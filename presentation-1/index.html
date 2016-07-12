@@ -3,7 +3,7 @@
     <head>
   		<meta charset="utf-8">
 
-  		<title>reveal.js – The HTML Presentation Framework</title>
+  		<title>CSS Presentation on Selectors, units, calc and background - By Daniel David</title>
 
   		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
   		<meta name="author" content="Hakim El Hattab">
@@ -39,40 +39,7 @@
         <div id="pitfall"></div>
         <div class="reveal">
             <div class="slides">
-
-              <!-- <section data-transition="convex">Slide 2
-                <p class="fragment">First sentence</p>
-                <p class="fragment">Second sentence</p>
-                <p class="fragment">Third sentence</p>
-                <section><h1>Sub-slide</h1>
-                  <aside class="notes">
-                    Oh hey, these are some notes. They'll be hidden in your presentation,
-                    but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-                  </aside>
-                </section>
               </section>
-                <section>
-                  <h2>Code highlighting</h2>
-<pre><code class="hljs">
-<html>
-<head>
-  <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
-    }
-
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
-</html>
-</code></pre>
-
-              </section> -->
                 <!-- <section>
                   <h1>About me</h1>
                   <h2>Daniel David</h2>
@@ -80,19 +47,10 @@
                   <p> (Once) active on <a href="http://stackoverflow.com/users">StackOverflow</a> CSS and HTML tags
                   <p>user: danield (Gravatar: 770 - Chabad Headquarters) </p>
                 </section> -->
-                <section>
-                  <h6>CSS - How to search</h6>
-                  <ul>
-                    <li>Prepend 'w3c' (World Wide Web Consortium - CSS spec) to the search</li>
-                    <li>Take a look at the date (if it's old it may be outdated)</li>
-                    <li>w3schools.com is NOT related to w3c and may contain incorrect information (see w3fools.com)</li>
-                    <li>MDN - https://developer.mozilla.org/en-US/docs/Web/CSS</li>
-                    <li>To check browser compatibility - be sure to check out <a href="http://caniuse.com/">caniuse.com</a></li>
-                  </ul>
-                </section>
+
                 <section>
                   <h1>CSS Selectors</h1>
-                  <h2>https://drafts.csswg.org/selectors/</h2>
+                  <h2><a href="https://drafts.csswg.org/selectors/">Selectors Level 4</a></h2>
                 </section>
                 <section data-transition="convex">
                   <h2>CSS Selectors - Topics</h1>
@@ -383,8 +341,8 @@
 
                       </ul>
                     </section>
-                    <section>
-                      <div class="tip"></div>
+                    <section class="tip">
+                      <br>
                       <h6>The CSS4 Parent Selector</h6>
                       <ul>
                         <li>The <a href="http://dev.w3.org/csswg/selectors4/#relational">Selectors Level 4 Working Draft</a> includes a <code>:has()</code> pseudo-class that works the same as the <a href="http://api.jquery.com/has-selector/">jQuery implementation</a>.</li>
@@ -393,7 +351,7 @@
                       <!-- https://drafts.csswg.org/selectors-4/#relational -->
                       <p><code>:has()</code> usage:</p>
 <pre class="highlight"><code>a:has(> img)</code></pre>
-                      <small>Match ancor elements only if they contain an image as a direct child</small>
+                      <small>Match anchor elements only if they contain an image as a direct child</small>
 <pre class="highlight"><code>dt:has(+ dt)</code></pre>
                       <small>Match Definition Term (&lt;dt&gt;) element only if it is immediately followed by another &lt;dt&gt; element</small><br><br>
                       <small>See StackOverflow:  <a href="http://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector">Is there a CSS parent selector?</a></small>
@@ -439,18 +397,20 @@
                     <section>
                       <h2>Pseudo Classes</h2>
                       <ul>
-                        <li>https://drafts.csswg.org/selectors/#syntax</li>
-                        <li>https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes</li>
-                        <li>https://css-tricks.com/pseudo-class-selectors/</li>
-                        <li>https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/</li>
+                        <li><a href="https://drafts.csswg.org/selectors/#syntax">w3c spec</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN</a></li>
+                        <li><a href="https://css-tricks.com/pseudo-class-selectors/">CSS Tricks</a></li>
+                        <li><a href="https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/">Smashing Magazine</a></li>
                       </ul>
                     </section>
                     <section>
                       <h6>pseudo classes</h6>
-                      <p>A CSS pseudo-class is a keyword added to selectors that specifies a special state of the element to be selected.
-                        For example <code>:hover</code> will apply a style when the user hovers over the element specified by the selector.</p>
-                        <p>Think of it as being a filter, that filters/matches only a subset of the selected elements which are in the requested state</p>
-                        <p>pseudo classes only work on css selectors, so you can't use them in style attributes or in javascript</p>
+                      <ul>
+                        <li>A CSS pseudo-class is a keyword added to selectors that specifies a special state of the element to be selected.
+                          For example <code>:hover</code> will apply a style when the user hovers over the element specified by the selector.</li>
+                        <li>Think of it as being a filter, that filters/matches only a subset of the selected elements ie. those that are in the requested state</li>
+                        <li>Pseudo classes only work on css selectors, so you can't use them in style attributes</li>
+                      </ul>
                     </section>
                     <section>
                       <h6>Syntax</h6>
@@ -482,17 +442,27 @@
                       <h6>Link-related pseudo classes</h6>
                       <p data-height="265" data-theme-id="0" data-slug-hash="jAGdbQ" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/jAGdbQ/">jAGdbQ</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                       <ul>
-                        <li>Technique to remember all the link pseduo class selectors. Look at the first letter of each: LVHA ... LoVe HAte</li>
-                        <li><code>:link</code> is equivalent to <code>a[href]</code> - it only works on anchor elements with href set</li>
+                        <li><small>Technique to remember all the link pseudo class selectors (:link, :visited, :hover, :active). Look at the first letter of each: LVHA ... LoVe HAte</small></li>
+                        <li><code>:link</code> is equivalent to <code>a[href]</code> - it only works on anchor elements with <code>href</code> set</li>
                         <li>If we were to switch the order between the :hover and :active states in the CSS - the :active pseudo class would never be set.</li>
                       </ul>
                     </section>
                     <section>
                       <h6>Input related pseudo class</h6>
                       <ul>
-                        <li><a href=""><code>:focus, :enabled, :disabled</code></a></li>
-                        <li><a href=""><code>:target</code></a></li>
-                        <li><a href=""><code>:checked, :indeterminate</code></a></li>
+                        <li><code><a href="http://codepen.io/danield770/pen/oLokYR">:focus</a>,
+                          <a href="http://codepen.io/danield770/pen/PzOpbN">:enabled, :disabled</a></code></a></li>
+                        <li><a href="http://codepen.io/danield770/pen/kXxBop?editors=1100#0"><code>:target</code></a></li>
+                        <li><a href=""><code><a href="http://codepen.io/danield770/pen/rLYyYv">:checked</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate">:indeterminate</a></code></a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>The "checkbox hack"</h6>
+                      <p> We can (AB)USE CSS to simulate click events using the <code>:target</code> and <code>:checked</code> pseudo classes.</p>
+                      <ul>
+                        <li>For a 'toggle' effect <a href="http://codepen.io/danield770/pen/xOPqvK?editors=1100#0">checkbox inputs</a> can be used</li>
+                        <li>For an open-close click event effect - <a href="https://css-tricks.com/examples/CSSTabs/radio.php">radio inputs</a> or
+                          <a href="https://bitsofco.de/the-target-trick/?utm_source=html5weekly&utm_medium=email"><code>:target</code></a> pseudo classes can be used</li>
                       </ul>
                     </section>
                     <section>
@@ -508,41 +478,44 @@
                     <section>
                       <h6>Language related pseudo class</h6>
                       <p>:lang() vs [lang]</p>
-
+                      <p data-height="265" data-theme-id="0" data-slug-hash="dXkWrp" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/dXkWrp/">dXkWrp</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                     </section>
                     <section>
-                      <h6><code>:not, :empty</code> pseudo classes</h6>
+                      <h6><code><a href="http://codepen.io/danield770/pen/mEqmAw">:not</a>,
+                        <a href="http://codepen.io/danield770/pen/pbdPEq">:empty</a></code> pseudo classes</h6>
                       <ul>
                         <li>Like all pseudo classes, <code>:not</code> can be chained. </li>
-                        <li>As of CSS3, <code>:not</code> only accepts a simple selector (CSS4 will allow complex selectors)</li>
+                        <li>For now <code>:not</code> only accepts a simple selector (CSS4 will allow complex selectors)
+                          so eg. <code>li:not(li + li)</code> is not a vaid selector.
+                        </li>
                         <li><code>:empty</code> is different in that it takes into account text nodes.(less useful!)</li>
-                        <li>CSS4 is drafting a <code>:blank</code> pseudo class</li>
+                        <li>CSS4 is drafting a <code>:blank</code> pseudo class which ignors text nodes.</li>
                       </ul>
                     </section>
                     <section>
                       <h6>Position/Number-based pseudo classes</h6>
                       <ul>
-                        <li></li>
-                        <li><a href="https://css-tricks.com/examples/nth-child-tester/">:nth Tester</a></li>
-                        <li></li>
-                        <li></li>
+                        <li><a href="https://www.w3.org/TR/css3-selectors/#nth-child-pseudo">w3c spec</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child">MDN</a></li>
+                        <li><a href="https://css-tricks.com/examples/nth-child-tester/">:nth Tester online tool</a></li>
                       </ul>
                     </section>
                     <section  class="pitfall">
 <pre class="highlight"><code><div>
   <h2>Here is a heading</h2>
-  <p class="myClass">Here is a paragraph</p>
+  <p class="myClass">Some text</p>
   <ul>
-    <li>A list item</li>
-    <li class="myClass">A list item</li>
-    <li>A list item</li>
-    <li class="myClass">A list item</li>
-    <li>A list item</li>
-    <li class="myClass">A list item</li>
+    <li>item-1</li>
+    <li class="myClass">item-2</li>
+    <li class="myClass">item-3</li>
+    <li>item-4</li>
+    <li class="myClass">item-5</li>
   </ul>
-  <p class="myClass">Here is another paragraph</p>
+  <p class="myClass">Here is some more text</p>
 </div>
-/* CSS */
+</code></pre>
+
+<pre class="highlight"><code><div>
 .myClass:first-child {
   color: red;
 }
@@ -628,6 +601,7 @@ assert(window.document.foo == 'bar'); //true !!?!
                       <h2>The Cascade</h2>
                       <ul>
                         <li><a href="https://www.w3.org/TR/css3-cascade/">w3c spec</a></li>
+                        <li><a href="https://www.w3.org/TR/CSS2/cascade.html">w3c CSS2 spec</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade">MDN</a></li>
                       </ul>
                     </section>
@@ -695,6 +669,63 @@ assert(window.document.foo == 'bar'); //true !!?!
                   <section>
                     <section>
                       <h2>Advanced Selectors; Quantity Queries</h2>
+                      <ul>
+                        <li><a href="http://alistapart.com/article/quantity-queries-for-css">Quantity Queries for CSS · An A List Apart Article</a></li>
+                        <li><a href="http://quantityqueries.com/">Quantity Queries Online Tool</a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h2>Quantity Queries</h2>
+                      <q>...make CSS quantity-aware using specially formed selectors.</q>
+                    </section>
+                    <section>
+                      <h6>Question:</h6>
+                      <p>Write a CSS rule to style an element with a blue background only if it's parent has one child.<br>
+                        If it's parent has more than one child - give the children a green background</p>
+                    </section>
+                    <section>
+                      <h6>Answer:</h6>
+<pre class="highlight"><code>
+* {
+  background-color: green;
+}
+:first-child:last-child {
+  background-color: blue;
+}
+</code></pre>
+
+                      <p>OR</p>
+                      <p>The truth is that CSS has a built-in selector for this <code>:only-child</code></p>
+<pre class="highlight"><code>
+* {
+  background-color: green;
+}
+:only-child {
+  background-color: blue;
+}
+</code></pre>
+                    </section>
+                    <section>
+                      <h6>Taking this idea further for n elements:</h6>
+                      <p>Style the children when the parent has <strong>At least</strong> 5 elements</p>
+<pre class="highlight"><code>
+:nth-last-child(n+5), :nth-last-child(n+5) ~ * {
+  /* styles go here */
+}
+</code></pre>
+                      <p>Style the children when the parent has <strong>At most</strong> 5 elements</p>
+<pre class="highlight"><code>
+:nth-last-child(-n+5):first-child, :nth-last-child(-n+5):first-child ~ * {
+  /* styles go here */
+}
+</code></pre>
+                    </section>
+                    <section>
+                      <h6>Quantity Queries example use case</h6>
+                      <p>Question: how to alter the display of items in a horizontal navigation menu when there are too many to suit the initial layout mode.
+                        <br>Switch from a <code>display: table-cell</code> to a <code>display: inline-block</code> layout when the number of items in
+                        the menu becomes “more than or equal to 6.”</p>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="XKzprR" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/XKzprR/">Content Aware Navigation</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                     </section>
                   </section>
                   <section>
@@ -702,12 +733,6 @@ assert(window.document.foo == 'bar'); //true !!?!
                     <ul>
                       <li>Type and attribute names aren't case sensitive. Attribute values (like classes) are case sensitive</li>
                       <li>Selectors traverse the DOM downward, so no parent or previous sibling selector (for now)</li>
-                      <li>Selectors are parsed from right to left for efficiency reasons.
-                        <small>(See StackOverflow:
-                          <a href="http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left?rq=1">
-                          Why do browsers match CSS selectors from right to left?</a> )
-                        </small>
-                      </li>
                       <li>Think of pseudo classes like filters on the matched element which limit the match to a  given state</li>
                       <li>Pseudo classes may be chained to add additional filters (order doesn't matter)</li>
                       <li>Selector syntax :pseudo-class::pseudo-element eg. <code>.myClass:hover:before { ... }</code> (order matters!!)</li>
@@ -737,8 +762,7 @@ assert(window.document.foo == 'bar'); //true !!?!
                     <h4><a href="http://cssguidelin.es/#css-selectors">Best practices: (cssguidelin.es/#css-selectors)</a></h4>
                     <ul>
                       <li><strong>Select what you want explicitly</strong>, rather than relying on circumstance or
-                    coincidence. Good Selector Intent will rein in the reach and leak of your
-                    styles.</li>
+                    coincidence.</li>
                       <li><strong>Write selectors for reusability</strong>, so that you can work more efficiently and
                     reduce waste and repetition.</li>
                       <li><strong>Do not nest selectors unnecessarily</strong>, because this will increase
@@ -855,6 +879,24 @@ assert(window.document.foo == 'bar'); //true !!?!
                     <section>
                       <h2>background-color</h2>
                     </section>
+                  </section>
+                  <section>
+                    <h2>Some concluding remarks...</h2>
+                  </section>
+                  <section>
+                    <h6>CSS - How to search</h6>
+                    <ul>
+                      <li>Prepend 'w3c' (World Wide Web Consortium - CSS spec) to the search</li>
+                      <li>Take a look at the date (if it's old it may be outdated)</li>
+                      <li>w3schools.com is NOT related to w3c and may contain incorrect information (see w3fools.com)</li>
+                      <li>MDN - https://developer.mozilla.org/en-US/docs/Web/CSS</li>
+                      <li>To check browser compatibility - be sure to check out <a href="http://caniuse.com/">caniuse.com</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h2>Presentation Url</h2>
+                    <a href="https://danielcss.github.io/presentation-1/">https://danielcss.github.io/presentation-1/</a>
+                    <p>Thanks to github's free web hosting</p>
                   </section>
             </div>
         </div>
