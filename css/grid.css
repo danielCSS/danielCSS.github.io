@@ -1,0 +1,214 @@
+.u-textCenter {
+  text-align: center !important; }
+
+.o-grid__content {
+  width: 100%;
+  padding: .8em 1em 0;
+  background: aqua;
+  border-radius: 3px; }
+
+.o-grid__content:after {
+  content: '\00a0';
+  display: block;
+  margin-top: 1em;
+  height: 0;
+  visibility: hidden; }
+
+.c-box .o-grid__content {
+  height: 150px;
+  border: 2px solid salmon; }
+
+p {
+  margin: 20px;
+  font-size: 1.2em; }
+
+.o-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .o-grid--top {
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
+            align-items: flex-start; }
+  .o-grid--bottom {
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
+            align-items: flex-end; }
+  .o-grid--center {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
+  .o-grid--justifyCenter {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .o-grid--justified {
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .o-grid--justified .o-grid__item {
+      -webkit-flex: none;
+          -ms-flex: none;
+              flex: none; }
+  .o-grid--flexCells > .o-grid__item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .o-grid--no-flex {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    overflow: auto;
+    /* or hidden when there are arrows?? */ }
+    .o-grid--no-flex > .o-grid__item {
+      -webkit-flex: none;
+          -ms-flex: none;
+              flex: none;
+      width: 150px;
+      /* just for demo */
+      height: 150px;
+      /* just for demo */
+      border: 2px solid tomato;
+      /* just for demo */ }
+      .o-grid--no-flex > .o-grid__item + .o-grid__item {
+        margin-left: 0.5rem; }
+
+.o-grid__item {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: white; }
+  .o-grid__item--top {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+  .o-grid__item--bottom {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+  .o-grid__item--center {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+  .o-grid__item--flex-none {
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    width: 60%;
+    /* just for demo */
+    margin-top: 10px;
+    /* just for demo */
+    /* need to add a custom width eg: width: 40% according to context for this to work */ }
+
+.o-grid--gutters {
+  margin: -1em 0 1em -1em; }
+  .o-grid--gutters > .o-grid__item {
+    padding: 1em 0 0 1em; }
+
+.o-grid--guttersLg {
+  margin: -1.5em 0 1.5em -1.5em; }
+  .o-grid--guttersLg > .o-grid__item {
+    padding: 1.5em 0 0 1.5em; }
+
+.o-grid--guttersXl {
+  margin: -2em 0 2em -2em; }
+  .o-grid--guttersXl > .o-grid__item {
+    padding: 2em 0 0 2em; }
+
+.u-1\/2 {
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%; }
+
+.u-1\/3 {
+  -webkit-flex: 0 0 33.333%;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  max-width: 33.333%; }
+
+.u-1\/4 {
+  -webkit-flex: 0 0 25%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%; }
+
+.u-1\/5 {
+  -webkit-flex: 0 0 20%;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  max-width: 20%; }
+
+@media only screen and (max-width: 767px) {
+  .m-1\/1\@xs > .o-grid__item {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    max-width: 100%; }
+  .m-1\/2\@xs > .o-grid__item {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    max-width: 50%; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+  .m-1\/2\@s > .o-grid__item {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    max-width: 50%; }
+  .m-1\/3\@s > .o-grid__item {
+    -webkit-flex-basis: 33.333%;
+        -ms-flex-preferred-size: 33.333%;
+            flex-basis: 33.333%;
+    max-width: 33.333%; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .m-1\/2\@md > .o-grid__item {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    max-width: 50%; }
+  .m-1\/3\@md > .o-grid__item {
+    -webkit-flex-basis: 33.333%;
+        -ms-flex-preferred-size: 33.333%;
+            flex-basis: 33.333%;
+    max-width: 33.333%; } }
+
+@media only screen and (min-width: 1200px) {
+  .m-1\/3\@lg > .o-grid__item {
+    -webkit-flex-basis: 33.333%;
+        -ms-flex-preferred-size: 33.333%;
+            flex-basis: 33.333%;
+    max-width: 33.333%; }
+  .m-1\/4\@lg > .o-grid__item {
+    -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+    max-width: 25%; }
+  .um-1\/3\@lg {
+    -webkit-flex-basis: 33.333%;
+        -ms-flex-preferred-size: 33.333%;
+            flex-basis: 33.333%;
+    max-width: 33.333%; } }
+
+@media only screen and (min-width: 1400px) {
+  .m-1\/4\@xl > .o-grid__item {
+    -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+    max-width: 25%; }
+  .m-1\/5\@xl > .o-grid__item {
+    -webkit-flex-basis: 20%;
+        -ms-flex-preferred-size: 20%;
+            flex-basis: 20%;
+    max-width: 20%; } }
