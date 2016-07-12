@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  		<meta charset="utf-8">
+
+  		<title>reveal.js – The HTML Presentation Framework</title>
+
+  		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  		<meta name="author" content="Hakim El Hattab">
+
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  		<link rel="stylesheet" href="css/reveal.css">
+  		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+      <link rel="stylesheet" href="css/main.css">
+      <!-- <script src="js/app.js"></script> -->
+  		<!-- Code syntax highlighting -->
+  		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+  		<!-- Printing and PDF exports -->
+  		<script>
+  			var link = document.createElement( 'link' );
+  			link.rel = 'stylesheet';
+  			link.type = 'text/css';
+  			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  			document.getElementsByTagName( 'head' )[0].appendChild( link );
+  		</script>
+
+  		<!--[if lt IE 9]>
+  		<script src="lib/js/html5shiv.js"></script>
+  		<![endif]-->
+  	</head>
+
+    <body>
+        <div id="tip"></div>
+        <div id="pitfall"></div>
+        <div class="reveal">
+            <div class="slides">
+
+              <!-- <section data-transition="convex">Slide 2
+                <p class="fragment">First sentence</p>
+                <p class="fragment">Second sentence</p>
+                <p class="fragment">Third sentence</p>
+                <section><h1>Sub-slide</h1>
+                  <aside class="notes">
+                    Oh hey, these are some notes. They'll be hidden in your presentation,
+                    but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+                  </aside>
+                </section>
+              </section>
+                <section>
+                  <h2>Code highlighting</h2>
+<pre><code class="hljs">
+<html>
+<head>
+  <title>Web Font Sample</title>
+  <style type="text/css" media="screen, print">
+    @font-face {
+      font-family: "Bitstream Vera Serif Bold";
+      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+    }
+
+    body { font-family: "Bitstream Vera Serif Bold", serif }
+  </style>
+</head>
+<body>
+  This is Bitstream Vera Serif Bold.
+</body>
+</html>
+</code></pre>
+
+              </section> -->
+                <!-- <section>
+                  <h1>About me</h1>
+                  <h2>Daniel David</h2>
+                  <h4>CSS developer</h4>
+                  <p> (Once) active on <a href="http://stackoverflow.com/users">StackOverflow</a> CSS and HTML tags
+                  <p>user: danield (Gravatar: 770 - Chabad Headquarters) </p>
+                </section> -->
+                <section>
+                  <h6>CSS - How to search</h6>
+                  <ul>
+                    <li>Prepend 'w3c' (World Wide Web Consortium - CSS spec) to the search</li>
+                    <li>Take a look at the date (if it's old it may be outdated)</li>
+                    <li>w3schools.com is NOT related to w3c and may contain incorrect information (see w3fools.com)</li>
+                    <li>MDN - https://developer.mozilla.org/en-US/docs/Web/CSS</li>
+                    <li>To check browser compatibility - be sure to check out <a href="http://caniuse.com/">caniuse.com</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <h1>CSS Selectors</h1>
+                  <h2>https://drafts.csswg.org/selectors/</h2>
+                </section>
+                <section data-transition="convex">
+                  <h2>CSS Selectors - Topics</h1>
+                  <ul>
+                    <li>Anatomy of a CSS Ruleset / CSS rule</li>
+                    <li>Simple selectors and Combinators</li>
+                    <li>Pseudo Classes</li>
+                    <li>Pseudo Elements</li>
+                    <li>Specificity</li>
+                    <li>The Cascade</li>
+                    <li>Advanced Selectors - Quantity Queries</li>
+                  </ul>
+                </section>
+                <section  data-transition="convex">
+                  <section>
+                  <h3>Anatomy of a CSS Ruleset / CSS rule</h3>
+<pre class="highlight"><code>[selector] {
+  [property]: [value];
+  [&lt;--declaration---&gt;]
+}
+</code></pre>
+                  </section>
+                  <section>
+<pre class="highlight"><code>[selector] {
+  [property]: [value];
+  [&lt;--declaration---&gt;]
+}
+</code></pre>
+<ul>
+                    <li class="fragment">A <span class="highlight-blue"><em>property</em></span> is an identifier,
+                      that is a human-readable name, that defines which <span class="highlight-green"><em>feature</em></span> is considered.</li>
+                    <li class="fragment">A <span class="highlight-blue"><em>value</em></span> describes how the feature must be handled by the browser engine.
+                      Each property has a set of valid values, defined by a formal grammar.</li>
+                    <li class="fragment">A CSS <span class="highlight-blue"><em>declaration</em></span> consists of a
+                      <span class="highlight-green"><em>property and value pair</em></span> separated by a colon (:)</li>
+                    <li class="fragment">A CSS <span class="highlight-blue"><em>declaration block</em></span> consists of 0 or more CSS declarations
+                      enclosed within curly braces { /* declarations */ }</li>
+                    <li class="fragment">A CSS <span class="highlight-blue"><em>ruleset / rule</em></span> consists of a
+                      <span class="highlight-green"><em>selector</em></span> and a CSS
+                      <span class="highlight-green"><em>declaration block</em></span></li></ul>
+                  </section>
+                  <section>
+                    <h6>At-rules <code>(@media, @import, @keyframes etc.)</code></h6> <!-- see https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax -->
+                    <p> In addition to CSS rules, there is other information that a Web author may want to convey in the style sheet</p>
+                    <ol><li>'@' + identifier.... + ';' </li>
+<pre class="highlight"><code>
+  /* @import url; */
+  @import url("google.com/css/main.css");
+  @import 'main.css';
+</code></pre>
+<!--
+  /* @import url list-of-media-queries; */
+  @import url("fineprint.css") print;
+  @import url('landscape.css') screen and (orientation:landscape); -->
+<li>'@' + identifier + { /* css rules */ }</li>
+<pre class="highlight"><code>
+  /* Viewport width at least */
+  @media (min-width: 767px) {
+    html {
+      font-size: 14px;
+    }
+  }
+</code></pre>
+<!--
+  /* CSS feature detection with @supports:
+  applies the rules inside the ‘@supports’ rule only when ‘display: flexbox’ is supported. */
+
+  @supports ( display: flexbox ) {
+    body, #navigation, #content { display: flexbox; }
+    #navigation { background: blue; color: white; }
+    #article { background: white; color: black; }
+  } -->
+                      <aside class="notes">
+                        like the character set @charset, other external style sheets to import @import,
+                        font face @font-face or list counter descriptions and many more. It will use other and specific kinds of statements to do that.
+                      </aside>
+                  </section>
+                </section>
+                <section>
+                  <section>
+                    <h2>Simple selectors and Combinators</h2>
+                  </section>
+                    <!-- https://www.w3.org/TR/css3-selectors/#general-sibling-combinators -->
+                    <!-- <div class="tip"></div> -->
+                    <section>
+                      <h2>Simple Selectors</h2>
+                      <p>A <span class="highlight-blue"><em>simple selector</em></span> is either a <span class="highlight-green"><em>type</em></span>
+                         selector, <span class="highlight-green"><em>universal</em></span> selector,
+                         <span class="highlight-green"><em>attribute</em></span> selector,
+                         <span class="highlight-green"><em>class</em></span> selector,
+                         <span class="highlight-green"><em>ID</em></span> selector, or
+                         <span class="highlight-green"><em>pseudo-class</em></span>.</p>
+                    </section>
+                    <section>
+                      <table>
+            						<thead>
+            							<tr>
+            								<th>Selector Type</th>
+            								<th>Pattern</th>
+            								<th>Elements Matched</th>
+            							</tr>
+            						</thead>
+            						<tbody>
+                          <tr>
+            								<td>Universal selector</td>
+            								<td>*</td>
+            								<td>any element</td>
+            							</tr>
+            							<tr>
+            								<td>Type selector</td>
+            								<td>E</td>
+            								<td>an element of type E</td>
+            							</tr>
+                          <tr>
+            								<td>Class selector</td>
+            								<td>.myClass</td>
+            								<td>any element whose class is "myClass"; equivalent to *.myClass </td>
+            							</tr>
+                          <tr>
+            								<td>ID selector</td>
+            								<td>#myID</td>
+            								<td>any element whose ID is "myID"; equivalent to *#myID </td>
+            							</tr>
+                        </tbody>
+                      </table>
+                    </section>
+                    <section>
+                      <h6>Examples</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="grGvdd" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/grGvdd/">grGvdd</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="yJzvvB" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/yJzvvB/">yJzvvB</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                    <section>
+                      <table>
+            						<thead>
+            							<tr>
+            								<th>Selector Type</th>
+            								<th>Pattern</th>
+            								<th>Elements Matched</th>
+            							</tr>
+            						</thead>
+            						<tbody>
+                          <tr>
+            								<td>Attribute selector</td>
+            								<td>E[foo]</td>
+            								<td>an E element with a "foo" attribute</td>
+            							</tr>
+                          <tr>
+            								<td>Attribute selector</td>
+            								<td>E[foo="bar"]</td>
+            								<td>an E element whose "foo" attribute value is exactly equal to "bar"</td>
+            							</tr>
+                          <tr>
+            								<td>Attribute selector</td>
+            								<td>E[foo~="bar"]</td>
+            								<td>an E element whose "foo" attribute value is a list of whitespace-separated values, one of which is exactly equal to "bar"</td>
+            							</tr>
+                        </tbody>
+                      </table>
+                    </section>
+                    <section>
+                      <table>
+            						<thead>
+            							<tr>
+            								<th>Selector Type</th>
+            								<th>Pattern</th>
+            								<th>Elements Matched</th>
+            							</tr>
+            						</thead>
+            						<tbody>
+                          <tr>
+            								<td>Attribute selector</td>
+            								<td>E[foo^="bar"]</td>
+            								<td>an E element whose "foo" attribute value ends exactly with the string "bar"</td>
+            							</tr>
+                          <tr>
+            								<td>Attribute selector</td>
+            								<td>E[foo$="bar"]</td>
+            								<td>an E element with a "foo" attribute</td>
+            							</tr>
+                          <tr>
+            								<td>Attribute selector</td>
+            								<td>E[foo*="bar"]	</td>
+            								<td>an E element whose "foo" attribute value contains the substring "bar"</td>
+            							</tr>
+                        </tbody>
+                      </table>
+                    </section>
+                    <!-- https://developer.mozilla.org/en/docs/Web/Guide/CSS/Getting_started/Selectors -->
+                    <section>
+                      <h4>Attribute Selectors - Examples </h4>
+                      <dl>
+                       <dt><code>[disabled]</code></dt>
+                       <dd>Selects all elements with a "disabled" attribute.</dd>
+                       <dt><code>[type='button']</code></dt>
+                       <dd>Selects elements with a "button" type.</dd>
+                       <dt><code>[class~=key]</code></dt>
+                       <dd>Selects elements with the class "key" (but not e.g. "keyed", "monkey", "buckeye"). Functionally equivalent to <code>.key</code>.</dd>
+                       <dt><code>[lang|=es]</code></dt>
+                       <dd>Selects elements specified as Spanish. This includes "es" and "es-MX" but not "eu-ES" (which is Basque).</dd>
+                      </dl>
+                    </section>
+                    <section>
+                      <h4>Attribute Selectors - Examples </h4>
+                      <dl>
+                       <dt>[title*="example" i]</dt>
+                       <dd>Selects elements whose title contains "example", ignoring case. In browsers that don't support the "i" flag, this selector probably won't match any element.</dd>
+                       <dt><code>a[href^="https://"]</code></dt>
+                       <dd>Selects secure links.</dd>
+                       <dt><code>img[src$=".png"]</code></dt>
+                       <dd>Indirectly selects PNG images; any images that are PNGs but whose URL doesn't end in ".png" (such as when there's a query string) won't be selected.</dd>
+                      </dl>
+                    </section>
+                    <section>
+                      <h6>Various attribute selectors in action</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="kXGZOX" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/kXGZOX/">kXGZOX</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                    <section>
+                      <h6>Case insensitive attribute values</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="mEwGvX" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/mEwGvX/">mEwGvX</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                    <section>
+                      <h6>Compound Selectors</h6>
+                      <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="compound">compound selector</dfn> is a sequence of <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#simple" id="ref-for-simple-3">simple selectors</a> that are not separated by a <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#combinator" id="ref-for-combinator-1">combinator</a>.
+	It represents an element that matches all of the <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#simple" id="ref-for-simple-4">simple selectors</a> it contains.
+	If it contains a <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#type-selector" id="ref-for-type-selector-2">type selector</a> or <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#universal-selector" id="ref-for-universal-selector-2">universal selector</a>,
+	that selector must come first in the sequence.
+	Only one type selector or universal selector is allowed in the sequence.</p>
+                      <code>section#myId, h2.myHeader, *.error, .class1.class2.class3</code>
+                    </section>
+                    <section>
+                      <h2>Combinators</h2>
+                      <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="combinator">combinator</dfn> represents a particular kind of relationship
+	between the elements matched by the <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#compound" id="ref-for-compound-8">compound selectors</a> on either side.
+	Combinators in Selectors level 4 include:
+	the <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#descendant-combinator" id="ref-for-descendant-combinator-1">descendant combinator</a> (white space),
+	the <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#child-combinator" id="ref-for-child-combinator-1">child combinator</a> (<code>&gt;</code>),
+	the <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#next-sibling-combinator" id="ref-for-next-sibling-combinator-1">next-sibling combinator</a> (<code>+</code>),
+	and the <a data-link-type="dfn" href="https://drafts.csswg.org/selectors/#following-sibling-combinator" id="ref-for-following-sibling-combinator-1">following-sibling combinator</a> (<code>~</code>).</p>
+                    </section>
+                    <section>
+                      <h3>The DOM family Tree</h3>
+<pre class="highlight"><code>
+  <div>a
+    <aside>b
+      <p>c</p>
+      <ul>d
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+      </ul>
+      <div>h</div>
+    </aside>
+    <span>i</span>
+    <div>j</div>
+  </div>
+</code></pre>
+                      <ul>
+                        <li><code>b->j</code> are descendants of <code>a</code></li>
+                        <li><code>b,i,j</code> are direct children of <code>a (>)</code></li>
+                        <li><code>b,i,j</code> and <code>c,d,h</code> and <code>e,f,g</code> are siblings / adjacent (+)</li>
+                        <li><code>b,c,e</code> are first children</li>
+                        <li><code>g,h,j</code> are last children</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>The DOM family Tree</h3>
+<pre class="highlight"><code>
+  <div>a
+    <aside>b
+      <p>c</p>
+      <ul>d
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+      </ul>
+      <div>h</div>
+    </aside>
+    <span>i</span>
+    <div>j</div>
+  </div>
+</code></pre>
+                      <ul>
+                        <li>Selectors traverse the DOM downwards - no Parent selector. (for now - see CSS4 level selectors)
+                          You can't say: select <code>a</code> (the parent) if <code>a</code> contains <code>b</code>.
+                        </li>
+                        <li>Selectors ignor text nodes. So elements are adjacent even if text nodes separate between them
+                        <a href="http://codepen.io/danield770/pen/GqrxNL">(codepen)</a></li>
+
+                      </ul>
+                    </section>
+                    <section>
+                      <div class="tip"></div>
+                      <h6>The CSS4 Parent Selector</h6>
+                      <ul>
+                        <li>The <a href="http://dev.w3.org/csswg/selectors4/#relational">Selectors Level 4 Working Draft</a> includes a <code>:has()</code> pseudo-class that works the same as the <a href="http://api.jquery.com/has-selector/">jQuery implementation</a>.</li>
+                        <li>As of 2016, <strong><a href="http://caniuse.com/#feat=css-has">this is not available in any browser</a></strong>. </li>
+                      </ul>
+                      <!-- https://drafts.csswg.org/selectors-4/#relational -->
+                      <p><code>:has()</code> usage:</p>
+<pre class="highlight"><code>a:has(> img)</code></pre>
+                      <small>Match ancor elements only if they contain an image as a direct child</small>
+<pre class="highlight"><code>dt:has(+ dt)</code></pre>
+                      <small>Match Definition Term (&lt;dt&gt;) element only if it is immediately followed by another &lt;dt&gt; element</small><br><br>
+                      <small>See StackOverflow:  <a href="http://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector">Is there a CSS parent selector?</a></small>
+                    </section>
+                    <section>
+                      <h4>Combinators</h4>
+                      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors -->
+                      <dl>
+                       <dt><a href="/en-US/docs/Web/CSS/Adjacent_sibling_selectors">Adjacent sibling selectors</a></dt>
+                       <dd>The <code>'+'</code> combinator selects nodes that immediately follow the former specified element.<br>
+                       <strong>Syntax:</strong> <code><var>A</var> + <var>B</var></code><br>
+                       <strong>Example:</strong> <code>ul + li</code> will match any <a href="/en-US/docs/Web/HTML/Element/li" title="The HTML <li> element (or HTML List Item Element) is used to represent an item in a list. It must be contained in a parent element: an ordered list (<ol>), an unordered list (<ul>), or a menu (<menu>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter."><code>&lt;li&gt;</code></a> that immediately follows a <a href="/en-US/docs/Web/HTML/Element/ul" title="The HTML <ul> element (or HTML Unordered List Element) represents an unordered list of items, namely a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle or a squared. The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property."><code>&lt;ul&gt;</code></a>.</dd>
+                       <dt><a href="/en-US/docs/Web/CSS/General_sibling_selectors">General sibling selectors</a></dt>
+                       <dd>The <code>'~'</code> combinator selects nodes that follow (not necessarily immediately) the former specified element, if both elements shared the same parent.<br>
+                       <strong>Syntax:</strong> <code><var>A</var> ~ <var>B</var></code><br>
+                       <strong>Example:</strong> <code>p ~ span</code> will match all <a href="/en-US/docs/Web/HTML/Element/span" title="The HTML <span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element."><code>&lt;span&gt;</code></a> elements that follow a <a href="/en-US/docs/Web/HTML/Element/p" title="The HTML <p> element (or HTML Paragraph Element) represents a paragraph of text."><code>&lt;p&gt;</code></a> element inside the same element.</dd>
+                      </dl>
+                    </section>
+                    <section>
+                      <h4>Combinators</h4>
+                      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors -->
+                      <dl>
+                       <dt><a href="/en-US/docs/Web/CSS/Child_selectors">Child selectors</a></dt>
+                       <dd>The <code>'&gt;'</code> combinator selects nodes that are direct children of the former specified element.<br>
+                       <strong>Syntax:</strong> <code><var>A</var> &gt; <var>B</var></code><br>
+                       <strong>Example:</strong> <code>ul &gt; li</code> will match all <a href="/en-US/docs/Web/HTML/Element/li" title="The HTML <li> element (or HTML List Item Element) is used to represent an item in a list. It must be contained in a parent element: an ordered list (<ol>), an unordered list (<ul>), or a menu (<menu>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter."><code>&lt;li&gt;</code></a> elements that are inside a <a href="/en-US/docs/Web/HTML/Element/ul" title="The HTML <ul> element (or HTML Unordered List Element) represents an unordered list of items, namely a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle or a squared. The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property."><code>&lt;ul&gt;</code></a> element.</dd>
+                       <dt><a href="/en-US/docs/Web/CSS/Descendant_selectors">Descendant selectors</a></dt>
+                       <dd>The <code>' '</code> combinator selects nodes that are children (not necessary direct children) of the former specified element.<br>
+                       <strong>Syntax:</strong> <code>A B</code><br>
+                       <strong>Example:</strong> <code>div span</code> will match any <a href="/en-US/docs/Web/HTML/Element/span" title="The HTML <span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element."><code>&lt;span&gt;</code></a> element that is inside a <a href="/en-US/docs/Web/HTML/Element/div" title="The HTML <div> element (or HTML Document Division Element) is the generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as <article> or <nav>) is appropriate."><code>&lt;div&gt;</code></a> element.</dd>
+                      </dl>
+                    </section>
+                    <section>
+                      <h6>Adjacent sibling combinator use case</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="AXQyQQ" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/AXQyQQ/">AXQyQQ</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                    <section>
+                      <h6>General sibling combinator use case</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="akLYVY" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/akLYVY/">akLYVY</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Pseudo Classes</h2>
+                      <ul>
+                        <li>https://drafts.csswg.org/selectors/#syntax</li>
+                        <li>https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes</li>
+                        <li>https://css-tricks.com/pseudo-class-selectors/</li>
+                        <li>https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>pseudo classes</h6>
+                      <p>A CSS pseudo-class is a keyword added to selectors that specifies a special state of the element to be selected.
+                        For example <code>:hover</code> will apply a style when the user hovers over the element specified by the selector.</p>
+                        <p>Think of it as being a filter, that filters/matches only a subset of the selected elements which are in the requested state</p>
+                        <p>pseudo classes only work on css selectors, so you can't use them in style attributes or in javascript</p>
+                    </section>
+                    <section>
+                      <h6>Syntax</h6>
+                      <p>Regular pseudo class eg: <code>:hover</code></p>
+<pre class="highlight"><code>selector:pseudo-class {
+  property: value;
+} </code></pre>
+                      <p>Functional pseudo class eg: <code>:nth-child(2n + 1)</code></p>
+<pre class="highlight"><code>selector:pseudo-class(value) {
+  property: value;
+} </code></pre>
+                    </section>
+                    <section>
+                      <h6>Pseudo classes - categorized</h6>
+                      <ul>
+                        <li>Link-related pseudo class selectors <br><small><code>:link, :visited, :hover, :active</code></small></li>
+                        <li>Input related pseudo class selectors <br> <small><code>:focus, :target, :enabled, :disabled,
+                          :checked, :indeterminate, :default, :read-only, :read-write</code></small></li>
+                        <li>Validation related pseudo class selectors <br> <small><code>:in-range, :out-of-range, :valid, :invalid, :optional, :required, :placeholder-shown</code></small></li>
+                        <li>Language related pseudo class selectors <br> <small><code>:lang()</code></small></li>
+                        <li>Relational pseudo class selectors <br> <small><code>:not(), :empty, :blank (?)</code></small></li>
+                        <li>Position/Number-based pseudo class selectors <br> <small><code>:root, :first-child, :last-child,
+                          :nth-child(), :nth-of-type(), :first-of-type, :last-of-type, :nth-last-of-type(),
+                          :nth-last-child(), :only-of-type, :only-child,
+                        </code></small></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Link-related pseudo classes</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="jAGdbQ" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/jAGdbQ/">jAGdbQ</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                      <ul>
+                        <li>Technique to remember all the link pseduo class selectors. Look at the first letter of each: LVHA ... LoVe HAte</li>
+                        <li><code>:link</code> is equivalent to <code>a[href]</code> - it only works on anchor elements with href set</li>
+                        <li>If we were to switch the order between the :hover and :active states in the CSS - the :active pseudo class would never be set.</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Input related pseudo class</h6>
+                      <ul>
+                        <li><a href=""><code>:focus, :enabled, :disabled</code></a></li>
+                        <li><a href=""><code>:target</code></a></li>
+                        <li><a href=""><code>:checked, :indeterminate</code></a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Validation related pseudo classes</h6>
+                      <a href="https://css-tricks.com/form-validation-ux-html-css/">Form Validation UX in HTML and CSS</a>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="JXgKjb" data-default-tab="css,result" data-user="chriscoyier" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/chriscoyier/pen/JXgKjb/">Form with a bunch of HTML5 Validation and CSS3 Help</a> by Chris Coyier (<a href="http://codepen.io/chriscoyier">@chriscoyier</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                      <p>NB: The built-in validation bubbles can't be styled. <br>
+                        <small>StackOverflow: <a href="http://stackoverflow.com/questions/5713405/how-do-you-style-the-html5-form-validation-messages">
+                          How do you style the HTML5 form validation messages?</a></small><br>
+                        <small><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=259050">https://bugs.chromium.org/p/chromium/issues/detail?id=259050</a></small>
+                      </p>
+                    </section>
+                    <section>
+                      <h6>Language related pseudo class</h6>
+                      <p>:lang() vs [lang]</p>
+
+                    </section>
+                    <section>
+                      <h6><code>:not, :empty</code> pseudo classes</h6>
+                      <ul>
+                        <li>Like all pseudo classes, <code>:not</code> can be chained. </li>
+                        <li>As of CSS3, <code>:not</code> only accepts a simple selector (CSS4 will allow complex selectors)</li>
+                        <li><code>:empty</code> is different in that it takes into account text nodes.(less useful!)</li>
+                        <li>CSS4 is drafting a <code>:blank</code> pseudo class</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Position/Number-based pseudo classes</h6>
+                      <ul>
+                        <li></li>
+                        <li><a href="https://css-tricks.com/examples/nth-child-tester/">:nth Tester</a></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </section>
+                    <section  class="pitfall">
+<pre class="highlight"><code><div>
+  <h2>Here is a heading</h2>
+  <p class="myClass">Here is a paragraph</p>
+  <ul>
+    <li>A list item</li>
+    <li class="myClass">A list item</li>
+    <li>A list item</li>
+    <li class="myClass">A list item</li>
+    <li>A list item</li>
+    <li class="myClass">A list item</li>
+  </ul>
+  <p class="myClass">Here is another paragraph</p>
+</div>
+/* CSS */
+.myClass:first-child {
+  color: red;
+}
+</code></pre>
+                      <br><p>Question: Which element(s) will be red?</p>
+                    </section>
+                    <section>
+                      <p>Answer: None!</p>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="RRLmxx" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/RRLmxx/">RRLmxx</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                      <p><strong>The is no <code>:nth-class()</code> selector!!!</strong></p>
+                    </section>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Pseudo Elements</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Specificity</h2>
+                      <h6>
+                        <strike>Possibly</strike> the worst part of CSS.
+                       </h6>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#1. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>For anyone who’s a little rusty on how the cascade works, for normal CSS rules, the cascade takes three things into consideration: source order, specificity, and importance.</p>
+                        <p>Source order makes a lot of sense. It’s natural and intuitive to think that if rule Y comes after rule X, and both rules apply to the same element, rule Y’s declarations should “win”.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#2. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>Importance also makes a lot of sense. There are always going to be cases where you need to override something, and it’s good to have the option to do so. Importance is also the only way to override inline styles, so it’s actually quite necessary in some cases.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#3. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>But I think specificity is different.</p>
+                        <p>Specificity isn’t intuitive, and—especially for new developers—the results can often seem like a <em>gotcha</em> rather than the intended behavior. I’m also not sure there’s an equivalent in other systems or languages.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#4. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>For example, what if specificity were a thing in JavaScript. Imagine how much more unpredictable your code would be if the following test passed.</p>
+<pre class="highlight"><code>window.document.foo = 'bar';
+document.foo = 'qux';
+
+assert(window.document.foo == 'bar'); //true !!?!
+</code></pre>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#5. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>It would be crazy and completely unmanageable if the <code>window.document.foo = 'bar'</code> assignment above (which comes first) trumped the <code>document.foo = 'qux'</code> assignment (which comes second) just because the reference was “more specific”. Yet that’s essentially what happens in CSS.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://css-tricks.com/specifics-on-css-specificity/#article-header-id-0">Calculating CSS Specificity Value</a></h6>
+                      <p><img src="https://css-tricks.com/wp-content/csstricks-uploads/specificity-calculationbase.png" width="570" height="346" alt="" title=""></p>
+                      <small>
+                        <ul>
+                          <li>If the element has inline styling, that automatically wins (1,0,0,0 points)</li>
+                          <li>For each ID value, apply 0,1,0,0 points</li>
+                          <li>For each class value (or pseudo-class or attribute selector), apply 0,0,1,0 points</li>
+                          <li>For each type/pseudo element reference, apply 0,0,0,1 point</li>
+                        </ul>
+                      </small>
+                      <p><a href="https://css-tricks.com/specifics-on-css-specificity/">Specifics on CSS Specificity</a></p>
+                    </section>
+                    <section>
+                      <h6>Specificity Calculator</h6>
+                      <p><a href="https://specificity.keegan.st/">Specificity Calculator</a></p>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>The Cascade</h2>
+                      <ul>
+                        <li><a href="https://www.w3.org/TR/css3-cascade/">w3c spec</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade">MDN</a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>The Cascade</h6>
+                      <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="cascade">cascade</dfn> is an algorithm which takes a unordered list of <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#declared-value" id="ref-for-declared-value-6">declared values</a> for a given property on a given element,
+	sorts them by their declaration’s precedence,
+	and outputs a single <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#cascaded-value" id="ref-for-cascaded-value-8">cascaded value</a>.</p>
+                    </section>
+                    <section>
+                      <h6>Cascading Origins</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="EybKzN" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/EybKzN/">EybKzN</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                      <div>Questions: (NB: No CSS rules have been written)</div>
+                      <ul>
+                        <li>Why is a <code>div</code> a block element? The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">initial (default) value</a> for the <code>display</code> property is <code>inline</code>!?</li>
+                        <li>How does the browser know to display the french quotes - just by adding the lang attribute?</li>
+                        <li>How does the <code>&lt;br&gt;</code> tag force a new line?</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Answer: The User Agent</h6>
+                      <p>Conforming user agents must apply a default style sheet</p>
+                      <ul>
+                        <li><a href="https://www.w3.org/TR/css3-cascade/#cascading-origins">User Agent definition - spec</a></li>
+                        <li><a href="https://www.w3.org/TR/CSS2/sample.html">Default style sheet for HTML 4</a></li>
+                        <li><a href="https://www.w3.org/TR/html5/rendering.html#quotes">Quotes</a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Cascading Origins (intentionally simplified:)</h6>
+                      <ul>
+                        <li>Author</li>
+                        <li>User</li>
+                        <li>User agent (UA)</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>The Cascade Algorithm</h6>
+                      <p>The cascade sorts declarations according to the following criteria, in descending order of priority: (intentionally simplified:)</p>
+                      <ul>
+                        <li>Origin and Importance</li>
+                        <li>Specificity</li>
+                        <li>Order of Appearance</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>The Cascade</h6>
+                      <ul>
+                        <li>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="output-of-the-cascade">output of the cascade</dfn> is a (potentially empty) sorted list of <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#declared-value" id="ref-for-declared-value-7">declared values</a> for each property on each element.
+                      </li>
+                        <li>
+                          When the <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#cascade" id="ref-for-cascade-6">cascade</a> does not result in a value,
+	the <a data-link-type="dfn" href="#specified-value" id="ref-for-specified-value-10">specified value</a> must be found some other way. <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#inherited-property" id="ref-for-inherited-property-1">Inherited properties</a> draw their defaults from their parent element through <a data-link-type="dfn" href="#inheritance" id="ref-for-inheritance-4">inheritance</a>;
+	all other properties take their <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#initial-value" id="ref-for-initial-value-3">initial value</a>.
+	Authors can explicitly request inheritance or initialization
+	via the <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css3-cascade/#valdef-all-inherit" id="ref-for-valdef-all-inherit-2">inherit</a> and <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css3-cascade/#valdef-all-initial" id="ref-for-valdef-all-initial-2">initial</a> keywords.
+                        </li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Cascade Demo</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="jAaraa" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/jAaraa/">jAaraa</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Advanced Selectors; Quantity Queries</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <h4>Selectors - General notes</h4>
+                    <ul>
+                      <li>Type and attribute names aren't case sensitive. Attribute values (like classes) are case sensitive</li>
+                      <li>Selectors traverse the DOM downward, so no parent or previous sibling selector (for now)</li>
+                      <li>Selectors are parsed from right to left for efficiency reasons.
+                        <small>(See StackOverflow:
+                          <a href="http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left?rq=1">
+                          Why do browsers match CSS selectors from right to left?</a> )
+                        </small>
+                      </li>
+                      <li>Think of pseudo classes like filters on the matched element which limit the match to a  given state</li>
+                      <li>Pseudo classes may be chained to add additional filters (order doesn't matter)</li>
+                      <li>Selector syntax :pseudo-class::pseudo-element eg. <code>.myClass:hover:before { ... }</code> (order matters!!)</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>Selectors - General notes</h4>
+                      <li>Selectors are parsed from right to left for efficiency reasons.<br>
+                        <small>(See StackOverflow:
+                          <a href="http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left?rq=1">
+                          Why do browsers match CSS selectors from right to left?</a> ;<br>
+                          <a href="http://stackoverflow.com/questions/3851635/css-combinator-precedence/3851754#3851754">
+                          CSS combinator precedence?</a> )
+                        </small>
+                        <p>If you were to read selectors in plain English, you would read them from right to left too.
+                          So, the selector:</p>
+<pre class="highlight"><code>a > b ~ c d</code></pre>
+                        <p>would mean:<br><br>
+
+                        Select any <code>d</code> element<br>
+                        that is a descendant of a <code>c</code> element<br>
+                        that is a sibling of, and comes after, a <code>b</code> element<br>
+                        that is a direct child of an <code>a</code> element.</p>
+                        <!-- that is a child (direct descendant) of an <code>a</code> element.</p> -->
+                  </section>
+                  <section>
+                    <h4><a href="http://cssguidelin.es/#css-selectors">Best practices: (cssguidelin.es/#css-selectors)</a></h4>
+                    <ul>
+                      <li><strong>Select what you want explicitly</strong>, rather than relying on circumstance or
+                    coincidence. Good Selector Intent will rein in the reach and leak of your
+                    styles.</li>
+                      <li><strong>Write selectors for reusability</strong>, so that you can work more efficiently and
+                    reduce waste and repetition.</li>
+                      <li><strong>Do not nest selectors unnecessarily</strong>, because this will increase
+                    specificity and affect where else you can use your styles.</li>
+                      <li><strong>Do not qualify selectors unnecessarily</strong>, as this will impact the number of
+                    different elements you can apply styles to.</li>
+                      <li><strong>Keep selectors as short as possible</strong>, in order to keep specificity down and
+                    performance up.</li>
+                    </ul>
+                    <!-- <ul>
+                      <li>Keep selectors as succint as possible; Single class selectors are preferred when possible</li>
+                      <li>Don't use #ID selectors - they aren't necessary</li>
+                      <li>Don't use <code>!important</code> passively - ie. to solve specificity issues</li>
+                      <li>If extra specificity is absolutely needed - repeat the class name <code>.myClass.myClass { ... }</code></li>
+                    </ul> -->
+                  </section>
+                  <section>
+                      <h1>CSS Units</h1>
+                      <a href="https://www.w3.org/TR/css-values/">CSS Values and Units Module Level 3</a>
+                  </section>
+                  <section data-transition="convex">
+                    <h2>CSS Units - Topics</h1>
+                    <ul>
+                      <li>px vs em vs rem</li>
+                      <li>Viewport Units: vw, vh, vmin, vmax</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>px vs em vs rem</h2>
+                    </section>
+                    <section>
+                      <h2>px vs em vs rem etc</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Viewport Units: vw, vh, vmin, vmax</h2>
+                      <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length"></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href="https://css-tricks.com/viewport-sized-typography/"></a></li>
+                        <li></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h2>Viewport Units: vw, vh, vmin, vmax</h2>
+                      <dl>
+                       <dt id="vh"><code>vh</code></dt>
+                       <dd>1/100th of the height of the viewport.</dd>
+                       <dt id="vw"><code>vw</code></dt>
+                       <dd>1/100th of the width of the viewport.</dd>
+                       <dt id="vmin"><code>vmin</code></dt>
+                       <dd>1/100th of the minimum value between the height and the width of the viewport.</dd>
+                       <dt id="vmax"><code>vmax</code></dt>
+                       <dd>1/100th of the maximum value between the height and the width of the viewport.</dd>
+                      </dl>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h1>Calc</h1>
+                    </section>
+                    <section>
+                      <h2>more info on calc()</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <h1>The Background shorthand property</h1>
+                  </section>
+                  <section data-transition="convex">
+                    <h2>The Background shorthand property</h1>
+                    <ul>
+                      <li>background-image</li>
+                      <li>background-position</li>
+                      <li>background-size</li>
+                      <li>background-repeat</li>
+                      <li>background-attachment</li>
+                      <li>background-clip</li>
+                      <li>background-color</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-image</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-position</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-size</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-repeat</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-attachment</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-clip</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-color</h2>
+                    </section>
+                  </section>
+            </div>
+        </div>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        <script src="lib/js/head.min.js"></script>
+    		<script src="js/reveal.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          //controls: true,
+          //progress: true,
+          history: true,
+          //center: true,
+
+          transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+          // Optional reveal.js plugins
+          dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+          ]
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+.highlight-blue {
+  color: #1976d2; }
+
+.highlight-green {
+  color: #8bc34a; }
+
+#tip, #pitfall {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 250px 250px 0 0;
+  border-color: #86bce0 transparent transparent transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; }
+  #tip:before, #pitfall:before {
+    content: '';
+    width: 128px;
+    height: 128px;
+    position: fixed;
+    top: 0;
+    left: 5px; }
+  #tip:after, #pitfall:after {
+    position: fixed;
+    width: 70%;
+    left: 0;
+    right: 0;
+    top: 20px;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    color: #1976d2;
+    border: double 7px #1976d2; }
+
+#tip:before {
+  background: url(../images/tip.png) no-repeat; }
+
+#pitfall:before {
+  background: url(../images/pitfall.png) no-repeat; }
+
+#tip:after {
+  content: 'TIP'; }
+
+#pitfall:after {
+  content: 'PITFALL'; }
+
+h6 code {
+  text-transform: lowercase; }
