@@ -497,8 +497,15 @@
                       <ul>
                         <li><a href="https://www.w3.org/TR/css3-selectors/#nth-child-pseudo">w3c spec</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child">MDN</a></li>
+                        <li><a href="https://css-tricks.com/how-nth-child-works/">How nth-child works</a></li>
+                        <li><a href="https://css-tricks.com/useful-nth-child-recipies/">Useful nth-child recipes</a></li>
+                        <li><a href="http://nthmaster.com/">nthmaster.com</a>
                         <li><a href="https://css-tricks.com/examples/nth-child-tester/">:nth Tester online tool</a></li>
                       </ul>
+                    </section>
+                    <section>
+                      <h6>Position/Number-based pseudo classes</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="AXbxpa" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/AXbxpa/">AXbxpa</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                     </section>
                     <section  class="pitfall">
 <pre class="highlight"><code><div>
@@ -533,6 +540,114 @@
                     <section>
                       <h2>Pseudo Elements</h2>
                     </section>
+                    <section>
+                    <h6>Pseudo elements</h6>
+                    <q>Just like pseudo-classes, pseudo-elements are added to selectors but instead of describing a special state, they allow you to style certain parts of a document.
+                      For example, the <code>::first-line</code> pseudo-element targets only  the first line of an element specified by the selector.(MDN)</q>
+                  </section>
+                  <section>
+                    <h6>Pseudo elements</h6>
+                    <q>When their computed content value is not none, these pseudo-elements generate boxes as if they were immediate children
+                      of their originating element, and can be styled exactly like any normal document-sourced element in the document tree.
+                      They inherit any inheritable properties from their originating element;
+                      non-inheritable properties take their initial values as usual. (w3c spec)</q>
+                  </section>
+                  <section>
+                    <h6>Pseudo elements - syntax</h6>
+                    selector::pseudo-element {
+                    property: value;
+                  }
+                  </section>
+                  <section>
+                    <h6>Combining pseudo classes with pseudo elements</h6>
+                    <p data-height="265" data-theme-id="0" data-slug-hash="kXoNqy" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/kXoNqy/">kXoNqy</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                  </section>
+                  <section>
+                    <h6>Generated Content - <code>:before</code> and <code>:after</code></h6>
+                    <ul>
+                      <li><a href="https://www.w3.org/TR/css-pseudo-4/#generated-content">w3c spec - generated content</a></li>
+                      <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/Pseudo-elements">MDN - pseudo elements</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">MDN - pseudo elements</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after">MDN - :before</a></li>
+                      <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/Pseudo-elements">MDN - :after</a></li>
+                      <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/content">MDN - the content property</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>Generated Content - <code>:before</code> and <code>:after</code></h6>
+                    <ul>
+                      <li>The CSS ::before and ::after pseudo-elements match a virtual first/last child
+                         of the selected element.</li>
+                      <li>They are typically used to add cosmetic
+                      content to an element by using the content CSS property.</li>
+                      <li>These pseudo elements' display property have an initial value of inline by default.</li>
+                    </ul>
+                  </section>
+                  <!-- <section>
+                    <h6>Generated content - example</h6>
+
+                  </section> -->
+                  <section class="pitfall">
+                    <h6>Generated content - Accessibility issues</h6>
+                    <p>Genrated content is not part of the DOM, this means:
+                    <ul>
+                      <li>The content will not be accessible to (some?) screen readers</li>
+                      <li>The content will not be selectable (so no copy/paste)</li>
+                      <li>Bots won't see the content for SEO purposes</li>
+                      <li>Can't be set by javascript. Although you can <a href="http://stackoverflow.com/a/26650485/703717">retrieve </a>the contents with <code>window.getComputedStyle</code></li>
+                    </ul>
+                    <small>see <a href="http://www.karlgroves.com/2013/08/26/css-generated-content-is-not-content/">CSS generated content is not content</a></small>
+                  </section>
+                  <section>
+                    <h6>The content property</h6>
+                    <q>The content CSS property is used with the ::before and ::after pseudo-elements to generate content in an element.
+                       Objects inserted using the content property are anonymous replaced elements.
+                    </q>
+                    <p>Formal Syntax</p>
+                    <code>normal | none | [ &lt;string&gt; | &lt;uri&gt; | &lt;counter&gt; | attr() | open-quote | close-quote | no-open-quote | no-close-quote ]+</code>
+                  </section>
+                  <section>
+                    <h6>CSS Counters</h6>
+                    <ul>
+                      <li><a href="https://drafts.csswg.org/css-lists-3/#auto-numbering">w3c spec - counters</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS counters</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment">counter increment</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>CSS Counters Demo</h6>
+                    <a href="http://stackoverflow.com/questions/26841805/can-you-count-a-particular-class-with-css">Can you count a particular class with CSS?</a>
+                  </section>
+                  <section>
+                    <h6>The <a href="https://developer.mozilla.org/en/docs/Web/CSS/attr"><code>attr()</code> CSS function</a></h6>
+                    <ul>
+                      <li>The attr() CSS function is used to retrieve the value of an attribute of the selected element and
+                         use it in the style sheet. It can be used on pseudo-elements too and, in this case,
+                         the value of the attribute on the pseudo-element's originated element is returned.</li>
+                      <li><a href="https://www.w3.org/TR/css3-values/#example-0366e27a">The attr() function can be used with any CSS property</a>, but support for properties other than content is experimental.</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>attr() - Demo</h6>
+                    <p data-height="265" data-theme-id="0" data-slug-hash="oLopVg" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/oLopVg/">oLopVg</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                  </section>
+                  <section class='pitfall'>
+                    <h6>Problem:Generated Content is not showing</h6>
+                    <ul>
+                      <li>Check that you have set the content property; <code>content: '';</code> will do.</li>
+                      <li>Inline replaced elements such as <code><a href="https://bitsofco.de/styling-broken-images/">img*</a>, input, textarea, select</code> <a href="http://codepen.io/danield770/pen/QEOAZm">don't support generated content.</a></li>
+                      <li>You may have to set width and height. eg. for background-images (<a href="http://codepen.io/danield770/pen/KrykZQ">demo</a>)</li>
+                      <li>You may have to set display to inline-block or block (<a href="http://codepen.io/danield770/pen/NAwXOa">demo</a>)</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>Other pseudo elements</h6>
+                    <ul>
+                      <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter#CSS_Content">::first-letter</a></code></li>
+                      <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::selection#example">::selection</a></code></li>
+                      <li><code><a href="http://codepen.io/danield770/pen/jAakEp">::placeholder</a></code></li>
+                    </ul>
+                  </section>
                   </section>
                   <section>
                     <section>
@@ -795,17 +910,23 @@ assert(window.document.foo == 'bar'); //true !!?!
                       <h2>px vs em vs rem</h2>
                     </section>
                     <section>
-                      <h2>px vs em vs rem etc</h2>
+                      <h6>px vs em vs rem</h6>
+                      <ul>
+                        <li><a href="http://zellwk.com/blog/rem-vs-em/">rem vs em</a></li>
+                        <li><a href="https://medium.com/@simurai/sizing-web-components-8f433689736f#.rt5h349ql"></a>Sizing (Web) components</li>
+                        <li><a href="https://www.sitepoint.com/power-em-units-css/">power of em units</a></li>
+                        <li><a href="http://zellwk.com/blog/media-query-units/">media query units</a></li>
+                      </ul>
                     </section>
                   </section>
                   <section>
                     <section>
                       <h2>Viewport Units: vw, vh, vmin, vmax</h2>
                       <ul>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length"></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a></li>
+                        <li><a href="https://www.smashingmagazine.com/2016/05/fluid-typography/">Fluid typography</a></li>
                         <li><a href="https://css-tricks.com/viewport-sized-typography/"></a></li>
-                        <li></li>
+                        <li><a href="http://stackoverflow.com/questions/20456694/grid-of-responsive-squares"></a>Compare with padding-bottom % technique</li>
                       </ul>
                     </section>
                     <section>
@@ -827,7 +948,11 @@ assert(window.document.foo == 'bar'); //true !!?!
                       <h1>Calc</h1>
                     </section>
                     <section>
-                      <h2>more info on calc()</h2>
+                      <h6>Calc</h6>
+                      <ul>
+                        <li><a href="https://css-tricks.com/couple-takes-sticky-footer/">Sticky Footer</a></li>
+                        <li><a href="http://zellwk.com/blog/viewport-based-typography/">Viewport based typography</a></li>
+                      </ul>
                     </section>
                   </section>
                   <section>
@@ -897,6 +1022,11 @@ assert(window.document.foo == 'bar'); //true !!?!
                     <h2>Presentation Url</h2>
                     <a href="https://danielcss.github.io/presentation-1/">https://danielcss.github.io/presentation-1/</a>
                     <p>Thanks to github's free web hosting</p>
+                    <br>
+                    <p>Presentation built using <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a></p>
+                  </section>
+                  <section>
+                    <h1>Thank you!</h1>
                   </section>
             </div>
         </div>
