@@ -58,10 +58,10 @@
                     <li>Anatomy of a CSS Ruleset / CSS rule</li>
                     <li>Simple selectors and Combinators</li>
                     <li>Pseudo Classes</li>
-                    <!-- <li>Pseudo Elements</li>
+                    <li>Pseudo Elements</li>
                     <li>Specificity</li>
                     <li>The Cascade</li>
-                    <li>Advanced Selectors - Quantity Queries</li> -->
+                    <li>Advanced Selectors - Quantity Queries</li>
                   </ul>
                 </section>
                 <section  data-transition="convex">
@@ -534,6 +534,475 @@
                       <p data-height="265" data-theme-id="0" data-slug-hash="RRLmxx" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/RRLmxx/">RRLmxx</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                       <p><strong>The is no <code>:nth-class()</code> selector!!!</strong></p>
                     </section>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Pseudo Elements</h2>
+                    </section>
+                    <section>
+                    <h6>Pseudo elements</h6>
+                    <q>Just like pseudo-classes, pseudo-elements are added to selectors but instead of describing a special state, they allow you to style certain parts of a document.
+                      For example, the <code>::first-line</code> pseudo-element targets only  the first line of an element specified by the selector.(MDN)</q>
+                  </section>
+                  <section>
+                    <h6>Pseudo elements</h6>
+                    <q>When their computed content value is not none, these pseudo-elements generate boxes as if they were immediate children
+                      of their originating element, and can be styled exactly like any normal document-sourced element in the document tree.
+                      They inherit any inheritable properties from their originating element;
+                      non-inheritable properties take their initial values as usual. (w3c spec)</q>
+                  </section>
+                  <section>
+                    <h6>Pseudo elements - syntax</h6>
+                    selector::pseudo-element {
+                    property: value;
+                  }
+                  </section>
+                  <section>
+                    <h6>Combining pseudo classes with pseudo elements</h6>
+                    <p data-height="265" data-theme-id="0" data-slug-hash="kXoNqy" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/kXoNqy/">kXoNqy</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                  </section>
+                  <section>
+                    <h6>Generated Content - <code>:before</code> and <code>:after</code></h6>
+                    <ul>
+                      <li><a href="https://www.w3.org/TR/css-pseudo-4/#generated-content">w3c spec - generated content</a></li>
+                      <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/Pseudo-elements">MDN - pseudo elements</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">MDN - pseudo elements</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after">MDN - :before</a></li>
+                      <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/Pseudo-elements">MDN - :after</a></li>
+                      <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/content">MDN - the content property</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>Generated Content - <code>:before</code> and <code>:after</code></h6>
+                    <ul>
+                      <li>The CSS ::before and ::after pseudo-elements match a virtual first/last child
+                         of the selected element.</li>
+                      <li>They are typically used to add cosmetic
+                      content to an element by using the content CSS property.</li>
+                      <li>These pseudo elements' display property have an initial value of inline by default.</li>
+                    </ul>
+                  </section>
+                  <!-- <section>
+                    <h6>Generated content - example</h6>
+
+                  </section> -->
+                  <section class="pitfall">
+                    <h6>Generated content - Accessibility issues</h6>
+                    <p>Genrated content is not part of the DOM, this means:
+                    <ul>
+                      <li>The content will not be accessible to (some?) screen readers</li>
+                      <li>The content will not be selectable (so no copy/paste)</li>
+                      <li>Bots won't see the content for SEO purposes</li>
+                      <li>Can't be set by javascript. Although you can <a href="http://stackoverflow.com/a/26650485/703717">retrieve </a>the contents with <code>window.getComputedStyle</code></li>
+                    </ul>
+                    <small>see <a href="http://www.karlgroves.com/2013/08/26/css-generated-content-is-not-content/">CSS generated content is not content</a></small>
+                  </section>
+                  <section>
+                    <h6>The content property</h6>
+                    <q>The content CSS property is used with the ::before and ::after pseudo-elements to generate content in an element.
+                       Objects inserted using the content property are anonymous replaced elements.
+                    </q>
+                    <p>Formal Syntax</p>
+                    <code>normal | none | [ &lt;string&gt; | &lt;uri&gt; | &lt;counter&gt; | attr() | open-quote | close-quote | no-open-quote | no-close-quote ]+</code>
+                  </section>
+                  <section>
+                    <h6>CSS Counters</h6>
+                    <ul>
+                      <li><a href="https://drafts.csswg.org/css-lists-3/#auto-numbering">w3c spec - counters</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS counters</a></li>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment">counter increment</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>CSS Counters Demo</h6>
+                    <a href="http://stackoverflow.com/questions/26841805/can-you-count-a-particular-class-with-css">Can you count a particular class with CSS?</a>
+                  </section>
+                  <section>
+                    <h6>The <a href="https://developer.mozilla.org/en/docs/Web/CSS/attr"><code>attr()</code> CSS function</a></h6>
+                    <ul>
+                      <li>The attr() CSS function is used to retrieve the value of an attribute of the selected element and
+                         use it in the style sheet. It can be used on pseudo-elements too and, in this case,
+                         the value of the attribute on the pseudo-element's originated element is returned.</li>
+                      <li><a href="https://www.w3.org/TR/css3-values/#example-0366e27a">The attr() function can be used with any CSS property</a>, but support for properties other than content is experimental.</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>attr() - Demo</h6>
+                    <p data-height="265" data-theme-id="0" data-slug-hash="oLopVg" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/oLopVg/">oLopVg</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                  </section>
+                  <section class='pitfall'>
+                    <h6>Problem:Generated Content is not showing</h6>
+                    <ul>
+                      <li>Check that you have set the content property; <code>content: '';</code> will do.</li>
+                      <li>Inline replaced elements such as <code><a href="https://bitsofco.de/styling-broken-images/">img*</a>, input, textarea, select</code> <a href="http://codepen.io/danield770/pen/QEOAZm">don't support generated content.</a></li>
+                      <li>You may have to set width and height. eg. for background-images (<a href="http://codepen.io/danield770/pen/KrykZQ">demo</a>)</li>
+                      <li>You may have to set display to inline-block or block (<a href="http://codepen.io/danield770/pen/NAwXOa">demo</a>)</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h6>Other pseudo elements</h6>
+                    <ul>
+                      <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter#CSS_Content">::first-letter</a></code></li>
+                      <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::selection#example">::selection</a></code></li>
+                      <li><code><a href="http://codepen.io/danield770/pen/jAakEp">::placeholder</a></code></li>
+                    </ul>
+                  </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Specificity</h2>
+                      <h6>
+                        <strike>Possibly</strike> the worst part of CSS.
+                       </h6>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#1. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>For anyone who’s a little rusty on how the cascade works, for normal CSS rules, the cascade takes three things into consideration: source order, specificity, and importance.</p>
+                        <p>Source order makes a lot of sense. It’s natural and intuitive to think that if rule Y comes after rule X, and both rules apply to the same element, rule Y’s declarations should “win”.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#2. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>Importance also makes a lot of sense. There are always going to be cases where you need to override something, and it’s good to have the option to do so. Importance is also the only way to override inline styles, so it’s actually quite necessary in some cases.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#3. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>But I think specificity is different.</p>
+                        <p>Specificity isn’t intuitive, and—especially for new developers—the results can often seem like a <em>gotcha</em> rather than the intended behavior. I’m also not sure there’s an equivalent in other systems or languages.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#4. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>For example, what if specificity were a thing in JavaScript. Imagine how much more unpredictable your code would be if the following test passed.</p>
+<pre class="highlight"><code>window.document.foo = 'bar';
+document.foo = 'qux';
+
+assert(window.document.foo == 'bar'); //true !!?!
+</code></pre>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://philipwalton.com/articles/do-we-actually-need-specificity-in-css/">#5. Do We Actually Need Specificity In CSS? (Philip Walton)</a></h6>
+                      <blockquote>
+                        <p>It would be crazy and completely unmanageable if the <code>window.document.foo = 'bar'</code> assignment above (which comes first) trumped the <code>document.foo = 'qux'</code> assignment (which comes second) just because the reference was “more specific”. Yet that’s essentially what happens in CSS.</p>
+                      </blockquote>
+                    </section>
+                    <section>
+                      <h6><a href="https://css-tricks.com/specifics-on-css-specificity/#article-header-id-0">Calculating CSS Specificity Value</a></h6>
+                      <p><img src="https://css-tricks.com/wp-content/csstricks-uploads/specificity-calculationbase.png" width="570" height="346" alt="" title=""></p>
+                      <small>
+                        <ul>
+                          <li>If the element has inline styling, that automatically wins (1,0,0,0 points)</li>
+                          <li>For each ID value, apply 0,1,0,0 points</li>
+                          <li>For each class value (or pseudo-class or attribute selector), apply 0,0,1,0 points</li>
+                          <li>For each type/pseudo element reference, apply 0,0,0,1 point</li>
+                        </ul>
+                      </small>
+                      <p><a href="https://css-tricks.com/specifics-on-css-specificity/">Specifics on CSS Specificity</a></p>
+                    </section>
+                    <section>
+                      <h6>Specificity Calculator</h6>
+                      <p><a href="https://specificity.keegan.st/">Specificity Calculator</a></p>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>The Cascade</h2>
+                      <ul>
+                        <li><a href="https://www.w3.org/TR/css3-cascade/">w3c spec</a></li>
+                        <li><a href="https://www.w3.org/TR/CSS2/cascade.html">w3c CSS2 spec</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade">MDN</a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>The Cascade</h6>
+                      <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="cascade">cascade</dfn> is an algorithm which takes a unordered list of <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#declared-value" id="ref-for-declared-value-6">declared values</a> for a given property on a given element,
+	sorts them by their declaration’s precedence,
+	and outputs a single <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#cascaded-value" id="ref-for-cascaded-value-8">cascaded value</a>.</p>
+                    </section>
+                    <section>
+                      <h6>Cascading Origins</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="EybKzN" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/EybKzN/">EybKzN</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                      <div>Questions: (NB: No CSS rules have been written)</div>
+                      <ul>
+                        <li>Why is a <code>div</code> a block element? The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">initial (default) value</a> for the <code>display</code> property is <code>inline</code>!?</li>
+                        <li>How does the browser know to display the french quotes - just by adding the lang attribute?</li>
+                        <li>How does the <code>&lt;br&gt;</code> tag force a new line?</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Answer: The User Agent</h6>
+                      <p>Conforming user agents must apply a default style sheet</p>
+                      <ul>
+                        <li><a href="https://www.w3.org/TR/css3-cascade/#cascading-origins">User Agent definition - spec</a></li>
+                        <li><a href="https://www.w3.org/TR/CSS2/sample.html">Default style sheet for HTML 4</a></li>
+                        <li><a href="https://www.w3.org/TR/html5/rendering.html#quotes">Quotes</a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Cascading Origins (intentionally simplified:)</h6>
+                      <ul>
+                        <li>Author</li>
+                        <li>User</li>
+                        <li>User agent (UA)</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>The Cascade Algorithm</h6>
+                      <p>The cascade sorts declarations according to the following criteria, in descending order of priority: (intentionally simplified:)</p>
+                      <ul>
+                        <li>Origin and Importance</li>
+                        <li>Specificity</li>
+                        <li>Order of Appearance</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>The Cascade</h6>
+                      <ul>
+                        <li>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="output-of-the-cascade">output of the cascade</dfn> is a (potentially empty) sorted list of <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#declared-value" id="ref-for-declared-value-7">declared values</a> for each property on each element.
+                      </li>
+                        <li>
+                          When the <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#cascade" id="ref-for-cascade-6">cascade</a> does not result in a value,
+	the <a data-link-type="dfn" href="#specified-value" id="ref-for-specified-value-10">specified value</a> must be found some other way. <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#inherited-property" id="ref-for-inherited-property-1">Inherited properties</a> draw their defaults from their parent element through <a data-link-type="dfn" href="#inheritance" id="ref-for-inheritance-4">inheritance</a>;
+	all other properties take their <a data-link-type="dfn" href="https://www.w3.org/TR/css3-cascade/#initial-value" id="ref-for-initial-value-3">initial value</a>.
+	Authors can explicitly request inheritance or initialization
+	via the <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css3-cascade/#valdef-all-inherit" id="ref-for-valdef-all-inherit-2">inherit</a> and <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css3-cascade/#valdef-all-initial" id="ref-for-valdef-all-initial-2">initial</a> keywords.
+                        </li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h6>Cascade Demo</h6>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="jAaraa" data-default-tab="html,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/jAaraa/">jAaraa</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Advanced Selectors; Quantity Queries</h2>
+                      <ul>
+                        <li><a href="http://alistapart.com/article/quantity-queries-for-css">Quantity Queries for CSS · An A List Apart Article</a></li>
+                        <li><a href="http://quantityqueries.com/">Quantity Queries Online Tool</a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h2>Quantity Queries</h2>
+                      <q>...make CSS quantity-aware using specially formed selectors.</q>
+                    </section>
+                    <section>
+                      <h6>Question:</h6>
+                      <p>Write a CSS rule to style an element with a blue background only if it's parent has one child.<br>
+                        If it's parent has more than one child - give the children a green background</p>
+                    </section>
+                    <section>
+                      <h6>Answer:</h6>
+<pre class="highlight"><code>
+* {
+  background-color: green;
+}
+:first-child:last-child {
+  background-color: blue;
+}
+</code></pre>
+
+                      <p>OR</p>
+                      <p>The truth is that CSS has a built-in selector for this <code>:only-child</code></p>
+<pre class="highlight"><code>
+* {
+  background-color: green;
+}
+:only-child {
+  background-color: blue;
+}
+</code></pre>
+                    </section>
+                    <section>
+                      <h6>Taking this idea further for n elements:</h6>
+                      <p>Style the children when the parent has <strong>At least</strong> 5 elements</p>
+<pre class="highlight"><code>
+:nth-last-child(n+5), :nth-last-child(n+5) ~ * {
+  /* styles go here */
+}
+</code></pre>
+                      <p>Style the children when the parent has <strong>At most</strong> 5 elements</p>
+<pre class="highlight"><code>
+:nth-last-child(-n+5):first-child, :nth-last-child(-n+5):first-child ~ * {
+  /* styles go here */
+}
+</code></pre>
+                    </section>
+                    <section>
+                      <h6>Quantity Queries example use case</h6>
+                      <p>Question: how to alter the display of items in a horizontal navigation menu when there are too many to suit the initial layout mode.
+                        <br>Switch from a <code>display: table-cell</code> to a <code>display: inline-block</code> layout when the number of items in
+                        the menu becomes “more than or equal to 6.”</p>
+                      <p data-height="265" data-theme-id="0" data-slug-hash="XKzprR" data-default-tab="css,result" data-user="danield770" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danield770/pen/XKzprR/">Content Aware Navigation</a> by Daniel David (<a href="http://codepen.io/danield770">@danield770</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    </section>
+                  </section>
+                  <section>
+                    <h4>Selectors - General notes</h4>
+                    <ul>
+                      <li>Type and attribute names aren't case sensitive. Attribute values (like classes) are case sensitive</li>
+                      <li>Selectors traverse the DOM downward, so no parent or previous sibling selector (for now)</li>
+                      <li>Think of pseudo classes like filters on the matched element which limit the match to a  given state</li>
+                      <li>Pseudo classes may be chained to add additional filters (order doesn't matter)</li>
+                      <li>Selector syntax :pseudo-class::pseudo-element eg. <code>.myClass:hover:before { ... }</code> (order matters!!)</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>Selectors - General notes</h4>
+                      <li>Selectors are parsed from right to left for efficiency reasons.<br>
+                        <small>(See StackOverflow:
+                          <a href="http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left?rq=1">
+                          Why do browsers match CSS selectors from right to left?</a> ;<br>
+                          <a href="http://stackoverflow.com/questions/3851635/css-combinator-precedence/3851754#3851754">
+                          CSS combinator precedence?</a> )
+                        </small>
+                        <p>If you were to read selectors in plain English, you would read them from right to left too.
+                          So, the selector:</p>
+<pre class="highlight"><code>a > b ~ c d</code></pre>
+                        <p>would mean:<br><br>
+
+                        Select any <code>d</code> element<br>
+                        that is a descendant of a <code>c</code> element<br>
+                        that is a sibling of, and comes after, a <code>b</code> element<br>
+                        that is a direct child of an <code>a</code> element.</p>
+                        <!-- that is a child (direct descendant) of an <code>a</code> element.</p> -->
+                  </section>
+                  <section>
+                    <h4><a href="http://cssguidelin.es/#css-selectors">Best practices: (cssguidelin.es/#css-selectors)</a></h4>
+                    <ul>
+                      <li><strong>Select what you want explicitly</strong>, rather than relying on circumstance or
+                    coincidence.</li>
+                      <li><strong>Write selectors for reusability</strong>, so that you can work more efficiently and
+                    reduce waste and repetition.</li>
+                      <li><strong>Do not nest selectors unnecessarily</strong>, because this will increase
+                    specificity and affect where else you can use your styles.</li>
+                      <li><strong>Do not qualify selectors unnecessarily</strong>, as this will impact the number of
+                    different elements you can apply styles to.</li>
+                      <li><strong>Keep selectors as short as possible</strong>, in order to keep specificity down and
+                    performance up.</li>
+                    </ul>
+                    <!-- <ul>
+                      <li>Keep selectors as succint as possible; Single class selectors are preferred when possible</li>
+                      <li>Don't use #ID selectors - they aren't necessary</li>
+                      <li>Don't use <code>!important</code> passively - ie. to solve specificity issues</li>
+                      <li>If extra specificity is absolutely needed - repeat the class name <code>.myClass.myClass { ... }</code></li>
+                    </ul> -->
+                  </section>
+                  <section>
+                      <h1>CSS Units</h1>
+                      <a href="https://www.w3.org/TR/css-values/">CSS Values and Units Module Level 3</a>
+                  </section>
+                  <section data-transition="convex">
+                    <h2>CSS Units - Topics</h1>
+                    <ul>
+                      <li>px vs em vs rem</li>
+                      <li>Viewport Units: vw, vh, vmin, vmax</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>px vs em vs rem</h2>
+                    </section>
+                    <section>
+                      <h6>px vs em vs rem</h6>
+                      <ul>
+                        <li><a href="http://zellwk.com/blog/rem-vs-em/">rem vs em</a></li>
+                        <li><a href="https://medium.com/@simurai/sizing-web-components-8f433689736f#.rt5h349ql"></a>Sizing (Web) components</li>
+                        <li><a href="https://www.sitepoint.com/power-em-units-css/">power of em units</a></li>
+                        <li><a href="http://zellwk.com/blog/media-query-units/">media query units</a></li>
+                      </ul>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>Viewport Units: vw, vh, vmin, vmax</h2>
+                      <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a></li>
+                        <li><a href="https://www.smashingmagazine.com/2016/05/fluid-typography/">Fluid typography</a></li>
+                        <li><a href="https://css-tricks.com/viewport-sized-typography/"></a></li>
+                        <li><a href="http://stackoverflow.com/questions/20456694/grid-of-responsive-squares"></a>Compare with padding-bottom % technique</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h2>Viewport Units: vw, vh, vmin, vmax</h2>
+                      <dl>
+                       <dt id="vh"><code>vh</code></dt>
+                       <dd>1/100th of the height of the viewport.</dd>
+                       <dt id="vw"><code>vw</code></dt>
+                       <dd>1/100th of the width of the viewport.</dd>
+                       <dt id="vmin"><code>vmin</code></dt>
+                       <dd>1/100th of the minimum value between the height and the width of the viewport.</dd>
+                       <dt id="vmax"><code>vmax</code></dt>
+                       <dd>1/100th of the maximum value between the height and the width of the viewport.</dd>
+                      </dl>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h1>Calc</h1>
+                    </section>
+                    <section>
+                      <h6>Calc</h6>
+                      <ul>
+                        <li><a href="https://css-tricks.com/couple-takes-sticky-footer/">Sticky Footer</a></li>
+                        <li><a href="http://zellwk.com/blog/viewport-based-typography/">Viewport based typography</a></li>
+                      </ul>
+                    </section>
+                  </section>
+                  <section>
+                    <h1>The Background shorthand property</h1>
+                  </section>
+                  <section data-transition="convex">
+                    <h2>The Background shorthand property</h1>
+                    <ul>
+                      <li>background-image</li>
+                      <li>background-position</li>
+                      <li>background-size</li>
+                      <li>background-repeat</li>
+                      <li>background-attachment</li>
+                      <li>background-clip</li>
+                      <li>background-color</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-image</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-position</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-size</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-repeat</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-attachment</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-clip</h2>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <h2>background-color</h2>
                     </section>
                   </section>
                   <section>
