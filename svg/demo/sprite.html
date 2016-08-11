@@ -1,0 +1,2392 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>
+		@charset "UTF-8";
+		body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}
+
+		header{display:block;padding:3em 3em 2em 3em;background-color:#fff}
+		header p{margin:2em 0 0 0}
+		section{border-top:1px solid #eee;padding:2em 3em 0 3em}
+		ul{margin:0;padding:0;display: flex; flex-wrap: wrap; width: 1200px; margin-left: auto; margin-right: auto;list-style:none;}
+		li{flex: 1 1 0; padding: 10px 20px;position:relative;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}
+		/*.icon{display:inline;display:inline-block}*/
+		h1{margin-top:0}
+
+		footer{display:block;margin:0;padding:0 3em 3em 3em}
+		footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}
+
+			li svg {fill: #666666; margin-left: auto; margin-right: auto; width:1em; height: 1em; display:block; margin-top:10px; font-size: 3em;}
+			li:hover svg { fill: tomato; }
+			li:nth-child(2n):hover svg { fill: white; }
+			li:nth-child(2n):hover { background: tomato; }
+			li:nth-child(2n):hover h2 { color: white; }
+			h2 {margin-left: auto; margin-right: auto; text-align:center; display:block;font-size:16px; margin-top: 16px;}
+		</style>
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+
+
+<!--
+
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+
+				<li title="000009-folder-blank-open">
+					<div class="icon-box">
+
+						<!-- 000009-folder-blank-open -->
+						<svg class="svg-000009-folder-blank-open-dims">
+							<use xlink:href="futurama4.svg#000009-folder-blank-open"></use>
+						</svg>
+
+					</div>
+					<h2>000009-folder-blank-open</h2>
+				</li>
+				<li title="000016-two-folders">
+					<div class="icon-box">
+
+						<!-- 000016-two-folders -->
+						<svg class="svg-000016-two-folders-dims">
+							<use xlink:href="futurama4.svg#000016-two-folders"></use>
+						</svg>
+
+					</div>
+					<h2>000016-two-folders</h2>
+				</li>
+				<li title="000017-user">
+					<div class="icon-box">
+
+						<!-- 000017-user -->
+						<svg class="svg-000017-user-dims">
+							<use xlink:href="futurama4.svg#000017-user"></use>
+						</svg>
+
+					</div>
+					<h2>000017-user</h2>
+				</li>
+				<li title="000019-user-tie">
+					<div class="icon-box">
+
+						<!-- 000019-user-tie -->
+						<svg class="svg-000019-user-tie-dims">
+							<use xlink:href="futurama4.svg#000019-user-tie"></use>
+						</svg>
+
+					</div>
+					<h2>000019-user-tie</h2>
+				</li>
+				<li title="000033-document-text">
+					<div class="icon-box">
+
+						<!-- 000033-document-text -->
+						<svg class="svg-000033-document-text-dims">
+							<use xlink:href="futurama4.svg#000033-document-text"></use>
+						</svg>
+
+					</div>
+					<h2>000033-document-text</h2>
+				</li>
+				<li title="000062-two-documents-text">
+					<div class="icon-box">
+
+						<!-- 000062-two-documents-text -->
+						<svg class="svg-000062-two-documents-text-dims">
+							<use xlink:href="futurama4.svg#000062-two-documents-text"></use>
+						</svg>
+
+					</div>
+					<h2>000062-two-documents-text</h2>
+				</li>
+				<li title="000068-printer-document-text">
+					<div class="icon-box">
+
+						<!-- 000068-printer-document-text -->
+						<svg class="svg-000068-printer-document-text-dims">
+							<use xlink:href="futurama4.svg#000068-printer-document-text"></use>
+						</svg>
+
+					</div>
+					<h2>000068-printer-document-text</h2>
+				</li>
+				<li title="000080-envelope-closed-02">
+					<div class="icon-box">
+
+						<!-- 000080-envelope-closed-02 -->
+						<svg class="svg-000080-envelope-closed-02-dims">
+							<use xlink:href="futurama4.svg#000080-envelope-closed-02"></use>
+						</svg>
+
+					</div>
+					<h2>000080-envelope-closed-02</h2>
+				</li>
+				<li title="000081-envelope-open-empty">
+					<div class="icon-box">
+
+						<!-- 000081-envelope-open-empty -->
+						<svg class="svg-000081-envelope-open-empty-dims">
+							<use xlink:href="futurama4.svg#000081-envelope-open-empty"></use>
+						</svg>
+
+					</div>
+					<h2>000081-envelope-open-empty</h2>
+				</li>
+				<li title="000092-battery-plus-minus">
+					<div class="icon-box">
+
+						<!-- 000092-battery-plus-minus -->
+						<svg class="svg-000092-battery-plus-minus-dims">
+							<use xlink:href="futurama4.svg#000092-battery-plus-minus"></use>
+						</svg>
+
+					</div>
+					<h2>000092-battery-plus-minus</h2>
+				</li>
+				<li title="000095-circle-diagonal-stripe">
+					<div class="icon-box">
+
+						<!-- 000095-circle-diagonal-stripe -->
+						<svg class="svg-000095-circle-diagonal-stripe-dims">
+							<use xlink:href="futurama4.svg#000095-circle-diagonal-stripe"></use>
+						</svg>
+
+					</div>
+					<h2>000095-circle-diagonal-stripe</h2>
+				</li>
+				<li title="000098-circle-exclamation-mark">
+					<div class="icon-box">
+
+						<!-- 000098-circle-exclamation-mark -->
+						<svg class="svg-000098-circle-exclamation-mark-dims">
+							<use xlink:href="futurama4.svg#000098-circle-exclamation-mark"></use>
+						</svg>
+
+					</div>
+					<h2>000098-circle-exclamation-mark</h2>
+				</li>
+				<li title="000099-circle-minus">
+					<div class="icon-box">
+
+						<!-- 000099-circle-minus -->
+						<svg class="svg-000099-circle-minus-dims">
+							<use xlink:href="futurama4.svg#000099-circle-minus"></use>
+						</svg>
+
+					</div>
+					<h2>000099-circle-minus</h2>
+				</li>
+				<li title="000100-circle-plus">
+					<div class="icon-box">
+
+						<!-- 000100-circle-plus -->
+						<svg class="svg-000100-circle-plus-dims">
+							<use xlink:href="futurama4.svg#000100-circle-plus"></use>
+						</svg>
+
+					</div>
+					<h2>000100-circle-plus</h2>
+				</li>
+				<li title="000101-circle-info-02">
+					<div class="icon-box">
+
+						<!-- 000101-circle-info-02 -->
+						<svg class="svg-000101-circle-info-02-dims">
+							<use xlink:href="futurama4.svg#000101-circle-info-02"></use>
+						</svg>
+
+					</div>
+					<h2>000101-circle-info-02</h2>
+				</li>
+				<li title="000102-circle-exclamation-mark-02">
+					<div class="icon-box">
+
+						<!-- 000102-circle-exclamation-mark-02 -->
+						<svg class="svg-000102-circle-exclamation-mark-02-dims">
+							<use xlink:href="futurama4.svg#000102-circle-exclamation-mark-02"></use>
+						</svg>
+
+					</div>
+					<h2>000102-circle-exclamation-mark-02</h2>
+				</li>
+				<li title="000103-minus">
+					<div class="icon-box">
+
+						<!-- 000103-minus -->
+						<svg class="svg-000103-minus-dims">
+							<use xlink:href="futurama4.svg#000103-minus"></use>
+						</svg>
+
+					</div>
+					<h2>000103-minus</h2>
+				</li>
+				<li title="000104-plus">
+					<div class="icon-box">
+
+						<!-- 000104-plus -->
+						<svg class="svg-000104-plus-dims">
+							<use xlink:href="futurama4.svg#000104-plus"></use>
+						</svg>
+
+					</div>
+					<h2>000104-plus</h2>
+				</li>
+				<li title="000105-cross-mark">
+					<div class="icon-box">
+
+						<!-- 000105-cross-mark -->
+						<svg class="svg-000105-cross-mark-dims">
+							<use xlink:href="futurama4.svg#000105-cross-mark"></use>
+						</svg>
+
+					</div>
+					<h2>000105-cross-mark</h2>
+				</li>
+				<li title="000106-circle-cross-mark">
+					<div class="icon-box">
+
+						<!-- 000106-circle-cross-mark -->
+						<svg class="svg-000106-circle-cross-mark-dims">
+							<use xlink:href="futurama4.svg#000106-circle-cross-mark"></use>
+						</svg>
+
+					</div>
+					<h2>000106-circle-cross-mark</h2>
+				</li>
+				<li title="000116-circle-check-mark-02">
+					<div class="icon-box">
+
+						<!-- 000116-circle-check-mark-02 -->
+						<svg class="svg-000116-circle-check-mark-02-dims">
+							<use xlink:href="futurama4.svg#000116-circle-check-mark-02"></use>
+						</svg>
+
+					</div>
+					<h2>000116-circle-check-mark-02</h2>
+				</li>
+				<li title="000117-circle-minus-02">
+					<div class="icon-box">
+
+						<!-- 000117-circle-minus-02 -->
+						<svg class="svg-000117-circle-minus-02-dims">
+							<use xlink:href="futurama4.svg#000117-circle-minus-02"></use>
+						</svg>
+
+					</div>
+					<h2>000117-circle-minus-02</h2>
+				</li>
+				<li title="000118-circle-plus-02">
+					<div class="icon-box">
+
+						<!-- 000118-circle-plus-02 -->
+						<svg class="svg-000118-circle-plus-02-dims">
+							<use xlink:href="futurama4.svg#000118-circle-plus-02"></use>
+						</svg>
+
+					</div>
+					<h2>000118-circle-plus-02</h2>
+				</li>
+				<li title="000119-circle-cross-mark-02">
+					<div class="icon-box">
+
+						<!-- 000119-circle-cross-mark-02 -->
+						<svg class="svg-000119-circle-cross-mark-02-dims">
+							<use xlink:href="futurama4.svg#000119-circle-cross-mark-02"></use>
+						</svg>
+
+					</div>
+					<h2>000119-circle-cross-mark-02</h2>
+				</li>
+				<li title="000120-circle-arrow-left">
+					<div class="icon-box">
+
+						<!-- 000120-circle-arrow-left -->
+						<svg class="svg-000120-circle-arrow-left-dims">
+							<use xlink:href="futurama4.svg#000120-circle-arrow-left"></use>
+						</svg>
+
+					</div>
+					<h2>000120-circle-arrow-left</h2>
+				</li>
+				<li title="000121-circle-arrow-right">
+					<div class="icon-box">
+
+						<!-- 000121-circle-arrow-right -->
+						<svg class="svg-000121-circle-arrow-right-dims">
+							<use xlink:href="futurama4.svg#000121-circle-arrow-right"></use>
+						</svg>
+
+					</div>
+					<h2>000121-circle-arrow-right</h2>
+				</li>
+				<li title="000122-circle-arrow-down">
+					<div class="icon-box">
+
+						<!-- 000122-circle-arrow-down -->
+						<svg class="svg-000122-circle-arrow-down-dims">
+							<use xlink:href="futurama4.svg#000122-circle-arrow-down"></use>
+						</svg>
+
+					</div>
+					<h2>000122-circle-arrow-down</h2>
+				</li>
+				<li title="000123-circle-arrow-up">
+					<div class="icon-box">
+
+						<!-- 000123-circle-arrow-up -->
+						<svg class="svg-000123-circle-arrow-up-dims">
+							<use xlink:href="futurama4.svg#000123-circle-arrow-up"></use>
+						</svg>
+
+					</div>
+					<h2>000123-circle-arrow-up</h2>
+				</li>
+				<li title="000124-circle-arrow-left-02">
+					<div class="icon-box">
+
+						<!-- 000124-circle-arrow-left-02 -->
+						<svg class="svg-000124-circle-arrow-left-02-dims">
+							<use xlink:href="futurama4.svg#000124-circle-arrow-left-02"></use>
+						</svg>
+
+					</div>
+					<h2>000124-circle-arrow-left-02</h2>
+				</li>
+				<li title="000125-circle-arrow-up-02">
+					<div class="icon-box">
+
+						<!-- 000125-circle-arrow-up-02 -->
+						<svg class="svg-000125-circle-arrow-up-02-dims">
+							<use xlink:href="futurama4.svg#000125-circle-arrow-up-02"></use>
+						</svg>
+
+					</div>
+					<h2>000125-circle-arrow-up-02</h2>
+				</li>
+				<li title="000126-circle-arrow-down-02">
+					<div class="icon-box">
+
+						<!-- 000126-circle-arrow-down-02 -->
+						<svg class="svg-000126-circle-arrow-down-02-dims">
+							<use xlink:href="futurama4.svg#000126-circle-arrow-down-02"></use>
+						</svg>
+
+					</div>
+					<h2>000126-circle-arrow-down-02</h2>
+				</li>
+				<li title="000127-circle-arrow-right-02">
+					<div class="icon-box">
+
+						<!-- 000127-circle-arrow-right-02 -->
+						<svg class="svg-000127-circle-arrow-right-02-dims">
+							<use xlink:href="futurama4.svg#000127-circle-arrow-right-02"></use>
+						</svg>
+
+					</div>
+					<h2>000127-circle-arrow-right-02</h2>
+				</li>
+				<li title="000128-square-arrow-right">
+					<div class="icon-box">
+
+						<!-- 000128-square-arrow-right -->
+						<svg class="svg-000128-square-arrow-right-dims">
+							<use xlink:href="futurama4.svg#000128-square-arrow-right"></use>
+						</svg>
+
+					</div>
+					<h2>000128-square-arrow-right</h2>
+				</li>
+				<li title="000129-square-arrow-up">
+					<div class="icon-box">
+
+						<!-- 000129-square-arrow-up -->
+						<svg class="svg-000129-square-arrow-up-dims">
+							<use xlink:href="futurama4.svg#000129-square-arrow-up"></use>
+						</svg>
+
+					</div>
+					<h2>000129-square-arrow-up</h2>
+				</li>
+				<li title="000130-square-arrow-down">
+					<div class="icon-box">
+
+						<!-- 000130-square-arrow-down -->
+						<svg class="svg-000130-square-arrow-down-dims">
+							<use xlink:href="futurama4.svg#000130-square-arrow-down"></use>
+						</svg>
+
+					</div>
+					<h2>000130-square-arrow-down</h2>
+				</li>
+				<li title="000131-square-arrow-left">
+					<div class="icon-box">
+
+						<!-- 000131-square-arrow-left -->
+						<svg class="svg-000131-square-arrow-left-dims">
+							<use xlink:href="futurama4.svg#000131-square-arrow-left"></use>
+						</svg>
+
+					</div>
+					<h2>000131-square-arrow-left</h2>
+				</li>
+				<li title="000142-house">
+					<div class="icon-box">
+
+						<!-- 000142-house -->
+						<svg class="svg-000142-house-dims">
+							<use xlink:href="futurama4.svg#000142-house"></use>
+						</svg>
+
+					</div>
+					<h2>000142-house</h2>
+				</li>
+				<li title="000150-pencil">
+					<div class="icon-box">
+
+						<!-- 000150-pencil -->
+						<svg class="svg-000150-pencil-dims">
+							<use xlink:href="futurama4.svg#000150-pencil"></use>
+						</svg>
+
+					</div>
+					<h2>000150-pencil</h2>
+				</li>
+				<li title="000153-briefcase-02">
+					<div class="icon-box">
+
+						<!-- 000153-briefcase-02 -->
+						<svg class="svg-000153-briefcase-02-dims">
+							<use xlink:href="futurama4.svg#000153-briefcase-02"></use>
+						</svg>
+
+					</div>
+					<h2>000153-briefcase-02</h2>
+				</li>
+				<li title="000157-scissors">
+					<div class="icon-box">
+
+						<!-- 000157-scissors -->
+						<svg class="svg-000157-scissors-dims">
+							<use xlink:href="futurama4.svg#000157-scissors"></use>
+						</svg>
+
+					</div>
+					<h2>000157-scissors</h2>
+				</li>
+				<li title="000159-credit-card">
+					<div class="icon-box">
+
+						<!-- 000159-credit-card -->
+						<svg class="svg-000159-credit-card-dims">
+							<use xlink:href="futurama4.svg#000159-credit-card"></use>
+						</svg>
+
+					</div>
+					<h2>000159-credit-card</h2>
+				</li>
+				<li title="000162-clip">
+					<div class="icon-box">
+
+						<!-- 000162-clip -->
+						<svg class="svg-000162-clip-dims">
+							<use xlink:href="futurama4.svg#000162-clip"></use>
+						</svg>
+
+					</div>
+					<h2>000162-clip</h2>
+				</li>
+				<li title="000173-wrench">
+					<div class="icon-box">
+
+						<!-- 000173-wrench -->
+						<svg class="svg-000173-wrench-dims">
+							<use xlink:href="futurama4.svg#000173-wrench"></use>
+						</svg>
+
+					</div>
+					<h2>000173-wrench</h2>
+				</li>
+				<li title="000174-clock">
+					<div class="icon-box">
+
+						<!-- 000174-clock -->
+						<svg class="svg-000174-clock-dims">
+							<use xlink:href="futurama4.svg#000174-clock"></use>
+						</svg>
+
+					</div>
+					<h2>000174-clock</h2>
+				</li>
+				<li title="000177-calendar">
+					<div class="icon-box">
+
+						<!-- 000177-calendar -->
+						<svg class="svg-000177-calendar-dims">
+							<use xlink:href="futurama4.svg#000177-calendar"></use>
+						</svg>
+
+					</div>
+					<h2>000177-calendar</h2>
+				</li>
+				<li title="000184-cd">
+					<div class="icon-box">
+
+						<!-- 000184-cd -->
+						<svg class="svg-000184-cd-dims">
+							<use xlink:href="futurama4.svg#000184-cd"></use>
+						</svg>
+
+					</div>
+					<h2>000184-cd</h2>
+				</li>
+				<li title="000187-monitor">
+					<div class="icon-box">
+
+						<!-- 000187-monitor -->
+						<svg class="svg-000187-monitor-dims">
+							<use xlink:href="futurama4.svg#000187-monitor"></use>
+						</svg>
+
+					</div>
+					<h2>000187-monitor</h2>
+				</li>
+				<li title="000188-tv">
+					<div class="icon-box">
+
+						<!-- 000188-tv -->
+						<svg class="svg-000188-tv-dims">
+							<use xlink:href="futurama4.svg#000188-tv"></use>
+						</svg>
+
+					</div>
+					<h2>000188-tv</h2>
+				</li>
+				<li title="000195-floppy-disk">
+					<div class="icon-box">
+
+						<!-- 000195-floppy-disk -->
+						<svg class="svg-000195-floppy-disk-dims">
+							<use xlink:href="futurama4.svg#000195-floppy-disk"></use>
+						</svg>
+
+					</div>
+					<h2>000195-floppy-disk</h2>
+				</li>
+				<li title="000197-calculator">
+					<div class="icon-box">
+
+						<!-- 000197-calculator -->
+						<svg class="svg-000197-calculator-dims">
+							<use xlink:href="futurama4.svg#000197-calculator"></use>
+						</svg>
+
+					</div>
+					<h2>000197-calculator</h2>
+				</li>
+				<li title="000209-the-globe">
+					<div class="icon-box">
+
+						<!-- 000209-the-globe -->
+						<svg class="svg-000209-the-globe-dims">
+							<use xlink:href="futurama4.svg#000209-the-globe"></use>
+						</svg>
+
+					</div>
+					<h2>000209-the-globe</h2>
+				</li>
+				<li title="000213-square-arrow-diagonal-up-right">
+					<div class="icon-box">
+
+						<!-- 000213-square-arrow-diagonal-up-right -->
+						<svg class="svg-000213-square-arrow-diagonal-up-right-dims">
+							<use xlink:href="futurama4.svg#000213-square-arrow-diagonal-up-right"></use>
+						</svg>
+
+					</div>
+					<h2>000213-square-arrow-diagonal-up-right</h2>
+				</li>
+				<li title="000214-turn-off">
+					<div class="icon-box">
+
+						<!-- 000214-turn-off -->
+						<svg class="svg-000214-turn-off-dims">
+							<use xlink:href="futurama4.svg#000214-turn-off"></use>
+						</svg>
+
+					</div>
+					<h2>000214-turn-off</h2>
+				</li>
+				<li title="000215-power-button">
+					<div class="icon-box">
+
+						<!-- 000215-power-button -->
+						<svg class="svg-000215-power-button-dims">
+							<use xlink:href="futurama4.svg#000215-power-button"></use>
+						</svg>
+
+					</div>
+					<h2>000215-power-button</h2>
+				</li>
+				<li title="000223-list">
+					<div class="icon-box">
+
+						<!-- 000223-list -->
+						<svg class="svg-000223-list-dims">
+							<use xlink:href="futurama4.svg#000223-list"></use>
+						</svg>
+
+					</div>
+					<h2>000223-list</h2>
+				</li>
+				<li title="000230-cloud-02">
+					<div class="icon-box">
+
+						<!-- 000230-cloud-02 -->
+						<svg class="svg-000230-cloud-02-dims">
+							<use xlink:href="futurama4.svg#000230-cloud-02"></use>
+						</svg>
+
+					</div>
+					<h2>000230-cloud-02</h2>
+				</li>
+				<li title="000247-bar-graph-mixed">
+					<div class="icon-box">
+
+						<!-- 000247-bar-graph-mixed -->
+						<svg class="svg-000247-bar-graph-mixed-dims">
+							<use xlink:href="futurama4.svg#000247-bar-graph-mixed"></use>
+						</svg>
+
+					</div>
+					<h2>000247-bar-graph-mixed</h2>
+				</li>
+				<li title="000253-nine-squares">
+					<div class="icon-box">
+
+						<!-- 000253-nine-squares -->
+						<svg class="svg-000253-nine-squares-dims">
+							<use xlink:href="futurama4.svg#000253-nine-squares"></use>
+						</svg>
+
+					</div>
+					<h2>000253-nine-squares</h2>
+				</li>
+				<li title="000290-cloud-03">
+					<div class="icon-box">
+
+						<!-- 000290-cloud-03 -->
+						<svg class="svg-000290-cloud-03-dims">
+							<use xlink:href="futurama4.svg#000290-cloud-03"></use>
+						</svg>
+
+					</div>
+					<h2>000290-cloud-03</h2>
+				</li>
+				<li title="000306-label-tag">
+					<div class="icon-box">
+
+						<!-- 000306-label-tag -->
+						<svg class="svg-000306-label-tag-dims">
+							<use xlink:href="futurama4.svg#000306-label-tag"></use>
+						</svg>
+
+					</div>
+					<h2>000306-label-tag</h2>
+				</li>
+				<li title="000385-phone-receiver-02">
+					<div class="icon-box">
+
+						<!-- 000385-phone-receiver-02 -->
+						<svg class="svg-000385-phone-receiver-02-dims">
+							<use xlink:href="futurama4.svg#000385-phone-receiver-02"></use>
+						</svg>
+
+					</div>
+					<h2>000385-phone-receiver-02</h2>
+				</li>
+				<li title="000405-chain">
+					<div class="icon-box">
+
+						<!-- 000405-chain -->
+						<svg class="svg-000405-chain-dims">
+							<use xlink:href="futurama4.svg#000405-chain"></use>
+						</svg>
+
+					</div>
+					<h2>000405-chain</h2>
+				</li>
+				<li title="000455-two-arrows-refresh">
+					<div class="icon-box">
+
+						<!-- 000455-two-arrows-refresh -->
+						<svg class="svg-000455-two-arrows-refresh-dims">
+							<use xlink:href="futurama4.svg#000455-two-arrows-refresh"></use>
+						</svg>
+
+					</div>
+					<h2>000455-two-arrows-refresh</h2>
+				</li>
+				<li title="000509-connection">
+					<div class="icon-box">
+
+						<!-- 000509-connection -->
+						<svg class="svg-000509-connection-dims">
+							<use xlink:href="futurama4.svg#000509-connection"></use>
+						</svg>
+
+					</div>
+					<h2>000509-connection</h2>
+				</li>
+				<li title="000554-shield">
+					<div class="icon-box">
+
+						<!-- 000554-shield -->
+						<svg class="svg-000554-shield-dims">
+							<use xlink:href="futurama4.svg#000554-shield"></use>
+						</svg>
+
+					</div>
+					<h2>000554-shield</h2>
+				</li>
+				<li title="000560-circle-question-mark">
+					<div class="icon-box">
+
+						<!-- 000560-circle-question-mark -->
+						<svg class="svg-000560-circle-question-mark-dims">
+							<use xlink:href="futurama4.svg#000560-circle-question-mark"></use>
+						</svg>
+
+					</div>
+					<h2>000560-circle-question-mark</h2>
+				</li>
+				<li title="000561-octagon-question-mark">
+					<div class="icon-box">
+
+						<!-- 000561-octagon-question-mark -->
+						<svg class="svg-000561-octagon-question-mark-dims">
+							<use xlink:href="futurama4.svg#000561-octagon-question-mark"></use>
+						</svg>
+
+					</div>
+					<h2>000561-octagon-question-mark</h2>
+				</li>
+				<li title="000575-shopping-cart-with-goods">
+					<div class="icon-box">
+
+						<!-- 000575-shopping-cart-with-goods -->
+						<svg class="svg-000575-shopping-cart-with-goods-dims">
+							<use xlink:href="futurama4.svg#000575-shopping-cart-with-goods"></use>
+						</svg>
+
+					</div>
+					<h2>000575-shopping-cart-with-goods</h2>
+				</li>
+				<li title="000599-christmas-bauble-star-02">
+					<div class="icon-box">
+
+						<!-- 000599-christmas-bauble-star-02 -->
+						<svg class="svg-000599-christmas-bauble-star-02-dims">
+							<use xlink:href="futurama4.svg#000599-christmas-bauble-star-02"></use>
+						</svg>
+
+					</div>
+					<h2>000599-christmas-bauble-star-02</h2>
+				</li>
+				<li title="000606-christmas-bauble-pattern">
+					<div class="icon-box">
+
+						<!-- 000606-christmas-bauble-pattern -->
+						<svg class="svg-000606-christmas-bauble-pattern-dims">
+							<use xlink:href="futurama4.svg#000606-christmas-bauble-pattern"></use>
+						</svg>
+
+					</div>
+					<h2>000606-christmas-bauble-pattern</h2>
+				</li>
+				<li title="000617-plane-03">
+					<div class="icon-box">
+
+						<!-- 000617-plane-03 -->
+						<svg class="svg-000617-plane-03-dims">
+							<use xlink:href="futurama4.svg#000617-plane-03"></use>
+						</svg>
+
+					</div>
+					<h2>000617-plane-03</h2>
+				</li>
+				<li title="000631-easter-egg-stripe-02">
+					<div class="icon-box">
+
+						<!-- 000631-easter-egg-stripe-02 -->
+						<svg class="svg-000631-easter-egg-stripe-02-dims">
+							<use xlink:href="futurama4.svg#000631-easter-egg-stripe-02"></use>
+						</svg>
+
+					</div>
+					<h2>000631-easter-egg-stripe-02</h2>
+				</li>
+				<li title="000632-easter-egg-pattern">
+					<div class="icon-box">
+
+						<!-- 000632-easter-egg-pattern -->
+						<svg class="svg-000632-easter-egg-pattern-dims">
+							<use xlink:href="futurama4.svg#000632-easter-egg-pattern"></use>
+						</svg>
+
+					</div>
+					<h2>000632-easter-egg-pattern</h2>
+				</li>
+				<li title="000635-easter-egg-pattern-04">
+					<div class="icon-box">
+
+						<!-- 000635-easter-egg-pattern-04 -->
+						<svg class="svg-000635-easter-egg-pattern-04-dims">
+							<use xlink:href="futurama4.svg#000635-easter-egg-pattern-04"></use>
+						</svg>
+
+					</div>
+					<h2>000635-easter-egg-pattern-04</h2>
+				</li>
+				<li title="000645-car-02">
+					<div class="icon-box">
+
+						<!-- 000645-car-02 -->
+						<svg class="svg-000645-car-02-dims">
+							<use xlink:href="futurama4.svg#000645-car-02"></use>
+						</svg>
+
+					</div>
+					<h2>000645-car-02</h2>
+				</li>
+				<li title="000655-kite">
+					<div class="icon-box">
+
+						<!-- 000655-kite -->
+						<svg class="svg-000655-kite-dims">
+							<use xlink:href="futurama4.svg#000655-kite"></use>
+						</svg>
+
+					</div>
+					<h2>000655-kite</h2>
+				</li>
+				<li title="000686-ornament">
+					<div class="icon-box">
+
+						<!-- 000686-ornament -->
+						<svg class="svg-000686-ornament-dims">
+							<use xlink:href="futurama4.svg#000686-ornament"></use>
+						</svg>
+
+					</div>
+					<h2>000686-ornament</h2>
+				</li>
+				<li title="000687-ornament-02">
+					<div class="icon-box">
+
+						<!-- 000687-ornament-02 -->
+						<svg class="svg-000687-ornament-02-dims">
+							<use xlink:href="futurama4.svg#000687-ornament-02"></use>
+						</svg>
+
+					</div>
+					<h2>000687-ornament-02</h2>
+				</li>
+				<li title="000688-ornament-03">
+					<div class="icon-box">
+
+						<!-- 000688-ornament-03 -->
+						<svg class="svg-000688-ornament-03-dims">
+							<use xlink:href="futurama4.svg#000688-ornament-03"></use>
+						</svg>
+
+					</div>
+					<h2>000688-ornament-03</h2>
+				</li>
+				<li title="000700-glasses">
+					<div class="icon-box">
+
+						<!-- 000700-glasses -->
+						<svg class="svg-000700-glasses-dims">
+							<use xlink:href="futurama4.svg#000700-glasses"></use>
+						</svg>
+
+					</div>
+					<h2>000700-glasses</h2>
+				</li>
+				<li title="000702-bulb-on">
+					<div class="icon-box">
+
+						<!-- 000702-bulb-on -->
+						<svg class="svg-000702-bulb-on-dims">
+							<use xlink:href="futurama4.svg#000702-bulb-on"></use>
+						</svg>
+
+					</div>
+					<h2>000702-bulb-on</h2>
+				</li>
+				<li title="000719-mug-02">
+					<div class="icon-box">
+
+						<!-- 000719-mug-02 -->
+						<svg class="svg-000719-mug-02-dims">
+							<use xlink:href="futurama4.svg#000719-mug-02"></use>
+						</svg>
+
+					</div>
+					<h2>000719-mug-02</h2>
+				</li>
+				<li title="000723-trashcan">
+					<div class="icon-box">
+
+						<!-- 000723-trashcan -->
+						<svg class="svg-000723-trashcan-dims">
+							<use xlink:href="futurama4.svg#000723-trashcan"></use>
+						</svg>
+
+					</div>
+					<h2>000723-trashcan</h2>
+				</li>
+				<li title="000738-compass">
+					<div class="icon-box">
+
+						<!-- 000738-compass -->
+						<svg class="svg-000738-compass-dims">
+							<use xlink:href="futurama4.svg#000738-compass"></use>
+						</svg>
+
+					</div>
+					<h2>000738-compass</h2>
+				</li>
+				<li title="000744-paintbrush">
+					<div class="icon-box">
+
+						<!-- 000744-paintbrush -->
+						<svg class="svg-000744-paintbrush-dims">
+							<use xlink:href="futurama4.svg#000744-paintbrush"></use>
+						</svg>
+
+					</div>
+					<h2>000744-paintbrush</h2>
+				</li>
+				<li title="000749-cigarette">
+					<div class="icon-box">
+
+						<!-- 000749-cigarette -->
+						<svg class="svg-000749-cigarette-dims">
+							<use xlink:href="futurama4.svg#000749-cigarette"></use>
+						</svg>
+
+					</div>
+					<h2>000749-cigarette</h2>
+				</li>
+				<li title="000785-speaker-volume-two">
+					<div class="icon-box">
+
+						<!-- 000785-speaker-volume-two -->
+						<svg class="svg-000785-speaker-volume-two-dims">
+							<use xlink:href="futurama4.svg#000785-speaker-volume-two"></use>
+						</svg>
+
+					</div>
+					<h2>000785-speaker-volume-two</h2>
+				</li>
+				<li title="000786-speaker-volume-two-02">
+					<div class="icon-box">
+
+						<!-- 000786-speaker-volume-two-02 -->
+						<svg class="svg-000786-speaker-volume-two-02-dims">
+							<use xlink:href="futurama4.svg#000786-speaker-volume-two-02"></use>
+						</svg>
+
+					</div>
+					<h2>000786-speaker-volume-two-02</h2>
+				</li>
+				<li title="000799-arrow-left">
+					<div class="icon-box">
+
+						<!-- 000799-arrow-left -->
+						<svg class="svg-000799-arrow-left-dims">
+							<use xlink:href="futurama4.svg#000799-arrow-left"></use>
+						</svg>
+
+					</div>
+					<h2>000799-arrow-left</h2>
+				</li>
+				<li title="000800-arrow-up">
+					<div class="icon-box">
+
+						<!-- 000800-arrow-up -->
+						<svg class="svg-000800-arrow-up-dims">
+							<use xlink:href="futurama4.svg#000800-arrow-up"></use>
+						</svg>
+
+					</div>
+					<h2>000800-arrow-up</h2>
+				</li>
+				<li title="000801-arrow-down">
+					<div class="icon-box">
+
+						<!-- 000801-arrow-down -->
+						<svg class="svg-000801-arrow-down-dims">
+							<use xlink:href="futurama4.svg#000801-arrow-down"></use>
+						</svg>
+
+					</div>
+					<h2>000801-arrow-down</h2>
+				</li>
+				<li title="000802-arrow-right">
+					<div class="icon-box">
+
+						<!-- 000802-arrow-right -->
+						<svg class="svg-000802-arrow-right-dims">
+							<use xlink:href="futurama4.svg#000802-arrow-right"></use>
+						</svg>
+
+					</div>
+					<h2>000802-arrow-right</h2>
+				</li>
+				<li title="000807-arrow-left-02">
+					<div class="icon-box">
+
+						<!-- 000807-arrow-left-02 -->
+						<svg class="svg-000807-arrow-left-02-dims">
+							<use xlink:href="futurama4.svg#000807-arrow-left-02"></use>
+						</svg>
+
+					</div>
+					<h2>000807-arrow-left-02</h2>
+				</li>
+				<li title="000808-arrow-up-02">
+					<div class="icon-box">
+
+						<!-- 000808-arrow-up-02 -->
+						<svg class="svg-000808-arrow-up-02-dims">
+							<use xlink:href="futurama4.svg#000808-arrow-up-02"></use>
+						</svg>
+
+					</div>
+					<h2>000808-arrow-up-02</h2>
+				</li>
+				<li title="000809-arrow-down-02">
+					<div class="icon-box">
+
+						<!-- 000809-arrow-down-02 -->
+						<svg class="svg-000809-arrow-down-02-dims">
+							<use xlink:href="futurama4.svg#000809-arrow-down-02"></use>
+						</svg>
+
+					</div>
+					<h2>000809-arrow-down-02</h2>
+				</li>
+				<li title="000810-arrow-right-02">
+					<div class="icon-box">
+
+						<!-- 000810-arrow-right-02 -->
+						<svg class="svg-000810-arrow-right-02-dims">
+							<use xlink:href="futurama4.svg#000810-arrow-right-02"></use>
+						</svg>
+
+					</div>
+					<h2>000810-arrow-right-02</h2>
+				</li>
+				<li title="000812-arrow-diagonal-up-right">
+					<div class="icon-box">
+
+						<!-- 000812-arrow-diagonal-up-right -->
+						<svg class="svg-000812-arrow-diagonal-up-right-dims">
+							<use xlink:href="futurama4.svg#000812-arrow-diagonal-up-right"></use>
+						</svg>
+
+					</div>
+					<h2>000812-arrow-diagonal-up-right</h2>
+				</li>
+				<li title="000813-arrow-diagonal-down-right">
+					<div class="icon-box">
+
+						<!-- 000813-arrow-diagonal-down-right -->
+						<svg class="svg-000813-arrow-diagonal-down-right-dims">
+							<use xlink:href="futurama4.svg#000813-arrow-diagonal-down-right"></use>
+						</svg>
+
+					</div>
+					<h2>000813-arrow-diagonal-down-right</h2>
+				</li>
+				<li title="000814-arrow-diagonal-down-left">
+					<div class="icon-box">
+
+						<!-- 000814-arrow-diagonal-down-left -->
+						<svg class="svg-000814-arrow-diagonal-down-left-dims">
+							<use xlink:href="futurama4.svg#000814-arrow-diagonal-down-left"></use>
+						</svg>
+
+					</div>
+					<h2>000814-arrow-diagonal-down-left</h2>
+				</li>
+				<li title="000815-arrow-diagonal-up-left">
+					<div class="icon-box">
+
+						<!-- 000815-arrow-diagonal-up-left -->
+						<svg class="svg-000815-arrow-diagonal-up-left-dims">
+							<use xlink:href="futurama4.svg#000815-arrow-diagonal-up-left"></use>
+						</svg>
+
+					</div>
+					<h2>000815-arrow-diagonal-up-left</h2>
+				</li>
+				<li title="000827-calendar-02">
+					<div class="icon-box">
+
+						<!-- 000827-calendar-02 -->
+						<svg class="svg-000827-calendar-02-dims">
+							<use xlink:href="futurama4.svg#000827-calendar-02"></use>
+						</svg>
+
+					</div>
+					<h2>000827-calendar-02</h2>
+				</li>
+				<li title="000846-arrow-right-05">
+					<div class="icon-box">
+
+						<!-- 000846-arrow-right-05 -->
+						<svg class="svg-000846-arrow-right-05-dims">
+							<use xlink:href="futurama4.svg#000846-arrow-right-05"></use>
+						</svg>
+
+					</div>
+					<h2>000846-arrow-right-05</h2>
+				</li>
+				<li title="000847-arrow-left-05">
+					<div class="icon-box">
+
+						<!-- 000847-arrow-left-05 -->
+						<svg class="svg-000847-arrow-left-05-dims">
+							<use xlink:href="futurama4.svg#000847-arrow-left-05"></use>
+						</svg>
+
+					</div>
+					<h2>000847-arrow-left-05</h2>
+				</li>
+				<li title="000848-arrow-down-05">
+					<div class="icon-box">
+
+						<!-- 000848-arrow-down-05 -->
+						<svg class="svg-000848-arrow-down-05-dims">
+							<use xlink:href="futurama4.svg#000848-arrow-down-05"></use>
+						</svg>
+
+					</div>
+					<h2>000848-arrow-down-05</h2>
+				</li>
+				<li title="000849-arrow-up-05">
+					<div class="icon-box">
+
+						<!-- 000849-arrow-up-05 -->
+						<svg class="svg-000849-arrow-up-05-dims">
+							<use xlink:href="futurama4.svg#000849-arrow-up-05"></use>
+						</svg>
+
+					</div>
+					<h2>000849-arrow-up-05</h2>
+				</li>
+				<li title="000850-flower-03">
+					<div class="icon-box">
+
+						<!-- 000850-flower-03 -->
+						<svg class="svg-000850-flower-03-dims">
+							<use xlink:href="futurama4.svg#000850-flower-03"></use>
+						</svg>
+
+					</div>
+					<h2>000850-flower-03</h2>
+				</li>
+				<li title="000856-arrow-left-07">
+					<div class="icon-box">
+
+						<!-- 000856-arrow-left-07 -->
+						<svg class="svg-000856-arrow-left-07-dims">
+							<use xlink:href="futurama4.svg#000856-arrow-left-07"></use>
+						</svg>
+
+					</div>
+					<h2>000856-arrow-left-07</h2>
+				</li>
+				<li title="000857-arrow-right-07">
+					<div class="icon-box">
+
+						<!-- 000857-arrow-right-07 -->
+						<svg class="svg-000857-arrow-right-07-dims">
+							<use xlink:href="futurama4.svg#000857-arrow-right-07"></use>
+						</svg>
+
+					</div>
+					<h2>000857-arrow-right-07</h2>
+				</li>
+				<li title="000858-arrow-down-07">
+					<div class="icon-box">
+
+						<!-- 000858-arrow-down-07 -->
+						<svg class="svg-000858-arrow-down-07-dims">
+							<use xlink:href="futurama4.svg#000858-arrow-down-07"></use>
+						</svg>
+
+					</div>
+					<h2>000858-arrow-down-07</h2>
+				</li>
+				<li title="000859-arrow-up-07">
+					<div class="icon-box">
+
+						<!-- 000859-arrow-up-07 -->
+						<svg class="svg-000859-arrow-up-07-dims">
+							<use xlink:href="futurama4.svg#000859-arrow-up-07"></use>
+						</svg>
+
+					</div>
+					<h2>000859-arrow-up-07</h2>
+				</li>
+				<li title="000884-article-two-columns-picture">
+					<div class="icon-box">
+
+						<!-- 000884-article-two-columns-picture -->
+						<svg class="svg-000884-article-two-columns-picture-dims">
+							<use xlink:href="futurama4.svg#000884-article-two-columns-picture"></use>
+						</svg>
+
+					</div>
+					<h2>000884-article-two-columns-picture</h2>
+				</li>
+				<li title="000989-magnifying-glass">
+					<div class="icon-box">
+
+						<!-- 000989-magnifying-glass -->
+						<svg class="svg-000989-magnifying-glass-dims">
+							<use xlink:href="futurama4.svg#000989-magnifying-glass"></use>
+						</svg>
+
+					</div>
+					<h2>000989-magnifying-glass</h2>
+				</li>
+				<li title="001017-pencil-02">
+					<div class="icon-box">
+
+						<!-- 001017-pencil-02 -->
+						<svg class="svg-001017-pencil-02-dims">
+							<use xlink:href="futurama4.svg#001017-pencil-02"></use>
+						</svg>
+
+					</div>
+					<h2>001017-pencil-02</h2>
+				</li>
+				<li title="001030-two-windows">
+					<div class="icon-box">
+
+						<!-- 001030-two-windows -->
+						<svg class="svg-001030-two-windows-dims">
+							<use xlink:href="futurama4.svg#001030-two-windows"></use>
+						</svg>
+
+					</div>
+					<h2>001030-two-windows</h2>
+				</li>
+				<li title="001068-square-social-02">
+					<div class="icon-box">
+
+						<!-- 001068-square-social-02 -->
+						<svg class="svg-001068-square-social-02-dims">
+							<use xlink:href="futurama4.svg#001068-square-social-02"></use>
+						</svg>
+
+					</div>
+					<h2>001068-square-social-02</h2>
+				</li>
+				<li title="001069-square-social-01">
+					<div class="icon-box">
+
+						<!-- 001069-square-social-01 -->
+						<svg class="svg-001069-square-social-01-dims">
+							<use xlink:href="futurama4.svg#001069-square-social-01"></use>
+						</svg>
+
+					</div>
+					<h2>001069-square-social-01</h2>
+				</li>
+				<li title="001070-square-social-03">
+					<div class="icon-box">
+
+						<!-- 001070-square-social-03 -->
+						<svg class="svg-001070-square-social-03-dims">
+							<use xlink:href="futurama4.svg#001070-square-social-03"></use>
+						</svg>
+
+					</div>
+					<h2>001070-square-social-03</h2>
+				</li>
+				<li title="001071-social-01">
+					<div class="icon-box">
+
+						<!-- 001071-social-01 -->
+						<svg class="svg-001071-social-01-dims">
+							<use xlink:href="futurama4.svg#001071-social-01"></use>
+						</svg>
+
+					</div>
+					<h2>001071-social-01</h2>
+				</li>
+				<li title="001072-social-02">
+					<div class="icon-box">
+
+						<!-- 001072-social-02 -->
+						<svg class="svg-001072-social-02-dims">
+							<use xlink:href="futurama4.svg#001072-social-02"></use>
+						</svg>
+
+					</div>
+					<h2>001072-social-02</h2>
+				</li>
+				<li title="001073-social-03">
+					<div class="icon-box">
+
+						<!-- 001073-social-03 -->
+						<svg class="svg-001073-social-03-dims">
+							<use xlink:href="futurama4.svg#001073-social-03"></use>
+						</svg>
+
+					</div>
+					<h2>001073-social-03</h2>
+				</li>
+				<li title="001074-social-05">
+					<div class="icon-box">
+
+						<!-- 001074-social-05 -->
+						<svg class="svg-001074-social-05-dims">
+							<use xlink:href="futurama4.svg#001074-social-05"></use>
+						</svg>
+
+					</div>
+					<h2>001074-social-05</h2>
+				</li>
+				<li title="001075-social-04">
+					<div class="icon-box">
+
+						<!-- 001075-social-04 -->
+						<svg class="svg-001075-social-04-dims">
+							<use xlink:href="futurama4.svg#001075-social-04"></use>
+						</svg>
+
+					</div>
+					<h2>001075-social-04</h2>
+				</li>
+				<li title="001076-square-social-05">
+					<div class="icon-box">
+
+						<!-- 001076-square-social-05 -->
+						<svg class="svg-001076-square-social-05-dims">
+							<use xlink:href="futurama4.svg#001076-square-social-05"></use>
+						</svg>
+
+					</div>
+					<h2>001076-square-social-05</h2>
+				</li>
+				<li title="001077-social-06">
+					<div class="icon-box">
+
+						<!-- 001077-social-06 -->
+						<svg class="svg-001077-social-06-dims">
+							<use xlink:href="futurama4.svg#001077-social-06"></use>
+						</svg>
+
+					</div>
+					<h2>001077-social-06</h2>
+				</li>
+				<li title="001078-circle-social-02">
+					<div class="icon-box">
+
+						<!-- 001078-circle-social-02 -->
+						<svg class="svg-001078-circle-social-02-dims">
+							<use xlink:href="futurama4.svg#001078-circle-social-02"></use>
+						</svg>
+
+					</div>
+					<h2>001078-circle-social-02</h2>
+				</li>
+				<li title="001090-music">
+					<div class="icon-box">
+
+						<!-- 001090-music -->
+						<svg class="svg-001090-music-dims">
+							<use xlink:href="futurama4.svg#001090-music"></use>
+						</svg>
+
+					</div>
+					<h2>001090-music</h2>
+				</li>
+				<li title="001094-circle-question-mark-02">
+					<div class="icon-box">
+
+						<!-- 001094-circle-question-mark-02 -->
+						<svg class="svg-001094-circle-question-mark-02-dims">
+							<use xlink:href="futurama4.svg#001094-circle-question-mark-02"></use>
+						</svg>
+
+					</div>
+					<h2>001094-circle-question-mark-02</h2>
+				</li>
+				<li title="001096-location-02">
+					<div class="icon-box">
+
+						<!-- 001096-location-02 -->
+						<svg class="svg-001096-location-02-dims">
+							<use xlink:href="futurama4.svg#001096-location-02"></use>
+						</svg>
+
+					</div>
+					<h2>001096-location-02</h2>
+				</li>
+				<li title="001149-padlock-open-03">
+					<div class="icon-box">
+
+						<!-- 001149-padlock-open-03 -->
+						<svg class="svg-001149-padlock-open-03-dims">
+							<use xlink:href="futurama4.svg#001149-padlock-open-03"></use>
+						</svg>
+
+					</div>
+					<h2>001149-padlock-open-03</h2>
+				</li>
+				<li title="001150-padlock-closed-03">
+					<div class="icon-box">
+
+						<!-- 001150-padlock-closed-03 -->
+						<svg class="svg-001150-padlock-closed-03-dims">
+							<use xlink:href="futurama4.svg#001150-padlock-closed-03"></use>
+						</svg>
+
+					</div>
+					<h2>001150-padlock-closed-03</h2>
+				</li>
+				<li title="001177-classic-mouse-pointer">
+					<div class="icon-box">
+
+						<!-- 001177-classic-mouse-pointer -->
+						<svg class="svg-001177-classic-mouse-pointer-dims">
+							<use xlink:href="futurama4.svg#001177-classic-mouse-pointer"></use>
+						</svg>
+
+					</div>
+					<h2>001177-classic-mouse-pointer</h2>
+				</li>
+				<li title="001186-kid-smiling">
+					<div class="icon-box">
+
+						<!-- 001186-kid-smiling -->
+						<svg class="svg-001186-kid-smiling-dims">
+							<use xlink:href="futurama4.svg#001186-kid-smiling"></use>
+						</svg>
+
+					</div>
+					<h2>001186-kid-smiling</h2>
+				</li>
+				<li title="001188-arrows-four-directions-2">
+					<div class="icon-box">
+
+						<!-- 001188-arrows-four-directions-2 -->
+						<svg class="svg-001188-arrows-four-directions-2-dims">
+							<use xlink:href="futurama4.svg#001188-arrows-four-directions-2"></use>
+						</svg>
+
+					</div>
+					<h2>001188-arrows-four-directions-2</h2>
+				</li>
+				<li title="001207-arrows-four-directions-04">
+					<div class="icon-box">
+
+						<!-- 001207-arrows-four-directions-04 -->
+						<svg class="svg-001207-arrows-four-directions-04-dims">
+							<use xlink:href="futurama4.svg#001207-arrows-four-directions-04"></use>
+						</svg>
+
+					</div>
+					<h2>001207-arrows-four-directions-04</h2>
+				</li>
+				<li title="001214-two-arrows-refresh-03">
+					<div class="icon-box">
+
+						<!-- 001214-two-arrows-refresh-03 -->
+						<svg class="svg-001214-two-arrows-refresh-03-dims">
+							<use xlink:href="futurama4.svg#001214-two-arrows-refresh-03"></use>
+						</svg>
+
+					</div>
+					<h2>001214-two-arrows-refresh-03</h2>
+				</li>
+				<li title="001218-eye-02">
+					<div class="icon-box">
+
+						<!-- 001218-eye-02 -->
+						<svg class="svg-001218-eye-02-dims">
+							<use xlink:href="futurama4.svg#001218-eye-02"></use>
+						</svg>
+
+					</div>
+					<h2>001218-eye-02</h2>
+				</li>
+				<li title="001222-circle-arrow-right-05">
+					<div class="icon-box">
+
+						<!-- 001222-circle-arrow-right-05 -->
+						<svg class="svg-001222-circle-arrow-right-05-dims">
+							<use xlink:href="futurama4.svg#001222-circle-arrow-right-05"></use>
+						</svg>
+
+					</div>
+					<h2>001222-circle-arrow-right-05</h2>
+				</li>
+				<li title="001223-circle-arrow-down-05">
+					<div class="icon-box">
+
+						<!-- 001223-circle-arrow-down-05 -->
+						<svg class="svg-001223-circle-arrow-down-05-dims">
+							<use xlink:href="futurama4.svg#001223-circle-arrow-down-05"></use>
+						</svg>
+
+					</div>
+					<h2>001223-circle-arrow-down-05</h2>
+				</li>
+				<li title="001224-circle-arrow-left-05">
+					<div class="icon-box">
+
+						<!-- 001224-circle-arrow-left-05 -->
+						<svg class="svg-001224-circle-arrow-left-05-dims">
+							<use xlink:href="futurama4.svg#001224-circle-arrow-left-05"></use>
+						</svg>
+
+					</div>
+					<h2>001224-circle-arrow-left-05</h2>
+				</li>
+				<li title="001225-circle-arrow-up-05">
+					<div class="icon-box">
+
+						<!-- 001225-circle-arrow-up-05 -->
+						<svg class="svg-001225-circle-arrow-up-05-dims">
+							<use xlink:href="futurama4.svg#001225-circle-arrow-up-05"></use>
+						</svg>
+
+					</div>
+					<h2>001225-circle-arrow-up-05</h2>
+				</li>
+				<li title="001227-document-blank">
+					<div class="icon-box">
+
+						<!-- 001227-document-blank -->
+						<svg class="svg-001227-document-blank-dims">
+							<use xlink:href="futurama4.svg#001227-document-blank"></use>
+						</svg>
+
+					</div>
+					<h2>001227-document-blank</h2>
+				</li>
+				<li title="001232-sheet-text">
+					<div class="icon-box">
+
+						<!-- 001232-sheet-text -->
+						<svg class="svg-001232-sheet-text-dims">
+							<use xlink:href="futurama4.svg#001232-sheet-text"></use>
+						</svg>
+
+					</div>
+					<h2>001232-sheet-text</h2>
+				</li>
+				<li title="001297-document-pdf">
+					<div class="icon-box">
+
+						<!-- 001297-document-pdf -->
+						<svg class="svg-001297-document-pdf-dims">
+							<use xlink:href="futurama4.svg#001297-document-pdf"></use>
+						</svg>
+
+					</div>
+					<h2>001297-document-pdf</h2>
+				</li>
+				<li title="001298-document-doc">
+					<div class="icon-box">
+
+						<!-- 001298-document-doc -->
+						<svg class="svg-001298-document-doc-dims">
+							<use xlink:href="futurama4.svg#001298-document-doc"></use>
+						</svg>
+
+					</div>
+					<h2>001298-document-doc</h2>
+				</li>
+				<li title="001299-document-eps">
+					<div class="icon-box">
+
+						<!-- 001299-document-eps -->
+						<svg class="svg-001299-document-eps-dims">
+							<use xlink:href="futurama4.svg#001299-document-eps"></use>
+						</svg>
+
+					</div>
+					<h2>001299-document-eps</h2>
+				</li>
+				<li title="001300-document-ai">
+					<div class="icon-box">
+
+						<!-- 001300-document-ai -->
+						<svg class="svg-001300-document-ai-dims">
+							<use xlink:href="futurama4.svg#001300-document-ai"></use>
+						</svg>
+
+					</div>
+					<h2>001300-document-ai</h2>
+				</li>
+				<li title="001301-document-png">
+					<div class="icon-box">
+
+						<!-- 001301-document-png -->
+						<svg class="svg-001301-document-png-dims">
+							<use xlink:href="futurama4.svg#001301-document-png"></use>
+						</svg>
+
+					</div>
+					<h2>001301-document-png</h2>
+				</li>
+				<li title="001302-speech-bubble">
+					<div class="icon-box">
+
+						<!-- 001302-speech-bubble -->
+						<svg class="svg-001302-speech-bubble-dims">
+							<use xlink:href="futurama4.svg#001302-speech-bubble"></use>
+						</svg>
+
+					</div>
+					<h2>001302-speech-bubble</h2>
+				</li>
+				<li title="001303-document-psd">
+					<div class="icon-box">
+
+						<!-- 001303-document-psd -->
+						<svg class="svg-001303-document-psd-dims">
+							<use xlink:href="futurama4.svg#001303-document-psd"></use>
+						</svg>
+
+					</div>
+					<h2>001303-document-psd</h2>
+				</li>
+				<li title="001304-document-txt">
+					<div class="icon-box">
+
+						<!-- 001304-document-txt -->
+						<svg class="svg-001304-document-txt-dims">
+							<use xlink:href="futurama4.svg#001304-document-txt"></use>
+						</svg>
+
+					</div>
+					<h2>001304-document-txt</h2>
+				</li>
+				<li title="001305-document-jpg">
+					<div class="icon-box">
+
+						<!-- 001305-document-jpg -->
+						<svg class="svg-001305-document-jpg-dims">
+							<use xlink:href="futurama4.svg#001305-document-jpg"></use>
+						</svg>
+
+					</div>
+					<h2>001305-document-jpg</h2>
+				</li>
+				<li title="001341-circle-arrow-left-06">
+					<div class="icon-box">
+
+						<!-- 001341-circle-arrow-left-06 -->
+						<svg class="svg-001341-circle-arrow-left-06-dims">
+							<use xlink:href="futurama4.svg#001341-circle-arrow-left-06"></use>
+						</svg>
+
+					</div>
+					<h2>001341-circle-arrow-left-06</h2>
+				</li>
+				<li title="001359-two-hearts">
+					<div class="icon-box">
+
+						<!-- 001359-two-hearts -->
+						<svg class="svg-001359-two-hearts-dims">
+							<use xlink:href="futurama4.svg#001359-two-hearts"></use>
+						</svg>
+
+					</div>
+					<h2>001359-two-hearts</h2>
+				</li>
+				<li title="001403-crop">
+					<div class="icon-box">
+
+						<!-- 001403-crop -->
+						<svg class="svg-001403-crop-dims">
+							<use xlink:href="futurama4.svg#001403-crop"></use>
+						</svg>
+
+					</div>
+					<h2>001403-crop</h2>
+				</li>
+				<li title="001425-two-pages-broken-line">
+					<div class="icon-box">
+
+						<!-- 001425-two-pages-broken-line -->
+						<svg class="svg-001425-two-pages-broken-line-dims">
+							<use xlink:href="futurama4.svg#001425-two-pages-broken-line"></use>
+						</svg>
+
+					</div>
+					<h2>001425-two-pages-broken-line</h2>
+				</li>
+				<li title="001539-two-arrows-diagonal-03">
+					<div class="icon-box">
+
+						<!-- 001539-two-arrows-diagonal-03 -->
+						<svg class="svg-001539-two-arrows-diagonal-03-dims">
+							<use xlink:href="futurama4.svg#001539-two-arrows-diagonal-03"></use>
+						</svg>
+
+					</div>
+					<h2>001539-two-arrows-diagonal-03</h2>
+				</li>
+				<li title="001541-two-arrows-diagonal-04">
+					<div class="icon-box">
+
+						<!-- 001541-two-arrows-diagonal-04 -->
+						<svg class="svg-001541-two-arrows-diagonal-04-dims">
+							<use xlink:href="futurama4.svg#001541-two-arrows-diagonal-04"></use>
+						</svg>
+
+					</div>
+					<h2>001541-two-arrows-diagonal-04</h2>
+				</li>
+				<li title="001610-sheet-blank-question-mark-03">
+					<div class="icon-box">
+
+						<!-- 001610-sheet-blank-question-mark-03 -->
+						<svg class="svg-001610-sheet-blank-question-mark-03-dims">
+							<use xlink:href="futurama4.svg#001610-sheet-blank-question-mark-03"></use>
+						</svg>
+
+					</div>
+					<h2>001610-sheet-blank-question-mark-03</h2>
+				</li>
+				<li title="001715-circle-square-stop">
+					<div class="icon-box">
+
+						<!-- 001715-circle-square-stop -->
+						<svg class="svg-001715-circle-square-stop-dims">
+							<use xlink:href="futurama4.svg#001715-circle-square-stop"></use>
+						</svg>
+
+					</div>
+					<h2>001715-circle-square-stop</h2>
+				</li>
+				<li title="001719-layout-two-horizontal-rectangles">
+					<div class="icon-box">
+
+						<!-- 001719-layout-two-horizontal-rectangles -->
+						<svg class="svg-001719-layout-two-horizontal-rectangles-dims">
+							<use xlink:href="futurama4.svg#001719-layout-two-horizontal-rectangles"></use>
+						</svg>
+
+					</div>
+					<h2>001719-layout-two-horizontal-rectangles</h2>
+				</li>
+				<li title="001720-layout-two-vertical-rectangles">
+					<div class="icon-box">
+
+						<!-- 001720-layout-two-vertical-rectangles -->
+						<svg class="svg-001720-layout-two-vertical-rectangles-dims">
+							<use xlink:href="futurama4.svg#001720-layout-two-vertical-rectangles"></use>
+						</svg>
+
+					</div>
+					<h2>001720-layout-two-vertical-rectangles</h2>
+				</li>
+				<li title="001811-square-circle-inside">
+					<div class="icon-box">
+
+						<!-- 001811-square-circle-inside -->
+						<svg class="svg-001811-square-circle-inside-dims">
+							<use xlink:href="futurama4.svg#001811-square-circle-inside"></use>
+						</svg>
+
+					</div>
+					<h2>001811-square-circle-inside</h2>
+				</li>
+				<li title="001849-square-arrow-diagonal-right-down-02">
+					<div class="icon-box">
+
+						<!-- 001849-square-arrow-diagonal-right-down-02 -->
+						<svg class="svg-001849-square-arrow-diagonal-right-down-02-dims">
+							<use xlink:href="futurama4.svg#001849-square-arrow-diagonal-right-down-02"></use>
+						</svg>
+
+					</div>
+					<h2>001849-square-arrow-diagonal-right-down-02</h2>
+				</li>
+				<li title="001995-layout-content-column-header-02">
+					<div class="icon-box">
+
+						<!-- 001995-layout-content-column-header-02 -->
+						<svg class="svg-001995-layout-content-column-header-02-dims">
+							<use xlink:href="futurama4.svg#001995-layout-content-column-header-02"></use>
+						</svg>
+
+					</div>
+					<h2>001995-layout-content-column-header-02</h2>
+				</li>
+				<li title="002304-smelly-trash-can">
+					<div class="icon-box">
+
+						<!-- 002304-smelly-trash-can -->
+						<svg class="svg-002304-smelly-trash-can-dims">
+							<use xlink:href="futurama4.svg#002304-smelly-trash-can"></use>
+						</svg>
+
+					</div>
+					<h2>002304-smelly-trash-can</h2>
+				</li>
+				<li title="002305-whip">
+					<div class="icon-box">
+
+						<!-- 002305-whip -->
+						<svg class="svg-002305-whip-dims">
+							<use xlink:href="futurama4.svg#002305-whip"></use>
+						</svg>
+
+					</div>
+					<h2>002305-whip</h2>
+				</li>
+				<li title="002309-handcuffs">
+					<div class="icon-box">
+
+						<!-- 002309-handcuffs -->
+						<svg class="svg-002309-handcuffs-dims">
+							<use xlink:href="futurama4.svg#002309-handcuffs"></use>
+						</svg>
+
+					</div>
+					<h2>002309-handcuffs</h2>
+				</li>
+				<li title="002322-bong">
+					<div class="icon-box">
+
+						<!-- 002322-bong -->
+						<svg class="svg-002322-bong-dims">
+							<use xlink:href="futurama4.svg#002322-bong"></use>
+						</svg>
+
+					</div>
+					<h2>002322-bong</h2>
+				</li>
+				<li title="002323-marijuana">
+					<div class="icon-box">
+
+						<!-- 002323-marijuana -->
+						<svg class="svg-002323-marijuana-dims">
+							<use xlink:href="futurama4.svg#002323-marijuana"></use>
+						</svg>
+
+					</div>
+					<h2>002323-marijuana</h2>
+				</li>
+				<li title="002329-male-torso">
+					<div class="icon-box">
+
+						<!-- 002329-male-torso -->
+						<svg class="svg-002329-male-torso-dims">
+							<use xlink:href="futurama4.svg#002329-male-torso"></use>
+						</svg>
+
+					</div>
+					<h2>002329-male-torso</h2>
+				</li>
+				<li title="002331-joint">
+					<div class="icon-box">
+
+						<!-- 002331-joint -->
+						<svg class="svg-002331-joint-dims">
+							<use xlink:href="futurama4.svg#002331-joint"></use>
+						</svg>
+
+					</div>
+					<h2>002331-joint</h2>
+				</li>
+				<li title="002399-text-arrow-down-02">
+					<div class="icon-box">
+
+						<!-- 002399-text-arrow-down-02 -->
+						<svg class="svg-002399-text-arrow-down-02-dims">
+							<use xlink:href="futurama4.svg#002399-text-arrow-down-02"></use>
+						</svg>
+
+					</div>
+					<h2>002399-text-arrow-down-02</h2>
+				</li>
+				<li title="002400-text-arrow-up-02">
+					<div class="icon-box">
+
+						<!-- 002400-text-arrow-up-02 -->
+						<svg class="svg-002400-text-arrow-up-02-dims">
+							<use xlink:href="futurama4.svg#002400-text-arrow-up-02"></use>
+						</svg>
+
+					</div>
+					<h2>002400-text-arrow-up-02</h2>
+				</li>
+				<li title="002412-menu-02">
+					<div class="icon-box">
+
+						<!-- 002412-menu-02 -->
+						<svg class="svg-002412-menu-02-dims">
+							<use xlink:href="futurama4.svg#002412-menu-02"></use>
+						</svg>
+
+					</div>
+					<h2>002412-menu-02</h2>
+				</li>
+				<li title="002435-flag-chequered-02">
+					<div class="icon-box">
+
+						<!-- 002435-flag-chequered-02 -->
+						<svg class="svg-002435-flag-chequered-02-dims">
+							<use xlink:href="futurama4.svg#002435-flag-chequered-02"></use>
+						</svg>
+
+					</div>
+					<h2>002435-flag-chequered-02</h2>
+				</li>
+				<li title="002436-flag-empty-02">
+					<div class="icon-box">
+
+						<!-- 002436-flag-empty-02 -->
+						<svg class="svg-002436-flag-empty-02-dims">
+							<use xlink:href="futurama4.svg#002436-flag-empty-02"></use>
+						</svg>
+
+					</div>
+					<h2>002436-flag-empty-02</h2>
+				</li>
+				<li title="002463-four-hearts">
+					<div class="icon-box">
+
+						<!-- 002463-four-hearts -->
+						<svg class="svg-002463-four-hearts-dims">
+							<use xlink:href="futurama4.svg#002463-four-hearts"></use>
+						</svg>
+
+					</div>
+					<h2>002463-four-hearts</h2>
+				</li>
+				<li title="002484-gift-person">
+					<div class="icon-box">
+
+						<!-- 002484-gift-person -->
+						<svg class="svg-002484-gift-person-dims">
+							<use xlink:href="futurama4.svg#002484-gift-person"></use>
+						</svg>
+
+					</div>
+					<h2>002484-gift-person</h2>
+				</li>
+				<li title="002485-gift-plus">
+					<div class="icon-box">
+
+						<!-- 002485-gift-plus -->
+						<svg class="svg-002485-gift-plus-dims">
+							<use xlink:href="futurama4.svg#002485-gift-plus"></use>
+						</svg>
+
+					</div>
+					<h2>002485-gift-plus</h2>
+				</li>
+				<li title="002486-gift-minus">
+					<div class="icon-box">
+
+						<!-- 002486-gift-minus -->
+						<svg class="svg-002486-gift-minus-dims">
+							<use xlink:href="futurama4.svg#002486-gift-minus"></use>
+						</svg>
+
+					</div>
+					<h2>002486-gift-minus</h2>
+				</li>
+				<li title="002487-gift-question-mark">
+					<div class="icon-box">
+
+						<!-- 002487-gift-question-mark -->
+						<svg class="svg-002487-gift-question-mark-dims">
+							<use xlink:href="futurama4.svg#002487-gift-question-mark"></use>
+						</svg>
+
+					</div>
+					<h2>002487-gift-question-mark</h2>
+				</li>
+				<li title="002488-gift-exclamation-mark">
+					<div class="icon-box">
+
+						<!-- 002488-gift-exclamation-mark -->
+						<svg class="svg-002488-gift-exclamation-mark-dims">
+							<use xlink:href="futurama4.svg#002488-gift-exclamation-mark"></use>
+						</svg>
+
+					</div>
+					<h2>002488-gift-exclamation-mark</h2>
+				</li>
+				<li title="002492-square-arrow-up-03">
+					<div class="icon-box">
+
+						<!-- 002492-square-arrow-up-03 -->
+						<svg class="svg-002492-square-arrow-up-03-dims">
+							<use xlink:href="futurama4.svg#002492-square-arrow-up-03"></use>
+						</svg>
+
+					</div>
+					<h2>002492-square-arrow-up-03</h2>
+				</li>
+				<li title="002493-square-arrow-down-04">
+					<div class="icon-box">
+
+						<!-- 002493-square-arrow-down-04 -->
+						<svg class="svg-002493-square-arrow-down-04-dims">
+							<use xlink:href="futurama4.svg#002493-square-arrow-down-04"></use>
+						</svg>
+
+					</div>
+					<h2>002493-square-arrow-down-04</h2>
+				</li>
+				<li title="002500-square-arrow-up-04">
+					<div class="icon-box">
+
+						<!-- 002500-square-arrow-up-04 -->
+						<svg class="svg-002500-square-arrow-up-04-dims">
+							<use xlink:href="futurama4.svg#002500-square-arrow-up-04"></use>
+						</svg>
+
+					</div>
+					<h2>002500-square-arrow-up-04</h2>
+				</li>
+				<li title="002501-square-arrow-right-03">
+					<div class="icon-box">
+
+						<!-- 002501-square-arrow-right-03 -->
+						<svg class="svg-002501-square-arrow-right-03-dims">
+							<use xlink:href="futurama4.svg#002501-square-arrow-right-03"></use>
+						</svg>
+
+					</div>
+					<h2>002501-square-arrow-right-03</h2>
+				</li>
+				<li title="002502-square-arrow-left-03">
+					<div class="icon-box">
+
+						<!-- 002502-square-arrow-left-03 -->
+						<svg class="svg-002502-square-arrow-left-03-dims">
+							<use xlink:href="futurama4.svg#002502-square-arrow-left-03"></use>
+						</svg>
+
+					</div>
+					<h2>002502-square-arrow-left-03</h2>
+				</li>
+				<li title="002504-square-arrow-right-04">
+					<div class="icon-box">
+
+						<!-- 002504-square-arrow-right-04 -->
+						<svg class="svg-002504-square-arrow-right-04-dims">
+							<use xlink:href="futurama4.svg#002504-square-arrow-right-04"></use>
+						</svg>
+
+					</div>
+					<h2>002504-square-arrow-right-04</h2>
+				</li>
+				<li title="002505-square-arrow-left-04">
+					<div class="icon-box">
+
+						<!-- 002505-square-arrow-left-04 -->
+						<svg class="svg-002505-square-arrow-left-04-dims">
+							<use xlink:href="futurama4.svg#002505-square-arrow-left-04"></use>
+						</svg>
+
+					</div>
+					<h2>002505-square-arrow-left-04</h2>
+				</li>
+				<li title="002506-square-arrow-down-03">
+					<div class="icon-box">
+
+						<!-- 002506-square-arrow-down-03 -->
+						<svg class="svg-002506-square-arrow-down-03-dims">
+							<use xlink:href="futurama4.svg#002506-square-arrow-down-03"></use>
+						</svg>
+
+					</div>
+					<h2>002506-square-arrow-down-03</h2>
+				</li>
+				<li title="002527-three-dots">
+					<div class="icon-box">
+
+						<!-- 002527-three-dots -->
+						<svg class="svg-002527-three-dots-dims">
+							<use xlink:href="futurama4.svg#002527-three-dots"></use>
+						</svg>
+
+					</div>
+					<h2>002527-three-dots</h2>
+				</li>
+				<li title="002531-social-08">
+					<div class="icon-box">
+
+						<!-- 002531-social-08 -->
+						<svg class="svg-002531-social-08-dims">
+							<use xlink:href="futurama4.svg#002531-social-08"></use>
+						</svg>
+
+					</div>
+					<h2>002531-social-08</h2>
+				</li>
+				<li title="002549-square-angle-bottom-left">
+					<div class="icon-box">
+
+						<!-- 002549-square-angle-bottom-left -->
+						<svg class="svg-002549-square-angle-bottom-left-dims">
+							<use xlink:href="futurama4.svg#002549-square-angle-bottom-left"></use>
+						</svg>
+
+					</div>
+					<h2>002549-square-angle-bottom-left</h2>
+				</li>
+				<li title="002550-square-angle-bottom-right">
+					<div class="icon-box">
+
+						<!-- 002550-square-angle-bottom-right -->
+						<svg class="svg-002550-square-angle-bottom-right-dims">
+							<use xlink:href="futurama4.svg#002550-square-angle-bottom-right"></use>
+						</svg>
+
+					</div>
+					<h2>002550-square-angle-bottom-right</h2>
+				</li>
+				<li title="002551-square-angle-top-right">
+					<div class="icon-box">
+
+						<!-- 002551-square-angle-top-right -->
+						<svg class="svg-002551-square-angle-top-right-dims">
+							<use xlink:href="futurama4.svg#002551-square-angle-top-right"></use>
+						</svg>
+
+					</div>
+					<h2>002551-square-angle-top-right</h2>
+				</li>
+				<li title="002552-square-angle-top-left">
+					<div class="icon-box">
+
+						<!-- 002552-square-angle-top-left -->
+						<svg class="svg-002552-square-angle-top-left-dims">
+							<use xlink:href="futurama4.svg#002552-square-angle-top-left"></use>
+						</svg>
+
+					</div>
+					<h2>002552-square-angle-top-left</h2>
+				</li>
+				<li title="002553-square-in-square">
+					<div class="icon-box">
+
+						<!-- 002553-square-in-square -->
+						<svg class="svg-002553-square-in-square-dims">
+							<use xlink:href="futurama4.svg#002553-square-in-square"></use>
+						</svg>
+
+					</div>
+					<h2>002553-square-in-square</h2>
+				</li>
+				<li title="002554-two-triangles-in-square-02">
+					<div class="icon-box">
+
+						<!-- 002554-two-triangles-in-square-02 -->
+						<svg class="svg-002554-two-triangles-in-square-02-dims">
+							<use xlink:href="futurama4.svg#002554-two-triangles-in-square-02"></use>
+						</svg>
+
+					</div>
+					<h2>002554-two-triangles-in-square-02</h2>
+				</li>
+				<li title="002555-two-triangles-in-square">
+					<div class="icon-box">
+
+						<!-- 002555-two-triangles-in-square -->
+						<svg class="svg-002555-two-triangles-in-square-dims">
+							<use xlink:href="futurama4.svg#002555-two-triangles-in-square"></use>
+						</svg>
+
+					</div>
+					<h2>002555-two-triangles-in-square</h2>
+				</li>
+				<li title="002556-social-09">
+					<div class="icon-box">
+
+						<!-- 002556-social-09 -->
+						<svg class="svg-002556-social-09-dims">
+							<use xlink:href="futurama4.svg#002556-social-09"></use>
+						</svg>
+
+					</div>
+					<h2>002556-social-09</h2>
+				</li>
+				<li title="002557-social-10">
+					<div class="icon-box">
+
+						<!-- 002557-social-10 -->
+						<svg class="svg-002557-social-10-dims">
+							<use xlink:href="futurama4.svg#002557-social-10"></use>
+						</svg>
+
+					</div>
+					<h2>002557-social-10</h2>
+				</li>
+				<li title="002558-four-triangles-in-square">
+					<div class="icon-box">
+
+						<!-- 002558-four-triangles-in-square -->
+						<svg class="svg-002558-four-triangles-in-square-dims">
+							<use xlink:href="futurama4.svg#002558-four-triangles-in-square"></use>
+						</svg>
+
+					</div>
+					<h2>002558-four-triangles-in-square</h2>
+				</li>
+				<li title="002559-arrow-diagonal-left-down-03">
+					<div class="icon-box">
+
+						<!-- 002559-arrow-diagonal-left-down-03 -->
+						<svg class="svg-002559-arrow-diagonal-left-down-03-dims">
+							<use xlink:href="futurama4.svg#002559-arrow-diagonal-left-down-03"></use>
+						</svg>
+
+					</div>
+					<h2>002559-arrow-diagonal-left-down-03</h2>
+				</li>
+				<li title="002560-arrow-diagonal-right-down-03">
+					<div class="icon-box">
+
+						<!-- 002560-arrow-diagonal-right-down-03 -->
+						<svg class="svg-002560-arrow-diagonal-right-down-03-dims">
+							<use xlink:href="futurama4.svg#002560-arrow-diagonal-right-down-03"></use>
+						</svg>
+
+					</div>
+					<h2>002560-arrow-diagonal-right-down-03</h2>
+				</li>
+				<li title="002561-arrow-diagonal-right-up-03">
+					<div class="icon-box">
+
+						<!-- 002561-arrow-diagonal-right-up-03 -->
+						<svg class="svg-002561-arrow-diagonal-right-up-03-dims">
+							<use xlink:href="futurama4.svg#002561-arrow-diagonal-right-up-03"></use>
+						</svg>
+
+					</div>
+					<h2>002561-arrow-diagonal-right-up-03</h2>
+				</li>
+				<li title="002562-arrow-diagonal-left-up-03">
+					<div class="icon-box">
+
+						<!-- 002562-arrow-diagonal-left-up-03 -->
+						<svg class="svg-002562-arrow-diagonal-left-up-03-dims">
+							<use xlink:href="futurama4.svg#002562-arrow-diagonal-left-up-03"></use>
+						</svg>
+
+					</div>
+					<h2>002562-arrow-diagonal-left-up-03</h2>
+				</li>
+				<li title="002650-screw-02">
+					<div class="icon-box">
+
+						<!-- 002650-screw-02 -->
+						<svg class="svg-002650-screw-02-dims">
+							<use xlink:href="futurama4.svg#002650-screw-02"></use>
+						</svg>
+
+					</div>
+					<h2>002650-screw-02</h2>
+				</li>
+				<li title="002656-sun-03">
+					<div class="icon-box">
+
+						<!-- 002656-sun-03 -->
+						<svg class="svg-002656-sun-03-dims">
+							<use xlink:href="futurama4.svg#002656-sun-03"></use>
+						</svg>
+
+					</div>
+					<h2>002656-sun-03</h2>
+				</li>
+				<li title="002658-dollar">
+					<div class="icon-box">
+
+						<!-- 002658-dollar -->
+						<svg class="svg-002658-dollar-dims">
+							<use xlink:href="futurama4.svg#002658-dollar"></use>
+						</svg>
+
+					</div>
+					<h2>002658-dollar</h2>
+				</li>
+				<li title="002701-social-13">
+					<div class="icon-box">
+
+						<!-- 002701-social-13 -->
+						<svg class="svg-002701-social-13-dims">
+							<use xlink:href="futurama4.svg#002701-social-13"></use>
+						</svg>
+
+					</div>
+					<h2>002701-social-13</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Wed, 10 Aug 2016 12:33:26 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>
