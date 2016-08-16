@@ -13,6 +13,15 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <style>
+          li {
+            font-size: 18px;
+            margin: 15px 0;
+          }
+          img {
+            width: 50rem;
+          }
+        </style>
     </head>
     <body style="width:50rem;margin: 0 auto;background: beige;">
         <!--[if lt IE 8]>
@@ -23,7 +32,7 @@
         <h2>External SVG sprite system</h2>
         <h3>The current state of the icons</h3>
         <p>The most recent SVG set which I hae received is <a href="GB_ICONS_SVG_UPDATED.zip">this one </a>
-        <div>  <img style="width:50rem" src="GB_ICONS.png" /> </div>
+        <div>  <img src="GB_ICONS.png" alt="" /> </div>
 
         The following is a list of issues with the current icon set:
         <ol>
@@ -33,7 +42,7 @@
             pngs which contain gradients like the 'page fold' png on the vip/benefits page, but I AM referring to the crown icons in the same vip/benefits tab. )
             Please see <a href="https://jira.egalacoral.com/browse/WPL-1922">WPL-1922</a> and the following image which show all/most of the icons
              which are used throughout the site. (Actually, there are a few more icons - such as the ones described <a href="https://jira.egalacoral.com/browse/GB-156">here</a>)
-             <div>  <img src="icons.png" style="width:50rem" /> </div>
+             <div>  <img src="icons.png" alt="" /> </div>
           </li>
           <li>The current icon set has color data in the form of classes and CSS styles describing fill colors etc within the SVG.
             All these styles must be REMOVED from the SVGs - EXCEPT for icons with static fills.
@@ -44,7 +53,7 @@
             One clear difference is that the viewBox size in the other icon sets are 24x24 or 32x32 unlike the current icon set which is 180x180.
             I am not 100% certain that this is the reason for the larger file size though. Please look into this.
            </li>
-          <li></li>
+
         </ol>
         </p>
         <h2>Requirements</h3>
@@ -72,6 +81,10 @@
           </li>
           <li>
             <h3>The Target size for 100 icons: 50KB or less.</h3>
+          </li>
+          <li>The SVG file names end up becoming ids for the individual svg icons to reference.
+            For this reason it is important that the SVG file names are descriptive yet succint and most important: don't contain whitespaces.
+            (NB: The way the current SVGs are named is FINE. I just included this point to emphasize that this is necessary.)
           </li>
         </ol>
         <h3>Proof of Concept / Demos</h3>
