@@ -1,0 +1,1073 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>
+		@charset "UTF-8";
+		body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}
+
+		header{display:block;padding:3em 3em 2em 3em;background-color:#fff}
+		header p{margin:2em 0 0 0}
+		section{border-top:1px solid #eee;padding:2em 3em 0 3em}
+		ul{margin:0;padding:0;display: flex; flex-wrap: wrap; width: 1200px; margin-left: auto; margin-right: auto;list-style:none;}
+		li{flex: 1 1 0; padding: 10px 20px;position:relative;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}
+		/*.icon{display:inline;display:inline-block}*/
+		h1{margin-top:0}
+
+		footer{display:block;margin:0;padding:0 3em 3em 3em}
+		footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}
+
+			li svg {fill: #666666; margin-left: auto; margin-right: auto; width:1em; height: 1em; display:block; margin-top:10px; font-size: 3em;}
+			li:hover svg { fill: tomato; }
+			li:nth-child(2n):hover svg { fill: white; }
+			li:nth-child(2n):hover { background: tomato; }
+			li:nth-child(2n):hover h2 { color: white; }
+			h2 {margin-left: auto; margin-right: auto; text-align:center; display:block;font-size:16px; margin-top: 16px;}
+		</style>
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+		<section>
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+
+				<li title="ADD_LINK">
+					<div class="icon-box">
+
+						<!-- ADD_LINK -->
+						<svg class="svg-ADD_LINK-dims">
+							<use xlink:href="gb1.svg#ADD_LINK"></use>
+						</svg>
+
+					</div>
+					<h2>ADD_LINK</h2>
+				</li>
+				<li title="BINGO">
+					<div class="icon-box">
+
+						<!-- BINGO -->
+						<svg class="svg-BINGO-dims">
+							<use xlink:href="gb1.svg#BINGO"></use>
+						</svg>
+
+					</div>
+					<h2>BINGO</h2>
+				</li>
+				<li title="BINGO_JACKPOTS">
+					<div class="icon-box">
+
+						<!-- BINGO_JACKPOTS -->
+						<svg class="svg-BINGO_JACKPOTS-dims">
+							<use xlink:href="gb1.svg#BINGO_JACKPOTS"></use>
+						</svg>
+
+					</div>
+					<h2>BINGO_JACKPOTS</h2>
+				</li>
+				<li title="BINGO_SCHEDULE">
+					<div class="icon-box">
+
+						<!-- BINGO_SCHEDULE -->
+						<svg class="svg-BINGO_SCHEDULE-dims">
+							<use xlink:href="gb1.svg#BINGO_SCHEDULE"></use>
+						</svg>
+
+					</div>
+					<h2>BINGO_SCHEDULE</h2>
+				</li>
+				<li title="BUZZ">
+					<div class="icon-box">
+
+						<!-- BUZZ -->
+						<svg class="svg-BUZZ-dims">
+							<use xlink:href="gb1.svg#BUZZ"></use>
+						</svg>
+
+					</div>
+					<h2>BUZZ</h2>
+				</li>
+				<li title="CARD1">
+					<div class="icon-box">
+
+						<!-- CARD1 -->
+						<svg class="svg-CARD1-dims">
+							<use xlink:href="gb1.svg#CARD1"></use>
+						</svg>
+
+					</div>
+					<h2>CARD1</h2>
+				</li>
+				<li title="CARD2">
+					<div class="icon-box">
+
+						<!-- CARD2 -->
+						<svg class="svg-CARD2-dims">
+							<use xlink:href="gb1.svg#CARD2"></use>
+						</svg>
+
+					</div>
+					<h2>CARD2</h2>
+				</li>
+				<li title="CASINO">
+					<div class="icon-box">
+
+						<!-- CASINO -->
+						<svg class="svg-CASINO-dims">
+							<use xlink:href="gb1.svg#CASINO"></use>
+						</svg>
+
+					</div>
+					<h2>CASINO</h2>
+				</li>
+				<li title="CATEGORIES">
+					<div class="icon-box">
+
+						<!-- CATEGORIES -->
+						<svg class="svg-CATEGORIES-dims">
+							<use xlink:href="gb1.svg#CATEGORIES"></use>
+						</svg>
+
+					</div>
+					<h2>CATEGORIES</h2>
+				</li>
+				<li title="CHANGE_PASSWORD">
+					<div class="icon-box">
+
+						<!-- CHANGE_PASSWORD -->
+						<svg class="svg-CHANGE_PASSWORD-dims">
+							<use xlink:href="gb1.svg#CHANGE_PASSWORD"></use>
+						</svg>
+
+					</div>
+					<h2>CHANGE_PASSWORD</h2>
+				</li>
+				<li title="CHAT">
+					<div class="icon-box">
+
+						<!-- CHAT -->
+						<svg class="svg-CHAT-dims">
+							<use xlink:href="gb1.svg#CHAT"></use>
+						</svg>
+
+					</div>
+					<h2>CHAT</h2>
+				</li>
+				<li title="CLOSE">
+					<div class="icon-box">
+
+						<!-- CLOSE -->
+						<svg class="svg-CLOSE-dims">
+							<use xlink:href="gb1.svg#CLOSE"></use>
+						</svg>
+
+					</div>
+					<h2>CLOSE</h2>
+				</li>
+				<li title="CLOSE_SMALL">
+					<div class="icon-box">
+
+						<!-- CLOSE_SMALL -->
+						<svg class="svg-CLOSE_SMALL-dims">
+							<use xlink:href="gb1.svg#CLOSE_SMALL"></use>
+						</svg>
+
+					</div>
+					<h2>CLOSE_SMALL</h2>
+				</li>
+				<li title="CLUB_FINDER">
+					<div class="icon-box">
+
+						<!-- CLUB_FINDER -->
+						<svg class="svg-CLUB_FINDER-dims">
+							<use xlink:href="gb1.svg#CLUB_FINDER"></use>
+						</svg>
+
+					</div>
+					<h2>CLUB_FINDER</h2>
+				</li>
+				<li title="COOLING_OF_PERIOD">
+					<div class="icon-box">
+
+						<!-- COOLING_OF_PERIOD -->
+						<svg class="svg-COOLING_OF_PERIOD-dims">
+							<use xlink:href="gb1.svg#COOLING_OF_PERIOD"></use>
+						</svg>
+
+					</div>
+					<h2>COOLING_OF_PERIOD</h2>
+				</li>
+				<li title="CORONATIONSTREET">
+					<div class="icon-box">
+
+						<!-- CORONATIONSTREET -->
+						<svg class="svg-CORONATIONSTREET-dims">
+							<use xlink:href="gb1.svg#CORONATIONSTREET"></use>
+						</svg>
+
+					</div>
+					<h2>CORONATIONSTREET</h2>
+				</li>
+				<li title="CVV_CODE">
+					<div class="icon-box">
+
+						<!-- CVV_CODE -->
+						<svg class="svg-CVV_CODE-dims">
+							<use xlink:href="gb1.svg#CVV_CODE"></use>
+						</svg>
+
+					</div>
+					<h2>CVV_CODE</h2>
+				</li>
+				<li title="DEPOSIT">
+					<div class="icon-box">
+
+						<!-- DEPOSIT -->
+						<svg class="svg-DEPOSIT-dims">
+							<use xlink:href="gb1.svg#DEPOSIT"></use>
+						</svg>
+
+					</div>
+					<h2>DEPOSIT</h2>
+				</li>
+				<li title="DESKTOP">
+					<div class="icon-box">
+
+						<!-- DESKTOP -->
+						<svg class="svg-DESKTOP-dims">
+							<use xlink:href="gb1.svg#DESKTOP"></use>
+						</svg>
+
+					</div>
+					<h2>DESKTOP</h2>
+				</li>
+				<li title="EMAIL">
+					<div class="icon-box">
+
+						<!-- EMAIL -->
+						<svg class="svg-EMAIL-dims">
+							<use xlink:href="gb1.svg#EMAIL"></use>
+						</svg>
+
+					</div>
+					<h2>EMAIL</h2>
+				</li>
+				<li title="ENABLE_PIN_">
+					<div class="icon-box">
+
+						<!-- ENABLE_PIN_ -->
+						<svg class="svg-ENABLE_PIN_-dims">
+							<use xlink:href="gb1.svg#ENABLE_PIN_"></use>
+						</svg>
+
+					</div>
+					<h2>ENABLE_PIN_</h2>
+				</li>
+				<li title="ENABLE_TOUCH">
+					<div class="icon-box">
+
+						<!-- ENABLE_TOUCH -->
+						<svg class="svg-ENABLE_TOUCH-dims">
+							<use xlink:href="gb1.svg#ENABLE_TOUCH"></use>
+						</svg>
+
+					</div>
+					<h2>ENABLE_TOUCH</h2>
+				</li>
+				<li title="ENTER_PROMO_CODE">
+					<div class="icon-box">
+
+						<!-- ENTER_PROMO_CODE -->
+						<svg class="svg-ENTER_PROMO_CODE-dims">
+							<use xlink:href="gb1.svg#ENTER_PROMO_CODE"></use>
+						</svg>
+
+					</div>
+					<h2>ENTER_PROMO_CODE</h2>
+				</li>
+				<li title="EXCLUSIVE">
+					<div class="icon-box">
+
+						<!-- EXCLUSIVE -->
+						<svg class="svg-EXCLUSIVE-dims">
+							<use xlink:href="gb1.svg#EXCLUSIVE"></use>
+						</svg>
+
+					</div>
+					<h2>EXCLUSIVE</h2>
+				</li>
+				<li title="EXCLUSIVE2">
+					<div class="icon-box">
+
+						<!-- EXCLUSIVE2 -->
+						<svg class="svg-EXCLUSIVE2-dims">
+							<use xlink:href="gb1.svg#EXCLUSIVE2"></use>
+						</svg>
+
+					</div>
+					<h2>EXCLUSIVE2</h2>
+				</li>
+				<li title="EXPAND">
+					<div class="icon-box">
+
+						<!-- EXPAND -->
+						<svg class="svg-EXPAND-dims">
+							<use xlink:href="gb1.svg#EXPAND"></use>
+						</svg>
+
+					</div>
+					<h2>EXPAND</h2>
+				</li>
+				<li title="EXPAND_SMALL">
+					<div class="icon-box">
+
+						<!-- EXPAND_SMALL -->
+						<svg class="svg-EXPAND_SMALL-dims">
+							<use xlink:href="gb1.svg#EXPAND_SMALL"></use>
+						</svg>
+
+					</div>
+					<h2>EXPAND_SMALL</h2>
+				</li>
+				<li title="FAVOURITE">
+					<div class="icon-box">
+
+						<!-- FAVOURITE -->
+						<svg class="svg-FAVOURITE-dims">
+							<use xlink:href="gb1.svg#FAVOURITE"></use>
+						</svg>
+
+					</div>
+					<h2>FAVOURITE</h2>
+				</li>
+				<li title="FAVOURITIES">
+					<div class="icon-box">
+
+						<!-- FAVOURITIES -->
+						<svg class="svg-FAVOURITIES-dims">
+							<use xlink:href="gb1.svg#FAVOURITIES"></use>
+						</svg>
+
+					</div>
+					<h2>FAVOURITIES</h2>
+				</li>
+				<li title="FEATURES">
+					<div class="icon-box">
+
+						<!-- FEATURES -->
+						<svg class="svg-FEATURES-dims">
+							<use xlink:href="gb1.svg#FEATURES"></use>
+						</svg>
+
+					</div>
+					<h2>FEATURES</h2>
+				</li>
+				<li title="FEEDBACK">
+					<div class="icon-box">
+
+						<!-- FEEDBACK -->
+						<svg class="svg-FEEDBACK-dims">
+							<use xlink:href="gb1.svg#FEEDBACK"></use>
+						</svg>
+
+					</div>
+					<h2>FEEDBACK</h2>
+				</li>
+				<li title="FILTERS">
+					<div class="icon-box">
+
+						<!-- FILTERS -->
+						<svg class="svg-FILTERS-dims">
+							<use xlink:href="gb1.svg#FILTERS"></use>
+						</svg>
+
+					</div>
+					<h2>FILTERS</h2>
+				</li>
+				<li title="FLUTTER">
+					<div class="icon-box">
+
+						<!-- FLUTTER -->
+						<svg class="svg-FLUTTER-dims">
+							<use xlink:href="gb1.svg#FLUTTER"></use>
+						</svg>
+
+					</div>
+					<h2>FLUTTER</h2>
+				</li>
+				<li title="GALATV">
+					<div class="icon-box">
+
+						<!-- GALATV -->
+						<svg class="svg-GALATV-dims">
+							<use xlink:href="gb1.svg#GALATV"></use>
+						</svg>
+
+					</div>
+					<h2>GALATV</h2>
+				</li>
+				<li title="GAMES">
+					<div class="icon-box">
+
+						<!-- GAMES -->
+						<svg class="svg-GAMES-dims">
+							<use xlink:href="gb1.svg#GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>GAMES</h2>
+				</li>
+				<li title="GAME_PROFILE">
+					<div class="icon-box">
+
+						<!-- GAME_PROFILE -->
+						<svg class="svg-GAME_PROFILE-dims">
+							<use xlink:href="gb1.svg#GAME_PROFILE"></use>
+						</svg>
+
+					</div>
+					<h2>GAME_PROFILE</h2>
+				</li>
+				<li title="GRID_VIEW">
+					<div class="icon-box">
+
+						<!-- GRID_VIEW -->
+						<svg class="svg-GRID_VIEW-dims">
+							<use xlink:href="gb1.svg#GRID_VIEW"></use>
+						</svg>
+
+					</div>
+					<h2>GRID_VIEW</h2>
+				</li>
+				<li title="HELP">
+					<div class="icon-box">
+
+						<!-- HELP -->
+						<svg class="svg-HELP-dims">
+							<use xlink:href="gb1.svg#HELP"></use>
+						</svg>
+
+					</div>
+					<h2>HELP</h2>
+				</li>
+				<li title="HOME">
+					<div class="icon-box">
+
+						<!-- HOME -->
+						<svg class="svg-HOME-dims">
+							<use xlink:href="gb1.svg#HOME"></use>
+						</svg>
+
+					</div>
+					<h2>HOME</h2>
+				</li>
+				<li title="HOW_TO_PLAY">
+					<div class="icon-box">
+
+						<!-- HOW_TO_PLAY -->
+						<svg class="svg-HOW_TO_PLAY-dims">
+							<use xlink:href="gb1.svg#HOW_TO_PLAY"></use>
+						</svg>
+
+					</div>
+					<h2>HOW_TO_PLAY</h2>
+				</li>
+				<li title="INFORMATION">
+					<div class="icon-box">
+
+						<!-- INFORMATION -->
+						<svg class="svg-INFORMATION-dims">
+							<use xlink:href="gb1.svg#INFORMATION"></use>
+						</svg>
+
+					</div>
+					<h2>INFORMATION</h2>
+				</li>
+				<li title="INFORMATION_SMALL">
+					<div class="icon-box">
+
+						<!-- INFORMATION_SMALL -->
+						<svg class="svg-INFORMATION_SMALL-dims">
+							<use xlink:href="gb1.svg#INFORMATION_SMALL"></use>
+						</svg>
+
+					</div>
+					<h2>INFORMATION_SMALL</h2>
+				</li>
+				<li title="JACKPOT">
+					<div class="icon-box">
+
+						<!-- JACKPOT -->
+						<svg class="svg-JACKPOT-dims">
+							<use xlink:href="gb1.svg#JACKPOT"></use>
+						</svg>
+
+					</div>
+					<h2>JACKPOT</h2>
+				</li>
+				<li title="LINK">
+					<div class="icon-box">
+
+						<!-- LINK -->
+						<svg class="svg-LINK-dims">
+							<use xlink:href="gb1.svg#LINK"></use>
+						</svg>
+
+					</div>
+					<h2>LINK</h2>
+				</li>
+				<li title="LINK2">
+					<div class="icon-box">
+
+						<!-- LINK2 -->
+						<svg class="svg-LINK2-dims">
+							<use xlink:href="gb1.svg#LINK2"></use>
+						</svg>
+
+					</div>
+					<h2>LINK2</h2>
+				</li>
+				<li title="LIST_VIEW">
+					<div class="icon-box">
+
+						<!-- LIST_VIEW -->
+						<svg class="svg-LIST_VIEW-dims">
+							<use xlink:href="gb1.svg#LIST_VIEW"></use>
+						</svg>
+
+					</div>
+					<h2>LIST_VIEW</h2>
+				</li>
+				<li title="LIVECALLER">
+					<div class="icon-box">
+
+						<!-- LIVECALLER -->
+						<svg class="svg-LIVECALLER-dims">
+							<use xlink:href="gb1.svg#LIVECALLER"></use>
+						</svg>
+
+					</div>
+					<h2>LIVECALLER</h2>
+				</li>
+				<li title="LOTTO">
+					<div class="icon-box">
+
+						<!-- LOTTO -->
+						<svg class="svg-LOTTO-dims">
+							<use xlink:href="gb1.svg#LOTTO"></use>
+						</svg>
+
+					</div>
+					<h2>LOTTO</h2>
+				</li>
+				<li title="MAXIMUM_PAYOUT">
+					<div class="icon-box">
+
+						<!-- MAXIMUM_PAYOUT -->
+						<svg class="svg-MAXIMUM_PAYOUT-dims">
+							<use xlink:href="gb1.svg#MAXIMUM_PAYOUT"></use>
+						</svg>
+
+					</div>
+					<h2>MAXIMUM_PAYOUT</h2>
+				</li>
+				<li title="MAXIMUM_STAKE">
+					<div class="icon-box">
+
+						<!-- MAXIMUM_STAKE -->
+						<svg class="svg-MAXIMUM_STAKE-dims">
+							<use xlink:href="gb1.svg#MAXIMUM_STAKE"></use>
+						</svg>
+
+					</div>
+					<h2>MAXIMUM_STAKE</h2>
+				</li>
+				<li title="MENU_V2">
+					<div class="icon-box">
+
+						<!-- MENU_V2 -->
+						<svg class="svg-MENU_V2-dims">
+							<use xlink:href="gb1.svg#MENU_V2"></use>
+						</svg>
+
+					</div>
+					<h2>MENU_V2</h2>
+				</li>
+				<li title="MINIMUM_STAKE">
+					<div class="icon-box">
+
+						<!-- MINIMUM_STAKE -->
+						<svg class="svg-MINIMUM_STAKE-dims">
+							<use xlink:href="gb1.svg#MINIMUM_STAKE"></use>
+						</svg>
+
+					</div>
+					<h2>MINIMUM_STAKE</h2>
+				</li>
+				<li title="MOBILE">
+					<div class="icon-box">
+
+						<!-- MOBILE -->
+						<svg class="svg-MOBILE-dims">
+							<use xlink:href="gb1.svg#MOBILE"></use>
+						</svg>
+
+					</div>
+					<h2>MOBILE</h2>
+				</li>
+				<li title="MY_ACCOUNT">
+					<div class="icon-box">
+
+						<!-- MY_ACCOUNT -->
+						<svg class="svg-MY_ACCOUNT-dims">
+							<use xlink:href="gb1.svg#MY_ACCOUNT"></use>
+						</svg>
+
+					</div>
+					<h2>MY_ACCOUNT</h2>
+				</li>
+				<li title="MY_BONUS_BALANCE">
+					<div class="icon-box">
+
+						<!-- MY_BONUS_BALANCE -->
+						<svg class="svg-MY_BONUS_BALANCE-dims">
+							<use xlink:href="gb1.svg#MY_BONUS_BALANCE"></use>
+						</svg>
+
+					</div>
+					<h2>MY_BONUS_BALANCE</h2>
+				</li>
+				<li title="MY_DETAILS">
+					<div class="icon-box">
+
+						<!-- MY_DETAILS -->
+						<svg class="svg-MY_DETAILS-dims">
+							<use xlink:href="gb1.svg#MY_DETAILS"></use>
+						</svg>
+
+					</div>
+					<h2>MY_DETAILS</h2>
+				</li>
+				<li title="NEW">
+					<div class="icon-box">
+
+						<!-- NEW -->
+						<svg class="svg-NEW-dims">
+							<use xlink:href="gb1.svg#NEW"></use>
+						</svg>
+
+					</div>
+					<h2>NEW</h2>
+				</li>
+				<li title="NEW2">
+					<div class="icon-box">
+
+						<!-- NEW2 -->
+						<svg class="svg-NEW2-dims">
+							<use xlink:href="gb1.svg#NEW2"></use>
+						</svg>
+
+					</div>
+					<h2>NEW2</h2>
+				</li>
+				<li title="NEW_EXCLUSIVE">
+					<div class="icon-box">
+
+						<!-- NEW_EXCLUSIVE -->
+						<svg class="svg-NEW_EXCLUSIVE-dims">
+							<use xlink:href="gb1.svg#NEW_EXCLUSIVE"></use>
+						</svg>
+
+					</div>
+					<h2>NEW_EXCLUSIVE</h2>
+				</li>
+				<li title="PAYLINES">
+					<div class="icon-box">
+
+						<!-- PAYLINES -->
+						<svg class="svg-PAYLINES-dims">
+							<use xlink:href="gb1.svg#PAYLINES"></use>
+						</svg>
+
+					</div>
+					<h2>PAYLINES</h2>
+				</li>
+				<li title="PHONE_US">
+					<div class="icon-box">
+
+						<!-- PHONE_US -->
+						<svg class="svg-PHONE_US-dims">
+							<use xlink:href="gb1.svg#PHONE_US"></use>
+						</svg>
+
+					</div>
+					<h2>PHONE_US</h2>
+				</li>
+				<li title="PLAY">
+					<div class="icon-box">
+
+						<!-- PLAY -->
+						<svg class="svg-PLAY-dims">
+							<use xlink:href="gb1.svg#PLAY"></use>
+						</svg>
+
+					</div>
+					<h2>PLAY</h2>
+				</li>
+				<li title="PLAYER_ANALYTICS">
+					<div class="icon-box">
+
+						<!-- PLAYER_ANALYTICS -->
+						<svg class="svg-PLAYER_ANALYTICS-dims">
+							<use xlink:href="gb1.svg#PLAYER_ANALYTICS"></use>
+						</svg>
+
+					</div>
+					<h2>PLAYER_ANALYTICS</h2>
+				</li>
+				<li title="PLAY_BREAK_V1">
+					<div class="icon-box">
+
+						<!-- PLAY_BREAK_V1 -->
+						<svg class="svg-PLAY_BREAK_V1-dims">
+							<use xlink:href="gb1.svg#PLAY_BREAK_V1"></use>
+						</svg>
+
+					</div>
+					<h2>PLAY_BREAK_V1</h2>
+				</li>
+				<li title="PLAY_WHITE">
+					<div class="icon-box">
+
+						<!-- PLAY_WHITE -->
+						<svg class="svg-PLAY_WHITE-dims">
+							<use xlink:href="gb1.svg#PLAY_WHITE"></use>
+						</svg>
+
+					</div>
+					<h2>PLAY_WHITE</h2>
+				</li>
+				<li title="PROMOS">
+					<div class="icon-box">
+
+						<!-- PROMOS -->
+						<svg class="svg-PROMOS-dims">
+							<use xlink:href="gb1.svg#PROMOS"></use>
+						</svg>
+
+					</div>
+					<h2>PROMOS</h2>
+				</li>
+				<li title="RECENTLY_PLAYED_GAMES">
+					<div class="icon-box">
+
+						<!-- RECENTLY_PLAYED_GAMES -->
+						<svg class="svg-RECENTLY_PLAYED_GAMES-dims">
+							<use xlink:href="gb1.svg#RECENTLY_PLAYED_GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>RECENTLY_PLAYED_GAMES</h2>
+				</li>
+				<li title="REEDEM">
+					<div class="icon-box">
+
+						<!-- REEDEM -->
+						<svg class="svg-REEDEM-dims">
+							<use xlink:href="gb1.svg#REEDEM"></use>
+						</svg>
+
+					</div>
+					<h2>REEDEM</h2>
+				</li>
+				<li title="REEDEM1">
+					<div class="icon-box">
+
+						<!-- REEDEM1 -->
+						<svg class="svg-REEDEM1-dims">
+							<use xlink:href="gb1.svg#REEDEM1"></use>
+						</svg>
+
+					</div>
+					<h2>REEDEM1</h2>
+				</li>
+				<li title="RESPOSIBLE_GAMBLING">
+					<div class="icon-box">
+
+						<!-- RESPOSIBLE_GAMBLING -->
+						<svg class="svg-RESPOSIBLE_GAMBLING-dims">
+							<use xlink:href="gb1.svg#RESPOSIBLE_GAMBLING"></use>
+						</svg>
+
+					</div>
+					<h2>RESPOSIBLE_GAMBLING</h2>
+				</li>
+				<li title="REWARDS">
+					<div class="icon-box">
+
+						<!-- REWARDS -->
+						<svg class="svg-REWARDS-dims">
+							<use xlink:href="gb1.svg#REWARDS"></use>
+						</svg>
+
+					</div>
+					<h2>REWARDS</h2>
+				</li>
+				<li title="SCRATCH_CARDS">
+					<div class="icon-box">
+
+						<!-- SCRATCH_CARDS -->
+						<svg class="svg-SCRATCH_CARDS-dims">
+							<use xlink:href="gb1.svg#SCRATCH_CARDS"></use>
+						</svg>
+
+					</div>
+					<h2>SCRATCH_CARDS</h2>
+				</li>
+				<li title="SEARCH">
+					<div class="icon-box">
+
+						<!-- SEARCH -->
+						<svg class="svg-SEARCH-dims">
+							<use xlink:href="gb1.svg#SEARCH"></use>
+						</svg>
+
+					</div>
+					<h2>SEARCH</h2>
+				</li>
+				<li title="SECURED">
+					<div class="icon-box">
+
+						<!-- SECURED -->
+						<svg class="svg-SECURED-dims">
+							<use xlink:href="gb1.svg#SECURED"></use>
+						</svg>
+
+					</div>
+					<h2>SECURED</h2>
+				</li>
+				<li title="SELF_EXCLUSION">
+					<div class="icon-box">
+
+						<!-- SELF_EXCLUSION -->
+						<svg class="svg-SELF_EXCLUSION-dims">
+							<use xlink:href="gb1.svg#SELF_EXCLUSION"></use>
+						</svg>
+
+					</div>
+					<h2>SELF_EXCLUSION</h2>
+				</li>
+				<li title="SESSION_LIMITS">
+					<div class="icon-box">
+
+						<!-- SESSION_LIMITS -->
+						<svg class="svg-SESSION_LIMITS-dims">
+							<use xlink:href="gb1.svg#SESSION_LIMITS"></use>
+						</svg>
+
+					</div>
+					<h2>SESSION_LIMITS</h2>
+				</li>
+				<li title="SESSION_TIME">
+					<div class="icon-box">
+
+						<!-- SESSION_TIME -->
+						<svg class="svg-SESSION_TIME-dims">
+							<use xlink:href="gb1.svg#SESSION_TIME"></use>
+						</svg>
+
+					</div>
+					<h2>SESSION_TIME</h2>
+				</li>
+				<li title="SETTINGS">
+					<div class="icon-box">
+
+						<!-- SETTINGS -->
+						<svg class="svg-SETTINGS-dims">
+							<use xlink:href="gb1.svg#SETTINGS"></use>
+						</svg>
+
+					</div>
+					<h2>SETTINGS</h2>
+				</li>
+				<li title="SLOTS">
+					<div class="icon-box">
+
+						<!-- SLOTS -->
+						<svg class="svg-SLOTS-dims">
+							<use xlink:href="gb1.svg#SLOTS"></use>
+						</svg>
+
+					</div>
+					<h2>SLOTS</h2>
+				</li>
+				<li title="SLOTSANDGAMES">
+					<div class="icon-box">
+
+						<!-- SLOTSANDGAMES -->
+						<svg class="svg-SLOTSANDGAMES-dims">
+							<use xlink:href="gb1.svg#SLOTSANDGAMES"></use>
+						</svg>
+
+					</div>
+					<h2>SLOTSANDGAMES</h2>
+				</li>
+				<li title="TABLET">
+					<div class="icon-box">
+
+						<!-- TABLET -->
+						<svg class="svg-TABLET-dims">
+							<use xlink:href="gb1.svg#TABLET"></use>
+						</svg>
+
+					</div>
+					<h2>TABLET</h2>
+				</li>
+				<li title="TABLE_GAME">
+					<div class="icon-box">
+
+						<!-- TABLE_GAME -->
+						<svg class="svg-TABLE_GAME-dims">
+							<use xlink:href="gb1.svg#TABLE_GAME"></use>
+						</svg>
+
+					</div>
+					<h2>TABLE_GAME</h2>
+				</li>
+				<li title="TECH_SUPPORT">
+					<div class="icon-box">
+
+						<!-- TECH_SUPPORT -->
+						<svg class="svg-TECH_SUPPORT-dims">
+							<use xlink:href="gb1.svg#TECH_SUPPORT"></use>
+						</svg>
+
+					</div>
+					<h2>TECH_SUPPORT</h2>
+				</li>
+				<li title="TICKETS">
+					<div class="icon-box">
+
+						<!-- TICKETS -->
+						<svg class="svg-TICKETS-dims">
+							<use xlink:href="gb1.svg#TICKETS"></use>
+						</svg>
+
+					</div>
+					<h2>TICKETS</h2>
+				</li>
+				<li title="TIME">
+					<div class="icon-box">
+
+						<!-- TIME -->
+						<svg class="svg-TIME-dims">
+							<use xlink:href="gb1.svg#TIME"></use>
+						</svg>
+
+					</div>
+					<h2>TIME</h2>
+				</li>
+				<li title="TRANSACTION_HISTORY">
+					<div class="icon-box">
+
+						<!-- TRANSACTION_HISTORY -->
+						<svg class="svg-TRANSACTION_HISTORY-dims">
+							<use xlink:href="gb1.svg#TRANSACTION_HISTORY"></use>
+						</svg>
+
+					</div>
+					<h2>TRANSACTION_HISTORY</h2>
+				</li>
+				<li title="TV_FILM">
+					<div class="icon-box">
+
+						<!-- TV_FILM -->
+						<svg class="svg-TV_FILM-dims">
+							<use xlink:href="gb1.svg#TV_FILM"></use>
+						</svg>
+
+					</div>
+					<h2>TV_FILM</h2>
+				</li>
+				<li title="USERS">
+					<div class="icon-box">
+
+						<!-- USERS -->
+						<svg class="svg-USERS-dims">
+							<use xlink:href="gb1.svg#USERS"></use>
+						</svg>
+
+					</div>
+					<h2>USERS</h2>
+				</li>
+				<li title="VIP">
+					<div class="icon-box">
+
+						<!-- VIP -->
+						<svg class="svg-VIP-dims">
+							<use xlink:href="gb1.svg#VIP"></use>
+						</svg>
+
+					</div>
+					<h2>VIP</h2>
+				</li>
+				<li title="WARNING">
+					<div class="icon-box">
+
+						<!-- WARNING -->
+						<svg class="svg-WARNING-dims">
+							<use xlink:href="gb1.svg#WARNING"></use>
+						</svg>
+
+					</div>
+					<h2>WARNING</h2>
+				</li>
+				<li title="WITHDRAW">
+					<div class="icon-box">
+
+						<!-- WITHDRAW -->
+						<svg class="svg-WITHDRAW-dims">
+							<use xlink:href="gb1.svg#WITHDRAW"></use>
+						</svg>
+
+					</div>
+					<h2>WITHDRAW</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Tue, 16 Aug 2016 07:13:52 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+		<script defer src="svgxuse.min.js"></script>
+	</body>
+</html>
