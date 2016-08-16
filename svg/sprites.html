@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body style="width:30rem;margin: 0 auto">
+    <body style="width:50rem;margin: 0 auto;background: beige;">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -41,25 +41,24 @@
             <h3>Leave a little bit of space near the edges, especially for round shapes.</h3>
           </li>
           <li>
-            <h3>The SVG ViewBox should be square and all icons should use the same viewBox (eg. viewBox="0 0 32 32" )</h3>
+            <h3>The SVG ViewBox should be square and all icons should use the same viewBox dimensions (eg. viewBox="0 0 32 32" )</h3>
           </li>
           <li>
-            <h3>Build two sprites:</h3>
-            <p>a) A small one with essential icons (e.g. main icons used in the page header), to be inlined on each page. Target size: 5KB or less.</p>
-            <p>b) A bigger one with all the project’s icons, kept as an external file. Target size: 50KB or less.</p>
+            <h3>The Target size for 100 icons: 50KB or less.</h3>
           </li>
         </ol>
         <h3>Proof of Concept / Demos</h3>
         <p>2 icons sets</p>
-        <p>a) <a href="https://danielcss.github.io/svg/futuramoSVGs.zip">futuramo icon set (zip file)</a> - free download from https://futuramo.com/a/icons</p>
-        <p>b) <a href="https://danielcss.github.io/svg/materialSVGs.zip">Nova icon set (zip file)</a> - free download from http://www.webalys.com/nova/free-icons.html</p>
+        <p>a) <a href="https://danielcss.github.io/svg/futuramoSVGs.zip">futuramo icon set (zip file)</a> - free download from <a href="https://futuramo.com/a/icons">https://futuramo.com/a/icons</a></p>
+        <p>b) <a href="https://danielcss.github.io/svg/materialSVGs.zip">Nova icon set (zip file)</a> - free download from <a href="http://www.webalys.com/nova/free-icons.html">http://www.webalys.com/nova/free-icons.html</a></p>
         <p>Take a look at the format of the SVGs.</p>
         <p>After running gulp-svg-sprite on the SVGs I get a large SVG sprite file.</p>
         <p>Take a look at a demos: note that with this method we can use CSS to change the icon color (hover over the icons to see this in action)</p>
-        <p>a) futuramo icons demo: <a href="https://danielcss.github.io/svg/demo/sprite.html">futuramo icons demo with external svg sprite</a></p>
-        <p>b) Nova Icons demo:</p>
-        <a href="https://danielcss.github.io/svg/demo/material-solid.html">Nova demo 1 - solid icons </a><br>
-        <a href="https://danielcss.github.io/svg/demo/material-line.html">Nova demo 2 - line icons </a>
+        <ol>
+          <li><a href="https://danielcss.github.io/svg/demo/sprite.html">futuramo icons demo with external svg sprite</a></li>
+          <li><a href="https://danielcss.github.io/svg/demo/material-solid.html">Nova demo 1 - solid icons </a></li>
+          <li><a href="https://danielcss.github.io/svg/demo/material-line.html">Nova demo 2 - line icons </a></li>
+        </ol>
         <h3>Reference</h3>
         <p><a href="http://fvsch.com/code/svg-icons/how-to/">How to work with SVG icons</a></p>
     </body>
