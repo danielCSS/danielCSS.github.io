@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body style="width:30rem;margin: 0 auto">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <h2>External SVG sprite system</h2>
+        <ol>
+          <li>
+            <h3>Export to SVG</h3>
+            <p>In Illustrator use “Save As” and pick “SVG” for the format. (It might be better to use “Export as…” and pick SVG for an optimized result.)</p>
+            <p>In Sketch you can select an artboard, click “Make Exportable” on the bottom right, and pick “SVG” for the format.</p>
+            <p>In Inkscape you can “Save As” and pick “Optimized SVG”.</p>
+          </li>
+          <li>
+            <h3>Single-color icons:</h3>
+            <p>In your SOURCE FILE, the paths are black (#000000).</p>
+            <p>In the EXPORTED CODE, there are no fill attributes.</p>
+            <p>If we have hardcoded fills in the SVG source, we won’t be able to change those colors from our CSS code.</p>
+            <p>So it’s generally best to remove them, at least for single-color icons.</p>
+            <p>Illustrator doesn’t output fill attributes for path that are fully black (#000000).</p>
+            <p>Sketch does, so you may have to open the exported SVG code and manually remove the fill="#000000" attributes.</p>
+          </li>
+          <li>
+            <h3>Leave a little bit of space near the edges, especially for round shapes.</h3>
+          </li>
+          <li>
+            <h3>The SVG ViewBox should be square and all icons should use the same viewBox (eg. viewBox="0 0 32 32" )</h3>
+          </li>
+          <li>
+            <h3>Build two sprites:</h3>
+            <p>a) A small one with essential icons (e.g. main icons used in the page header), to be inlined on each page. Target size: 5KB or less.</p>
+            <p>b) A bigger one with all the project’s icons, kept as an external file. Target size: 50KB or less.</p>
+          </li>
+        </ol>
+        <h3>Proof of Concept / Demos</h3>
+        <p>2 icons sets</p>
+        <p>a) <a href="https://danielcss.github.io/svg/futuramoSVGs.zip">futuramo icon set (zip file)</a> - free download from https://futuramo.com/a/icons</p>
+        <p>b) <a href="https://danielcss.github.io/svg/materialSVGs.zip">Nova icon set (zip file)</a> - free download from http://www.webalys.com/nova/free-icons.html</p>
+        <p>Take a look at the format of the SVGs.</p>
+        <p>After running gulp-svg-sprite on the SVGs I get a large SVG sprite file.</p>
+        <p>Take a look at a demos: note that with this method we can use CSS to change the icon color (hover over the icons to see this in action)</p>
+        <p>a) futuramo icons demo: <a href="https://danielcss.github.io/svg/demo/sprite.html">futuramo icons demo with external svg sprite</a></p>
+        <p>b) Nova Icons demo:</p>
+        <a href="https://danielcss.github.io/svg/demo/material-solid.html">Nova demo 1 - solid icons </a><br>
+        <a href="https://danielcss.github.io/svg/demo/material-line.html">Nova demo 2 - line icons </a>
+        <h3>Reference</h3>
+        <p><a href="http://fvsch.com/code/svg-icons/how-to/">How to work with SVG icons</a></p>
+    </body>
+</html>
