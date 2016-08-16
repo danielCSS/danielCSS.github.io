@@ -21,6 +21,30 @@
 
         <!-- Add your site or application content here -->
         <h2>External SVG sprite system</h2>
+        <h3>The current state of the icons</h3>
+        <p>The most recent SVG set which I hae received is <a href="GB_ICONS_SVG_UPDATED.zip">this one </a>
+        <div>  <img src="GB_ICONS.png" /> </div>
+        The following is a list of issues with the current icon set:
+        <ol>
+          <li>
+            The icon set is missing quite a few icons which are used in the website. I would like all icons to be located in one resource.
+            When I say 'icons' I am refering to all the current images on the site which are svg files, (so, for example, I'm NOT referring to
+            pngs which contain gradients like the 'page fold' png on the vip/benefits page, but I AM referring to the crown icons in the same vip/benefits tab. )
+            Please see <a href="https://jira.egalacoral.com/browse/WPL-1922">WPL-1922</a> and the following image which show all/most of the icons
+             which are used throughout the site. (Actually, there are a few more icons - such as the ones described <a href="https://jira.egalacoral.com/browse/GB-156">here</a>)
+             <div>  <img src="icons.png" /> </div>
+          </li>
+          <li>The current icon set has color data in the form of classes and CSS styles describing fill colors etc within the SVG.
+            All these styles must be REMOVED from the SVGs - EXCEPT for icons with static fills</li>
+          <li>The current icon set containsw 91 icons and weighs 265Kb as individual SVGs and 184Kb after being converted to a sprite.
+            This is TOO large. Something is wrong in the way the SVGs are being created. Please compare with the 2 icons set demos.
+            One clear difference is that the viewBox size in the other icon sets are 24x24 or 32x32 unlike the current icon set which is 180x180.
+            I am not 100% certain that this is the reason for the larger file size though. Please look into this.
+           </li>
+          <li></li>
+        </ol>
+        </p>
+        <h2>Requirements</h3>
         <ol>
           <li>
             <h3>Export to SVG</h3>
@@ -53,7 +77,8 @@
         <p>b) <a href="https://danielcss.github.io/svg/materialSVGs.zip">Nova icon set (zip file)</a> - free download from <a href="http://www.webalys.com/nova/free-icons.html">http://www.webalys.com/nova/free-icons.html</a></p>
         <p>Take a look at the format of the SVGs.</p>
         <p>After running gulp-svg-sprite on the SVGs I get a large SVG sprite file.</p>
-        <p>Take a look at a demos: note that with this method we can use CSS to change the icon color (hover over the icons to see this in action)</p>
+        <p>Take a look at a demos: note that with this method we can use CSS to change the icon color (hover over the icons to see this in action)
+           Also notice that in order to change the size of the icons - we just need to modify the font-size (try this with inspect element)  </p>
         <ol>
           <li><a href="https://danielcss.github.io/svg/demo/sprite.html">futuramo icons demo with external svg sprite</a></li>
           <li><a href="https://danielcss.github.io/svg/demo/material-solid.html">Nova demo 1 - solid icons </a></li>
