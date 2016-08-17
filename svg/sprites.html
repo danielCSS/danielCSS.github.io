@@ -14,12 +14,17 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <style>
+          ol {
+            padding:0;
+          }
           li {
             font-size: 18px;
             margin: 15px 0;
           }
           img {
             width: 50rem;
+            margin: 20px auto;
+            display: block;
           }
         </style>
     </head>
@@ -39,17 +44,22 @@
           <li>
             The icon set is missing quite a few icons which are used in the website. I would like all icons to be located in one resource.
             When I say 'icons' I am refering to all the current images on the site which are svg files, (so, for example, I'm NOT referring to
-            pngs which contain gradients like the 'page fold' png on the vip/benefits page, but I AM referring to the crown icons in the same vip/benefits tab. )
+            pngs which contain gradients like the 'page fold' png on the vip/benefits page, but I AM referring to SVG icons such as the crown icons in the same vip/benefits tab. )
             Please see <a href="https://jira.egalacoral.com/browse/WPL-1922">WPL-1922</a> and the following image which show all/most of the icons
              which are used throughout the site. (Actually, there are a few more icons - such as the ones described <a href="https://jira.egalacoral.com/browse/GB-156">here</a>)
              <div>  <img src="icons.png" alt="" /> </div>
           </li>
           <li>The current icon set has color data in the form of classes and CSS styles describing fill colors etc within the SVG.
             All these styles must be REMOVED from the SVGs - EXCEPT for icons with static fills.
-            <a href="https://danielcss.github.io/svg/demo/gb1.html">This</a> is how the icon set currently looks - without the styling.
+            <a href="https://danielcss.github.io/svg/demo/gb1.html">This is how the icon set currently looks- without the styling.</a>
           </li>
-          <li>The current icon set containsw 91 icons and weighs 265Kb as individual SVGs and 184Kb after being converted to a sprite.
+          <li>The current icon set containsw 91 icons and weighs 265Kb as individual SVGs and 184Kb
+            <a href="demo/gb1.svg">after being converted to a sprite.</a>
             This is TOO large. Something is wrong in the way the SVGs are being created. Please compare with the 2 icons set demos.
+            <a href="futuramoSVGs.zip">The futuramo icon set</a> contains 210 icons and weighs 116Kb as individual SVGs and 79Kb
+              <a href="demo/futuramo4.svg">after being converted to a sprite.</a>
+            <a href="materialSVGs.zip">The Nova icon set</a> contains 350 icons and weighs 416Kb (line icons) / 375Kb (solid icons) as individual SVGs and
+            <a href="demo/material-line.svg">191Kb (line icons)</a> / <a href="demo/material-solid.svg">153Kb (solid icons)</a> after being converted to a sprite.
             One clear difference is that the viewBox size in the other icon sets are 24x24 or 32x32 unlike the current icon set which is 180x180.
             I am not 100% certain that this is the reason for the larger file size though. Please look into this.
            </li>
