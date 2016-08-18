@@ -34,10 +34,7 @@
             margin: 20px;
             width:1em;
             height: 1em;
-            display:block;
-            margin-top:10px;
             font-size: 3em;
-            fill: tomato;
           }
     			.Icon:nth-child(1) { color: #122268; }
     			.Icon:nth-child(2) { color: #EC028D; }
@@ -63,8 +60,10 @@
               For example: let's say one icon has 3 versions where one part of the SVG has a different fill depending on the context.
             In this case the fill attribute should be set to currentColor. like this: fill="currentColor"
             I can then take care of the different versions via CSS. If you need more information about this, I'd be happy to explain...
-            but here is a quick example for now:
-            <div class="icon-wpr">
+            but here is a quick example for now:<br>
+            Note that only one SVG file is referenced here,
+            but the CSS is altering the fill color in each case via the color property. (use inspect element to see this in action)
+            <div>
   						<svg class="Icon">
   							<use xlink:href="info.svg#info"></use>
   						</svg>
@@ -78,7 +77,9 @@
            </li>
             <li>I have already come across additional icons to the ones in the above zip file - I'll include these SVGs in a list here:</li>
             <ol>
-              <li><a href="90_ball.svg">90-ball</a></li>
+              <li><a href="90_ball.svg">90-ball</a>
+                (see <a href="https://jira.egalacoral.com/browse/GB-116">bug GB-116</a>)
+              </li>
             </ol>
           </ol>
           </p>
