@@ -73,8 +73,7 @@ li .Icon--inverted {
     color: white;
 }
 li:hover .Icon--inverted {
-    color: white;
-    animation: color-change2 5s infinite alternate;
+    animation: color-change 5s infinite alternate,color-change2 5s infinite alternate;
 }
 
 /*li:nth-child(2n):hover svg { fill: lightskyblue;; }
