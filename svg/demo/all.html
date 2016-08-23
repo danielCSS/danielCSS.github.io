@@ -21,58 +21,209 @@
 		footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}
 
 			li svg {fill: #666666; margin-left: auto; margin-right: auto; width:1em; height: 1em; display:block; margin-top:10px; font-size: 3em;}
-			li:hover svg { fill: tomato; }
+			li:hover svg { fill: gold;
+  			animation: color-change 5s infinite alternate;
+			}
 			li .Icon--inverted { color: white; }
-			li:nth-child(2n):hover svg { fill: lightskyblue;; }
+			/*li:nth-child(2n):hover svg { fill: lightskyblue;; }
 			li:nth-child(2n):hover { background: tomato; }
-			li:nth-child(2n):hover h2 { color: white; }
+			li:nth-child(2n):hover h2 { color: white; }*/
 			h2 {margin-left: auto; margin-right: auto; text-align:center; display:block;font-size:16px; margin-top: 16px;}
+			.shake-slow {
+			  /*display: inline-block;*/
+			  transform-origin: center center;
+			}
+			li:nth-child(5n):hover .shake-slow {
+			  animation-name: shake-slow;
+			  animation-duration: 5s;
+			  animation-timing-function: ease-in-out;
+			  animation-iteration-count: infinite;
+			}
+
+			@keyframes shake-slow {
+			  2% {
+			    transform: translate(8px, 0px) rotate(3.5deg);
+			  }
+			  4% {
+			    transform: translate(-7px, 7px) rotate(-1.5deg);
+			  }
+			  6% {
+			    transform: translate(9px, 7px) rotate(1.5deg);
+			  }
+			  8% {
+			    transform: translate(5px, -5px) rotate(-0.5deg);
+			  }
+			  10% {
+			    transform: translate(3px, 2px) rotate(0.5deg);
+			  }
+			  12% {
+			    transform: translate(-9px, 9px) rotate(0.5deg);
+			  }
+			  14% {
+			    transform: translate(0px, 6px) rotate(1.5deg);
+			  }
+			  16% {
+			    transform: translate(-8px, 2px) rotate(3.5deg);
+			  }
+			  18% {
+			    transform: translate(7px, 2px) rotate(0.5deg);
+			  }
+			  20% {
+			    transform: translate(-5px, -9px) rotate(-1.5deg);
+			  }
+			  22% {
+			    transform: translate(-8px, 6px) rotate(-2.5deg);
+			  }
+			  24% {
+			    transform: translate(7px, -3px) rotate(2.5deg);
+			  }
+			  26% {
+			    transform: translate(6px, -6px) rotate(-0.5deg);
+			  }
+			  28% {
+			    transform: translate(-1px, -8px) rotate(-0.5deg);
+			  }
+			  30% {
+			    transform: translate(5px, -7px) rotate(1.5deg);
+			  }
+			  32% {
+			    transform: translate(-3px, -2px) rotate(1.5deg);
+			  }
+			  34% {
+			    transform: translate(-3px, 6px) rotate(-2.5deg);
+			  }
+			  36% {
+			    transform: translate(-3px, -4px) rotate(0.5deg);
+			  }
+			  38% {
+			    transform: translate(3px, -2px) rotate(2.5deg);
+			  }
+			  40% {
+			    transform: translate(-9px, -7px) rotate(-0.5deg);
+			  }
+			  42% {
+			    transform: translate(-8px, -7px) rotate(-0.5deg);
+			  }
+			  44% {
+			    transform: translate(6px, 8px) rotate(1.5deg);
+			  }
+			  46% {
+			    transform: translate(-2px, -2px) rotate(3.5deg);
+			  }
+			  48% {
+			    transform: translate(6px, -1px) rotate(1.5deg);
+			  }
+			  50% {
+			    transform: translate(-8px, 0px) rotate(0.5deg);
+			  }
+			  52% {
+			    transform: translate(3px, -1px) rotate(-2.5deg);
+			  }
+			  54% {
+			    transform: translate(0px, 1px) rotate(3.5deg);
+			  }
+			  56% {
+			    transform: translate(1px, 2px) rotate(0.5deg);
+			  }
+			  58% {
+			    transform: translate(-5px, 0px) rotate(0.5deg);
+			  }
+			  60% {
+			    transform: translate(-9px, 3px) rotate(0.5deg);
+			  }
+			  62% {
+			    transform: translate(0px, -4px) rotate(3.5deg);
+			  }
+			  64% {
+			    transform: translate(9px, 6px) rotate(2.5deg);
+			  }
+			  66% {
+			    transform: translate(9px, 6px) rotate(0.5deg);
+			  }
+			  68% {
+			    transform: translate(10px, 1px) rotate(1.5deg);
+			  }
+			  70% {
+			    transform: translate(-7px, 3px) rotate(2.5deg);
+			  }
+			  72% {
+			    transform: translate(-6px, 10px) rotate(-1.5deg);
+			  }
+			  74% {
+			    transform: translate(6px, -7px) rotate(-1.5deg);
+			  }
+			  76% {
+			    transform: translate(-5px, 4px) rotate(2.5deg);
+			  }
+			  78% {
+			    transform: translate(6px, -3px) rotate(1.5deg);
+			  }
+			  80% {
+			    transform: translate(-5px, -4px) rotate(-2.5deg);
+			  }
+			  82% {
+			    transform: translate(-8px, 10px) rotate(1.5deg);
+			  }
+			  84% {
+			    transform: translate(3px, 1px) rotate(3.5deg);
+			  }
+			  86% {
+			    transform: translate(0px, -6px) rotate(-1.5deg);
+			  }
+			  88% {
+			    transform: translate(-1px, -6px) rotate(1.5deg);
+			  }
+			  90% {
+			    transform: translate(5px, 3px) rotate(-0.5deg);
+			  }
+			  92% {
+			    transform: translate(8px, 5px) rotate(-1.5deg);
+			  }
+			  94% {
+			    transform: translate(-4px, 6px) rotate(2.5deg);
+			  }
+			  96% {
+			    transform: translate(1px, 1px) rotate(0.5deg);
+			  }
+			  98% {
+			    transform: translate(-9px, 4px) rotate(1.5deg);
+			  }
+			  0%, 100% {
+			    transform: translate(0, 0) rotate(0);
+			  }
+			}
+			@keyframes color-change {
+			  20% {
+			    fill: tomato;
+			  }
+			  40% {
+			    fill: lightblue;
+			  }
+			  60% {
+			    fill: maroon;
+			  }
+			  80% {
+			    fill: rebeccapurple;
+			  }
+			  100% {
+			    fill: aqua;
+			  }
+			}
 		</style>
-<!--
-
-Sprite shape dimensions
-====================================================================================================
-You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
-they would become a huge 100% in size. You may use the following dimension classes for doing so.
-They might well be outsourced to an external stylesheet of course.
-
--->
-
-<!--
-====================================================================================================
--->
-
 	</head>
 	<body>
 
 		<header>
-			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
-			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
-			<ul>
-				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
-				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
-				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
-			</ul>
+			<h1>Bingo SVG icon sprite</h1>
 		</header>
 		<section>
-
-<!--
-
-B) Inline SVG with external sprite (IE 9-11 with polyfill only)
-====================================================================================================
-These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
-SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
-
--->
-
-			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 
 				<li title="EMAIL_US">
 					<div class="icon-box">
 
 						<!-- EMAIL_US -->
-						<svg class="svg-EMAIL_US-dims">
+						<svg class="shake-slow svg-EMAIL_US-dims">
 							<use xlink:href="all-icons6.svg#EMAIL_US"></use>
 						</svg>
 
@@ -83,7 +234,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- EXCLUSIVE_COLORED -->
-						<svg class="svg-EXCLUSIVE_COLORED-dims">
+						<svg class="shake-slow svg-EXCLUSIVE_COLORED-dims">
 							<use xlink:href="all-icons6.svg#EXCLUSIVE_COLORED"></use>
 						</svg>
 
@@ -94,7 +245,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FILTERS_2 -->
-						<svg class="svg-FILTERS_2-dims">
+						<svg class="shake-slow svg-FILTERS_2-dims">
 							<use xlink:href="all-icons6.svg#FILTERS_2"></use>
 						</svg>
 
@@ -105,7 +256,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LIVE_HELP -->
-						<svg class="svg-LIVE_HELP-dims">
+						<svg class="shake-slow svg-LIVE_HELP-dims">
 							<use xlink:href="all-icons6.svg#LIVE_HELP"></use>
 						</svg>
 
@@ -116,7 +267,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LIVE_TELEPHONE -->
-						<svg class="svg-LIVE_TELEPHONE-dims">
+						<svg class="shake-slow svg-LIVE_TELEPHONE-dims">
 							<use xlink:href="all-icons6.svg#LIVE_TELEPHONE"></use>
 						</svg>
 
@@ -127,7 +278,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MESSAGE_US -->
-						<svg class="svg-MESSAGE_US-dims">
+						<svg class="shake-slow svg-MESSAGE_US-dims">
 							<use xlink:href="all-icons6.svg#MESSAGE_US"></use>
 						</svg>
 
@@ -138,7 +289,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- NEW_EXCLUSIVE_COLORED -->
-						<svg class="svg-NEW_EXCLUSIVE_COLORED-dims">
+						<svg class="shake-slow svg-NEW_EXCLUSIVE_COLORED-dims">
 							<use xlink:href="all-icons6.svg#NEW_EXCLUSIVE_COLORED"></use>
 						</svg>
 
@@ -151,7 +302,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- 40_50_BALL -->
-						<svg class="svg-40_50_BALL-dims">
+						<svg class="shake-slow svg-40_50_BALL-dims">
 							<use xlink:href="all-icons6.svg#40_50_BALL"></use>
 						</svg>
 
@@ -162,7 +313,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- 52LIVES_CHARITY -->
-						<svg class="svg-52LIVES_CHARITY-dims">
+						<svg class="shake-slow svg-52LIVES_CHARITY-dims">
 							<use xlink:href="all-icons6.svg#52LIVES_CHARITY"></use>
 						</svg>
 
@@ -173,7 +324,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- 75_80_BALL -->
-						<svg class="svg-75_80_BALL-dims">
+						<svg class="shake-slow svg-75_80_BALL-dims">
 							<use xlink:href="all-icons6.svg#75_80_BALL"></use>
 						</svg>
 
@@ -184,7 +335,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- 90_BALL -->
-						<svg class="svg-90_BALL-dims">
+						<svg class="shake-slow svg-90_BALL-dims">
 							<use xlink:href="all-icons6.svg#90_BALL"></use>
 						</svg>
 
@@ -195,7 +346,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ADD_LINK -->
-						<svg class="svg-ADD_LINK-dims">
+						<svg class="shake-slow svg-ADD_LINK-dims">
 							<use xlink:href="all-icons6.svg#ADD_LINK"></use>
 						</svg>
 
@@ -206,7 +357,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ADDRESS_1 -->
-						<svg class="svg-ADDRESS_1-dims">
+						<svg class="shake-slow svg-ADDRESS_1-dims">
 							<use xlink:href="all-icons6.svg#ADDRESS_1"></use>
 						</svg>
 
@@ -217,7 +368,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ADDRESS_2 -->
-						<svg class="svg-ADDRESS_2-dims">
+						<svg class="shake-slow svg-ADDRESS_2-dims">
 							<use xlink:href="all-icons6.svg#ADDRESS_2"></use>
 						</svg>
 
@@ -228,7 +379,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ALL -->
-						<svg class="svg-ALL-dims">
+						<svg class="shake-slow svg-ALL-dims">
 							<use xlink:href="all-icons6.svg#ALL"></use>
 						</svg>
 
@@ -239,7 +390,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ARROW -->
-						<svg class="svg-ARROW-dims">
+						<svg class="shake-slow svg-ARROW-dims">
 							<use xlink:href="all-icons6.svg#ARROW"></use>
 						</svg>
 
@@ -250,7 +401,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ARROW_BACK -->
-						<svg class="svg-ARROW_BACK-dims">
+						<svg class="shake-slow svg-ARROW_BACK-dims">
 							<use xlink:href="all-icons6.svg#ARROW_BACK"></use>
 						</svg>
 
@@ -261,7 +412,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ARROW_DOWN -->
-						<svg class="svg-ARROW_DOWN-dims">
+						<svg class="shake-slow svg-ARROW_DOWN-dims">
 							<use xlink:href="all-icons6.svg#ARROW_DOWN"></use>
 						</svg>
 
@@ -272,7 +423,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ARROW_DOWN_BIG -->
-						<svg class="svg-ARROW_DOWN_BIG-dims">
+						<svg class="shake-slow svg-ARROW_DOWN_BIG-dims">
 							<use xlink:href="all-icons6.svg#ARROW_DOWN_BIG"></use>
 						</svg>
 
@@ -283,7 +434,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BENEFITS -->
-						<svg class="svg-BENEFITS-dims">
+						<svg class="shake-slow svg-BENEFITS-dims">
 							<use xlink:href="all-icons6.svg#BENEFITS"></use>
 						</svg>
 
@@ -294,7 +445,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BEST_DOGWALKS -->
-						<svg class="svg-BEST_DOGWALKS-dims">
+						<svg class="shake-slow svg-BEST_DOGWALKS-dims">
 							<use xlink:href="all-icons6.svg#BEST_DOGWALKS"></use>
 						</svg>
 
@@ -305,7 +456,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BINGO -->
-						<svg class="svg-BINGO-dims">
+						<svg class="shake-slow svg-BINGO-dims">
 							<use xlink:href="all-icons6.svg#BINGO"></use>
 						</svg>
 
@@ -316,7 +467,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BINGO_JACKPOTS -->
-						<svg class="svg-BINGO_JACKPOTS-dims">
+						<svg class="shake-slow svg-BINGO_JACKPOTS-dims">
 							<use xlink:href="all-icons6.svg#BINGO_JACKPOTS"></use>
 						</svg>
 
@@ -327,7 +478,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BINGO_ROOMS -->
-						<svg class="svg-BINGO_ROOMS-dims">
+						<svg class="shake-slow svg-BINGO_ROOMS-dims">
 							<use xlink:href="all-icons6.svg#BINGO_ROOMS"></use>
 						</svg>
 
@@ -338,7 +489,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BINGO_SCHEDULE_PRICE -->
-						<svg class="svg-BINGO_SCHEDULE_PRICE-dims">
+						<svg class="shake-slow svg-BINGO_SCHEDULE_PRICE-dims">
 							<use xlink:href="all-icons6.svg#BINGO_SCHEDULE_PRICE"></use>
 						</svg>
 
@@ -349,7 +500,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BINGO_SCHEDULE_PRIZE -->
-						<svg class="svg-BINGO_SCHEDULE_PRIZE-dims">
+						<svg class="shake-slow svg-BINGO_SCHEDULE_PRIZE-dims">
 							<use xlink:href="all-icons6.svg#BINGO_SCHEDULE_PRIZE"></use>
 						</svg>
 
@@ -360,7 +511,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BINGO_SCHEDULE -->
-						<svg class="svg-BINGO_SCHEDULE-dims">
+						<svg class="shake-slow svg-BINGO_SCHEDULE-dims">
 							<use xlink:href="all-icons6.svg#BINGO_SCHEDULE"></use>
 						</svg>
 
@@ -371,7 +522,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BLOG -->
-						<svg class="svg-BLOG-dims">
+						<svg class="shake-slow svg-BLOG-dims">
 							<use xlink:href="all-icons6.svg#BLOG"></use>
 						</svg>
 
@@ -382,7 +533,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- BUZZ -->
-						<svg class="svg-BUZZ-dims">
+						<svg class="shake-slow svg-BUZZ-dims">
 							<use xlink:href="all-icons6.svg#BUZZ"></use>
 						</svg>
 
@@ -393,7 +544,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CASINO -->
-						<svg class="svg-CASINO-dims">
+						<svg class="shake-slow svg-CASINO-dims">
 							<use xlink:href="all-icons6.svg#CASINO"></use>
 						</svg>
 
@@ -404,7 +555,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CATEGORIES -->
-						<svg class="svg-CATEGORIES-dims">
+						<svg class="shake-slow svg-CATEGORIES-dims">
 							<use xlink:href="all-icons6.svg#CATEGORIES"></use>
 						</svg>
 
@@ -415,7 +566,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CELEBRITY_WEDDINGS -->
-						<svg class="svg-CELEBRITY_WEDDINGS-dims">
+						<svg class="shake-slow svg-CELEBRITY_WEDDINGS-dims">
 							<use xlink:href="all-icons6.svg#CELEBRITY_WEDDINGS"></use>
 						</svg>
 
@@ -426,7 +577,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHANGE_PASSWORD -->
-						<svg class="svg-CHANGE_PASSWORD-dims">
+						<svg class="shake-slow svg-CHANGE_PASSWORD-dims">
 							<use xlink:href="all-icons6.svg#CHANGE_PASSWORD"></use>
 						</svg>
 
@@ -437,7 +588,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHAT -->
-						<svg class="svg-CHAT-dims">
+						<svg class="shake-slow svg-CHAT-dims">
 							<use xlink:href="all-icons6.svg#CHAT"></use>
 						</svg>
 
@@ -448,7 +599,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHAT_GAMES -->
-						<svg class="svg-CHAT_GAMES-dims">
+						<svg class="shake-slow svg-CHAT_GAMES-dims">
 							<use xlink:href="all-icons6.svg#CHAT_GAMES"></use>
 						</svg>
 
@@ -459,7 +610,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHAT_LINGO -->
-						<svg class="svg-CHAT_LINGO-dims">
+						<svg class="shake-slow svg-CHAT_LINGO-dims">
 							<use xlink:href="all-icons6.svg#CHAT_LINGO"></use>
 						</svg>
 
@@ -470,7 +621,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHECKED -->
-						<svg class="svg-CHECKED-dims">
+						<svg class="shake-slow svg-CHECKED-dims">
 							<use xlink:href="all-icons6.svg#CHECKED"></use>
 						</svg>
 
@@ -481,7 +632,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHEEKY -->
-						<svg class="svg-CHEEKY-dims">
+						<svg class="shake-slow svg-CHEEKY-dims">
 							<use xlink:href="all-icons6.svg#CHEEKY"></use>
 						</svg>
 
@@ -492,7 +643,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHEERY -->
-						<svg class="svg-CHEERY-dims">
+						<svg class="shake-slow svg-CHEERY-dims">
 							<use xlink:href="all-icons6.svg#CHEERY"></use>
 						</svg>
 
@@ -503,7 +654,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHILLED -->
-						<svg class="svg-CHILLED-dims">
+						<svg class="shake-slow svg-CHILLED-dims">
 							<use xlink:href="all-icons6.svg#CHILLED"></use>
 						</svg>
 
@@ -514,7 +665,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHIPPER -->
-						<svg class="svg-CHIPPER-dims">
+						<svg class="shake-slow svg-CHIPPER-dims">
 							<use xlink:href="all-icons6.svg#CHIPPER"></use>
 						</svg>
 
@@ -525,7 +676,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHIRPY -->
-						<svg class="svg-CHIRPY-dims">
+						<svg class="shake-slow svg-CHIRPY-dims">
 							<use xlink:href="all-icons6.svg#CHIRPY"></use>
 						</svg>
 
@@ -536,7 +687,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CHUFFED -->
-						<svg class="svg-CHUFFED-dims">
+						<svg class="shake-slow svg-CHUFFED-dims">
 							<use xlink:href="all-icons6.svg#CHUFFED"></use>
 						</svg>
 
@@ -547,7 +698,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLOSE -->
-						<svg class="svg-CLOSE-dims">
+						<svg class="shake-slow svg-CLOSE-dims">
 							<use xlink:href="all-icons6.svg#CLOSE"></use>
 						</svg>
 
@@ -558,7 +709,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_BAR -->
-						<svg class="svg-CLUB_FACILITIES_BAR-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_BAR-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_BAR"></use>
 						</svg>
 
@@ -569,7 +720,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_CASH_MACHINE -->
-						<svg class="svg-CLUB_FACILITIES_CASH_MACHINE-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_CASH_MACHINE-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_CASH_MACHINE"></use>
 						</svg>
 
@@ -580,7 +731,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_DINNER -->
-						<svg class="svg-CLUB_FACILITIES_DINNER-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_DINNER-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_DINNER"></use>
 						</svg>
 
@@ -591,7 +742,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_DISABLED -->
-						<svg class="svg-CLUB_FACILITIES_DISABLED-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_DISABLED-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_DISABLED"></use>
 						</svg>
 
@@ -602,7 +753,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_EMAIL -->
-						<svg class="svg-CLUB_FACILITIES_EMAIL-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_EMAIL-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_EMAIL"></use>
 						</svg>
 
@@ -613,7 +764,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_HEARING_LOOP -->
-						<svg class="svg-CLUB_FACILITIES_HEARING_LOOP-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_HEARING_LOOP-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_HEARING_LOOP"></use>
 						</svg>
 
@@ -624,7 +775,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_SLOTS_MACHINES -->
-						<svg class="svg-CLUB_FACILITIES_SLOTS_MACHINES-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_SLOTS_MACHINES-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_SLOTS_MACHINES"></use>
 						</svg>
 
@@ -635,7 +786,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_SMOKING -->
-						<svg class="svg-CLUB_FACILITIES_SMOKING-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_SMOKING-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_SMOKING"></use>
 						</svg>
 
@@ -646,7 +797,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_TELEPHONE -->
-						<svg class="svg-CLUB_FACILITIES_TELEPHONE-dims">
+						<svg class="shake-slow svg-CLUB_FACILITIES_TELEPHONE-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_TELEPHONE"></use>
 						</svg>
 
@@ -657,7 +808,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CLUB_FINDER -->
-						<svg class="svg-CLUB_FINDER-dims">
+						<svg class="shake-slow svg-CLUB_FINDER-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FINDER"></use>
 						</svg>
 
@@ -668,7 +819,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CONTACT_US -->
-						<svg class="svg-CONTACT_US-dims">
+						<svg class="shake-slow svg-CONTACT_US-dims">
 							<use xlink:href="all-icons6.svg#CONTACT_US"></use>
 						</svg>
 
@@ -679,7 +830,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- COOLING_OF_PERIOD -->
-						<svg class="svg-COOLING_OF_PERIOD-dims">
+						<svg class="shake-slow svg-COOLING_OF_PERIOD-dims">
 							<use xlink:href="all-icons6.svg#COOLING_OF_PERIOD"></use>
 						</svg>
 
@@ -690,7 +841,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CORONATION_STREET -->
-						<svg class="svg-CORONATION_STREET-dims">
+						<svg class="shake-slow svg-CORONATION_STREET-dims">
 							<use xlink:href="all-icons6.svg#CORONATION_STREET"></use>
 						</svg>
 
@@ -701,7 +852,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- CVV_CODE -->
-						<svg class="svg-CVV_CODE-dims">
+						<svg class="shake-slow svg-CVV_CODE-dims">
 							<use xlink:href="all-icons6.svg#CVV_CODE"></use>
 						</svg>
 
@@ -712,7 +863,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- DEPOSIT_AMOUNT -->
-						<svg class="svg-DEPOSIT_AMOUNT-dims">
+						<svg class="shake-slow svg-DEPOSIT_AMOUNT-dims">
 							<use xlink:href="all-icons6.svg#DEPOSIT_AMOUNT"></use>
 						</svg>
 
@@ -723,7 +874,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- DEPOSIT_CASHIER -->
-						<svg class="svg-DEPOSIT_CASHIER-dims">
+						<svg class="shake-slow svg-DEPOSIT_CASHIER-dims">
 							<use xlink:href="all-icons6.svg#DEPOSIT_CASHIER"></use>
 						</svg>
 
@@ -734,7 +885,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- DESKTOP -->
-						<svg class="svg-DESKTOP-dims">
+						<svg class="shake-slow svg-DESKTOP-dims">
 							<use xlink:href="all-icons6.svg#DESKTOP"></use>
 						</svg>
 
@@ -745,7 +896,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- EMAIL -->
-						<svg class="svg-EMAIL-dims">
+						<svg class="shake-slow svg-EMAIL-dims">
 							<use xlink:href="all-icons6.svg#EMAIL"></use>
 						</svg>
 
@@ -756,7 +907,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ENABLE_PIN_NUMBER -->
-						<svg class="svg-ENABLE_PIN_NUMBER-dims">
+						<svg class="shake-slow svg-ENABLE_PIN_NUMBER-dims">
 							<use xlink:href="all-icons6.svg#ENABLE_PIN_NUMBER"></use>
 						</svg>
 
@@ -767,7 +918,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- ENTER_PROMO_CODE -->
-						<svg class="svg-ENTER_PROMO_CODE-dims">
+						<svg class="shake-slow svg-ENTER_PROMO_CODE-dims">
 							<use xlink:href="all-icons6.svg#ENTER_PROMO_CODE"></use>
 						</svg>
 
@@ -778,7 +929,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- EXCLUSIVE -->
-						<svg class="svg-EXCLUSIVE-dims">
+						<svg class="shake-slow svg-EXCLUSIVE-dims">
 							<use xlink:href="all-icons6.svg#EXCLUSIVE"></use>
 						</svg>
 
@@ -789,7 +940,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- EXPAND -->
-						<svg class="svg-EXPAND-dims Icon--inverted">
+						<svg class="shake-slow svg-EXPAND-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#EXPAND"></use>
 						</svg>
 
@@ -800,7 +951,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- EXPAND_2 -->
-						<svg class="svg-EXPAND_2-dims Icon--inverted">
+						<svg class="shake-slow svg-EXPAND_2-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#EXPAND_2"></use>
 						</svg>
 
@@ -811,7 +962,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FACEBOOK -->
-						<svg class="svg-FACEBOOK-dims Icon--inverted">
+						<svg class="shake-slow svg-FACEBOOK-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#FACEBOOK"></use>
 						</svg>
 
@@ -822,7 +973,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FAVOURITE -->
-						<svg class="svg-FAVOURITE-dims">
+						<svg class="shake-slow svg-FAVOURITE-dims">
 							<use xlink:href="all-icons6.svg#FAVOURITE"></use>
 						</svg>
 
@@ -833,7 +984,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FAVOURITE_2 -->
-						<svg class="svg-FAVOURITE_2-dims Icon--inverted">
+						<svg class="shake-slow svg-FAVOURITE_2-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#FAVOURITE_2"></use>
 						</svg>
 
@@ -844,7 +995,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FEATURES -->
-						<svg class="svg-FEATURES-dims">
+						<svg class="shake-slow svg-FEATURES-dims">
 							<use xlink:href="all-icons6.svg#FEATURES"></use>
 						</svg>
 
@@ -855,7 +1006,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FEEDBACK -->
-						<svg class="svg-FEEDBACK-dims">
+						<svg class="shake-slow svg-FEEDBACK-dims">
 							<use xlink:href="all-icons6.svg#FEEDBACK"></use>
 						</svg>
 
@@ -866,7 +1017,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FILTERS -->
-						<svg class="svg-FILTERS-dims">
+						<svg class="shake-slow svg-FILTERS-dims">
 							<use xlink:href="all-icons6.svg#FILTERS"></use>
 						</svg>
 
@@ -877,7 +1028,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FLUTTER -->
-						<svg class="svg-FLUTTER-dims">
+						<svg class="shake-slow svg-FLUTTER-dims">
 							<use xlink:href="all-icons6.svg#FLUTTER"></use>
 						</svg>
 
@@ -888,7 +1039,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FOLLOW_US -->
-						<svg class="svg-FOLLOW_US-dims">
+						<svg class="shake-slow svg-FOLLOW_US-dims">
 							<use xlink:href="all-icons6.svg#FOLLOW_US"></use>
 						</svg>
 
@@ -899,7 +1050,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- FOOTER_HELP -->
-						<svg class="svg-FOOTER_HELP-dims">
+						<svg class="shake-slow svg-FOOTER_HELP-dims">
 							<use xlink:href="all-icons6.svg#FOOTER_HELP"></use>
 						</svg>
 
@@ -910,7 +1061,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GALA_GOLD -->
-						<svg class="svg-GALA_GOLD-dims">
+						<svg class="shake-slow svg-GALA_GOLD-dims">
 							<use xlink:href="all-icons6.svg#GALA_GOLD"></use>
 						</svg>
 
@@ -921,7 +1072,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GALA_TV -->
-						<svg class="svg-GALA_TV-dims">
+						<svg class="shake-slow svg-GALA_TV-dims">
 							<use xlink:href="all-icons6.svg#GALA_TV"></use>
 						</svg>
 
@@ -932,7 +1083,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GAMES -->
-						<svg class="svg-GAMES-dims">
+						<svg class="shake-slow svg-GAMES-dims">
 							<use xlink:href="all-icons6.svg#GAMES"></use>
 						</svg>
 
@@ -943,7 +1094,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GAMES_2 -->
-						<svg class="svg-GAMES_2-dims">
+						<svg class="shake-slow svg-GAMES_2-dims">
 							<use xlink:href="all-icons6.svg#GAMES_2"></use>
 						</svg>
 
@@ -954,7 +1105,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GAME_OF_THE_WEEK -->
-						<svg class="svg-GAME_OF_THE_WEEK-dims">
+						<svg class="shake-slow svg-GAME_OF_THE_WEEK-dims">
 							<use xlink:href="all-icons6.svg#GAME_OF_THE_WEEK"></use>
 						</svg>
 
@@ -965,7 +1116,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GAME_PROFILE -->
-						<svg class="svg-GAME_PROFILE-dims">
+						<svg class="shake-slow svg-GAME_PROFILE-dims">
 							<use xlink:href="all-icons6.svg#GAME_PROFILE"></use>
 						</svg>
 
@@ -976,7 +1127,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GOOGLE+ -->
-						<svg class="svg-GOOGLE+-dims Icon--inverted">
+						<svg class="shake-slow svg-GOOGLE+-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#GOOGLE+"></use>
 						</svg>
 
@@ -987,7 +1138,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- GRID_VIEW -->
-						<svg class="svg-GRID_VIEW-dims">
+						<svg class="shake-slow svg-GRID_VIEW-dims">
 							<use xlink:href="all-icons6.svg#GRID_VIEW"></use>
 						</svg>
 
@@ -998,7 +1149,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- HELP -->
-						<svg class="svg-HELP-dims">
+						<svg class="shake-slow svg-HELP-dims">
 							<use xlink:href="all-icons6.svg#HELP"></use>
 						</svg>
 
@@ -1009,7 +1160,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- HISTORY -->
-						<svg class="svg-HISTORY-dims">
+						<svg class="shake-slow svg-HISTORY-dims">
 							<use xlink:href="all-icons6.svg#HISTORY"></use>
 						</svg>
 
@@ -1020,7 +1171,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- HOME -->
-						<svg class="svg-HOME-dims">
+						<svg class="shake-slow svg-HOME-dims">
 							<use xlink:href="all-icons6.svg#HOME"></use>
 						</svg>
 
@@ -1031,7 +1182,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- HOT -->
-						<svg class="svg-HOT-dims Icon--inverted">
+						<svg class="shake-slow svg-HOT-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#HOT"></use>
 						</svg>
 
@@ -1042,7 +1193,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- HOW_TO_PLAY -->
-						<svg class="svg-HOW_TO_PLAY-dims">
+						<svg class="shake-slow svg-HOW_TO_PLAY-dims">
 							<use xlink:href="all-icons6.svg#HOW_TO_PLAY"></use>
 						</svg>
 
@@ -1053,7 +1204,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- INBOX -->
-						<svg class="svg-INBOX-dims">
+						<svg class="shake-slow svg-INBOX-dims">
 							<use xlink:href="all-icons6.svg#INBOX"></use>
 						</svg>
 
@@ -1064,7 +1215,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- INFORMATION -->
-						<svg class="svg-INFORMATION-dims Icon--inverted">
+						<svg class="shake-slow svg-INFORMATION-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#INFORMATION"></use>
 						</svg>
 
@@ -1075,7 +1226,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- INSTAGRAM -->
-						<svg class="svg-INSTAGRAM-dims Icon--inverted">
+						<svg class="shake-slow svg-INSTAGRAM-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#INSTAGRAM"></use>
 						</svg>
 
@@ -1086,7 +1237,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- JACKPOT -->
-						<svg class="svg-JACKPOT-dims">
+						<svg class="shake-slow svg-JACKPOT-dims">
 							<use xlink:href="all-icons6.svg#JACKPOT"></use>
 						</svg>
 
@@ -1097,7 +1248,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LINK -->
-						<svg class="svg-LINK-dims">
+						<svg class="shake-slow svg-LINK-dims">
 							<use xlink:href="all-icons6.svg#LINK"></use>
 						</svg>
 
@@ -1108,7 +1259,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LINK_INVERTED -->
-						<svg class="svg-LINK_INVERTED-dims Icon--inverted">
+						<svg class="shake-slow svg-LINK_INVERTED-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#LINK_INVERTED"></use>
 						</svg>
 
@@ -1119,7 +1270,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LISTVIEW -->
-						<svg class="svg-LISTVIEW-dims">
+						<svg class="shake-slow svg-LISTVIEW-dims">
 							<use xlink:href="all-icons6.svg#LISTVIEW"></use>
 						</svg>
 
@@ -1130,7 +1281,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LIVE_CALLER -->
-						<svg class="svg-LIVE_CALLER-dims">
+						<svg class="shake-slow svg-LIVE_CALLER-dims">
 							<use xlink:href="all-icons6.svg#LIVE_CALLER"></use>
 						</svg>
 
@@ -1141,7 +1292,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LOGIN -->
-						<svg class="svg-LOGIN-dims">
+						<svg class="shake-slow svg-LOGIN-dims">
 							<use xlink:href="all-icons6.svg#LOGIN"></use>
 						</svg>
 
@@ -1152,7 +1303,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- LOTTO -->
-						<svg class="svg-LOTTO-dims">
+						<svg class="shake-slow svg-LOTTO-dims">
 							<use xlink:href="all-icons6.svg#LOTTO"></use>
 						</svg>
 
@@ -1163,7 +1314,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MAP -->
-						<svg class="svg-MAP-dims">
+						<svg class="shake-slow svg-MAP-dims">
 							<use xlink:href="all-icons6.svg#MAP"></use>
 						</svg>
 
@@ -1174,7 +1325,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MAXIMUM_PAYOUT -->
-						<svg class="svg-MAXIMUM_PAYOUT-dims">
+						<svg class="shake-slow svg-MAXIMUM_PAYOUT-dims">
 							<use xlink:href="all-icons6.svg#MAXIMUM_PAYOUT"></use>
 						</svg>
 
@@ -1185,7 +1336,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MAXIMUM_STAKE -->
-						<svg class="svg-MAXIMUM_STAKE-dims">
+						<svg class="shake-slow svg-MAXIMUM_STAKE-dims">
 							<use xlink:href="all-icons6.svg#MAXIMUM_STAKE"></use>
 						</svg>
 
@@ -1196,7 +1347,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MENU -->
-						<svg class="svg-MENU-dims">
+						<svg class="shake-slow svg-MENU-dims">
 							<use xlink:href="all-icons6.svg#MENU"></use>
 						</svg>
 
@@ -1207,7 +1358,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MENU_2 -->
-						<svg class="svg-MENU_2-dims">
+						<svg class="shake-slow svg-MENU_2-dims">
 							<use xlink:href="all-icons6.svg#MENU_2"></use>
 						</svg>
 
@@ -1218,7 +1369,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MESSAGES -->
-						<svg class="svg-MESSAGES-dims">
+						<svg class="shake-slow svg-MESSAGES-dims">
 							<use xlink:href="all-icons6.svg#MESSAGES"></use>
 						</svg>
 
@@ -1229,7 +1380,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MINIMIZE -->
-						<svg class="svg-MINIMIZE-dims Icon--inverted">
+						<svg class="shake-slow svg-MINIMIZE-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#MINIMIZE"></use>
 						</svg>
 
@@ -1240,7 +1391,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MINIMUM_STAKE -->
-						<svg class="svg-MINIMUM_STAKE-dims">
+						<svg class="shake-slow svg-MINIMUM_STAKE-dims">
 							<use xlink:href="all-icons6.svg#MINIMUM_STAKE"></use>
 						</svg>
 
@@ -1251,7 +1402,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MOBILE -->
-						<svg class="svg-MOBILE-dims">
+						<svg class="shake-slow svg-MOBILE-dims">
 							<use xlink:href="all-icons6.svg#MOBILE"></use>
 						</svg>
 
@@ -1262,7 +1413,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MOST_POPULAR -->
-						<svg class="svg-MOST_POPULAR-dims">
+						<svg class="shake-slow svg-MOST_POPULAR-dims">
 							<use xlink:href="all-icons6.svg#MOST_POPULAR"></use>
 						</svg>
 
@@ -1273,7 +1424,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MOVE -->
-						<svg class="svg-MOVE-dims">
+						<svg class="shake-slow svg-MOVE-dims">
 							<use xlink:href="all-icons6.svg#MOVE"></use>
 						</svg>
 
@@ -1284,7 +1435,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MY_ACCOUNT -->
-						<svg class="svg-MY_ACCOUNT-dims">
+						<svg class="shake-slow svg-MY_ACCOUNT-dims">
 							<use xlink:href="all-icons6.svg#MY_ACCOUNT"></use>
 						</svg>
 
@@ -1295,7 +1446,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MY_BONUS_BALANCE -->
-						<svg class="svg-MY_BONUS_BALANCE-dims">
+						<svg class="shake-slow svg-MY_BONUS_BALANCE-dims">
 							<use xlink:href="all-icons6.svg#MY_BONUS_BALANCE"></use>
 						</svg>
 
@@ -1306,7 +1457,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- MY_DETAILS -->
-						<svg class="svg-MY_DETAILS-dims">
+						<svg class="shake-slow svg-MY_DETAILS-dims">
 							<use xlink:href="all-icons6.svg#MY_DETAILS"></use>
 						</svg>
 
@@ -1317,7 +1468,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- NEW -->
-						<svg class="svg-NEW-dims">
+						<svg class="shake-slow svg-NEW-dims">
 							<use xlink:href="all-icons6.svg#NEW"></use>
 						</svg>
 
@@ -1328,7 +1479,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- NEWS -->
-						<svg class="svg-NEWS-dims">
+						<svg class="shake-slow svg-NEWS-dims">
 							<use xlink:href="all-icons6.svg#NEWS"></use>
 						</svg>
 
@@ -1339,7 +1490,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- NEW_2 -->
-						<svg class="svg-NEW_2-dims Icon--inverted">
+						<svg class="shake-slow svg-NEW_2-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#NEW_2"></use>
 						</svg>
 
@@ -1350,7 +1501,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- NEW_EXCLUSIVE -->
-						<svg class="svg-NEW_EXCLUSIVE-dims">
+						<svg class="shake-slow svg-NEW_EXCLUSIVE-dims">
 							<use xlink:href="all-icons6.svg#NEW_EXCLUSIVE"></use>
 						</svg>
 
@@ -1361,7 +1512,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- NEW_MESSAGE -->
-						<svg class="svg-NEW_MESSAGE-dims">
+						<svg class="shake-slow svg-NEW_MESSAGE-dims">
 							<use xlink:href="all-icons6.svg#NEW_MESSAGE"></use>
 						</svg>
 
@@ -1372,7 +1523,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- PAYLINES -->
-						<svg class="svg-PAYLINES-dims">
+						<svg class="shake-slow svg-PAYLINES-dims">
 							<use xlink:href="all-icons6.svg#PAYLINES"></use>
 						</svg>
 
@@ -1383,7 +1534,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- PAYMENT_METHOD -->
-						<svg class="svg-PAYMENT_METHOD-dims">
+						<svg class="shake-slow svg-PAYMENT_METHOD-dims">
 							<use xlink:href="all-icons6.svg#PAYMENT_METHOD"></use>
 						</svg>
 
@@ -1394,7 +1545,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- PINTEREST -->
-						<svg class="svg-PINTEREST-dims Icon--inverted">
+						<svg class="shake-slow svg-PINTEREST-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#PINTEREST"></use>
 						</svg>
 
@@ -1405,7 +1556,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- PLAY -->
-						<svg class="svg-PLAY-dims">
+						<svg class="shake-slow svg-PLAY-dims">
 							<use xlink:href="all-icons6.svg#PLAY"></use>
 						</svg>
 
@@ -1416,7 +1567,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- PLAYBREAK -->
-						<svg class="svg-PLAYBREAK-dims">
+						<svg class="shake-slow svg-PLAYBREAK-dims">
 							<use xlink:href="all-icons6.svg#PLAYBREAK"></use>
 						</svg>
 
@@ -1427,7 +1578,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- PLAYER_ANALYTICS -->
-						<svg class="svg-PLAYER_ANALYTICS-dims">
+						<svg class="shake-slow svg-PLAYER_ANALYTICS-dims">
 							<use xlink:href="all-icons6.svg#PLAYER_ANALYTICS"></use>
 						</svg>
 
@@ -1438,7 +1589,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- POPUP_DRAG -->
-						<svg class="svg-POPUP_DRAG-dims">
+						<svg class="shake-slow svg-POPUP_DRAG-dims">
 							<use xlink:href="all-icons6.svg#POPUP_DRAG"></use>
 						</svg>
 
@@ -1449,7 +1600,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- PROMOS -->
-						<svg class="svg-PROMOS-dims">
+						<svg class="shake-slow svg-PROMOS-dims">
 							<use xlink:href="all-icons6.svg#PROMOS"></use>
 						</svg>
 
@@ -1460,7 +1611,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- RECENTLY_PLAYED_GAMES -->
-						<svg class="svg-RECENTLY_PLAYED_GAMES-dims">
+						<svg class="shake-slow svg-RECENTLY_PLAYED_GAMES-dims">
 							<use xlink:href="all-icons6.svg#RECENTLY_PLAYED_GAMES"></use>
 						</svg>
 
@@ -1471,7 +1622,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- REDEEM -->
-						<svg class="svg-REDEEM-dims">
+						<svg class="shake-slow svg-REDEEM-dims">
 							<use xlink:href="all-icons6.svg#REDEEM"></use>
 						</svg>
 
@@ -1482,7 +1633,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- RESPONSIBLE_GAMBLING -->
-						<svg class="svg-RESPONSIBLE_GAMBLING-dims">
+						<svg class="shake-slow svg-RESPONSIBLE_GAMBLING-dims">
 							<use xlink:href="all-icons6.svg#RESPONSIBLE_GAMBLING"></use>
 						</svg>
 
@@ -1493,7 +1644,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- REWARDS -->
-						<svg class="svg-REWARDS-dims">
+						<svg class="shake-slow svg-REWARDS-dims">
 							<use xlink:href="all-icons6.svg#REWARDS"></use>
 						</svg>
 
@@ -1504,7 +1655,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SCRATCH_CARDS -->
-						<svg class="svg-SCRATCH_CARDS-dims">
+						<svg class="shake-slow svg-SCRATCH_CARDS-dims">
 							<use xlink:href="all-icons6.svg#SCRATCH_CARDS"></use>
 						</svg>
 
@@ -1515,7 +1666,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SEARCH -->
-						<svg class="svg-SEARCH-dims">
+						<svg class="shake-slow svg-SEARCH-dims">
 							<use xlink:href="all-icons6.svg#SEARCH"></use>
 						</svg>
 
@@ -1526,7 +1677,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SECURED -->
-						<svg class="svg-SECURED-dims">
+						<svg class="shake-slow svg-SECURED-dims">
 							<use xlink:href="all-icons6.svg#SECURED"></use>
 						</svg>
 
@@ -1537,7 +1688,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SELF_EXCLUSION -->
-						<svg class="svg-SELF_EXCLUSION-dims">
+						<svg class="shake-slow svg-SELF_EXCLUSION-dims">
 							<use xlink:href="all-icons6.svg#SELF_EXCLUSION"></use>
 						</svg>
 
@@ -1548,7 +1699,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SEND_ITEMS -->
-						<svg class="svg-SEND_ITEMS-dims">
+						<svg class="shake-slow svg-SEND_ITEMS-dims">
 							<use xlink:href="all-icons6.svg#SEND_ITEMS"></use>
 						</svg>
 
@@ -1559,7 +1710,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SESSION_LIMIT -->
-						<svg class="svg-SESSION_LIMIT-dims">
+						<svg class="shake-slow svg-SESSION_LIMIT-dims">
 							<use xlink:href="all-icons6.svg#SESSION_LIMIT"></use>
 						</svg>
 
@@ -1570,7 +1721,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SESSION_TIME -->
-						<svg class="svg-SESSION_TIME-dims">
+						<svg class="shake-slow svg-SESSION_TIME-dims">
 							<use xlink:href="all-icons6.svg#SESSION_TIME"></use>
 						</svg>
 
@@ -1581,7 +1732,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SETTINGS -->
-						<svg class="svg-SETTINGS-dims">
+						<svg class="shake-slow svg-SETTINGS-dims">
 							<use xlink:href="all-icons6.svg#SETTINGS"></use>
 						</svg>
 
@@ -1592,7 +1743,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SET_LIMITS -->
-						<svg class="svg-SET_LIMITS-dims Icon--inverted">
+						<svg class="shake-slow svg-SET_LIMITS-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#SET_LIMITS"></use>
 						</svg>
 
@@ -1603,7 +1754,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SET_LIMITS_2 -->
-						<svg class="svg-SET_LIMITS_2-dims">
+						<svg class="shake-slow svg-SET_LIMITS_2-dims">
 							<use xlink:href="all-icons6.svg#SET_LIMITS_2"></use>
 						</svg>
 
@@ -1614,7 +1765,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SLOTS -->
-						<svg class="svg-SLOTS-dims">
+						<svg class="shake-slow svg-SLOTS-dims">
 							<use xlink:href="all-icons6.svg#SLOTS"></use>
 						</svg>
 
@@ -1625,7 +1776,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SLOTS_GAMES -->
-						<svg class="svg-SLOTS_GAMES-dims">
+						<svg class="shake-slow svg-SLOTS_GAMES-dims">
 							<use xlink:href="all-icons6.svg#SLOTS_GAMES"></use>
 						</svg>
 
@@ -1636,7 +1787,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- SPECIALS -->
-						<svg class="svg-SPECIALS-dims">
+						<svg class="shake-slow svg-SPECIALS-dims">
 							<use xlink:href="all-icons6.svg#SPECIALS"></use>
 						</svg>
 
@@ -1647,7 +1798,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TABLET -->
-						<svg class="svg-TABLET-dims">
+						<svg class="shake-slow svg-TABLET-dims">
 							<use xlink:href="all-icons6.svg#TABLET"></use>
 						</svg>
 
@@ -1658,7 +1809,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TABLE_GAME -->
-						<svg class="svg-TABLE_GAME-dims">
+						<svg class="shake-slow svg-TABLE_GAME-dims">
 							<use xlink:href="all-icons6.svg#TABLE_GAME"></use>
 						</svg>
 
@@ -1669,7 +1820,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TECH_SUPPORT -->
-						<svg class="svg-TECH_SUPPORT-dims">
+						<svg class="shake-slow svg-TECH_SUPPORT-dims">
 							<use xlink:href="all-icons6.svg#TECH_SUPPORT"></use>
 						</svg>
 
@@ -1680,7 +1831,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TICK -->
-						<svg class="svg-TICK-dims">
+						<svg class="shake-slow svg-TICK-dims">
 							<use xlink:href="all-icons6.svg#TICK"></use>
 						</svg>
 
@@ -1691,7 +1842,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TICKETS -->
-						<svg class="svg-TICKETS-dims">
+						<svg class="shake-slow svg-TICKETS-dims">
 							<use xlink:href="all-icons6.svg#TICKETS"></use>
 						</svg>
 
@@ -1702,7 +1853,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TIME -->
-						<svg class="svg-TIME-dims">
+						<svg class="shake-slow svg-TIME-dims">
 							<use xlink:href="all-icons6.svg#TIME"></use>
 						</svg>
 
@@ -1713,7 +1864,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TOP_GAMES -->
-						<svg class="svg-TOP_GAMES-dims">
+						<svg class="shake-slow svg-TOP_GAMES-dims">
 							<use xlink:href="all-icons6.svg#TOP_GAMES"></use>
 						</svg>
 
@@ -1724,7 +1875,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TOUCH_ID -->
-						<svg class="svg-TOUCH_ID-dims">
+						<svg class="shake-slow svg-TOUCH_ID-dims">
 							<use xlink:href="all-icons6.svg#TOUCH_ID"></use>
 						</svg>
 
@@ -1735,7 +1886,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TRANSACTION_HISTORY -->
-						<svg class="svg-TRANSACTION_HISTORY-dims">
+						<svg class="shake-slow svg-TRANSACTION_HISTORY-dims">
 							<use xlink:href="all-icons6.svg#TRANSACTION_HISTORY"></use>
 						</svg>
 
@@ -1746,7 +1897,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TV_FILM -->
-						<svg class="svg-TV_FILM-dims">
+						<svg class="shake-slow svg-TV_FILM-dims">
 							<use xlink:href="all-icons6.svg#TV_FILM"></use>
 						</svg>
 
@@ -1757,7 +1908,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- TWITTER -->
-						<svg class="svg-TWITTER-dims Icon--inverted">
+						<svg class="shake-slow svg-TWITTER-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#TWITTER"></use>
 						</svg>
 
@@ -1768,7 +1919,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- USERS -->
-						<svg class="svg-USERS-dims">
+						<svg class="shake-slow svg-USERS-dims">
 							<use xlink:href="all-icons6.svg#USERS"></use>
 						</svg>
 
@@ -1779,7 +1930,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- VIP -->
-						<svg class="svg-VIP-dims">
+						<svg class="shake-slow svg-VIP-dims">
 							<use xlink:href="all-icons6.svg#VIP"></use>
 						</svg>
 
@@ -1790,7 +1941,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- VOTE -->
-						<svg class="svg-VOTE-dims">
+						<svg class="shake-slow svg-VOTE-dims">
 							<use xlink:href="all-icons6.svg#VOTE"></use>
 						</svg>
 
@@ -1801,7 +1952,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- WARNING -->
-						<svg class="svg-WARNING-dims Icon--inverted">
+						<svg class="shake-slow svg-WARNING-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#WARNING"></use>
 						</svg>
 
@@ -1812,7 +1963,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- WHATIS -->
-						<svg class="svg-WHATIS-dims">
+						<svg class="shake-slow svg-WHATIS-dims">
 							<use xlink:href="all-icons6.svg#WHATIS"></use>
 						</svg>
 
@@ -1823,7 +1974,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- WHERE_IT_IS -->
-						<svg class="svg-WHERE_IT_IS-dims">
+						<svg class="shake-slow svg-WHERE_IT_IS-dims">
 							<use xlink:href="all-icons6.svg#WHERE_IT_IS"></use>
 						</svg>
 
@@ -1834,7 +1985,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- WITHDRAW -->
-						<svg class="svg-WITHDRAW-dims">
+						<svg class="shake-slow svg-WITHDRAW-dims">
 							<use xlink:href="all-icons6.svg#WITHDRAW"></use>
 						</svg>
 
@@ -1845,7 +1996,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- WITHDRAW_METHOD -->
-						<svg class="svg-WITHDRAW_METHOD-dims">
+						<svg class="shake-slow svg-WITHDRAW_METHOD-dims">
 							<use xlink:href="all-icons6.svg#WITHDRAW_METHOD"></use>
 						</svg>
 
@@ -1856,7 +2007,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					<div class="icon-box">
 
 						<!-- YOUTUBE -->
-						<svg class="svg-YOUTUBE-dims Icon--inverted">
+						<svg class="shake-slow svg-YOUTUBE-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#YOUTUBE"></use>
 						</svg>
 
@@ -1874,5 +2025,6 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 		<footer>
 			<p>Generated at Sun, 21 Aug 2016 08:47:29 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
+		<script defer src="svgxuse.min.js"></script>
 	</body>
 </html>
