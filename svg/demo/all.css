@@ -110,17 +110,17 @@ li:nth-child(2n):hover svg {
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 /* perspectiveDown http://www.minimamente.com/example/magic_animations/ */
-li:nth-child(3n):hover svg {
+/*li:nth-child(3n):hover svg {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   -webkit-animation-name: perspectiveDown;
   animation-name: perspectiveDown;
-}
+}*/
 /* Rubberband - animate.css https://daneden.github.io/animate.css/ */
-li:nth-child(4n):hover svg {
+/*li:nth-child(4n):hover svg {
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
-}
+}*/
 /* Shake slow */
 li:nth-child(5n) svg {
   transform-origin: center center;
@@ -132,12 +132,12 @@ li:nth-child(5n):hover svg {
     animation-iteration-count: infinite;
 }
 /* font-size transition */
-li:nth-child(6n) svg {
+/*li:nth-child(6n) svg {
   transition: font-size 0.3;
 }
 li:nth-child(6n):hover svg {
   font-size: 4em;
-}
+}*/
 @keyframes rubberBand {
   from {
     -webkit-transform: scale3d(1, 1, 1);
@@ -357,18 +357,18 @@ li:nth-child(6n):hover svg {
 }
 @keyframes color-change2 {
     20% {
-        fill: cyan;
+        color: cyan;
     }
     40% {
-        fill: salmon;
+        color: salmon;
     }
     60% {
-        fill: white;
+        color: white;
     }
     80% {
-        fill: lightblue;
+        color: lightblue;
     }
     100% {
-        fill: wheat;
+        color: wheat;
     }
 }
