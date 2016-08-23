@@ -5,210 +5,9 @@
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<link href="all.css" rel="stylesheet"></link>
 		<style>
-		@charset "UTF-8";
-		body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}
 
-		header{display:block;padding:3em 3em 2em 3em;background-color:#fff}
-		header p{margin:2em 0 0 0}
-		section{border-top:1px solid #eee;padding:2em 3em 0 3em}
-		ul{margin:0;padding:0;display: flex; flex-wrap: wrap; width: 1200px; margin-left: auto; margin-right: auto;list-style:none;}
-		li{flex: 1 1 0; padding: 10px 20px;position:relative;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}
-		/*.icon{display:inline;display:inline-block}*/
-		h1{margin-top:0}
-
-		footer{display:block;margin:0;padding:0 3em 3em 3em}
-		footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}
-
-			li svg {fill: #666666; margin-left: auto; margin-right: auto; width:1em; height: 1em; display:block; margin-top:10px; font-size: 3em;}
-			li:hover svg { fill: gold;
-  			animation: color-change 5s infinite alternate;
-			}
-			li .Icon--inverted { color: white; }
-			/*li:nth-child(2n):hover svg { fill: lightskyblue;; }
-			li:nth-child(2n):hover { background: tomato; }
-			li:nth-child(2n):hover h2 { color: white; }*/
-			h2 {margin-left: auto; margin-right: auto; text-align:center; display:block;font-size:16px; margin-top: 16px;}
-			.shake-slow {
-			  /*display: inline-block;*/
-			  transform-origin: center center;
-			}
-			li:nth-child(5n):hover .shake-slow {
-			  animation-name: shake-slow;
-			  animation-duration: 5s;
-			  animation-timing-function: ease-in-out;
-			  animation-iteration-count: infinite;
-			}
-
-			@keyframes shake-slow {
-			  2% {
-			    transform: translate(8px, 0px) rotate(3.5deg);
-			  }
-			  4% {
-			    transform: translate(-7px, 7px) rotate(-1.5deg);
-			  }
-			  6% {
-			    transform: translate(9px, 7px) rotate(1.5deg);
-			  }
-			  8% {
-			    transform: translate(5px, -5px) rotate(-0.5deg);
-			  }
-			  10% {
-			    transform: translate(3px, 2px) rotate(0.5deg);
-			  }
-			  12% {
-			    transform: translate(-9px, 9px) rotate(0.5deg);
-			  }
-			  14% {
-			    transform: translate(0px, 6px) rotate(1.5deg);
-			  }
-			  16% {
-			    transform: translate(-8px, 2px) rotate(3.5deg);
-			  }
-			  18% {
-			    transform: translate(7px, 2px) rotate(0.5deg);
-			  }
-			  20% {
-			    transform: translate(-5px, -9px) rotate(-1.5deg);
-			  }
-			  22% {
-			    transform: translate(-8px, 6px) rotate(-2.5deg);
-			  }
-			  24% {
-			    transform: translate(7px, -3px) rotate(2.5deg);
-			  }
-			  26% {
-			    transform: translate(6px, -6px) rotate(-0.5deg);
-			  }
-			  28% {
-			    transform: translate(-1px, -8px) rotate(-0.5deg);
-			  }
-			  30% {
-			    transform: translate(5px, -7px) rotate(1.5deg);
-			  }
-			  32% {
-			    transform: translate(-3px, -2px) rotate(1.5deg);
-			  }
-			  34% {
-			    transform: translate(-3px, 6px) rotate(-2.5deg);
-			  }
-			  36% {
-			    transform: translate(-3px, -4px) rotate(0.5deg);
-			  }
-			  38% {
-			    transform: translate(3px, -2px) rotate(2.5deg);
-			  }
-			  40% {
-			    transform: translate(-9px, -7px) rotate(-0.5deg);
-			  }
-			  42% {
-			    transform: translate(-8px, -7px) rotate(-0.5deg);
-			  }
-			  44% {
-			    transform: translate(6px, 8px) rotate(1.5deg);
-			  }
-			  46% {
-			    transform: translate(-2px, -2px) rotate(3.5deg);
-			  }
-			  48% {
-			    transform: translate(6px, -1px) rotate(1.5deg);
-			  }
-			  50% {
-			    transform: translate(-8px, 0px) rotate(0.5deg);
-			  }
-			  52% {
-			    transform: translate(3px, -1px) rotate(-2.5deg);
-			  }
-			  54% {
-			    transform: translate(0px, 1px) rotate(3.5deg);
-			  }
-			  56% {
-			    transform: translate(1px, 2px) rotate(0.5deg);
-			  }
-			  58% {
-			    transform: translate(-5px, 0px) rotate(0.5deg);
-			  }
-			  60% {
-			    transform: translate(-9px, 3px) rotate(0.5deg);
-			  }
-			  62% {
-			    transform: translate(0px, -4px) rotate(3.5deg);
-			  }
-			  64% {
-			    transform: translate(9px, 6px) rotate(2.5deg);
-			  }
-			  66% {
-			    transform: translate(9px, 6px) rotate(0.5deg);
-			  }
-			  68% {
-			    transform: translate(10px, 1px) rotate(1.5deg);
-			  }
-			  70% {
-			    transform: translate(-7px, 3px) rotate(2.5deg);
-			  }
-			  72% {
-			    transform: translate(-6px, 10px) rotate(-1.5deg);
-			  }
-			  74% {
-			    transform: translate(6px, -7px) rotate(-1.5deg);
-			  }
-			  76% {
-			    transform: translate(-5px, 4px) rotate(2.5deg);
-			  }
-			  78% {
-			    transform: translate(6px, -3px) rotate(1.5deg);
-			  }
-			  80% {
-			    transform: translate(-5px, -4px) rotate(-2.5deg);
-			  }
-			  82% {
-			    transform: translate(-8px, 10px) rotate(1.5deg);
-			  }
-			  84% {
-			    transform: translate(3px, 1px) rotate(3.5deg);
-			  }
-			  86% {
-			    transform: translate(0px, -6px) rotate(-1.5deg);
-			  }
-			  88% {
-			    transform: translate(-1px, -6px) rotate(1.5deg);
-			  }
-			  90% {
-			    transform: translate(5px, 3px) rotate(-0.5deg);
-			  }
-			  92% {
-			    transform: translate(8px, 5px) rotate(-1.5deg);
-			  }
-			  94% {
-			    transform: translate(-4px, 6px) rotate(2.5deg);
-			  }
-			  96% {
-			    transform: translate(1px, 1px) rotate(0.5deg);
-			  }
-			  98% {
-			    transform: translate(-9px, 4px) rotate(1.5deg);
-			  }
-			  0%, 100% {
-			    transform: translate(0, 0) rotate(0);
-			  }
-			}
-			@keyframes color-change {
-			  20% {
-			    fill: tomato;
-			  }
-			  40% {
-			    fill: lightblue;
-			  }
-			  60% {
-			    fill: maroon;
-			  }
-			  80% {
-			    fill: rebeccapurple;
-			  }
-			  100% {
-			    fill: aqua;
-			  }
-			}
 		</style>
 	</head>
 	<body>
@@ -223,7 +22,7 @@
 					<div class="icon-box">
 
 						<!-- EMAIL_US -->
-						<svg class="shake-slow svg-EMAIL_US-dims">
+						<svg class="svg-EMAIL_US-dims">
 							<use xlink:href="all-icons6.svg#EMAIL_US"></use>
 						</svg>
 
@@ -234,7 +33,7 @@
 					<div class="icon-box">
 
 						<!-- EXCLUSIVE_COLORED -->
-						<svg class="shake-slow svg-EXCLUSIVE_COLORED-dims">
+						<svg class="svg-EXCLUSIVE_COLORED-dims">
 							<use xlink:href="all-icons6.svg#EXCLUSIVE_COLORED"></use>
 						</svg>
 
@@ -245,7 +44,7 @@
 					<div class="icon-box">
 
 						<!-- FILTERS_2 -->
-						<svg class="shake-slow svg-FILTERS_2-dims">
+						<svg class="svg-FILTERS_2-dims">
 							<use xlink:href="all-icons6.svg#FILTERS_2"></use>
 						</svg>
 
@@ -256,7 +55,7 @@
 					<div class="icon-box">
 
 						<!-- LIVE_HELP -->
-						<svg class="shake-slow svg-LIVE_HELP-dims">
+						<svg class="svg-LIVE_HELP-dims">
 							<use xlink:href="all-icons6.svg#LIVE_HELP"></use>
 						</svg>
 
@@ -267,7 +66,7 @@
 					<div class="icon-box">
 
 						<!-- LIVE_TELEPHONE -->
-						<svg class="shake-slow svg-LIVE_TELEPHONE-dims">
+						<svg class="svg-LIVE_TELEPHONE-dims">
 							<use xlink:href="all-icons6.svg#LIVE_TELEPHONE"></use>
 						</svg>
 
@@ -278,7 +77,7 @@
 					<div class="icon-box">
 
 						<!-- MESSAGE_US -->
-						<svg class="shake-slow svg-MESSAGE_US-dims">
+						<svg class="svg-MESSAGE_US-dims">
 							<use xlink:href="all-icons6.svg#MESSAGE_US"></use>
 						</svg>
 
@@ -289,7 +88,7 @@
 					<div class="icon-box">
 
 						<!-- NEW_EXCLUSIVE_COLORED -->
-						<svg class="shake-slow svg-NEW_EXCLUSIVE_COLORED-dims">
+						<svg class="svg-NEW_EXCLUSIVE_COLORED-dims">
 							<use xlink:href="all-icons6.svg#NEW_EXCLUSIVE_COLORED"></use>
 						</svg>
 
@@ -302,7 +101,7 @@
 					<div class="icon-box">
 
 						<!-- 40_50_BALL -->
-						<svg class="shake-slow svg-40_50_BALL-dims">
+						<svg class="svg-40_50_BALL-dims">
 							<use xlink:href="all-icons6.svg#40_50_BALL"></use>
 						</svg>
 
@@ -313,7 +112,7 @@
 					<div class="icon-box">
 
 						<!-- 52LIVES_CHARITY -->
-						<svg class="shake-slow svg-52LIVES_CHARITY-dims">
+						<svg class="svg-52LIVES_CHARITY-dims">
 							<use xlink:href="all-icons6.svg#52LIVES_CHARITY"></use>
 						</svg>
 
@@ -324,7 +123,7 @@
 					<div class="icon-box">
 
 						<!-- 75_80_BALL -->
-						<svg class="shake-slow svg-75_80_BALL-dims">
+						<svg class="svg-75_80_BALL-dims">
 							<use xlink:href="all-icons6.svg#75_80_BALL"></use>
 						</svg>
 
@@ -335,7 +134,7 @@
 					<div class="icon-box">
 
 						<!-- 90_BALL -->
-						<svg class="shake-slow svg-90_BALL-dims">
+						<svg class="svg-90_BALL-dims">
 							<use xlink:href="all-icons6.svg#90_BALL"></use>
 						</svg>
 
@@ -346,7 +145,7 @@
 					<div class="icon-box">
 
 						<!-- ADD_LINK -->
-						<svg class="shake-slow svg-ADD_LINK-dims">
+						<svg class="svg-ADD_LINK-dims">
 							<use xlink:href="all-icons6.svg#ADD_LINK"></use>
 						</svg>
 
@@ -357,7 +156,7 @@
 					<div class="icon-box">
 
 						<!-- ADDRESS_1 -->
-						<svg class="shake-slow svg-ADDRESS_1-dims">
+						<svg class="svg-ADDRESS_1-dims">
 							<use xlink:href="all-icons6.svg#ADDRESS_1"></use>
 						</svg>
 
@@ -368,7 +167,7 @@
 					<div class="icon-box">
 
 						<!-- ADDRESS_2 -->
-						<svg class="shake-slow svg-ADDRESS_2-dims">
+						<svg class="svg-ADDRESS_2-dims">
 							<use xlink:href="all-icons6.svg#ADDRESS_2"></use>
 						</svg>
 
@@ -379,7 +178,7 @@
 					<div class="icon-box">
 
 						<!-- ALL -->
-						<svg class="shake-slow svg-ALL-dims">
+						<svg class="svg-ALL-dims">
 							<use xlink:href="all-icons6.svg#ALL"></use>
 						</svg>
 
@@ -390,7 +189,7 @@
 					<div class="icon-box">
 
 						<!-- ARROW -->
-						<svg class="shake-slow svg-ARROW-dims">
+						<svg class="svg-ARROW-dims">
 							<use xlink:href="all-icons6.svg#ARROW"></use>
 						</svg>
 
@@ -401,7 +200,7 @@
 					<div class="icon-box">
 
 						<!-- ARROW_BACK -->
-						<svg class="shake-slow svg-ARROW_BACK-dims">
+						<svg class="svg-ARROW_BACK-dims">
 							<use xlink:href="all-icons6.svg#ARROW_BACK"></use>
 						</svg>
 
@@ -412,7 +211,7 @@
 					<div class="icon-box">
 
 						<!-- ARROW_DOWN -->
-						<svg class="shake-slow svg-ARROW_DOWN-dims">
+						<svg class="svg-ARROW_DOWN-dims">
 							<use xlink:href="all-icons6.svg#ARROW_DOWN"></use>
 						</svg>
 
@@ -423,7 +222,7 @@
 					<div class="icon-box">
 
 						<!-- ARROW_DOWN_BIG -->
-						<svg class="shake-slow svg-ARROW_DOWN_BIG-dims">
+						<svg class="svg-ARROW_DOWN_BIG-dims">
 							<use xlink:href="all-icons6.svg#ARROW_DOWN_BIG"></use>
 						</svg>
 
@@ -434,7 +233,7 @@
 					<div class="icon-box">
 
 						<!-- BENEFITS -->
-						<svg class="shake-slow svg-BENEFITS-dims">
+						<svg class="svg-BENEFITS-dims">
 							<use xlink:href="all-icons6.svg#BENEFITS"></use>
 						</svg>
 
@@ -445,7 +244,7 @@
 					<div class="icon-box">
 
 						<!-- BEST_DOGWALKS -->
-						<svg class="shake-slow svg-BEST_DOGWALKS-dims">
+						<svg class="svg-BEST_DOGWALKS-dims">
 							<use xlink:href="all-icons6.svg#BEST_DOGWALKS"></use>
 						</svg>
 
@@ -456,7 +255,7 @@
 					<div class="icon-box">
 
 						<!-- BINGO -->
-						<svg class="shake-slow svg-BINGO-dims">
+						<svg class="svg-BINGO-dims">
 							<use xlink:href="all-icons6.svg#BINGO"></use>
 						</svg>
 
@@ -467,7 +266,7 @@
 					<div class="icon-box">
 
 						<!-- BINGO_JACKPOTS -->
-						<svg class="shake-slow svg-BINGO_JACKPOTS-dims">
+						<svg class="svg-BINGO_JACKPOTS-dims">
 							<use xlink:href="all-icons6.svg#BINGO_JACKPOTS"></use>
 						</svg>
 
@@ -478,7 +277,7 @@
 					<div class="icon-box">
 
 						<!-- BINGO_ROOMS -->
-						<svg class="shake-slow svg-BINGO_ROOMS-dims">
+						<svg class="svg-BINGO_ROOMS-dims">
 							<use xlink:href="all-icons6.svg#BINGO_ROOMS"></use>
 						</svg>
 
@@ -489,7 +288,7 @@
 					<div class="icon-box">
 
 						<!-- BINGO_SCHEDULE_PRICE -->
-						<svg class="shake-slow svg-BINGO_SCHEDULE_PRICE-dims">
+						<svg class="svg-BINGO_SCHEDULE_PRICE-dims">
 							<use xlink:href="all-icons6.svg#BINGO_SCHEDULE_PRICE"></use>
 						</svg>
 
@@ -500,7 +299,7 @@
 					<div class="icon-box">
 
 						<!-- BINGO_SCHEDULE_PRIZE -->
-						<svg class="shake-slow svg-BINGO_SCHEDULE_PRIZE-dims">
+						<svg class="svg-BINGO_SCHEDULE_PRIZE-dims">
 							<use xlink:href="all-icons6.svg#BINGO_SCHEDULE_PRIZE"></use>
 						</svg>
 
@@ -511,7 +310,7 @@
 					<div class="icon-box">
 
 						<!-- BINGO_SCHEDULE -->
-						<svg class="shake-slow svg-BINGO_SCHEDULE-dims">
+						<svg class="svg-BINGO_SCHEDULE-dims">
 							<use xlink:href="all-icons6.svg#BINGO_SCHEDULE"></use>
 						</svg>
 
@@ -522,7 +321,7 @@
 					<div class="icon-box">
 
 						<!-- BLOG -->
-						<svg class="shake-slow svg-BLOG-dims">
+						<svg class="svg-BLOG-dims">
 							<use xlink:href="all-icons6.svg#BLOG"></use>
 						</svg>
 
@@ -533,7 +332,7 @@
 					<div class="icon-box">
 
 						<!-- BUZZ -->
-						<svg class="shake-slow svg-BUZZ-dims">
+						<svg class="svg-BUZZ-dims">
 							<use xlink:href="all-icons6.svg#BUZZ"></use>
 						</svg>
 
@@ -544,7 +343,7 @@
 					<div class="icon-box">
 
 						<!-- CASINO -->
-						<svg class="shake-slow svg-CASINO-dims">
+						<svg class="svg-CASINO-dims">
 							<use xlink:href="all-icons6.svg#CASINO"></use>
 						</svg>
 
@@ -555,7 +354,7 @@
 					<div class="icon-box">
 
 						<!-- CATEGORIES -->
-						<svg class="shake-slow svg-CATEGORIES-dims">
+						<svg class="svg-CATEGORIES-dims">
 							<use xlink:href="all-icons6.svg#CATEGORIES"></use>
 						</svg>
 
@@ -566,7 +365,7 @@
 					<div class="icon-box">
 
 						<!-- CELEBRITY_WEDDINGS -->
-						<svg class="shake-slow svg-CELEBRITY_WEDDINGS-dims">
+						<svg class="svg-CELEBRITY_WEDDINGS-dims">
 							<use xlink:href="all-icons6.svg#CELEBRITY_WEDDINGS"></use>
 						</svg>
 
@@ -577,7 +376,7 @@
 					<div class="icon-box">
 
 						<!-- CHANGE_PASSWORD -->
-						<svg class="shake-slow svg-CHANGE_PASSWORD-dims">
+						<svg class="svg-CHANGE_PASSWORD-dims">
 							<use xlink:href="all-icons6.svg#CHANGE_PASSWORD"></use>
 						</svg>
 
@@ -588,7 +387,7 @@
 					<div class="icon-box">
 
 						<!-- CHAT -->
-						<svg class="shake-slow svg-CHAT-dims">
+						<svg class="svg-CHAT-dims">
 							<use xlink:href="all-icons6.svg#CHAT"></use>
 						</svg>
 
@@ -599,7 +398,7 @@
 					<div class="icon-box">
 
 						<!-- CHAT_GAMES -->
-						<svg class="shake-slow svg-CHAT_GAMES-dims">
+						<svg class="svg-CHAT_GAMES-dims">
 							<use xlink:href="all-icons6.svg#CHAT_GAMES"></use>
 						</svg>
 
@@ -610,7 +409,7 @@
 					<div class="icon-box">
 
 						<!-- CHAT_LINGO -->
-						<svg class="shake-slow svg-CHAT_LINGO-dims">
+						<svg class="svg-CHAT_LINGO-dims">
 							<use xlink:href="all-icons6.svg#CHAT_LINGO"></use>
 						</svg>
 
@@ -621,7 +420,7 @@
 					<div class="icon-box">
 
 						<!-- CHECKED -->
-						<svg class="shake-slow svg-CHECKED-dims">
+						<svg class="svg-CHECKED-dims">
 							<use xlink:href="all-icons6.svg#CHECKED"></use>
 						</svg>
 
@@ -632,7 +431,7 @@
 					<div class="icon-box">
 
 						<!-- CHEEKY -->
-						<svg class="shake-slow svg-CHEEKY-dims">
+						<svg class="svg-CHEEKY-dims">
 							<use xlink:href="all-icons6.svg#CHEEKY"></use>
 						</svg>
 
@@ -643,7 +442,7 @@
 					<div class="icon-box">
 
 						<!-- CHEERY -->
-						<svg class="shake-slow svg-CHEERY-dims">
+						<svg class="svg-CHEERY-dims">
 							<use xlink:href="all-icons6.svg#CHEERY"></use>
 						</svg>
 
@@ -654,7 +453,7 @@
 					<div class="icon-box">
 
 						<!-- CHILLED -->
-						<svg class="shake-slow svg-CHILLED-dims">
+						<svg class="svg-CHILLED-dims">
 							<use xlink:href="all-icons6.svg#CHILLED"></use>
 						</svg>
 
@@ -665,7 +464,7 @@
 					<div class="icon-box">
 
 						<!-- CHIPPER -->
-						<svg class="shake-slow svg-CHIPPER-dims">
+						<svg class="svg-CHIPPER-dims">
 							<use xlink:href="all-icons6.svg#CHIPPER"></use>
 						</svg>
 
@@ -676,7 +475,7 @@
 					<div class="icon-box">
 
 						<!-- CHIRPY -->
-						<svg class="shake-slow svg-CHIRPY-dims">
+						<svg class="svg-CHIRPY-dims">
 							<use xlink:href="all-icons6.svg#CHIRPY"></use>
 						</svg>
 
@@ -687,7 +486,7 @@
 					<div class="icon-box">
 
 						<!-- CHUFFED -->
-						<svg class="shake-slow svg-CHUFFED-dims">
+						<svg class="svg-CHUFFED-dims">
 							<use xlink:href="all-icons6.svg#CHUFFED"></use>
 						</svg>
 
@@ -698,7 +497,7 @@
 					<div class="icon-box">
 
 						<!-- CLOSE -->
-						<svg class="shake-slow svg-CLOSE-dims">
+						<svg class="svg-CLOSE-dims">
 							<use xlink:href="all-icons6.svg#CLOSE"></use>
 						</svg>
 
@@ -709,7 +508,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_BAR -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_BAR-dims">
+						<svg class="svg-CLUB_FACILITIES_BAR-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_BAR"></use>
 						</svg>
 
@@ -720,7 +519,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_CASH_MACHINE -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_CASH_MACHINE-dims">
+						<svg class="svg-CLUB_FACILITIES_CASH_MACHINE-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_CASH_MACHINE"></use>
 						</svg>
 
@@ -731,7 +530,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_DINNER -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_DINNER-dims">
+						<svg class="svg-CLUB_FACILITIES_DINNER-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_DINNER"></use>
 						</svg>
 
@@ -742,7 +541,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_DISABLED -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_DISABLED-dims">
+						<svg class="svg-CLUB_FACILITIES_DISABLED-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_DISABLED"></use>
 						</svg>
 
@@ -753,7 +552,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_EMAIL -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_EMAIL-dims">
+						<svg class="svg-CLUB_FACILITIES_EMAIL-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_EMAIL"></use>
 						</svg>
 
@@ -764,7 +563,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_HEARING_LOOP -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_HEARING_LOOP-dims">
+						<svg class="svg-CLUB_FACILITIES_HEARING_LOOP-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_HEARING_LOOP"></use>
 						</svg>
 
@@ -775,7 +574,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_SLOTS_MACHINES -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_SLOTS_MACHINES-dims">
+						<svg class="svg-CLUB_FACILITIES_SLOTS_MACHINES-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_SLOTS_MACHINES"></use>
 						</svg>
 
@@ -786,7 +585,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_SMOKING -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_SMOKING-dims">
+						<svg class="svg-CLUB_FACILITIES_SMOKING-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_SMOKING"></use>
 						</svg>
 
@@ -797,7 +596,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FACILITIES_TELEPHONE -->
-						<svg class="shake-slow svg-CLUB_FACILITIES_TELEPHONE-dims">
+						<svg class="svg-CLUB_FACILITIES_TELEPHONE-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FACILITIES_TELEPHONE"></use>
 						</svg>
 
@@ -808,7 +607,7 @@
 					<div class="icon-box">
 
 						<!-- CLUB_FINDER -->
-						<svg class="shake-slow svg-CLUB_FINDER-dims">
+						<svg class="svg-CLUB_FINDER-dims">
 							<use xlink:href="all-icons6.svg#CLUB_FINDER"></use>
 						</svg>
 
@@ -819,7 +618,7 @@
 					<div class="icon-box">
 
 						<!-- CONTACT_US -->
-						<svg class="shake-slow svg-CONTACT_US-dims">
+						<svg class="svg-CONTACT_US-dims">
 							<use xlink:href="all-icons6.svg#CONTACT_US"></use>
 						</svg>
 
@@ -830,7 +629,7 @@
 					<div class="icon-box">
 
 						<!-- COOLING_OF_PERIOD -->
-						<svg class="shake-slow svg-COOLING_OF_PERIOD-dims">
+						<svg class="svg-COOLING_OF_PERIOD-dims">
 							<use xlink:href="all-icons6.svg#COOLING_OF_PERIOD"></use>
 						</svg>
 
@@ -841,7 +640,7 @@
 					<div class="icon-box">
 
 						<!-- CORONATION_STREET -->
-						<svg class="shake-slow svg-CORONATION_STREET-dims">
+						<svg class="svg-CORONATION_STREET-dims">
 							<use xlink:href="all-icons6.svg#CORONATION_STREET"></use>
 						</svg>
 
@@ -852,7 +651,7 @@
 					<div class="icon-box">
 
 						<!-- CVV_CODE -->
-						<svg class="shake-slow svg-CVV_CODE-dims">
+						<svg class="svg-CVV_CODE-dims">
 							<use xlink:href="all-icons6.svg#CVV_CODE"></use>
 						</svg>
 
@@ -863,7 +662,7 @@
 					<div class="icon-box">
 
 						<!-- DEPOSIT_AMOUNT -->
-						<svg class="shake-slow svg-DEPOSIT_AMOUNT-dims">
+						<svg class="svg-DEPOSIT_AMOUNT-dims">
 							<use xlink:href="all-icons6.svg#DEPOSIT_AMOUNT"></use>
 						</svg>
 
@@ -874,7 +673,7 @@
 					<div class="icon-box">
 
 						<!-- DEPOSIT_CASHIER -->
-						<svg class="shake-slow svg-DEPOSIT_CASHIER-dims">
+						<svg class="svg-DEPOSIT_CASHIER-dims">
 							<use xlink:href="all-icons6.svg#DEPOSIT_CASHIER"></use>
 						</svg>
 
@@ -885,7 +684,7 @@
 					<div class="icon-box">
 
 						<!-- DESKTOP -->
-						<svg class="shake-slow svg-DESKTOP-dims">
+						<svg class="svg-DESKTOP-dims">
 							<use xlink:href="all-icons6.svg#DESKTOP"></use>
 						</svg>
 
@@ -896,7 +695,7 @@
 					<div class="icon-box">
 
 						<!-- EMAIL -->
-						<svg class="shake-slow svg-EMAIL-dims">
+						<svg class="svg-EMAIL-dims">
 							<use xlink:href="all-icons6.svg#EMAIL"></use>
 						</svg>
 
@@ -907,7 +706,7 @@
 					<div class="icon-box">
 
 						<!-- ENABLE_PIN_NUMBER -->
-						<svg class="shake-slow svg-ENABLE_PIN_NUMBER-dims">
+						<svg class="svg-ENABLE_PIN_NUMBER-dims">
 							<use xlink:href="all-icons6.svg#ENABLE_PIN_NUMBER"></use>
 						</svg>
 
@@ -918,7 +717,7 @@
 					<div class="icon-box">
 
 						<!-- ENTER_PROMO_CODE -->
-						<svg class="shake-slow svg-ENTER_PROMO_CODE-dims">
+						<svg class="svg-ENTER_PROMO_CODE-dims">
 							<use xlink:href="all-icons6.svg#ENTER_PROMO_CODE"></use>
 						</svg>
 
@@ -929,7 +728,7 @@
 					<div class="icon-box">
 
 						<!-- EXCLUSIVE -->
-						<svg class="shake-slow svg-EXCLUSIVE-dims">
+						<svg class="svg-EXCLUSIVE-dims">
 							<use xlink:href="all-icons6.svg#EXCLUSIVE"></use>
 						</svg>
 
@@ -940,7 +739,7 @@
 					<div class="icon-box">
 
 						<!-- EXPAND -->
-						<svg class="shake-slow svg-EXPAND-dims Icon--inverted">
+						<svg class="svg-EXPAND-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#EXPAND"></use>
 						</svg>
 
@@ -951,7 +750,7 @@
 					<div class="icon-box">
 
 						<!-- EXPAND_2 -->
-						<svg class="shake-slow svg-EXPAND_2-dims Icon--inverted">
+						<svg class="svg-EXPAND_2-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#EXPAND_2"></use>
 						</svg>
 
@@ -962,7 +761,7 @@
 					<div class="icon-box">
 
 						<!-- FACEBOOK -->
-						<svg class="shake-slow svg-FACEBOOK-dims Icon--inverted">
+						<svg class="svg-FACEBOOK-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#FACEBOOK"></use>
 						</svg>
 
@@ -973,7 +772,7 @@
 					<div class="icon-box">
 
 						<!-- FAVOURITE -->
-						<svg class="shake-slow svg-FAVOURITE-dims">
+						<svg class="svg-FAVOURITE-dims">
 							<use xlink:href="all-icons6.svg#FAVOURITE"></use>
 						</svg>
 
@@ -984,7 +783,7 @@
 					<div class="icon-box">
 
 						<!-- FAVOURITE_2 -->
-						<svg class="shake-slow svg-FAVOURITE_2-dims Icon--inverted">
+						<svg class="svg-FAVOURITE_2-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#FAVOURITE_2"></use>
 						</svg>
 
@@ -995,7 +794,7 @@
 					<div class="icon-box">
 
 						<!-- FEATURES -->
-						<svg class="shake-slow svg-FEATURES-dims">
+						<svg class="svg-FEATURES-dims">
 							<use xlink:href="all-icons6.svg#FEATURES"></use>
 						</svg>
 
@@ -1006,7 +805,7 @@
 					<div class="icon-box">
 
 						<!-- FEEDBACK -->
-						<svg class="shake-slow svg-FEEDBACK-dims">
+						<svg class="svg-FEEDBACK-dims">
 							<use xlink:href="all-icons6.svg#FEEDBACK"></use>
 						</svg>
 
@@ -1017,7 +816,7 @@
 					<div class="icon-box">
 
 						<!-- FILTERS -->
-						<svg class="shake-slow svg-FILTERS-dims">
+						<svg class="svg-FILTERS-dims">
 							<use xlink:href="all-icons6.svg#FILTERS"></use>
 						</svg>
 
@@ -1028,7 +827,7 @@
 					<div class="icon-box">
 
 						<!-- FLUTTER -->
-						<svg class="shake-slow svg-FLUTTER-dims">
+						<svg class="svg-FLUTTER-dims">
 							<use xlink:href="all-icons6.svg#FLUTTER"></use>
 						</svg>
 
@@ -1039,7 +838,7 @@
 					<div class="icon-box">
 
 						<!-- FOLLOW_US -->
-						<svg class="shake-slow svg-FOLLOW_US-dims">
+						<svg class="svg-FOLLOW_US-dims">
 							<use xlink:href="all-icons6.svg#FOLLOW_US"></use>
 						</svg>
 
@@ -1050,7 +849,7 @@
 					<div class="icon-box">
 
 						<!-- FOOTER_HELP -->
-						<svg class="shake-slow svg-FOOTER_HELP-dims">
+						<svg class="svg-FOOTER_HELP-dims">
 							<use xlink:href="all-icons6.svg#FOOTER_HELP"></use>
 						</svg>
 
@@ -1061,7 +860,7 @@
 					<div class="icon-box">
 
 						<!-- GALA_GOLD -->
-						<svg class="shake-slow svg-GALA_GOLD-dims">
+						<svg class="svg-GALA_GOLD-dims">
 							<use xlink:href="all-icons6.svg#GALA_GOLD"></use>
 						</svg>
 
@@ -1072,7 +871,7 @@
 					<div class="icon-box">
 
 						<!-- GALA_TV -->
-						<svg class="shake-slow svg-GALA_TV-dims">
+						<svg class="svg-GALA_TV-dims">
 							<use xlink:href="all-icons6.svg#GALA_TV"></use>
 						</svg>
 
@@ -1083,7 +882,7 @@
 					<div class="icon-box">
 
 						<!-- GAMES -->
-						<svg class="shake-slow svg-GAMES-dims">
+						<svg class="svg-GAMES-dims">
 							<use xlink:href="all-icons6.svg#GAMES"></use>
 						</svg>
 
@@ -1094,7 +893,7 @@
 					<div class="icon-box">
 
 						<!-- GAMES_2 -->
-						<svg class="shake-slow svg-GAMES_2-dims">
+						<svg class="svg-GAMES_2-dims">
 							<use xlink:href="all-icons6.svg#GAMES_2"></use>
 						</svg>
 
@@ -1105,7 +904,7 @@
 					<div class="icon-box">
 
 						<!-- GAME_OF_THE_WEEK -->
-						<svg class="shake-slow svg-GAME_OF_THE_WEEK-dims">
+						<svg class="svg-GAME_OF_THE_WEEK-dims">
 							<use xlink:href="all-icons6.svg#GAME_OF_THE_WEEK"></use>
 						</svg>
 
@@ -1116,7 +915,7 @@
 					<div class="icon-box">
 
 						<!-- GAME_PROFILE -->
-						<svg class="shake-slow svg-GAME_PROFILE-dims">
+						<svg class="svg-GAME_PROFILE-dims">
 							<use xlink:href="all-icons6.svg#GAME_PROFILE"></use>
 						</svg>
 
@@ -1127,7 +926,7 @@
 					<div class="icon-box">
 
 						<!-- GOOGLE+ -->
-						<svg class="shake-slow svg-GOOGLE+-dims Icon--inverted">
+						<svg class="svg-GOOGLE+-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#GOOGLE+"></use>
 						</svg>
 
@@ -1138,7 +937,7 @@
 					<div class="icon-box">
 
 						<!-- GRID_VIEW -->
-						<svg class="shake-slow svg-GRID_VIEW-dims">
+						<svg class="svg-GRID_VIEW-dims">
 							<use xlink:href="all-icons6.svg#GRID_VIEW"></use>
 						</svg>
 
@@ -1149,7 +948,7 @@
 					<div class="icon-box">
 
 						<!-- HELP -->
-						<svg class="shake-slow svg-HELP-dims">
+						<svg class="svg-HELP-dims">
 							<use xlink:href="all-icons6.svg#HELP"></use>
 						</svg>
 
@@ -1160,7 +959,7 @@
 					<div class="icon-box">
 
 						<!-- HISTORY -->
-						<svg class="shake-slow svg-HISTORY-dims">
+						<svg class="svg-HISTORY-dims">
 							<use xlink:href="all-icons6.svg#HISTORY"></use>
 						</svg>
 
@@ -1171,7 +970,7 @@
 					<div class="icon-box">
 
 						<!-- HOME -->
-						<svg class="shake-slow svg-HOME-dims">
+						<svg class="svg-HOME-dims">
 							<use xlink:href="all-icons6.svg#HOME"></use>
 						</svg>
 
@@ -1182,7 +981,7 @@
 					<div class="icon-box">
 
 						<!-- HOT -->
-						<svg class="shake-slow svg-HOT-dims Icon--inverted">
+						<svg class="svg-HOT-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#HOT"></use>
 						</svg>
 
@@ -1193,7 +992,7 @@
 					<div class="icon-box">
 
 						<!-- HOW_TO_PLAY -->
-						<svg class="shake-slow svg-HOW_TO_PLAY-dims">
+						<svg class="svg-HOW_TO_PLAY-dims">
 							<use xlink:href="all-icons6.svg#HOW_TO_PLAY"></use>
 						</svg>
 
@@ -1204,7 +1003,7 @@
 					<div class="icon-box">
 
 						<!-- INBOX -->
-						<svg class="shake-slow svg-INBOX-dims">
+						<svg class="svg-INBOX-dims">
 							<use xlink:href="all-icons6.svg#INBOX"></use>
 						</svg>
 
@@ -1215,7 +1014,7 @@
 					<div class="icon-box">
 
 						<!-- INFORMATION -->
-						<svg class="shake-slow svg-INFORMATION-dims Icon--inverted">
+						<svg class="svg-INFORMATION-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#INFORMATION"></use>
 						</svg>
 
@@ -1226,7 +1025,7 @@
 					<div class="icon-box">
 
 						<!-- INSTAGRAM -->
-						<svg class="shake-slow svg-INSTAGRAM-dims Icon--inverted">
+						<svg class="svg-INSTAGRAM-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#INSTAGRAM"></use>
 						</svg>
 
@@ -1237,7 +1036,7 @@
 					<div class="icon-box">
 
 						<!-- JACKPOT -->
-						<svg class="shake-slow svg-JACKPOT-dims">
+						<svg class="svg-JACKPOT-dims">
 							<use xlink:href="all-icons6.svg#JACKPOT"></use>
 						</svg>
 
@@ -1248,7 +1047,7 @@
 					<div class="icon-box">
 
 						<!-- LINK -->
-						<svg class="shake-slow svg-LINK-dims">
+						<svg class="svg-LINK-dims">
 							<use xlink:href="all-icons6.svg#LINK"></use>
 						</svg>
 
@@ -1259,7 +1058,7 @@
 					<div class="icon-box">
 
 						<!-- LINK_INVERTED -->
-						<svg class="shake-slow svg-LINK_INVERTED-dims Icon--inverted">
+						<svg class="svg-LINK_INVERTED-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#LINK_INVERTED"></use>
 						</svg>
 
@@ -1270,7 +1069,7 @@
 					<div class="icon-box">
 
 						<!-- LISTVIEW -->
-						<svg class="shake-slow svg-LISTVIEW-dims">
+						<svg class="svg-LISTVIEW-dims">
 							<use xlink:href="all-icons6.svg#LISTVIEW"></use>
 						</svg>
 
@@ -1281,7 +1080,7 @@
 					<div class="icon-box">
 
 						<!-- LIVE_CALLER -->
-						<svg class="shake-slow svg-LIVE_CALLER-dims">
+						<svg class="svg-LIVE_CALLER-dims">
 							<use xlink:href="all-icons6.svg#LIVE_CALLER"></use>
 						</svg>
 
@@ -1292,7 +1091,7 @@
 					<div class="icon-box">
 
 						<!-- LOGIN -->
-						<svg class="shake-slow svg-LOGIN-dims">
+						<svg class="svg-LOGIN-dims">
 							<use xlink:href="all-icons6.svg#LOGIN"></use>
 						</svg>
 
@@ -1303,7 +1102,7 @@
 					<div class="icon-box">
 
 						<!-- LOTTO -->
-						<svg class="shake-slow svg-LOTTO-dims">
+						<svg class="svg-LOTTO-dims">
 							<use xlink:href="all-icons6.svg#LOTTO"></use>
 						</svg>
 
@@ -1314,7 +1113,7 @@
 					<div class="icon-box">
 
 						<!-- MAP -->
-						<svg class="shake-slow svg-MAP-dims">
+						<svg class="svg-MAP-dims">
 							<use xlink:href="all-icons6.svg#MAP"></use>
 						</svg>
 
@@ -1325,7 +1124,7 @@
 					<div class="icon-box">
 
 						<!-- MAXIMUM_PAYOUT -->
-						<svg class="shake-slow svg-MAXIMUM_PAYOUT-dims">
+						<svg class="svg-MAXIMUM_PAYOUT-dims">
 							<use xlink:href="all-icons6.svg#MAXIMUM_PAYOUT"></use>
 						</svg>
 
@@ -1336,7 +1135,7 @@
 					<div class="icon-box">
 
 						<!-- MAXIMUM_STAKE -->
-						<svg class="shake-slow svg-MAXIMUM_STAKE-dims">
+						<svg class="svg-MAXIMUM_STAKE-dims">
 							<use xlink:href="all-icons6.svg#MAXIMUM_STAKE"></use>
 						</svg>
 
@@ -1347,7 +1146,7 @@
 					<div class="icon-box">
 
 						<!-- MENU -->
-						<svg class="shake-slow svg-MENU-dims">
+						<svg class="svg-MENU-dims">
 							<use xlink:href="all-icons6.svg#MENU"></use>
 						</svg>
 
@@ -1358,7 +1157,7 @@
 					<div class="icon-box">
 
 						<!-- MENU_2 -->
-						<svg class="shake-slow svg-MENU_2-dims">
+						<svg class="svg-MENU_2-dims">
 							<use xlink:href="all-icons6.svg#MENU_2"></use>
 						</svg>
 
@@ -1369,7 +1168,7 @@
 					<div class="icon-box">
 
 						<!-- MESSAGES -->
-						<svg class="shake-slow svg-MESSAGES-dims">
+						<svg class="svg-MESSAGES-dims">
 							<use xlink:href="all-icons6.svg#MESSAGES"></use>
 						</svg>
 
@@ -1380,7 +1179,7 @@
 					<div class="icon-box">
 
 						<!-- MINIMIZE -->
-						<svg class="shake-slow svg-MINIMIZE-dims Icon--inverted">
+						<svg class="svg-MINIMIZE-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#MINIMIZE"></use>
 						</svg>
 
@@ -1391,7 +1190,7 @@
 					<div class="icon-box">
 
 						<!-- MINIMUM_STAKE -->
-						<svg class="shake-slow svg-MINIMUM_STAKE-dims">
+						<svg class="svg-MINIMUM_STAKE-dims">
 							<use xlink:href="all-icons6.svg#MINIMUM_STAKE"></use>
 						</svg>
 
@@ -1402,7 +1201,7 @@
 					<div class="icon-box">
 
 						<!-- MOBILE -->
-						<svg class="shake-slow svg-MOBILE-dims">
+						<svg class="svg-MOBILE-dims">
 							<use xlink:href="all-icons6.svg#MOBILE"></use>
 						</svg>
 
@@ -1413,7 +1212,7 @@
 					<div class="icon-box">
 
 						<!-- MOST_POPULAR -->
-						<svg class="shake-slow svg-MOST_POPULAR-dims">
+						<svg class="svg-MOST_POPULAR-dims">
 							<use xlink:href="all-icons6.svg#MOST_POPULAR"></use>
 						</svg>
 
@@ -1424,7 +1223,7 @@
 					<div class="icon-box">
 
 						<!-- MOVE -->
-						<svg class="shake-slow svg-MOVE-dims">
+						<svg class="svg-MOVE-dims">
 							<use xlink:href="all-icons6.svg#MOVE"></use>
 						</svg>
 
@@ -1435,7 +1234,7 @@
 					<div class="icon-box">
 
 						<!-- MY_ACCOUNT -->
-						<svg class="shake-slow svg-MY_ACCOUNT-dims">
+						<svg class="svg-MY_ACCOUNT-dims">
 							<use xlink:href="all-icons6.svg#MY_ACCOUNT"></use>
 						</svg>
 
@@ -1446,7 +1245,7 @@
 					<div class="icon-box">
 
 						<!-- MY_BONUS_BALANCE -->
-						<svg class="shake-slow svg-MY_BONUS_BALANCE-dims">
+						<svg class="svg-MY_BONUS_BALANCE-dims">
 							<use xlink:href="all-icons6.svg#MY_BONUS_BALANCE"></use>
 						</svg>
 
@@ -1457,7 +1256,7 @@
 					<div class="icon-box">
 
 						<!-- MY_DETAILS -->
-						<svg class="shake-slow svg-MY_DETAILS-dims">
+						<svg class="svg-MY_DETAILS-dims">
 							<use xlink:href="all-icons6.svg#MY_DETAILS"></use>
 						</svg>
 
@@ -1468,7 +1267,7 @@
 					<div class="icon-box">
 
 						<!-- NEW -->
-						<svg class="shake-slow svg-NEW-dims">
+						<svg class="svg-NEW-dims">
 							<use xlink:href="all-icons6.svg#NEW"></use>
 						</svg>
 
@@ -1479,7 +1278,7 @@
 					<div class="icon-box">
 
 						<!-- NEWS -->
-						<svg class="shake-slow svg-NEWS-dims">
+						<svg class="svg-NEWS-dims">
 							<use xlink:href="all-icons6.svg#NEWS"></use>
 						</svg>
 
@@ -1490,7 +1289,7 @@
 					<div class="icon-box">
 
 						<!-- NEW_2 -->
-						<svg class="shake-slow svg-NEW_2-dims Icon--inverted">
+						<svg class="svg-NEW_2-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#NEW_2"></use>
 						</svg>
 
@@ -1501,7 +1300,7 @@
 					<div class="icon-box">
 
 						<!-- NEW_EXCLUSIVE -->
-						<svg class="shake-slow svg-NEW_EXCLUSIVE-dims">
+						<svg class="svg-NEW_EXCLUSIVE-dims">
 							<use xlink:href="all-icons6.svg#NEW_EXCLUSIVE"></use>
 						</svg>
 
@@ -1512,7 +1311,7 @@
 					<div class="icon-box">
 
 						<!-- NEW_MESSAGE -->
-						<svg class="shake-slow svg-NEW_MESSAGE-dims">
+						<svg class="svg-NEW_MESSAGE-dims">
 							<use xlink:href="all-icons6.svg#NEW_MESSAGE"></use>
 						</svg>
 
@@ -1523,7 +1322,7 @@
 					<div class="icon-box">
 
 						<!-- PAYLINES -->
-						<svg class="shake-slow svg-PAYLINES-dims">
+						<svg class="svg-PAYLINES-dims">
 							<use xlink:href="all-icons6.svg#PAYLINES"></use>
 						</svg>
 
@@ -1534,7 +1333,7 @@
 					<div class="icon-box">
 
 						<!-- PAYMENT_METHOD -->
-						<svg class="shake-slow svg-PAYMENT_METHOD-dims">
+						<svg class="svg-PAYMENT_METHOD-dims">
 							<use xlink:href="all-icons6.svg#PAYMENT_METHOD"></use>
 						</svg>
 
@@ -1545,7 +1344,7 @@
 					<div class="icon-box">
 
 						<!-- PINTEREST -->
-						<svg class="shake-slow svg-PINTEREST-dims Icon--inverted">
+						<svg class="svg-PINTEREST-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#PINTEREST"></use>
 						</svg>
 
@@ -1556,7 +1355,7 @@
 					<div class="icon-box">
 
 						<!-- PLAY -->
-						<svg class="shake-slow svg-PLAY-dims">
+						<svg class="svg-PLAY-dims">
 							<use xlink:href="all-icons6.svg#PLAY"></use>
 						</svg>
 
@@ -1567,7 +1366,7 @@
 					<div class="icon-box">
 
 						<!-- PLAYBREAK -->
-						<svg class="shake-slow svg-PLAYBREAK-dims">
+						<svg class="svg-PLAYBREAK-dims">
 							<use xlink:href="all-icons6.svg#PLAYBREAK"></use>
 						</svg>
 
@@ -1578,7 +1377,7 @@
 					<div class="icon-box">
 
 						<!-- PLAYER_ANALYTICS -->
-						<svg class="shake-slow svg-PLAYER_ANALYTICS-dims">
+						<svg class="svg-PLAYER_ANALYTICS-dims">
 							<use xlink:href="all-icons6.svg#PLAYER_ANALYTICS"></use>
 						</svg>
 
@@ -1589,7 +1388,7 @@
 					<div class="icon-box">
 
 						<!-- POPUP_DRAG -->
-						<svg class="shake-slow svg-POPUP_DRAG-dims">
+						<svg class="svg-POPUP_DRAG-dims">
 							<use xlink:href="all-icons6.svg#POPUP_DRAG"></use>
 						</svg>
 
@@ -1600,7 +1399,7 @@
 					<div class="icon-box">
 
 						<!-- PROMOS -->
-						<svg class="shake-slow svg-PROMOS-dims">
+						<svg class="svg-PROMOS-dims">
 							<use xlink:href="all-icons6.svg#PROMOS"></use>
 						</svg>
 
@@ -1611,7 +1410,7 @@
 					<div class="icon-box">
 
 						<!-- RECENTLY_PLAYED_GAMES -->
-						<svg class="shake-slow svg-RECENTLY_PLAYED_GAMES-dims">
+						<svg class="svg-RECENTLY_PLAYED_GAMES-dims">
 							<use xlink:href="all-icons6.svg#RECENTLY_PLAYED_GAMES"></use>
 						</svg>
 
@@ -1622,7 +1421,7 @@
 					<div class="icon-box">
 
 						<!-- REDEEM -->
-						<svg class="shake-slow svg-REDEEM-dims">
+						<svg class="svg-REDEEM-dims">
 							<use xlink:href="all-icons6.svg#REDEEM"></use>
 						</svg>
 
@@ -1633,7 +1432,7 @@
 					<div class="icon-box">
 
 						<!-- RESPONSIBLE_GAMBLING -->
-						<svg class="shake-slow svg-RESPONSIBLE_GAMBLING-dims">
+						<svg class="svg-RESPONSIBLE_GAMBLING-dims">
 							<use xlink:href="all-icons6.svg#RESPONSIBLE_GAMBLING"></use>
 						</svg>
 
@@ -1644,7 +1443,7 @@
 					<div class="icon-box">
 
 						<!-- REWARDS -->
-						<svg class="shake-slow svg-REWARDS-dims">
+						<svg class="svg-REWARDS-dims">
 							<use xlink:href="all-icons6.svg#REWARDS"></use>
 						</svg>
 
@@ -1655,7 +1454,7 @@
 					<div class="icon-box">
 
 						<!-- SCRATCH_CARDS -->
-						<svg class="shake-slow svg-SCRATCH_CARDS-dims">
+						<svg class="svg-SCRATCH_CARDS-dims">
 							<use xlink:href="all-icons6.svg#SCRATCH_CARDS"></use>
 						</svg>
 
@@ -1666,7 +1465,7 @@
 					<div class="icon-box">
 
 						<!-- SEARCH -->
-						<svg class="shake-slow svg-SEARCH-dims">
+						<svg class="svg-SEARCH-dims">
 							<use xlink:href="all-icons6.svg#SEARCH"></use>
 						</svg>
 
@@ -1677,7 +1476,7 @@
 					<div class="icon-box">
 
 						<!-- SECURED -->
-						<svg class="shake-slow svg-SECURED-dims">
+						<svg class="svg-SECURED-dims">
 							<use xlink:href="all-icons6.svg#SECURED"></use>
 						</svg>
 
@@ -1688,7 +1487,7 @@
 					<div class="icon-box">
 
 						<!-- SELF_EXCLUSION -->
-						<svg class="shake-slow svg-SELF_EXCLUSION-dims">
+						<svg class="svg-SELF_EXCLUSION-dims">
 							<use xlink:href="all-icons6.svg#SELF_EXCLUSION"></use>
 						</svg>
 
@@ -1699,7 +1498,7 @@
 					<div class="icon-box">
 
 						<!-- SEND_ITEMS -->
-						<svg class="shake-slow svg-SEND_ITEMS-dims">
+						<svg class="svg-SEND_ITEMS-dims">
 							<use xlink:href="all-icons6.svg#SEND_ITEMS"></use>
 						</svg>
 
@@ -1710,7 +1509,7 @@
 					<div class="icon-box">
 
 						<!-- SESSION_LIMIT -->
-						<svg class="shake-slow svg-SESSION_LIMIT-dims">
+						<svg class="svg-SESSION_LIMIT-dims">
 							<use xlink:href="all-icons6.svg#SESSION_LIMIT"></use>
 						</svg>
 
@@ -1721,7 +1520,7 @@
 					<div class="icon-box">
 
 						<!-- SESSION_TIME -->
-						<svg class="shake-slow svg-SESSION_TIME-dims">
+						<svg class="svg-SESSION_TIME-dims">
 							<use xlink:href="all-icons6.svg#SESSION_TIME"></use>
 						</svg>
 
@@ -1732,7 +1531,7 @@
 					<div class="icon-box">
 
 						<!-- SETTINGS -->
-						<svg class="shake-slow svg-SETTINGS-dims">
+						<svg class="svg-SETTINGS-dims">
 							<use xlink:href="all-icons6.svg#SETTINGS"></use>
 						</svg>
 
@@ -1743,7 +1542,7 @@
 					<div class="icon-box">
 
 						<!-- SET_LIMITS -->
-						<svg class="shake-slow svg-SET_LIMITS-dims Icon--inverted">
+						<svg class="svg-SET_LIMITS-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#SET_LIMITS"></use>
 						</svg>
 
@@ -1754,7 +1553,7 @@
 					<div class="icon-box">
 
 						<!-- SET_LIMITS_2 -->
-						<svg class="shake-slow svg-SET_LIMITS_2-dims">
+						<svg class="svg-SET_LIMITS_2-dims">
 							<use xlink:href="all-icons6.svg#SET_LIMITS_2"></use>
 						</svg>
 
@@ -1765,7 +1564,7 @@
 					<div class="icon-box">
 
 						<!-- SLOTS -->
-						<svg class="shake-slow svg-SLOTS-dims">
+						<svg class="svg-SLOTS-dims">
 							<use xlink:href="all-icons6.svg#SLOTS"></use>
 						</svg>
 
@@ -1776,7 +1575,7 @@
 					<div class="icon-box">
 
 						<!-- SLOTS_GAMES -->
-						<svg class="shake-slow svg-SLOTS_GAMES-dims">
+						<svg class="svg-SLOTS_GAMES-dims">
 							<use xlink:href="all-icons6.svg#SLOTS_GAMES"></use>
 						</svg>
 
@@ -1787,7 +1586,7 @@
 					<div class="icon-box">
 
 						<!-- SPECIALS -->
-						<svg class="shake-slow svg-SPECIALS-dims">
+						<svg class="svg-SPECIALS-dims">
 							<use xlink:href="all-icons6.svg#SPECIALS"></use>
 						</svg>
 
@@ -1798,7 +1597,7 @@
 					<div class="icon-box">
 
 						<!-- TABLET -->
-						<svg class="shake-slow svg-TABLET-dims">
+						<svg class="svg-TABLET-dims">
 							<use xlink:href="all-icons6.svg#TABLET"></use>
 						</svg>
 
@@ -1809,7 +1608,7 @@
 					<div class="icon-box">
 
 						<!-- TABLE_GAME -->
-						<svg class="shake-slow svg-TABLE_GAME-dims">
+						<svg class="svg-TABLE_GAME-dims">
 							<use xlink:href="all-icons6.svg#TABLE_GAME"></use>
 						</svg>
 
@@ -1820,7 +1619,7 @@
 					<div class="icon-box">
 
 						<!-- TECH_SUPPORT -->
-						<svg class="shake-slow svg-TECH_SUPPORT-dims">
+						<svg class="svg-TECH_SUPPORT-dims">
 							<use xlink:href="all-icons6.svg#TECH_SUPPORT"></use>
 						</svg>
 
@@ -1831,7 +1630,7 @@
 					<div class="icon-box">
 
 						<!-- TICK -->
-						<svg class="shake-slow svg-TICK-dims">
+						<svg class="svg-TICK-dims">
 							<use xlink:href="all-icons6.svg#TICK"></use>
 						</svg>
 
@@ -1842,7 +1641,7 @@
 					<div class="icon-box">
 
 						<!-- TICKETS -->
-						<svg class="shake-slow svg-TICKETS-dims">
+						<svg class="svg-TICKETS-dims">
 							<use xlink:href="all-icons6.svg#TICKETS"></use>
 						</svg>
 
@@ -1853,7 +1652,7 @@
 					<div class="icon-box">
 
 						<!-- TIME -->
-						<svg class="shake-slow svg-TIME-dims">
+						<svg class="svg-TIME-dims">
 							<use xlink:href="all-icons6.svg#TIME"></use>
 						</svg>
 
@@ -1864,7 +1663,7 @@
 					<div class="icon-box">
 
 						<!-- TOP_GAMES -->
-						<svg class="shake-slow svg-TOP_GAMES-dims">
+						<svg class="svg-TOP_GAMES-dims">
 							<use xlink:href="all-icons6.svg#TOP_GAMES"></use>
 						</svg>
 
@@ -1875,7 +1674,7 @@
 					<div class="icon-box">
 
 						<!-- TOUCH_ID -->
-						<svg class="shake-slow svg-TOUCH_ID-dims">
+						<svg class="svg-TOUCH_ID-dims">
 							<use xlink:href="all-icons6.svg#TOUCH_ID"></use>
 						</svg>
 
@@ -1886,7 +1685,7 @@
 					<div class="icon-box">
 
 						<!-- TRANSACTION_HISTORY -->
-						<svg class="shake-slow svg-TRANSACTION_HISTORY-dims">
+						<svg class="svg-TRANSACTION_HISTORY-dims">
 							<use xlink:href="all-icons6.svg#TRANSACTION_HISTORY"></use>
 						</svg>
 
@@ -1897,7 +1696,7 @@
 					<div class="icon-box">
 
 						<!-- TV_FILM -->
-						<svg class="shake-slow svg-TV_FILM-dims">
+						<svg class="svg-TV_FILM-dims">
 							<use xlink:href="all-icons6.svg#TV_FILM"></use>
 						</svg>
 
@@ -1908,7 +1707,7 @@
 					<div class="icon-box">
 
 						<!-- TWITTER -->
-						<svg class="shake-slow svg-TWITTER-dims Icon--inverted">
+						<svg class="svg-TWITTER-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#TWITTER"></use>
 						</svg>
 
@@ -1919,7 +1718,7 @@
 					<div class="icon-box">
 
 						<!-- USERS -->
-						<svg class="shake-slow svg-USERS-dims">
+						<svg class="svg-USERS-dims">
 							<use xlink:href="all-icons6.svg#USERS"></use>
 						</svg>
 
@@ -1930,7 +1729,7 @@
 					<div class="icon-box">
 
 						<!-- VIP -->
-						<svg class="shake-slow svg-VIP-dims">
+						<svg class="svg-VIP-dims">
 							<use xlink:href="all-icons6.svg#VIP"></use>
 						</svg>
 
@@ -1941,7 +1740,7 @@
 					<div class="icon-box">
 
 						<!-- VOTE -->
-						<svg class="shake-slow svg-VOTE-dims">
+						<svg class="svg-VOTE-dims">
 							<use xlink:href="all-icons6.svg#VOTE"></use>
 						</svg>
 
@@ -1952,7 +1751,7 @@
 					<div class="icon-box">
 
 						<!-- WARNING -->
-						<svg class="shake-slow svg-WARNING-dims Icon--inverted">
+						<svg class="svg-WARNING-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#WARNING"></use>
 						</svg>
 
@@ -1963,7 +1762,7 @@
 					<div class="icon-box">
 
 						<!-- WHATIS -->
-						<svg class="shake-slow svg-WHATIS-dims">
+						<svg class="svg-WHATIS-dims">
 							<use xlink:href="all-icons6.svg#WHATIS"></use>
 						</svg>
 
@@ -1974,7 +1773,7 @@
 					<div class="icon-box">
 
 						<!-- WHERE_IT_IS -->
-						<svg class="shake-slow svg-WHERE_IT_IS-dims">
+						<svg class="svg-WHERE_IT_IS-dims">
 							<use xlink:href="all-icons6.svg#WHERE_IT_IS"></use>
 						</svg>
 
@@ -1985,7 +1784,7 @@
 					<div class="icon-box">
 
 						<!-- WITHDRAW -->
-						<svg class="shake-slow svg-WITHDRAW-dims">
+						<svg class="svg-WITHDRAW-dims">
 							<use xlink:href="all-icons6.svg#WITHDRAW"></use>
 						</svg>
 
@@ -1996,7 +1795,7 @@
 					<div class="icon-box">
 
 						<!-- WITHDRAW_METHOD -->
-						<svg class="shake-slow svg-WITHDRAW_METHOD-dims">
+						<svg class="svg-WITHDRAW_METHOD-dims">
 							<use xlink:href="all-icons6.svg#WITHDRAW_METHOD"></use>
 						</svg>
 
@@ -2007,7 +1806,7 @@
 					<div class="icon-box">
 
 						<!-- YOUTUBE -->
-						<svg class="shake-slow svg-YOUTUBE-dims Icon--inverted">
+						<svg class="svg-YOUTUBE-dims Icon--inverted">
 							<use xlink:href="all-icons6.svg#YOUTUBE"></use>
 						</svg>
 
