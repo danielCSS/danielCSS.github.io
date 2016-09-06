@@ -89,7 +89,12 @@ h2 {
     font-size: 16px;
     margin-top: 16px;
 }
-
+.header {
+  margin: 40px 0;
+    background: gold;
+    height: 40px;
+    line-height: 40px;
+}
 /* Bounce In http://ianlunn.github.io/Hover/ */
 li:nth-child(2n) svg {
   display: inline-block;
