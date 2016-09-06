@@ -64,6 +64,7 @@ li svg {
     display: block;
     margin-top: 10px;
     font-size: 3em;
+    color: white;
 }
 li:hover svg {
     fill: gold;
