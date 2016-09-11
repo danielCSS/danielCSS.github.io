@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+}
+h2, figcaption span:last-child {
+  display: none;
+}
+.no-webp h1, .no-webp figcaption span:first-child  {
+  display: none;
+}
+.no-webp h2, .no-webp figcaption span:last-child {
+  display: block;
+}
+figure {
+  display: inline-block;
+  width: 40vw;
+  margin: 2vw;
+  text-align: center;
+}
+/*figure:first-of-type {
+  border-right: 5px solid green;
+}*/
+figure:first-child:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background: green;
+  display: inline-block;
+}
