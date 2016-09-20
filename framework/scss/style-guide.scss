@@ -1,0 +1,43 @@
+@import "mq";
+@import "example.settings.global";
+
+
+@font-face {
+    font-family: "Headline";
+    src: url("../fonts/headline-regular.woff") format('woff');
+}
+
+.u-relative {
+  position: relative;
+}
+.u-inline-block {
+  display: inline-block;
+}
+
+.style-guide {
+  font-family: "Headline",sans-serif;
+  color: $textColor;
+  margin: 0 auto;
+  max-width: 100em;
+  > .o-box {
+    margin: 2em;
+    background: $lightBackground;
+  }
+}
+
+/* media queries examples */
+// .media {
+//   background: salmon;
+//   // @include mq($from: mobile, $until: tablet) {
+//   //     background: blue;
+//   // }
+//   @include mq($from: tablet, $until: desktop) {
+//       background: red;
+//   }
+//   @include mq($from: desktop, $until: wide) {
+//       background: yellow;
+//   }
+//   @include mq($from: wide) {
+//       background: green;
+//   }
+// }
