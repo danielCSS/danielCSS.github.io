@@ -1,0 +1,20 @@
+.c-input-text {
+  border-radius: px-to-em(6);
+  background: $white;
+  border: 0.15em solid $white;
+  padding: 0.5em;
+  width: 100%;
+
+  &:focus {
+    border: 0.15em solid $textColor;
+    outline: none;
+  }
+  .invalid & {
+    border: 0.15em solid $primaryColor;
+  }
+}
+.error {
+  .invalid & {
+    color: $primaryColor;
+  }
+}
