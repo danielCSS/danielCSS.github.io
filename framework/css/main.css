@@ -1418,7 +1418,7 @@ table {
   .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
     text-decoration: none;
     color: #050a1e; }
-  .c-btn--secondary:hover, .c-btn--secondary:focus {
+  .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
     background-color: #fee373; }
 
 /* Size variants
@@ -1456,6 +1456,25 @@ table {
 
 .c-checkbox--large {
   font-size: 1.6em; }
+
+.c-header {
+  border-radius: 0.375em 0.375em 0 0;
+  background: #dadce9;
+  font-size: 1.5em; }
+  .c-header--small {
+    font-size: 1em; }
+  .c-header--large {
+    font-size: 2em; }
+
+.c-header__text {
+  padding: 1.5em 0;
+  display: inline-block;
+  margin-bottom: 0;
+  /* override default element margin bottom (may need to refactor this) */
+  font-size: inherit;
+  /* override default element margin bottom (may need to refactor this) */
+  line-height: inherit;
+  /* override default element margin bottom (may need to refactor this) */ }
 
 /* ==========================================================================
    #CLEARFIX
@@ -2045,5 +2064,7 @@ table {
   .style-guide > .o-box {
     margin: 2em;
     background: #dadce9; }
+  .style-guide > .c-header {
+    margin: 2rem; }
 
 /* media queries examples */
