@@ -1410,7 +1410,7 @@ table {
     text-decoration: none;
     /* [4] */
     color: #fff; }
-  .c-btn--primary:hover, .c-btn--primary:focus {
+  .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
     background-color: #fd24a5; }
 
 .c-btn--secondary {
@@ -2027,32 +2027,6 @@ table {
 .u-hidden {
   display: none !important; }
 
-body:before {
-  background-color: #FCF8E3;
-  border-bottom: 1px solid #FBEED5;
-  border-left: 1px solid #FBEED5;
-  color: #C09853;
-  font: small-caption;
-  padding: 3px 6px;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100; }
-  @media (min-width: 47.9375em) {
-    body:before {
-      content: "tablet ≥ 767px (47.9375em)"; } }
-  @media (min-width: 75em) {
-    body:before {
-      content: "desktop ≥ 1200px (75em)"; } }
-  @media (min-width: 85.625em) {
-    body:before {
-      content: "wide ≥ 1370px (85.625em)"; } }
-
-/* dark blue */
-/* pink */
-/* yellow */
-/* gray */
 @font-face {
   font-family: "Headline";
   src: url("../fonts/headline-regular.woff") format("woff"); }
