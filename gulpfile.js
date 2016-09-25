@@ -1,4 +1,4 @@
-var currentSrc = 'framework';
+var currentSrc = 'svg/demo';
 
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
@@ -160,17 +160,17 @@ gulp.task('default', ['styles','browser-sync'], function(){
 
 
 gulp.task('svgo', function () {
-    return gulp.src('extras2/**/*.svg')
+    return gulp.src('svg/CORAL/**/*.svg')
         .pipe(svgmin())
-        .pipe(gulp.dest('./optimized13'));
+        .pipe(gulp.dest('./svg/CORAL-optimized'));
 });
 
 // SVG Config
 var config = {
   mode: {
     symbol: { // symbol mode to build the SVG
-      dest: 'sprite13', // destination foldeer
-      sprite: 'extras2.svg', //sprite name
+      dest: 'CORAL-sprite', // destination foldeer
+      sprite: 'CORAL-sprite.svg', //sprite name
       example: true // Build sample page
     }
   },
@@ -181,13 +181,13 @@ var config = {
 };
 
 gulp.task('sprite-page', function() {
-  return gulp.src('optimized13/**/*.svg')
+  return gulp.src('svg/CORAL-optimized/**/*.svg')
     .pipe(svgSprite(config))
     .pipe(gulp.dest('.'));
 });
 
 gulp.task('sprite-shortcut', function() {
-  return gulp.src('sprite13/extras2.svg')
+  return gulp.src('CORAL-sprite/CORAL-sprite.svg')
     .pipe(gulp.dest('.'));
 });
 
