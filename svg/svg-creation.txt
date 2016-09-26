@@ -1,0 +1,422 @@
+
+Reference for external SVG sprite systems:
+=========================================
+
+http://fvsch.com/code/svg-icons/how-to/
+
+1) setup gulp-svg-sprite with appropriate tasks and settings and run the task.
+see: https://github.com/jkphl/gulp-svg-sprite
+
+var gulp = require('gulp');
+var svgSprite = require('gulp-svg-sprite');
+var svgmin = require('gulp-svgmin');
+
+gulp.task('svgo', function () {
+    return gulp.src('svg/**/*.svg')
+        .pipe(svgmin())
+        .pipe(gulp.dest('./optimized'));
+});
+
+// SVG Config
+var config = {
+  mode: {
+    symbol: { // symbol mode to build the SVG
+      dest: 'sprite1', // destination foldeer
+      sprite: 'optimized-sprite.svg', //sprite name
+      example: true // Build sample page
+    }
+  },
+  svg: {
+    xmlDeclaration: false, // strip out the XML attribute
+    doctypeDeclaration: false // don't include the !DOCTYPE declaration
+  }
+};
+
+gulp.task('sprite-page', function() {
+  return gulp.src('optimized/**/*.svg')
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('sprite-shortcut', function() {
+  return gulp.src('sprite1/optimized-sprite.svg')
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('svgs', ['svgo', 'sprite-page', 'sprite-shortcut']);
+
+
+2) move the css classes to inline styles : https://inliner.cm/ or http://templates.mailchimp.com/resources/inline-css/
+3) remove the css styles with find/replace regex: <style>[\s\S]*?<\/style>
+4) remove the class attributes from the svg with: class="[\s\S]*?"
+5) remove blank lines with find/replace (maybe leave this to a compressor) : ^(?:[\t ]*(?:\r?\n|\r))+
+6) remove the redundant <g> grouping tags from the svg with: </?g[\s\S]*?>
+7) remove the redundant <defs> tags from the svg with: </?defs>
+8) remove the inline strokes with: stroke:[\s\S]*?;
+8) remove the fill:[\s]*none;
+9) change the remaining fills (which don't have value 'none') to 'fill:currentColor;stroke:none;' with: fill:[\s]*#[\s\S]*?;
+also fill="" with fill[\s]*=[\s]*"[\s]*#[\s\S]*?"
+
+10) remove ids from inner paths.
+
+<svg[\s\S]*?<\/svg>
+
+
+
+Proof of Concept / Demo
+=======================
+2 icons sets
+a) futuramo - https://futuramo.com/a/icons (requires login) - locally: https://danielcss.github.io/svg/futuramoSVGs.zip
+b) Nova Icons - http://www.webalys.com/nova/free-icons.html - locally: https://danielcss.github.io/svg/materialSVGs.zip
+
+Take a look at the format of the SVGs.
+
+After running gulp-svg-sprite on the SVGs I get I large SVG sprite file.
+
+Take a look at a demo
+a) futuramo icons demo: https://danielcss.github.io/svg/demo/sprite.html
+b) Nova Icons demo:
+https://danielcss.github.io/svg/demo/material-solid.html
+https://danielcss.github.io/svg/demo/material-line.html
+
+
+1. Export to SVG
+==============
+
+In Illustrator use “Save As” and pick “SVG” for the format. (It might be better to use “Export as…” and pick SVG for an optimized result.)
+In Sketch you can select an artboard, click “Make Exportable” on the bottom right, and pick “SVG” for the format.
+In Inkscape you can “Save As” and pick “Optimized SVG”.
+
+
+2. For single-color icons, make sure that:
+==========================================
+
+In your SOURCE FILE, the paths are black (#000000).
+In the EXPORTED CODE, there are no fill attributes.
+If we have hardcoded fills in the SVG source, we won’t be able to change those colors from our CSS code.
+So it’s generally best to remove them, at least for single-color icons.
+
+Illustrator doesn’t output fill attributes for path that are fully black (#000000).
+Sketch does, so you may have to open the exported SVG code and manually remove the fill="#000000" attributes.
+
+
+3. Leave a little bit of space near the edges, especially for round shapes.
+===========================================================================
+
+4. The SVG ViewBox should be square and all icons should use the same viewBox (eg. viewBox="0 0 32 32" )
+=========================================================================================================
+
+5. Build two sprites:
+=====================
+
+a) A small one with essential icons (e.g. main icons used in the page header), to be inlined on each page. Target size: 5KB or less.
+b) A bigger one with all the project’s icons, kept as an external file. Target size: 50KB or less.
+
+
+groupId=20008 parentStructureId= nameMap={zh_SG=, ga_IE=, sr_RS=, ro_RO=, cs_CZ=, zh_TW=, fi_FI=, tr_TR=, ar_SA=, ka_GE=, hi_IN=, pt_PT=, en_GB=GAMES INFO, el_GR=, sk_SK=, en_AU=, ru_RU=, es_ES=, it_IT=, iw_IL=, ja_JP=, my_MM=, sv_SE=, da_DK=, en_CA=, vi_VN=, nl_NL=, zh_CN=, de_DE=, en_US=GAMES INFO, ca_ES=, uk_UA=, th_TH=, pt_BR=, no_NO=, et_EE=, pl_PL=, fr_FR=, hu_HU=, bg_BG=, ko_KR=} locale=ar_SA
+groupId=20008 parentStructureId= nameMap={zh_SG=, ga_IE=, sr_RS=, ro_RO=, cs_CZ=, zh_TW=, fi_FI=, tr_TR=, ar_SA=, ka_GE=, hi_IN=, pt_PT=, en_GB=GAMES INFO, el_GR=, sk_SK=, en_AU=, ru_RU=, es_ES=, it_IT=, iw_IL=, ja_JP=, my_MM=, sv_SE=, da_DK=, en_CA=, vi_VN=, nl_NL=, zh_CN=, de_DE=, en_US=GAMES INFO, ca_ES=, uk_UA=, th_TH=, pt_BR=, no_NO=, et_EE=, pl_PL=, fr_FR=, hu_HU=, bg_BG=, ko_KR=} locale=ar_SA
+<svg class="Icon Icon--arrow" aria-hidden="true">
+  <use xlink:href="/path/to/icons.svg#arrow"></use>
+</svg>
+
+
+
+
+.Icon {
+  /* Allows sizing by changing the icon’s font-size */
+  width: 1em; height: 1em;
+  /* Nice visual alignment for icons alongside text */
+  vertical-align: -0.15em;
+  /* Default path fill = value of the color property */
+  fill: currentColor;
+  /* Paths and strokes that overflow the viewBox can show in IE.
+     If you use normalize.css, it already sets this. */
+  overflow: hidden;
+}
+
+1) Put this in the <head> of your pages:
+
+<style>.Icon{width:1em;height:1em}</style>
+
+Why? Because while the SVGs are unstyled (slow connections) the SVGs will be gigantic.
+
+2) Preloading external sprites
+
+icons from an external sprite can show up a bit late so add <link rel="preload" href="/path/to/icons.svg" as="image"> in the <head> of the page
+
+
+Keep a folder with your source icons
+=====================================
+
+External SVG Polyfill:
+======================
+
+a) svg4everybody - https://github.com/jonathantneal/svg4everybody, or
+b) svgxuse - https://github.com/Keyamoon/svgxuse).
+
+
+
+Use percentages for stroke-width
+Leave some room for strokes
+
+
+
+
+
+<h3>4. float:none; removed</h3>
+<ul>
+
+  <li title="ICN_50AND40">
+    <div class="icon-box">
+
+      <!-- ICN_50AND40 -->
+      <svg class="svg-ICN_50AND40-dims">
+        <use xlink:href="sprite8.svg#ICN_50AND40"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_50AND40</h2>
+  </li>
+  <li title="ICN_80AND75">
+    <div class="icon-box">
+
+      <!-- ICN_80AND75 -->
+      <svg class="svg-ICN_80AND75-dims">
+        <use xlink:href="sprite8.svg#ICN_80AND75"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_80AND75</h2>
+  </li>
+  <li title="ICN_BINGOROOMS">
+    <div class="icon-box">
+
+      <!-- ICN_BINGOROOMS -->
+      <svg class="svg-ICN_BINGOROOMS-dims">
+        <use xlink:href="sprite8.svg#ICN_BINGOROOMS"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_BINGOROOMS</h2>
+  </li>
+  <li title="ICN_CHANGE">
+    <div class="icon-box">
+
+      <!-- ICN_CHANGE -->
+      <svg class="svg-ICN_CHANGE-dims">
+        <use xlink:href="sprite8.svg#ICN_CHANGE"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_CHANGE</h2>
+  </li>
+  <li title="ICN_CHATGAMES">
+    <div class="icon-box">
+
+      <!-- ICN_CHATGAMES -->
+      <svg class="svg-ICN_CHATGAMES-dims">
+        <use xlink:href="sprite8.svg#ICN_CHATGAMES"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_CHATGAMES</h2>
+  </li>
+  <li title="ICN_CHATLINGO">
+    <div class="icon-box">
+
+      <!-- ICN_CHATLINGO -->
+      <svg class="svg-ICN_CHATLINGO-dims">
+        <use xlink:href="sprite8.svg#ICN_CHATLINGO"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_CHATLINGO</h2>
+  </li>
+  <li title="ICN_DEPOSITAMOUNT">
+    <div class="icon-box">
+
+      <!-- ICN_DEPOSITAMOUNT -->
+      <svg class="svg-ICN_DEPOSITAMOUNT-dims">
+        <use xlink:href="sprite8.svg#ICN_DEPOSITAMOUNT"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_DEPOSITAMOUNT</h2>
+  </li>
+  <li title="ICN_FOLLOWUS">
+    <div class="icon-box">
+
+      <!-- ICN_FOLLOWUS -->
+      <svg class="svg-ICN_FOLLOWUS-dims">
+        <use xlink:href="sprite8.svg#ICN_FOLLOWUS"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_FOLLOWUS</h2>
+  </li>
+  <li title="ICN_GALAGOLD">
+    <div class="icon-box">
+
+      <!-- ICN_GALAGOLD -->
+      <svg class="svg-ICN_GALAGOLD-dims">
+        <use xlink:href="sprite8.svg#ICN_GALAGOLD"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_GALAGOLD</h2>
+  </li>
+  <li title="ICN_GAMES">
+    <div class="icon-box">
+
+      <!-- ICN_GAMES -->
+      <svg class="svg-ICN_GAMES-dims">
+        <use xlink:href="sprite8.svg#ICN_GAMES"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_GAMES</h2>
+  </li>
+  <li title="ICN_GAMESOFTHEWEEK">
+    <div class="icon-box">
+
+      <!-- ICN_GAMESOFTHEWEEK -->
+      <svg class="svg-ICN_GAMESOFTHEWEEK-dims">
+        <use xlink:href="sprite8.svg#ICN_GAMESOFTHEWEEK"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_GAMESOFTHEWEEK</h2>
+  </li>
+  <li title="ICN_HISTORYGAMESONLY">
+    <div class="icon-box">
+
+      <!-- ICN_HISTORYGAMESONLY -->
+      <svg class="svg-ICN_HISTORYGAMESONLY-dims">
+        <use xlink:href="sprite8.svg#ICN_HISTORYGAMESONLY"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_HISTORYGAMESONLY</h2>
+  </li>
+  <li title="ICN_INBOX">
+    <div class="icon-box">
+
+      <!-- ICN_INBOX -->
+      <svg class="svg-ICN_INBOX-dims">
+        <use xlink:href="sprite8.svg#ICN_INBOX"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_INBOX</h2>
+  </li>
+  <li title="ICN_LIVECASINO">
+    <div class="icon-box">
+
+      <!-- ICN_LIVECASINO -->
+      <svg class="svg-ICN_LIVECASINO-dims">
+        <use xlink:href="sprite8.svg#ICN_LIVECASINO"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_LIVECASINO</h2>
+  </li>
+  <li title="ICN_MESSAGES">
+    <div class="icon-box">
+
+      <!-- ICN_MESSAGES -->
+      <svg class="svg-ICN_MESSAGES-dims">
+        <use xlink:href="sprite8.svg#ICN_MESSAGES"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_MESSAGES</h2>
+  </li>
+  <li title="ICN_NEWANDEXCLUSIVE">
+    <div class="icon-box">
+
+      <!-- ICN_NEWANDEXCLUSIVE -->
+      <svg class="svg-ICN_NEWANDEXCLUSIVE-dims">
+        <use xlink:href="sprite8.svg#ICN_NEWANDEXCLUSIVE"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_NEWANDEXCLUSIVE</h2>
+  </li>
+  <li title="ICN_PAYMENTMETHOD">
+    <div class="icon-box">
+
+      <!-- ICN_PAYMENTMETHOD -->
+      <svg class="svg-ICN_PAYMENTMETHOD-dims">
+        <use xlink:href="sprite8.svg#ICN_PAYMENTMETHOD"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_PAYMENTMETHOD</h2>
+  </li>
+  <li title="ICN_SENTITEMS">
+    <div class="icon-box">
+
+      <!-- ICN_SENTITEMS -->
+      <svg class="svg-ICN_SENTITEMS-dims">
+        <use xlink:href="sprite8.svg#ICN_SENTITEMS"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_SENTITEMS</h2>
+  </li>
+  <li title="ICN_SETLIMITS">
+    <div class="icon-box">
+
+      <!-- ICN_SETLIMITS -->
+      <svg class="svg-ICN_SETLIMITS-dims">
+        <use xlink:href="sprite8.svg#ICN_SETLIMITS"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_SETLIMITS</h2>
+  </li>
+  <li title="ICN_SLOTSANDGAMES">
+    <div class="icon-box">
+
+      <!-- ICN_SLOTSANDGAMES -->
+      <svg class="svg-ICN_SLOTSANDGAMES-dims">
+        <use xlink:href="sprite8.svg#ICN_SLOTSANDGAMES"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_SLOTSANDGAMES</h2>
+  </li>
+  <li title="ICN_SPECIALS">
+    <div class="icon-box">
+
+      <!-- ICN_SPECIALS -->
+      <svg class="svg-ICN_SPECIALS-dims">
+        <use xlink:href="sprite8.svg#ICN_SPECIALS"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_SPECIALS</h2>
+  </li>
+  <li title="ICN_TOPGAMES">
+    <div class="icon-box">
+
+      <!-- ICN_TOPGAMES -->
+      <svg class="svg-ICN_TOPGAMES-dims">
+        <use xlink:href="sprite8.svg#ICN_TOPGAMES"></use>
+      </svg>
+
+    </div>
+    <h2>ICN_TOPGAMES</h2>
+  </li>
+  <li title="test">
+    <div class="icon-box">
+
+      <!-- test -->
+      <svg class="svg-test-dims">
+        <use xlink:href="sprite8.svg#test"></use>
+      </svg>
+
+    </div>
+    <h2>test</h2>
+  </li>
+</ul>
