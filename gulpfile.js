@@ -1,4 +1,4 @@
-var currentSrc = 'svg/demo';
+var currentSrc = 'mediaQueries';
 
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
