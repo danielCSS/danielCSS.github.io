@@ -1,19 +1,155 @@
+//paths
+$images: '/galabingo-theme/images/';
+$images-icons: '/galabingo-theme/images/icons/';
+$images-vip: '/galabingo-theme/images/vip/';
+$images-icons-cards: '/galabingo-theme/images/icons/cards/';
+$library-images: '/library/images/';
+$library-vip: '/library/vip/';
+$library-footer: '/library/footer/';
+
+//fonts
+$fonts-path: '/galabingo-theme/fonts/';
+$main-font: 'Headline', sans-serif;
+$default-font: sans-serif;
+
+//colors
+$background-gamcare-certified:#01105F;
+$gamcare-certified-href:#f9d603;
+$white: #fff;
+$transparent-white: rgba(255,255,255,.95);
+
+$darkgray: #767982;
+
+$green: #4cb02d;
+
+$yellow: #fdd941;
+$pink: #ec028d;
+$pinklite: #fa25a4;
+
+$brightred: #e25757;
+$orange: #f76b1e;
+$brightred: #f44336;
+$darkred: #cc181e;
+$red: #cc2127;
+
+$grayblue: #aeb4d1;
+$lightgrey: #f0f2f8;
+$neutralgray: #e8e8e8;
+$lightgray: #a2a9c8;
+$darkgrey: #caccd9;
+$gray: #d9dce8;
+$deeprgrey: #d8dce7;
+$sashagrey: #a1a1a1;
+$blue: #55acee;
+$brightviolet: #6571a5;
+$border-blue: #4c5996;
+$lightviolet: #4a5ab1;
+$lightblue: #3a5795;
+$midblue: #304183;
+$darkblue: #122268;
+$bleakblue: #01115F;
+$marin: #125688;
+$splashblue: #163391;
+$violet: #23337e;
+$dark: #050a1e;
+$black: #000;
+$lightblack: #333;
+$blackbar: #0b1132;
+$lightergray: #f2f2f2;
+$lightpurple: #f2f2f2;
+$inputdisabled: #b7bcd1;
+$striped-table-gray: #e0e4f0;
+$striped-separation-gray: #b7bdd7;
+$placeholder-gray: #a9a9a9;
+$footer-gray: #757881;
+
+//ff fix select placeholder color
+$ffgrayselect: #d1d1d1;
+
+//z-indexes
+//temp for registration
+$register-index: 101;
+$header-index: 100;
+$menu-index: 10;
+$sticky-footer-index: 107;
+$sticky-up-btn-index: 100;
+$negative-index: -1;
+$super-negative-index: -999;
+$super-negative-offset: -999.9rem;
+$page-index: 2;
+$page-header-index: 3;
+$splash-index: 1000;
+$promotions-index: 10;
+$popup-close-btn-index: 10;
+$gamesinfo-navigation-index: 6;
+$main-header-btns-index:40;
+
+//games-items indexes
+$games-info-panel-index: 1;
+$games-item-index: 2;
+$games-info-top-index: 3;
+$games-jackpot-index: 4;
+$games-back-panel-index: 5;
+$games-flags-index: 6;
+
+//banner
+$banner-play-bingo-btn-index: 3;
+
 //media query sizes
 $media-query-mobile: 767;
 $media-query-tablet: 1200;
 $media-query-narrow-tablet: 950;
+$media-query-narrow-desktop: 1370;
 $media-query-max-page-desktop: 1600;
+$media-query-desktop-13: 1300;
 $media-query-desktop-14: 1400;
+$media-query-desktop-low: 850;
+/*$media-query-desktop-short: 620;*/
 
 $unit: 1px;
-//$mobile: $media-query-mobile * $unit;
-$mobile: 767px;
+$mobile: $media-query-mobile * $unit;
 $mobile_plus_1: ($media-query-mobile + 1) * $unit;
 $tablet: $media-query-tablet * $unit;
 $tablet_minus_1: ($media-query-tablet - 1) * $unit;
 $narrow-tablet: $media-query-narrow-tablet * $unit;
+$narrow-desktop: $media-query-narrow-desktop * $unit;
 $desktop-max-page-width: $media-query-max-page-desktop * $unit;
+$desktop-13-width: $media-query-desktop-13 * $unit;
 $desktop-14-width: $media-query-desktop-14 * $unit;
+$desktop-low-height: $media-query-desktop-low * $unit;
+/*$desktop-short-height: $media-query-desktop-short * $unit; */
+
+//sizes
+$max-page-width: $media-query-max-page-desktop * 0.1rem;
+$menu-devices-width: 34rem;
+$account-menu-devices-width: calc(100% - 5.4rem);
+$account-menu-devices-width-neg: calc((100% - 5.4rem) * -1);
+$menu-mobile-width: 27.2rem;
+$account-menu-mobile-width: calc(100% - 4.7rem);
+$account-menu-mobile-width-neg: calc((100% - 4.7rem) * -1);
+$account-menu-mobile-width-androidNative: 43.3rem;
+$header-desktop-height: 6rem;
+$header-tablet-height: 6rem;
+$header-mobile-height: 4.9rem;
+$game-header-height: 6rem;
+
+//filters
+$filterItemWidthMobile: 10.4rem;
+$filterItemWidthTablet: 16rem;
+$filterIconSizeMobile: 3.5rem;
+$filterIconSizeTablet: 4rem;
+// 7rem - is sprite item (70 px)
+// 8.5rem - is sprite item 70px + padding 15px
+$filterIconShiftMobile: -8.5 * $filterIconSizeMobile / 7;
+$filterIconShiftTablet: -8.5 * $filterIconSizeTablet / 7;
+
+//misc
+$btn-radius: .6rem;
+$default-radius: .6rem;
+$mobile-border-radius: 0;
+$btn-radius-big: 1rem;
+$sfHeight: 4rem;
+$sfHeight-mob: 3.6rem;
 
 @mixin respond-to($media) {
 	@if $media == mobile {
@@ -37,7 +173,7 @@ $desktop-14-width: $media-query-desktop-14 * $unit;
 		@media only screen and (max-width: $narrow-tablet) and (min-width: $mobile_plus_1) { @content; }
 	}
 	@else if $media == tablet {
-		@media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) , handheld and (orientation: landscape) { @content; }
+		@media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1), (orientation: landscape) { @content; }
 	}
 	@else if $media == tablet-portrait {
 		@media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) and (orientation: portrait) { @content; }
@@ -45,6 +181,15 @@ $desktop-14-width: $media-query-desktop-14 * $unit;
 	@else if $media == tablet-landscape {
 		@media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) and (orientation: landscape) { @content; }
 	}
+	@else if $media == desktop-narrow {
+		@media only screen and (min-width: $tablet) and (max-width: $narrow_desktop) { @content; }
+	}
+	/*@else if $media == desktop-short {
+		@media only screen and (min-width: $mobile) and (max-height: $desktop-short-height) { @content; }
+	}
+	@else if $media == desktop-short-wide {
+		@media only screen and (min-width: $tablet) and (max-height: $desktop-short-height) { @content; }
+	} */
 	@else if $media == desktop {
 		@media only screen and (min-width: $tablet) { @content; }
 	}
@@ -54,16 +199,20 @@ $desktop-14-width: $media-query-desktop-14 * $unit;
 	@else if $media == max-page-desktop {
 		@media only screen and (min-width: $desktop-max-page-width) { @content; }
 	}
+	@else if $media == desktop-13 {
+		@media only screen and (min-width: $desktop-13-width) { @content; }
+	}
 	@else if $media == desktop-14 {
 		@media only screen and (min-width: $desktop-14-width) { @content; }
 	}
+	@else if $media == desktop-low {
+		@media (min-width: $tablet) and (max-height: $desktop-low-height) { @content; }
+	}
 }
+
+
 body {
-  margin:0;
-}
-body {
-  //width:100vw;
-  //height: 100vh;
+	margin: 0;
   @include respond-to(mobile) {
     background: pink;
   }
