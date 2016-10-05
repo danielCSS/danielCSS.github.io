@@ -173,7 +173,7 @@ $sfHeight-mob: 3.6rem;
 		@media only screen and (max-width: $narrow-tablet) and (min-width: $mobile_plus_1) { @content; }
 	}
 	@else if $media == tablet {
-		@media (orientation: landscape) { @content; }
+		@media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1), (orientation: landscape) { @content; }
 	}
 	@else if $media == tablet-portrait {
 		@media only screen and (min-width: $mobile_plus_1) and (max-width: $tablet_minus_1) and (orientation: portrait) { @content; }
