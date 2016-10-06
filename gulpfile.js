@@ -1,3 +1,4 @@
+var svgFolder = 'coralFinal';
 var currentSrc = 'mediaQueries';
 
 var gulp = require('gulp');
@@ -160,17 +161,17 @@ gulp.task('default', ['styles','browser-sync'], function(){
 
 
 gulp.task('svgo', function () {
-    return gulp.src('svg/CORAL/**/*.svg')
+    return gulp.src('svg/' + svgFolder + '/**/*.svg')
         .pipe(svgmin())
-        .pipe(gulp.dest('./svg/CORAL-optimized'));
+        .pipe(gulp.dest('./svg/' + svgFolder + '-optimized'));
 });
 
 // SVG Config
 var config = {
   mode: {
     symbol: { // symbol mode to build the SVG
-      dest: 'CORAL-sprite', // destination foldeer
-      sprite: 'CORAL-sprite.svg', //sprite name
+      dest: svgFolder + '-sprite', // destination foldeer
+      sprite: svgFolder + '-sprite.svg', //sprite name
       example: true // Build sample page
     }
   },
@@ -181,13 +182,13 @@ var config = {
 };
 
 gulp.task('sprite-page', function() {
-  return gulp.src('svg/CORAL-optimized/**/*.svg')
+  return gulp.src('svg/' + svgFolder + '-optimized/**/*.svg')
     .pipe(svgSprite(config))
     .pipe(gulp.dest('.'));
 });
 
 gulp.task('sprite-shortcut', function() {
-  return gulp.src('CORAL-sprite/CORAL-sprite.svg')
+  return gulp.src(svgFolder + '-sprite/' + svgFolder + '-sprite.svg')
     .pipe(gulp.dest('.'));
 });
 
