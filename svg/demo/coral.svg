@@ -224,20 +224,9 @@
         </defs>
         <title>Arrow</title><path class="azcls-1" d="M70.926 56.35l-53.4-54a8.453 8.453 0 0 0-11.8.1l-3.2 3.2a8.27 8.27 0 0 0-.1 11.8l44.4 44.8-44.4 44.1a8.24 8.24 0 0 0 .1 11.7l3.2 3.1a8.453 8.453 0 0 0 11.8.1l53.4-53a8.575 8.575 0 0 0 0-11.9z"/></symbol>
     <symbol id="General--Back" viewBox="0 0 48 48">
-        <defs>
-            <style>
-                .bacls-1 {
-                    fill: none;
-                }
-                .bacls-2 {
-                    fill: #78be20;
-                }
-                .bacls-3 {
-                    fill: #ffcd00;
-                }
-            </style>
-        </defs>
-        <title>ICNTOPback</title><path class="bacls-1" d="M0 0h48v48H0z"/><path class="bacls-2" transform="rotate(135 17.43 16.1)" d="M-1.79 9.86h28.04v4.25H-1.79z"/><path class="bacls-3" transform="rotate(45 13.873 44.486)" d="M-1.69 26.43h27.42v4.33H-1.69z"/></symbol>
+        <title>ICNTOPback</title><path fill="none" class="bacls-1" d="M0 0h48v48H0z"/>
+        <path fill="#78be20" class="bacls-2" transform="rotate(135 17.43 16.1)" d="M-1.79 9.86h28.04v4.25H-1.79z"/>
+        <path fill="#ffcd00" class="bacls-3" transform="rotate(45 13.873 44.486)" d="M-1.69 26.43h27.42v4.33H-1.69z"/></symbol>
     <symbol id="General--Bin" viewBox="0 0 30.06994 38">
         <defs>
 
