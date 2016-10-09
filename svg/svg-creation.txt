@@ -52,6 +52,7 @@ gulp.task('svgs', ['svgo', 'sprite-page', 'sprite-shortcut']);
 5) remove blank lines with find/replace (maybe leave this to a compressor) : ^(?:[\t ]*(?:\r?\n|\r))+
 6) remove the redundant <g> grouping tags from the svg with: </?g[\s\S]*?>
 7) remove the redundant <defs> tags from the svg with: </?defs>
+remove title: <title>[\s\S]*?<\/title>
 8) remove the inline strokes with: stroke:[\s\S]*?;
 8) remove the fill:[\s]*none;
 9) change the remaining fills (which don't have value 'none') to 'fill:currentColor;stroke:none;' with: fill:[\s]*#[\s\S]*?;
