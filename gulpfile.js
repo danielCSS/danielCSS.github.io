@@ -1,5 +1,5 @@
 var svgFolder = 'coralFinal';
-var currentSrc = 'mediaQueries';
+var currentSrc = 'framework';
 
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');

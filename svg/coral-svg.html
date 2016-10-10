@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SVG icon set</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+          body {
+            width:50rem;
+            margin: 0 auto;
+            background: beige;
+          }
+          ol {
+            padding:0 0 0 18px;
+          }
+          li {
+            font-size: 18px;
+            margin: 15px 0;
+          }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <h1>Coral External SVG sprite system</h1>
+        <h3>The current state of the icons</h3>
+        <p>The most updated icon set can be found <a href="https://danielcss.github.io/svg/demo/coral-verbose.html">here</a></p>
+        <p>I would like to point out a few issues/clarifications regarding the SVGs </p>
+        <ol>
+          <li>The newer icons (eg: 'General--Forms--Lock' in the above document) seem to be created differently than the inital icons.
+            It very important that the icons are created consitently. For instance, the initial icon all had a viewBox with width and height of 24.
+            The newer icons have different viewBox values for width and height (eg: Lock icon above has: <code>viewBox="0 0 160 224"</code>).
+            This creates problems when scaling the icons.
+            Similarly, the thickness of the icons should also be consistent.
+          </li>
+
+          <li>The target SVG icons which should be included in the icon set should be light-weight 1-2 KB icons which have the ability to change color
+           (eg: if the background changes they need to 'invert' color). My point is that some of the 'legal'/'Payment_Methods' SVG icons - don't fit this description: they are very
+           heavy (GibGobern - 77KB !! , Senet - 38 KB etc) and don't need to dynamically change color. These should probably be prepared as png sprites.
+           (The file size of the pngs should be considerably smaller - especially after being compressed)
+          </li>
+          <li>Please create 2 folders of icons: One with all the icons which need to be able to change color dynamically (most of the icons) and another folder
+            with icons which are colored and never change color - like the social icons. This will help me when preparing the icons in the format that I need them.
+          </li>
+          <li>Please try to create the SVGs as light-weight as possible. For instance the TRIATHLON.svg is 11KB, LACROSSE.svg is 10KB, FUTSAL.svg is 9KB whereas GAELIC_FOOTBALL.svg is only 3KB (??)
+          maybe there are alternate ways to prepare these icons to make them smaller?
+          </li>
+          <li>Please leave a little bit of space near the edges, especially for round shapes.
+          </li>
+          <li>(Just to reiterate:) The SVG viewBox should be square and all icons should use the same viewBox dimensions (eg. viewBox="0 0 24 24" )</h3>
+          </li>
+        </ol>
+        <h3>External SVG icon set - Reference</h3>
+        <p><a href="http://fvsch.com/code/svg-icons/how-to/">How to work with SVG icons</a></p>
+    </body>
+</html>
