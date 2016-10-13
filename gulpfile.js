@@ -1,4 +1,4 @@
-var svgFolder = 'coralFinal';
+var svgFolder = 'coral1';
 var currentSrc = 'framework';
 
 var gulp = require('gulp');

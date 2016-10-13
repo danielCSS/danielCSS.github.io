@@ -1,0 +1,2295 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<link href="all.css" rel="stylesheet"></link>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Coral SVG icon sprite</h1>
+			<h3>External SVG sprite - Features:</h3>
+			<ul>
+				<li>Sprite is a separate file and can be cached by the browser.</li>
+				<li>Modify Icons sizes simply with 'font-size' (try this with inspect element)</li>
+				<li>Use CSS to modify icon color</li>
+				<li>The sprite can be set up to support two dynamically changing colors (see INFORMATION icon)</li>
+				<li>Native support in Edge 13+, Safari 9+. IE and older Safari/WebKit need a JS polyfill such as svg4everybody or svgxuse.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+
+				<li title="10-LINES">
+					<div class="icon-box">
+
+						<!-- 10-LINES -->
+						<svg class="svg-10-LINES-dims">
+							<use xlink:href="coral1.svg#10-LINES"></use>
+						</svg>
+
+					</div>
+					<h2>10-LINES</h2>
+				</li>
+				<li title="20-LINES">
+					<div class="icon-box">
+
+						<!-- 20-LINES -->
+						<svg class="svg-20-LINES-dims">
+							<use xlink:href="coral1.svg#20-LINES"></use>
+						</svg>
+
+					</div>
+					<h2>20-LINES</h2>
+				</li>
+				<li title="40_%26_50_BALL">
+					<div class="icon-box">
+
+						<!-- 40_%26_50_BALL -->
+						<svg class="svg-40_%26_50_BALL-dims">
+							<use xlink:href="coral1.svg#40_%26_50_BALL"></use>
+						</svg>
+
+					</div>
+					<h2>40_%26_50_BALL</h2>
+				</li>
+				<li title="5-LINES">
+					<div class="icon-box">
+
+						<!-- 5-LINES -->
+						<svg class="svg-5-LINES-dims">
+							<use xlink:href="coral1.svg#5-LINES"></use>
+						</svg>
+
+					</div>
+					<h2>5-LINES</h2>
+				</li>
+				<li title="6+HOLDEM">
+					<div class="icon-box">
+
+						<!-- 6+HOLDEM -->
+						<svg class="svg-6+HOLDEM-dims">
+							<use xlink:href="coral1.svg#6+HOLDEM"></use>
+						</svg>
+
+					</div>
+					<h2>6+HOLDEM</h2>
+				</li>
+				<li title="7S_AND_GEMS">
+					<div class="icon-box">
+
+						<!-- 7S_AND_GEMS -->
+						<svg class="svg-7S_AND_GEMS-dims">
+							<use xlink:href="coral1.svg#7S_AND_GEMS"></use>
+						</svg>
+
+					</div>
+					<h2>7S_AND_GEMS</h2>
+				</li>
+				<li title="80-75BALL">
+					<div class="icon-box">
+
+						<!-- 80-75BALL -->
+						<svg class="svg-80-75BALL-dims">
+							<use xlink:href="coral1.svg#80-75BALL"></use>
+						</svg>
+
+					</div>
+					<h2>80-75BALL</h2>
+				</li>
+				<li title="90_BALL">
+					<div class="icon-box">
+
+						<!-- 90_BALL -->
+						<svg class="svg-90_BALL-dims">
+							<use xlink:href="coral1.svg#90_BALL"></use>
+						</svg>
+
+					</div>
+					<h2>90_BALL</h2>
+				</li>
+				<li title="A-Z">
+					<div class="icon-box">
+
+						<!-- A-Z -->
+						<svg class="svg-A-Z-dims">
+							<use xlink:href="coral1.svg#A-Z"></use>
+						</svg>
+
+					</div>
+					<h2>A-Z</h2>
+				</li>
+				<li title="ACCOUNT_HISTORY">
+					<div class="icon-box">
+
+						<!-- ACCOUNT_HISTORY -->
+						<svg class="svg-ACCOUNT_HISTORY-dims">
+							<use xlink:href="coral1.svg#ACCOUNT_HISTORY"></use>
+						</svg>
+
+					</div>
+					<h2>ACCOUNT_HISTORY</h2>
+				</li>
+				<li title="ALERT">
+					<div class="icon-box">
+
+						<!-- ALERT -->
+						<svg class="svg-ALERT-dims">
+							<use xlink:href="coral1.svg#ALERT"></use>
+						</svg>
+
+					</div>
+					<h2>ALERT</h2>
+				</li>
+				<li title="ALL">
+					<div class="icon-box">
+
+						<!-- ALL -->
+						<svg class="svg-ALL-dims">
+							<use xlink:href="coral1.svg#ALL"></use>
+						</svg>
+
+					</div>
+					<h2>ALL</h2>
+				</li>
+				<li title="ALL_GAMES">
+					<div class="icon-box">
+
+						<!-- ALL_GAMES -->
+						<svg class="svg-ALL_GAMES-dims">
+							<use xlink:href="coral1.svg#ALL_GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>ALL_GAMES</h2>
+				</li>
+				<li title="ALL_ROOMS">
+					<div class="icon-box">
+
+						<!-- ALL_ROOMS -->
+						<svg class="svg-ALL_ROOMS-dims">
+							<use xlink:href="coral1.svg#ALL_ROOMS"></use>
+						</svg>
+
+					</div>
+					<h2>ALL_ROOMS</h2>
+				</li>
+				<li title="AMERICANFOOTBALL">
+					<div class="icon-box">
+
+						<!-- AMERICANFOOTBALL -->
+						<svg class="svg-AMERICANFOOTBALL-dims">
+							<use xlink:href="coral1.svg#AMERICANFOOTBALL"></use>
+						</svg>
+
+					</div>
+					<h2>AMERICANFOOTBALL</h2>
+				</li>
+				<li title="ARCADE">
+					<div class="icon-box">
+
+						<!-- ARCADE -->
+						<svg class="svg-ARCADE-dims">
+							<use xlink:href="coral1.svg#ARCADE"></use>
+						</svg>
+
+					</div>
+					<h2>ARCADE</h2>
+				</li>
+				<li title="ARCHERY">
+					<div class="icon-box">
+
+						<!-- ARCHERY -->
+						<svg class="svg-ARCHERY-dims">
+							<use xlink:href="coral1.svg#ARCHERY"></use>
+						</svg>
+
+					</div>
+					<h2>ARCHERY</h2>
+				</li>
+				<li title="ARROW">
+					<div class="icon-box">
+
+						<!-- ARROW -->
+						<svg class="svg-ARROW-dims">
+							<use xlink:href="coral1.svg#ARROW"></use>
+						</svg>
+
+					</div>
+					<h2>ARROW</h2>
+				</li>
+				<li title="ATHLETICS">
+					<div class="icon-box">
+
+						<!-- ATHLETICS -->
+						<svg class="svg-ATHLETICS-dims">
+							<use xlink:href="coral1.svg#ATHLETICS"></use>
+						</svg>
+
+					</div>
+					<h2>ATHLETICS</h2>
+				</li>
+				<li title="AUSIE_RULES">
+					<div class="icon-box">
+
+						<!-- AUSIE_RULES -->
+						<svg class="svg-AUSIE_RULES-dims">
+							<use xlink:href="coral1.svg#AUSIE_RULES"></use>
+						</svg>
+
+					</div>
+					<h2>AUSIE_RULES</h2>
+				</li>
+				<li title="BACCARAT">
+					<div class="icon-box">
+
+						<!-- BACCARAT -->
+						<svg class="svg-BACCARAT-dims">
+							<use xlink:href="coral1.svg#BACCARAT"></use>
+						</svg>
+
+					</div>
+					<h2>BACCARAT</h2>
+				</li>
+				<li title="BADMINTON">
+					<div class="icon-box">
+
+						<!-- BADMINTON -->
+						<svg class="svg-BADMINTON-dims">
+							<use xlink:href="coral1.svg#BADMINTON"></use>
+						</svg>
+
+					</div>
+					<h2>BADMINTON</h2>
+				</li>
+				<li title="BANDY">
+					<div class="icon-box">
+
+						<!-- BANDY -->
+						<svg class="svg-BANDY-dims">
+							<use xlink:href="coral1.svg#BANDY"></use>
+						</svg>
+
+					</div>
+					<h2>BANDY</h2>
+				</li>
+				<li title="BASEBALL">
+					<div class="icon-box">
+
+						<!-- BASEBALL -->
+						<svg class="svg-BASEBALL-dims">
+							<use xlink:href="coral1.svg#BASEBALL"></use>
+						</svg>
+
+					</div>
+					<h2>BASEBALL</h2>
+				</li>
+				<li title="BASKETBALL">
+					<div class="icon-box">
+
+						<!-- BASKETBALL -->
+						<svg class="svg-BASKETBALL-dims">
+							<use xlink:href="coral1.svg#BASKETBALL"></use>
+						</svg>
+
+					</div>
+					<h2>BASKETBALL</h2>
+				</li>
+				<li title="BEACH_SOCCER">
+					<div class="icon-box">
+
+						<!-- BEACH_SOCCER -->
+						<svg class="svg-BEACH_SOCCER-dims">
+							<use xlink:href="coral1.svg#BEACH_SOCCER"></use>
+						</svg>
+
+					</div>
+					<h2>BEACH_SOCCER</h2>
+				</li>
+				<li title="BEACH_VOLLEYBALL">
+					<div class="icon-box">
+
+						<!-- BEACH_VOLLEYBALL -->
+						<svg class="svg-BEACH_VOLLEYBALL-dims">
+							<use xlink:href="coral1.svg#BEACH_VOLLEYBALL"></use>
+						</svg>
+
+					</div>
+					<h2>BEACH_VOLLEYBALL</h2>
+				</li>
+				<li title="BENEFITS">
+					<div class="icon-box">
+
+						<!-- BENEFITS -->
+						<svg class="svg-BENEFITS-dims">
+							<use xlink:href="coral1.svg#BENEFITS"></use>
+						</svg>
+
+					</div>
+					<h2>BENEFITS</h2>
+				</li>
+				<li title="BETTINGLINE">
+					<div class="icon-box">
+
+						<!-- BETTINGLINE -->
+						<svg class="svg-BETTINGLINE-dims">
+							<use xlink:href="coral1.svg#BETTINGLINE"></use>
+						</svg>
+
+					</div>
+					<h2>BETTINGLINE</h2>
+				</li>
+				<li title="BIATHLON">
+					<div class="icon-box">
+
+						<!-- BIATHLON -->
+						<svg class="svg-BIATHLON-dims">
+							<use xlink:href="coral1.svg#BIATHLON"></use>
+						</svg>
+
+					</div>
+					<h2>BIATHLON</h2>
+				</li>
+				<li title="BIN">
+					<div class="icon-box">
+
+						<!-- BIN -->
+						<svg class="svg-BIN-dims">
+							<use xlink:href="coral1.svg#BIN"></use>
+						</svg>
+
+					</div>
+					<h2>BIN</h2>
+				</li>
+				<li title="BINGO">
+					<div class="icon-box">
+
+						<!-- BINGO -->
+						<svg class="svg-BINGO-dims">
+							<use xlink:href="coral1.svg#BINGO"></use>
+						</svg>
+
+					</div>
+					<h2>BINGO</h2>
+				</li>
+				<li title="BLACKJACK">
+					<div class="icon-box">
+
+						<!-- BLACKJACK -->
+						<svg class="svg-BLACKJACK-dims">
+							<use xlink:href="coral1.svg#BLACKJACK"></use>
+						</svg>
+
+					</div>
+					<h2>BLACKJACK</h2>
+				</li>
+				<li title="BONUS_FEATURE_SLOTS">
+					<div class="icon-box">
+
+						<!-- BONUS_FEATURE_SLOTS -->
+						<svg class="svg-BONUS_FEATURE_SLOTS-dims">
+							<use xlink:href="coral1.svg#BONUS_FEATURE_SLOTS"></use>
+						</svg>
+
+					</div>
+					<h2>BONUS_FEATURE_SLOTS</h2>
+				</li>
+				<li title="BOWLS">
+					<div class="icon-box">
+
+						<!-- BOWLS -->
+						<svg class="svg-BOWLS-dims">
+							<use xlink:href="coral1.svg#BOWLS"></use>
+						</svg>
+
+					</div>
+					<h2>BOWLS</h2>
+				</li>
+				<li title="BOXING">
+					<div class="icon-box">
+
+						<!-- BOXING -->
+						<svg class="svg-BOXING-dims">
+							<use xlink:href="coral1.svg#BOXING"></use>
+						</svg>
+
+					</div>
+					<h2>BOXING</h2>
+				</li>
+				<li title="CALENDAR">
+					<div class="icon-box">
+
+						<!-- CALENDAR -->
+						<svg class="svg-CALENDAR-dims">
+							<use xlink:href="coral1.svg#CALENDAR"></use>
+						</svg>
+
+					</div>
+					<h2>CALENDAR</h2>
+				</li>
+				<li title="CANCEL_WITHDRAW">
+					<div class="icon-box">
+
+						<!-- CANCEL_WITHDRAW -->
+						<svg class="svg-CANCEL_WITHDRAW-dims">
+							<use xlink:href="coral1.svg#CANCEL_WITHDRAW"></use>
+						</svg>
+
+					</div>
+					<h2>CANCEL_WITHDRAW</h2>
+				</li>
+				<li title="CANOEING">
+					<div class="icon-box">
+
+						<!-- CANOEING -->
+						<svg class="svg-CANOEING-dims">
+							<use xlink:href="coral1.svg#CANOEING"></use>
+						</svg>
+
+					</div>
+					<h2>CANOEING</h2>
+				</li>
+				<li title="CASHOUT">
+					<div class="icon-box">
+
+						<!-- CASHOUT -->
+						<svg class="svg-CASHOUT-dims">
+							<use xlink:href="coral1.svg#CASHOUT"></use>
+						</svg>
+
+					</div>
+					<h2>CASHOUT</h2>
+				</li>
+				<li title="CASINO">
+					<div class="icon-box">
+
+						<!-- CASINO -->
+						<svg class="svg-CASINO-dims">
+							<use xlink:href="coral1.svg#CASINO"></use>
+						</svg>
+
+					</div>
+					<h2>CASINO</h2>
+				</li>
+				<li title="CASINO_GAMES">
+					<div class="icon-box">
+
+						<!-- CASINO_GAMES -->
+						<svg class="svg-CASINO_GAMES-dims">
+							<use xlink:href="coral1.svg#CASINO_GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>CASINO_GAMES</h2>
+				</li>
+				<li title="CASINO_SLOTS">
+					<div class="icon-box">
+
+						<!-- CASINO_SLOTS -->
+						<svg class="svg-CASINO_SLOTS-dims">
+							<use xlink:href="coral1.svg#CASINO_SLOTS"></use>
+						</svg>
+
+					</div>
+					<h2>CASINO_SLOTS</h2>
+				</li>
+				<li title="CHANGE_PASS">
+					<div class="icon-box">
+
+						<!-- CHANGE_PASS -->
+						<svg class="svg-CHANGE_PASS-dims">
+							<use xlink:href="coral1.svg#CHANGE_PASS"></use>
+						</svg>
+
+					</div>
+					<h2>CHANGE_PASS</h2>
+				</li>
+				<li title="CHESS">
+					<div class="icon-box">
+
+						<!-- CHESS -->
+						<svg class="svg-CHESS-dims">
+							<use xlink:href="coral1.svg#CHESS"></use>
+						</svg>
+
+					</div>
+					<h2>CHESS</h2>
+				</li>
+				<li title="CHRISTMAS_SPECIALS">
+					<div class="icon-box">
+
+						<!-- CHRISTMAS_SPECIALS -->
+						<svg class="svg-CHRISTMAS_SPECIALS-dims">
+							<use xlink:href="coral1.svg#CHRISTMAS_SPECIALS"></use>
+						</svg>
+
+					</div>
+					<h2>CHRISTMAS_SPECIALS</h2>
+				</li>
+				<li title="COMMUNITY">
+					<div class="icon-box">
+
+						<!-- COMMUNITY -->
+						<svg class="svg-COMMUNITY-dims">
+							<use xlink:href="coral1.svg#COMMUNITY"></use>
+						</svg>
+
+					</div>
+					<h2>COMMUNITY</h2>
+				</li>
+				<li title="CONNECT">
+					<div class="icon-box">
+
+						<!-- CONNECT -->
+						<svg class="svg-CONNECT-dims">
+							<use xlink:href="coral1.svg#CONNECT"></use>
+						</svg>
+
+					</div>
+					<h2>CONNECT</h2>
+				</li>
+				<li title="CONTACTHELP">
+					<div class="icon-box">
+
+						<!-- CONTACTHELP -->
+						<svg class="svg-CONTACTHELP-dims">
+							<use xlink:href="coral1.svg#CONTACTHELP"></use>
+						</svg>
+
+					</div>
+					<h2>CONTACTHELP</h2>
+				</li>
+				<li title="CONTACT_US">
+					<div class="icon-box">
+
+						<!-- CONTACT_US -->
+						<svg class="svg-CONTACT_US-dims">
+							<use xlink:href="coral1.svg#CONTACT_US"></use>
+						</svg>
+
+					</div>
+					<h2>CONTACT_US</h2>
+				</li>
+				<li title="CRICKET">
+					<div class="icon-box">
+
+						<!-- CRICKET -->
+						<svg class="svg-CRICKET-dims">
+							<use xlink:href="coral1.svg#CRICKET"></use>
+						</svg>
+
+					</div>
+					<h2>CRICKET</h2>
+				</li>
+				<li title="CURLING">
+					<div class="icon-box">
+
+						<!-- CURLING -->
+						<svg class="svg-CURLING-dims">
+							<use xlink:href="coral1.svg#CURLING"></use>
+						</svg>
+
+					</div>
+					<h2>CURLING</h2>
+				</li>
+				<li title="CURRENT_AFFAIRS">
+					<div class="icon-box">
+
+						<!-- CURRENT_AFFAIRS -->
+						<svg class="svg-CURRENT_AFFAIRS-dims">
+							<use xlink:href="coral1.svg#CURRENT_AFFAIRS"></use>
+						</svg>
+
+					</div>
+					<h2>CURRENT_AFFAIRS</h2>
+				</li>
+				<li title="CVV">
+					<div class="icon-box">
+
+						<!-- CVV -->
+						<svg class="svg-CVV-dims">
+							<use xlink:href="coral1.svg#CVV"></use>
+						</svg>
+
+					</div>
+					<h2>CVV</h2>
+				</li>
+				<li title="CYCLING">
+					<div class="icon-box">
+
+						<!-- CYCLING -->
+						<svg class="svg-CYCLING-dims">
+							<use xlink:href="coral1.svg#CYCLING"></use>
+						</svg>
+
+					</div>
+					<h2>CYCLING</h2>
+				</li>
+				<li title="DARTS">
+					<div class="icon-box">
+
+						<!-- DARTS -->
+						<svg class="svg-DARTS-dims">
+							<use xlink:href="coral1.svg#DARTS"></use>
+						</svg>
+
+					</div>
+					<h2>DARTS</h2>
+				</li>
+				<li title="DEPOSIT">
+					<div class="icon-box">
+
+						<!-- DEPOSIT -->
+						<svg class="svg-DEPOSIT-dims">
+							<use xlink:href="coral1.svg#DEPOSIT"></use>
+						</svg>
+
+					</div>
+					<h2>DEPOSIT</h2>
+				</li>
+				<li title="DIVING">
+					<div class="icon-box">
+
+						<!-- DIVING -->
+						<svg class="svg-DIVING-dims">
+							<use xlink:href="coral1.svg#DIVING"></use>
+						</svg>
+
+					</div>
+					<h2>DIVING</h2>
+				</li>
+				<li title="DOWNLOAD-CASINO">
+					<div class="icon-box">
+
+						<!-- DOWNLOAD-CASINO -->
+						<svg class="svg-DOWNLOAD-CASINO-dims">
+							<use xlink:href="coral1.svg#DOWNLOAD-CASINO"></use>
+						</svg>
+
+					</div>
+					<h2>DOWNLOAD-CASINO</h2>
+				</li>
+				<li title="EQUSTERIAN">
+					<div class="icon-box">
+
+						<!-- EQUSTERIAN -->
+						<svg class="svg-EQUSTERIAN-dims">
+							<use xlink:href="coral1.svg#EQUSTERIAN"></use>
+						</svg>
+
+					</div>
+					<h2>EQUSTERIAN</h2>
+				</li>
+				<li title="ESPORTS">
+					<div class="icon-box">
+
+						<!-- ESPORTS -->
+						<svg class="svg-ESPORTS-dims">
+							<use xlink:href="coral1.svg#ESPORTS"></use>
+						</svg>
+
+					</div>
+					<h2>ESPORTS</h2>
+				</li>
+				<li title="EVENTS">
+					<div class="icon-box">
+
+						<!-- EVENTS -->
+						<svg class="svg-EVENTS-dims">
+							<use xlink:href="coral1.svg#EVENTS"></use>
+						</svg>
+
+					</div>
+					<h2>EVENTS</h2>
+				</li>
+				<li title="FAQ">
+					<div class="icon-box">
+
+						<!-- FAQ -->
+						<svg class="svg-FAQ-dims">
+							<use xlink:href="coral1.svg#FAQ"></use>
+						</svg>
+
+					</div>
+					<h2>FAQ</h2>
+				</li>
+				<li title="FAVOFF">
+					<div class="icon-box">
+
+						<!-- FAVOFF -->
+						<svg class="svg-FAVOFF-dims">
+							<use xlink:href="coral1.svg#FAVOFF"></use>
+						</svg>
+
+					</div>
+					<h2>FAVOFF</h2>
+				</li>
+				<li title="FAVON">
+					<div class="icon-box">
+
+						<!-- FAVON -->
+						<svg class="svg-FAVON-dims">
+							<use xlink:href="coral1.svg#FAVON"></use>
+						</svg>
+
+					</div>
+					<h2>FAVON</h2>
+				</li>
+				<li title="FENCING">
+					<div class="icon-box">
+
+						<!-- FENCING -->
+						<svg class="svg-FENCING-dims">
+							<use xlink:href="coral1.svg#FENCING"></use>
+						</svg>
+
+					</div>
+					<h2>FENCING</h2>
+				</li>
+				<li title="FILTERS">
+					<div class="icon-box">
+
+						<!-- FILTERS -->
+						<svg class="svg-FILTERS-dims">
+							<use xlink:href="coral1.svg#FILTERS"></use>
+						</svg>
+
+					</div>
+					<h2>FILTERS</h2>
+				</li>
+				<li title="FISHING">
+					<div class="icon-box">
+
+						<!-- FISHING -->
+						<svg class="svg-FISHING-dims">
+							<use xlink:href="coral1.svg#FISHING"></use>
+						</svg>
+
+					</div>
+					<h2>FISHING</h2>
+				</li>
+				<li title="FLOORBALL">
+					<div class="icon-box">
+
+						<!-- FLOORBALL -->
+						<svg class="svg-FLOORBALL-dims">
+							<use xlink:href="coral1.svg#FLOORBALL"></use>
+						</svg>
+
+					</div>
+					<h2>FLOORBALL</h2>
+				</li>
+				<li title="FOOTBALL">
+					<div class="icon-box">
+
+						<!-- FOOTBALL -->
+						<svg class="svg-FOOTBALL-dims">
+							<use xlink:href="coral1.svg#FOOTBALL"></use>
+						</svg>
+
+					</div>
+					<h2>FOOTBALL</h2>
+				</li>
+				<li title="FORMULA1">
+					<div class="icon-box">
+
+						<!-- FORMULA1 -->
+						<svg class="svg-FORMULA1-dims">
+							<use xlink:href="coral1.svg#FORMULA1"></use>
+						</svg>
+
+					</div>
+					<h2>FORMULA1</h2>
+				</li>
+				<li title="FREE_BETS">
+					<div class="icon-box">
+
+						<!-- FREE_BETS -->
+						<svg class="svg-FREE_BETS-dims">
+							<use xlink:href="coral1.svg#FREE_BETS"></use>
+						</svg>
+
+					</div>
+					<h2>FREE_BETS</h2>
+				</li>
+				<li title="FREE_SPINS_AND_REEL_BAND">
+					<div class="icon-box">
+
+						<!-- FREE_SPINS_AND_REEL_BAND -->
+						<svg class="svg-FREE_SPINS_AND_REEL_BAND-dims">
+							<use xlink:href="coral1.svg#FREE_SPINS_AND_REEL_BAND"></use>
+						</svg>
+
+					</div>
+					<h2>FREE_SPINS_AND_REEL_BAND</h2>
+				</li>
+				<li title="FRUITS">
+					<div class="icon-box">
+
+						<!-- FRUITS -->
+						<svg class="svg-FRUITS-dims">
+							<use xlink:href="coral1.svg#FRUITS"></use>
+						</svg>
+
+					</div>
+					<h2>FRUITS</h2>
+				</li>
+				<li title="FUTSAL">
+					<div class="icon-box">
+
+						<!-- FUTSAL -->
+						<svg class="svg-FUTSAL-dims">
+							<use xlink:href="coral1.svg#FUTSAL"></use>
+						</svg>
+
+					</div>
+					<h2>FUTSAL</h2>
+				</li>
+				<li title="GAELIC_FOOTBALL">
+					<div class="icon-box">
+
+						<!-- GAELIC_FOOTBALL -->
+						<svg class="svg-GAELIC_FOOTBALL-dims">
+							<use xlink:href="coral1.svg#GAELIC_FOOTBALL"></use>
+						</svg>
+
+					</div>
+					<h2>GAELIC_FOOTBALL</h2>
+				</li>
+				<li title="GAMBLING">
+					<div class="icon-box">
+
+						<!-- GAMBLING -->
+						<svg class="svg-GAMBLING-dims">
+							<use xlink:href="coral1.svg#GAMBLING"></use>
+						</svg>
+
+					</div>
+					<h2>GAMBLING</h2>
+				</li>
+				<li title="GAMCARE">
+					<div class="icon-box">
+
+						<!-- GAMCARE -->
+						<svg class="svg-GAMCARE-dims">
+							<use xlink:href="coral1.svg#GAMCARE"></use>
+						</svg>
+
+					</div>
+					<h2>GAMCARE</h2>
+				</li>
+				<li title="GAMCARECERTIFY">
+					<div class="icon-box">
+
+						<!-- GAMCARECERTIFY -->
+						<svg class="svg-GAMCARECERTIFY-dims">
+							<use xlink:href="coral1.svg#GAMCARECERTIFY"></use>
+						</svg>
+
+					</div>
+					<h2>GAMCARECERTIFY</h2>
+				</li>
+				<li title="GAMES">
+					<div class="icon-box">
+
+						<!-- GAMES -->
+						<svg class="svg-GAMES-dims">
+							<use xlink:href="coral1.svg#GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>GAMES</h2>
+				</li>
+				<li title="GAMING">
+					<div class="icon-box">
+
+						<!-- GAMING -->
+						<svg class="svg-GAMING-dims">
+							<use xlink:href="coral1.svg#GAMING"></use>
+						</svg>
+
+					</div>
+					<h2>GAMING</h2>
+				</li>
+				<li title="GBGA">
+					<div class="icon-box">
+
+						<!-- GBGA -->
+						<svg class="svg-GBGA-dims">
+							<use xlink:href="coral1.svg#GBGA"></use>
+						</svg>
+
+					</div>
+					<h2>GBGA</h2>
+				</li>
+				<li title="GOLF">
+					<div class="icon-box">
+
+						<!-- GOLF -->
+						<svg class="svg-GOLF-dims">
+							<use xlink:href="coral1.svg#GOLF"></use>
+						</svg>
+
+					</div>
+					<h2>GOLF</h2>
+				</li>
+				<li title="GREYHOUNDS">
+					<div class="icon-box">
+
+						<!-- GREYHOUNDS -->
+						<svg class="svg-GREYHOUNDS-dims">
+							<use xlink:href="coral1.svg#GREYHOUNDS"></use>
+						</svg>
+
+					</div>
+					<h2>GREYHOUNDS</h2>
+				</li>
+				<li title="GYMNASTICS">
+					<div class="icon-box">
+
+						<!-- GYMNASTICS -->
+						<svg class="svg-GYMNASTICS-dims">
+							<use xlink:href="coral1.svg#GYMNASTICS"></use>
+						</svg>
+
+					</div>
+					<h2>GYMNASTICS</h2>
+				</li>
+				<li title="HAND_BALL">
+					<div class="icon-box">
+
+						<!-- HAND_BALL -->
+						<svg class="svg-HAND_BALL-dims">
+							<use xlink:href="coral1.svg#HAND_BALL"></use>
+						</svg>
+
+					</div>
+					<h2>HAND_BALL</h2>
+				</li>
+				<li title="HEALTHLOTTERY">
+					<div class="icon-box">
+
+						<!-- HEALTHLOTTERY -->
+						<svg class="svg-HEALTHLOTTERY-dims">
+							<use xlink:href="coral1.svg#HEALTHLOTTERY"></use>
+						</svg>
+
+					</div>
+					<h2>HEALTHLOTTERY</h2>
+				</li>
+				<li title="HELP">
+					<div class="icon-box">
+
+						<!-- HELP -->
+						<svg class="svg-HELP-dims">
+							<use xlink:href="coral1.svg#HELP"></use>
+						</svg>
+
+					</div>
+					<h2>HELP</h2>
+				</li>
+				<li title="HILO">
+					<div class="icon-box">
+
+						<!-- HILO -->
+						<svg class="svg-HILO-dims">
+							<use xlink:href="coral1.svg#HILO"></use>
+						</svg>
+
+					</div>
+					<h2>HILO</h2>
+				</li>
+				<li title="HOCKEY">
+					<div class="icon-box">
+
+						<!-- HOCKEY -->
+						<svg class="svg-HOCKEY-dims">
+							<use xlink:href="coral1.svg#HOCKEY"></use>
+						</svg>
+
+					</div>
+					<h2>HOCKEY</h2>
+				</li>
+				<li title="HOLDEM">
+					<div class="icon-box">
+
+						<!-- HOLDEM -->
+						<svg class="svg-HOLDEM-dims">
+							<use xlink:href="coral1.svg#HOLDEM"></use>
+						</svg>
+
+					</div>
+					<h2>HOLDEM</h2>
+				</li>
+				<li title="HORSE_RACING">
+					<div class="icon-box">
+
+						<!-- HORSE_RACING -->
+						<svg class="svg-HORSE_RACING-dims">
+							<use xlink:href="coral1.svg#HORSE_RACING"></use>
+						</svg>
+
+					</div>
+					<h2>HORSE_RACING</h2>
+				</li>
+				<li title="HURLING">
+					<div class="icon-box">
+
+						<!-- HURLING -->
+						<svg class="svg-HURLING-dims">
+							<use xlink:href="coral1.svg#HURLING"></use>
+						</svg>
+
+					</div>
+					<h2>HURLING</h2>
+				</li>
+				<li title="Home">
+					<div class="icon-box">
+
+						<!-- Home -->
+						<svg class="svg-Home-dims">
+							<use xlink:href="coral1.svg#Home"></use>
+						</svg>
+
+					</div>
+					<h2>Home</h2>
+				</li>
+				<li title="IBAS">
+					<div class="icon-box">
+
+						<!-- IBAS -->
+						<svg class="svg-IBAS-dims">
+							<use xlink:href="coral1.svg#IBAS"></use>
+						</svg>
+
+					</div>
+					<h2>IBAS</h2>
+				</li>
+				<li title="ICE_HOCKEY">
+					<div class="icon-box">
+
+						<!-- ICE_HOCKEY -->
+						<svg class="svg-ICE_HOCKEY-dims">
+							<use xlink:href="coral1.svg#ICE_HOCKEY"></use>
+						</svg>
+
+					</div>
+					<h2>ICE_HOCKEY</h2>
+				</li>
+				<li title="INFO">
+					<div class="icon-box">
+
+						<!-- INFO -->
+						<svg class="svg-INFO-dims">
+							<use xlink:href="coral1.svg#INFO"></use>
+						</svg>
+
+					</div>
+					<h2>INFO</h2>
+				</li>
+				<li title="INSHOP">
+					<div class="icon-box">
+
+						<!-- INSHOP -->
+						<svg class="svg-INSHOP-dims">
+							<use xlink:href="coral1.svg#INSHOP"></use>
+						</svg>
+
+					</div>
+					<h2>INSHOP</h2>
+				</li>
+				<li title="INSTANTPLAY">
+					<div class="icon-box">
+
+						<!-- INSTANTPLAY -->
+						<svg class="svg-INSTANTPLAY-dims">
+							<use xlink:href="coral1.svg#INSTANTPLAY"></use>
+						</svg>
+
+					</div>
+					<h2>INSTANTPLAY</h2>
+				</li>
+				<li title="IN_PLAY">
+					<div class="icon-box">
+
+						<!-- IN_PLAY -->
+						<svg class="svg-IN_PLAY-dims">
+							<use xlink:href="coral1.svg#IN_PLAY"></use>
+						</svg>
+
+					</div>
+					<h2>IN_PLAY</h2>
+				</li>
+				<li title="JACKPOT">
+					<div class="icon-box">
+
+						<!-- JACKPOT -->
+						<svg class="svg-JACKPOT-dims">
+							<use xlink:href="coral1.svg#JACKPOT"></use>
+						</svg>
+
+					</div>
+					<h2>JACKPOT</h2>
+				</li>
+				<li title="JACKPOTS">
+					<div class="icon-box">
+
+						<!-- JACKPOTS -->
+						<svg class="svg-JACKPOTS-dims">
+							<use xlink:href="coral1.svg#JACKPOTS"></use>
+						</svg>
+
+					</div>
+					<h2>JACKPOTS</h2>
+				</li>
+				<li title="JUDO">
+					<div class="icon-box">
+
+						<!-- JUDO -->
+						<svg class="svg-JUDO-dims">
+							<use xlink:href="coral1.svg#JUDO"></use>
+						</svg>
+
+					</div>
+					<h2>JUDO</h2>
+				</li>
+				<li title="LACROSSE">
+					<div class="icon-box">
+
+						<!-- LACROSSE -->
+						<svg class="svg-LACROSSE-dims">
+							<use xlink:href="coral1.svg#LACROSSE"></use>
+						</svg>
+
+					</div>
+					<h2>LACROSSE</h2>
+				</li>
+				<li title="LIVECHAT">
+					<div class="icon-box">
+
+						<!-- LIVECHAT -->
+						<svg class="svg-LIVECHAT-dims">
+							<use xlink:href="coral1.svg#LIVECHAT"></use>
+						</svg>
+
+					</div>
+					<h2>LIVECHAT</h2>
+				</li>
+				<li title="LIVESCORES">
+					<div class="icon-box">
+
+						<!-- LIVESCORES -->
+						<svg class="svg-LIVESCORES-dims">
+							<use xlink:href="coral1.svg#LIVESCORES"></use>
+						</svg>
+
+					</div>
+					<h2>LIVESCORES</h2>
+				</li>
+				<li title="LIVE_CASINO">
+					<div class="icon-box">
+
+						<!-- LIVE_CASINO -->
+						<svg class="svg-LIVE_CASINO-dims">
+							<use xlink:href="coral1.svg#LIVE_CASINO"></use>
+						</svg>
+
+					</div>
+					<h2>LIVE_CASINO</h2>
+				</li>
+				<li title="LIVE_RACING">
+					<div class="icon-box">
+
+						<!-- LIVE_RACING -->
+						<svg class="svg-LIVE_RACING-dims">
+							<use xlink:href="coral1.svg#LIVE_RACING"></use>
+						</svg>
+
+					</div>
+					<h2>LIVE_RACING</h2>
+				</li>
+				<li title="LIVE_STREAM">
+					<div class="icon-box">
+
+						<!-- LIVE_STREAM -->
+						<svg class="svg-LIVE_STREAM-dims">
+							<use xlink:href="coral1.svg#LIVE_STREAM"></use>
+						</svg>
+
+					</div>
+					<h2>LIVE_STREAM</h2>
+				</li>
+				<li title="LOCATION">
+					<div class="icon-box">
+
+						<!-- LOCATION -->
+						<svg class="svg-LOCATION-dims">
+							<use xlink:href="coral1.svg#LOCATION"></use>
+						</svg>
+
+					</div>
+					<h2>LOCATION</h2>
+				</li>
+				<li title="LOCK">
+					<div class="icon-box">
+
+						<!-- LOCK -->
+						<svg class="svg-LOCK-dims">
+							<use xlink:href="coral1.svg#LOCK"></use>
+						</svg>
+
+					</div>
+					<h2>LOCK</h2>
+				</li>
+				<li title="LOGOUT">
+					<div class="icon-box">
+
+						<!-- LOGOUT -->
+						<svg class="svg-LOGOUT-dims">
+							<use xlink:href="coral1.svg#LOGOUT"></use>
+						</svg>
+
+					</div>
+					<h2>LOGOUT</h2>
+				</li>
+				<li title="LOTTO">
+					<div class="icon-box">
+
+						<!-- LOTTO -->
+						<svg class="svg-LOTTO-dims">
+							<use xlink:href="coral1.svg#LOTTO"></use>
+						</svg>
+
+					</div>
+					<h2>LOTTO</h2>
+				</li>
+				<li title="LOTTORESULTS">
+					<div class="icon-box">
+
+						<!-- LOTTORESULTS -->
+						<svg class="svg-LOTTORESULTS-dims">
+							<use xlink:href="coral1.svg#LOTTORESULTS"></use>
+						</svg>
+
+					</div>
+					<h2>LOTTORESULTS</h2>
+				</li>
+				<li title="MEDAL">
+					<div class="icon-box">
+
+						<!-- MEDAL -->
+						<svg class="svg-MEDAL-dims">
+							<use xlink:href="coral1.svg#MEDAL"></use>
+						</svg>
+
+					</div>
+					<h2>MEDAL</h2>
+				</li>
+				<li title="MINUS">
+					<div class="icon-box">
+
+						<!-- MINUS -->
+						<svg class="svg-MINUS-dims">
+							<use xlink:href="coral1.svg#MINUS"></use>
+						</svg>
+
+					</div>
+					<h2>MINUS</h2>
+				</li>
+				<li title="MODERN_PENTATHLON">
+					<div class="icon-box">
+
+						<!-- MODERN_PENTATHLON -->
+						<svg class="svg-MODERN_PENTATHLON-dims">
+							<use xlink:href="coral1.svg#MODERN_PENTATHLON"></use>
+						</svg>
+
+					</div>
+					<h2>MODERN_PENTATHLON</h2>
+				</li>
+				<li title="MORE">
+					<div class="icon-box">
+
+						<!-- MORE -->
+						<svg class="svg-MORE-dims">
+							<use xlink:href="coral1.svg#MORE"></use>
+						</svg>
+
+					</div>
+					<h2>MORE</h2>
+				</li>
+				<li title="MOTORBIKES">
+					<div class="icon-box">
+
+						<!-- MOTORBIKES -->
+						<svg class="svg-MOTORBIKES-dims">
+							<use xlink:href="coral1.svg#MOTORBIKES"></use>
+						</svg>
+
+					</div>
+					<h2>MOTORBIKES</h2>
+				</li>
+				<li title="MOTOR_SPORTS">
+					<div class="icon-box">
+
+						<!-- MOTOR_SPORTS -->
+						<svg class="svg-MOTOR_SPORTS-dims">
+							<use xlink:href="coral1.svg#MOTOR_SPORTS"></use>
+						</svg>
+
+					</div>
+					<h2>MOTOR_SPORTS</h2>
+				</li>
+				<li title="MOVIES">
+					<div class="icon-box">
+
+						<!-- MOVIES -->
+						<svg class="svg-MOVIES-dims">
+							<use xlink:href="coral1.svg#MOVIES"></use>
+						</svg>
+
+					</div>
+					<h2>MOVIES</h2>
+				</li>
+				<li title="MULTI-LINES">
+					<div class="icon-box">
+
+						<!-- MULTI-LINES -->
+						<svg class="svg-MULTI-LINES-dims">
+							<use xlink:href="coral1.svg#MULTI-LINES"></use>
+						</svg>
+
+					</div>
+					<h2>MULTI-LINES</h2>
+				</li>
+				<li title="MUSIC">
+					<div class="icon-box">
+
+						<!-- MUSIC -->
+						<svg class="svg-MUSIC-dims">
+							<use xlink:href="coral1.svg#MUSIC"></use>
+						</svg>
+
+					</div>
+					<h2>MUSIC</h2>
+				</li>
+				<li title="NETBALL">
+					<div class="icon-box">
+
+						<!-- NETBALL -->
+						<svg class="svg-NETBALL-dims">
+							<use xlink:href="coral1.svg#NETBALL"></use>
+						</svg>
+
+					</div>
+					<h2>NETBALL</h2>
+				</li>
+				<li title="NEWS-BLOG">
+					<div class="icon-box">
+
+						<!-- NEWS-BLOG -->
+						<svg class="svg-NEWS-BLOG-dims">
+							<use xlink:href="coral1.svg#NEWS-BLOG"></use>
+						</svg>
+
+					</div>
+					<h2>NEWS-BLOG</h2>
+				</li>
+				<li title="NEW_GAMES">
+					<div class="icon-box">
+
+						<!-- NEW_GAMES -->
+						<svg class="svg-NEW_GAMES-dims">
+							<use xlink:href="coral1.svg#NEW_GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>NEW_GAMES</h2>
+				</li>
+				<li title="NORTON">
+					<div class="icon-box">
+
+						<!-- NORTON -->
+						<svg class="svg-NORTON-dims">
+							<use xlink:href="coral1.svg#NORTON"></use>
+						</svg>
+
+					</div>
+					<h2>NORTON</h2>
+				</li>
+				<li title="OLYMPICS">
+					<div class="icon-box">
+
+						<!-- OLYMPICS -->
+						<svg class="svg-OLYMPICS-dims">
+							<use xlink:href="coral1.svg#OLYMPICS"></use>
+						</svg>
+
+					</div>
+					<h2>OLYMPICS</h2>
+				</li>
+				<li title="OLYMPIC_SPECIALS">
+					<div class="icon-box">
+
+						<!-- OLYMPIC_SPECIALS -->
+						<svg class="svg-OLYMPIC_SPECIALS-dims">
+							<use xlink:href="coral1.svg#OLYMPIC_SPECIALS"></use>
+						</svg>
+
+					</div>
+					<h2>OLYMPIC_SPECIALS</h2>
+				</li>
+				<li title="OPEN_BETS">
+					<div class="icon-box">
+
+						<!-- OPEN_BETS -->
+						<svg class="svg-OPEN_BETS-dims">
+							<use xlink:href="coral1.svg#OPEN_BETS"></use>
+						</svg>
+
+					</div>
+					<h2>OPEN_BETS</h2>
+				</li>
+				<li title="OTHER_GAMES">
+					<div class="icon-box">
+
+						<!-- OTHER_GAMES -->
+						<svg class="svg-OTHER_GAMES-dims">
+							<use xlink:href="coral1.svg#OTHER_GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>OTHER_GAMES</h2>
+				</li>
+				<li title="PASSHYDE">
+					<div class="icon-box">
+
+						<!-- PASSHYDE -->
+						<svg class="svg-PASSHYDE-dims">
+							<use xlink:href="coral1.svg#PASSHYDE"></use>
+						</svg>
+
+					</div>
+					<h2>PASSHYDE</h2>
+				</li>
+				<li title="PASSSHOW">
+					<div class="icon-box">
+
+						<!-- PASSSHOW -->
+						<svg class="svg-PASSSHOW-dims">
+							<use xlink:href="coral1.svg#PASSSHOW"></use>
+						</svg>
+
+					</div>
+					<h2>PASSSHOW</h2>
+				</li>
+				<li title="PELOTA">
+					<div class="icon-box">
+
+						<!-- PELOTA -->
+						<svg class="svg-PELOTA-dims">
+							<use xlink:href="coral1.svg#PELOTA"></use>
+						</svg>
+
+					</div>
+					<h2>PELOTA</h2>
+				</li>
+				<li title="PESAPILLO">
+					<div class="icon-box">
+
+						<!-- PESAPILLO -->
+						<svg class="svg-PESAPILLO-dims">
+							<use xlink:href="coral1.svg#PESAPILLO"></use>
+						</svg>
+
+					</div>
+					<h2>PESAPILLO</h2>
+				</li>
+				<li title="PLAY">
+					<div class="icon-box">
+
+						<!-- PLAY -->
+						<svg class="svg-PLAY-dims">
+							<use xlink:href="coral1.svg#PLAY"></use>
+						</svg>
+
+					</div>
+					<h2>PLAY</h2>
+				</li>
+				<li title="PLUS">
+					<div class="icon-box">
+
+						<!-- PLUS -->
+						<svg class="svg-PLUS-dims">
+							<use xlink:href="coral1.svg#PLUS"></use>
+						</svg>
+
+					</div>
+					<h2>PLUS</h2>
+				</li>
+				<li title="POKER">
+					<div class="icon-box">
+
+						<!-- POKER -->
+						<svg class="svg-POKER-dims">
+							<use xlink:href="coral1.svg#POKER"></use>
+						</svg>
+
+					</div>
+					<h2>POKER</h2>
+				</li>
+				<li title="POLITICS">
+					<div class="icon-box">
+
+						<!-- POLITICS -->
+						<svg class="svg-POLITICS-dims">
+							<use xlink:href="coral1.svg#POLITICS"></use>
+						</svg>
+
+					</div>
+					<h2>POLITICS</h2>
+				</li>
+				<li title="POOL">
+					<div class="icon-box">
+
+						<!-- POOL -->
+						<svg class="svg-POOL-dims">
+							<use xlink:href="coral1.svg#POOL"></use>
+						</svg>
+
+					</div>
+					<h2>POOL</h2>
+				</li>
+				<li title="POWERBOAT">
+					<div class="icon-box">
+
+						<!-- POWERBOAT -->
+						<svg class="svg-POWERBOAT-dims">
+							<use xlink:href="coral1.svg#POWERBOAT"></use>
+						</svg>
+
+					</div>
+					<h2>POWERBOAT</h2>
+				</li>
+				<li title="PRICE">
+					<div class="icon-box">
+
+						<!-- PRICE -->
+						<svg class="svg-PRICE-dims">
+							<use xlink:href="coral1.svg#PRICE"></use>
+						</svg>
+
+					</div>
+					<h2>PRICE</h2>
+				</li>
+				<li title="PROMOTIONS">
+					<div class="icon-box">
+
+						<!-- PROMOTIONS -->
+						<svg class="svg-PROMOTIONS-dims">
+							<use xlink:href="coral1.svg#PROMOTIONS"></use>
+						</svg>
+
+					</div>
+					<h2>PROMOTIONS</h2>
+				</li>
+				<li title="REDEEM_POINTS">
+					<div class="icon-box">
+
+						<!-- REDEEM_POINTS -->
+						<svg class="svg-REDEEM_POINTS-dims">
+							<use xlink:href="coral1.svg#REDEEM_POINTS"></use>
+						</svg>
+
+					</div>
+					<h2>REDEEM_POINTS</h2>
+				</li>
+				<li title="RESPONSIBLE_GAMBLING">
+					<div class="icon-box">
+
+						<!-- RESPONSIBLE_GAMBLING -->
+						<svg class="svg-RESPONSIBLE_GAMBLING-dims">
+							<use xlink:href="coral1.svg#RESPONSIBLE_GAMBLING"></use>
+						</svg>
+
+					</div>
+					<h2>RESPONSIBLE_GAMBLING</h2>
+				</li>
+				<li title="RESULTS">
+					<div class="icon-box">
+
+						<!-- RESULTS -->
+						<svg class="svg-RESULTS-dims">
+							<use xlink:href="coral1.svg#RESULTS"></use>
+						</svg>
+
+					</div>
+					<h2>RESULTS</h2>
+				</li>
+				<li title="ROOMS_SCHEDULE">
+					<div class="icon-box">
+
+						<!-- ROOMS_SCHEDULE -->
+						<svg class="svg-ROOMS_SCHEDULE-dims">
+							<use xlink:href="coral1.svg#ROOMS_SCHEDULE"></use>
+						</svg>
+
+					</div>
+					<h2>ROOMS_SCHEDULE</h2>
+				</li>
+				<li title="ROULETTE">
+					<div class="icon-box">
+
+						<!-- ROULETTE -->
+						<svg class="svg-ROULETTE-dims">
+							<use xlink:href="coral1.svg#ROULETTE"></use>
+						</svg>
+
+					</div>
+					<h2>ROULETTE</h2>
+				</li>
+				<li title="ROWING">
+					<div class="icon-box">
+
+						<!-- ROWING -->
+						<svg class="svg-ROWING-dims">
+							<use xlink:href="coral1.svg#ROWING"></use>
+						</svg>
+
+					</div>
+					<h2>ROWING</h2>
+				</li>
+				<li title="ROYAL_SPECIALS">
+					<div class="icon-box">
+
+						<!-- ROYAL_SPECIALS -->
+						<svg class="svg-ROYAL_SPECIALS-dims">
+							<use xlink:href="coral1.svg#ROYAL_SPECIALS"></use>
+						</svg>
+
+					</div>
+					<h2>ROYAL_SPECIALS</h2>
+				</li>
+				<li title="RUGBY_LEAGUE">
+					<div class="icon-box">
+
+						<!-- RUGBY_LEAGUE -->
+						<svg class="svg-RUGBY_LEAGUE-dims">
+							<use xlink:href="coral1.svg#RUGBY_LEAGUE"></use>
+						</svg>
+
+					</div>
+					<h2>RUGBY_LEAGUE</h2>
+				</li>
+				<li title="RUGBY_UNION">
+					<div class="icon-box">
+
+						<!-- RUGBY_UNION -->
+						<svg class="svg-RUGBY_UNION-dims">
+							<use xlink:href="coral1.svg#RUGBY_UNION"></use>
+						</svg>
+
+					</div>
+					<h2>RUGBY_UNION</h2>
+				</li>
+				<li title="SAILING">
+					<div class="icon-box">
+
+						<!-- SAILING -->
+						<svg class="svg-SAILING-dims">
+							<use xlink:href="coral1.svg#SAILING"></use>
+						</svg>
+
+					</div>
+					<h2>SAILING</h2>
+				</li>
+				<li title="SCHEDULE">
+					<div class="icon-box">
+
+						<!-- SCHEDULE -->
+						<svg class="svg-SCHEDULE-dims">
+							<use xlink:href="coral1.svg#SCHEDULE"></use>
+						</svg>
+
+					</div>
+					<h2>SCHEDULE</h2>
+				</li>
+				<li title="SCRATCHCARDS">
+					<div class="icon-box">
+
+						<!-- SCRATCHCARDS -->
+						<svg class="svg-SCRATCHCARDS-dims">
+							<use xlink:href="coral1.svg#SCRATCHCARDS"></use>
+						</svg>
+
+					</div>
+					<h2>SCRATCHCARDS</h2>
+				</li>
+				<li title="SEARCH">
+					<div class="icon-box">
+
+						<!-- SEARCH -->
+						<svg class="svg-SEARCH-dims">
+							<use xlink:href="coral1.svg#SEARCH"></use>
+						</svg>
+
+					</div>
+					<h2>SEARCH</h2>
+				</li>
+				<li title="SETTINGS">
+					<div class="icon-box">
+
+						<!-- SETTINGS -->
+						<svg class="svg-SETTINGS-dims">
+							<use xlink:href="coral1.svg#SETTINGS"></use>
+						</svg>
+
+					</div>
+					<h2>SETTINGS</h2>
+				</li>
+				<li title="SHINTY">
+					<div class="icon-box">
+
+						<!-- SHINTY -->
+						<svg class="svg-SHINTY-dims">
+							<use xlink:href="coral1.svg#SHINTY"></use>
+						</svg>
+
+					</div>
+					<h2>SHINTY</h2>
+				</li>
+				<li title="SHOOTING">
+					<div class="icon-box">
+
+						<!-- SHOOTING -->
+						<svg class="svg-SHOOTING-dims">
+							<use xlink:href="coral1.svg#SHOOTING"></use>
+						</svg>
+
+					</div>
+					<h2>SHOOTING</h2>
+				</li>
+				<li title="SHOPLOCATOR">
+					<div class="icon-box">
+
+						<!-- SHOPLOCATOR -->
+						<svg class="svg-SHOPLOCATOR-dims">
+							<use xlink:href="coral1.svg#SHOPLOCATOR"></use>
+						</svg>
+
+					</div>
+					<h2>SHOPLOCATOR</h2>
+				</li>
+				<li title="SIDEGAMES">
+					<div class="icon-box">
+
+						<!-- SIDEGAMES -->
+						<svg class="svg-SIDEGAMES-dims">
+							<use xlink:href="coral1.svg#SIDEGAMES"></use>
+						</svg>
+
+					</div>
+					<h2>SIDEGAMES</h2>
+				</li>
+				<li title="SIGNUP">
+					<div class="icon-box">
+
+						<!-- SIGNUP -->
+						<svg class="svg-SIGNUP-dims">
+							<use xlink:href="coral1.svg#SIGNUP"></use>
+						</svg>
+
+					</div>
+					<h2>SIGNUP</h2>
+				</li>
+				<li title="SKIING">
+					<div class="icon-box">
+
+						<!-- SKIING -->
+						<svg class="svg-SKIING-dims">
+							<use xlink:href="coral1.svg#SKIING"></use>
+						</svg>
+
+					</div>
+					<h2>SKIING</h2>
+				</li>
+				<li title="SKI_JUMPING">
+					<div class="icon-box">
+
+						<!-- SKI_JUMPING -->
+						<svg class="svg-SKI_JUMPING-dims">
+							<use xlink:href="coral1.svg#SKI_JUMPING"></use>
+						</svg>
+
+					</div>
+					<h2>SKI_JUMPING</h2>
+				</li>
+				<li title="SLOTS">
+					<div class="icon-box">
+
+						<!-- SLOTS -->
+						<svg class="svg-SLOTS-dims">
+							<use xlink:href="coral1.svg#SLOTS"></use>
+						</svg>
+
+					</div>
+					<h2>SLOTS</h2>
+				</li>
+				<li title="SLOTS&amp;GAMES">
+					<div class="icon-box">
+
+						<!-- SLOTS&amp;GAMES -->
+						<svg class="svg-SLOTS&amp;GAMES-dims">
+							<use xlink:href="coral1.svg#SLOTS&amp;GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>SLOTS&amp;GAMES</h2>
+				</li>
+				<li title="SNOOKER">
+					<div class="icon-box">
+
+						<!-- SNOOKER -->
+						<svg class="svg-SNOOKER-dims">
+							<use xlink:href="coral1.svg#SNOOKER"></use>
+						</svg>
+
+					</div>
+					<h2>SNOOKER</h2>
+				</li>
+				<li title="SPECIALS">
+					<div class="icon-box">
+
+						<!-- SPECIALS -->
+						<svg class="svg-SPECIALS-dims">
+							<use xlink:href="coral1.svg#SPECIALS"></use>
+						</svg>
+
+					</div>
+					<h2>SPECIALS</h2>
+				</li>
+				<li title="SPEEDWAY">
+					<div class="icon-box">
+
+						<!-- SPEEDWAY -->
+						<svg class="svg-SPEEDWAY-dims">
+							<use xlink:href="coral1.svg#SPEEDWAY"></use>
+						</svg>
+
+					</div>
+					<h2>SPEEDWAY</h2>
+				</li>
+				<li title="SPEED_SKATING">
+					<div class="icon-box">
+
+						<!-- SPEED_SKATING -->
+						<svg class="svg-SPEED_SKATING-dims">
+							<use xlink:href="coral1.svg#SPEED_SKATING"></use>
+						</svg>
+
+					</div>
+					<h2>SPEED_SKATING</h2>
+				</li>
+				<li title="SQUASH">
+					<div class="icon-box">
+
+						<!-- SQUASH -->
+						<svg class="svg-SQUASH-dims">
+							<use xlink:href="coral1.svg#SQUASH"></use>
+						</svg>
+
+					</div>
+					<h2>SQUASH</h2>
+				</li>
+				<li title="STATISTICS">
+					<div class="icon-box">
+
+						<!-- STATISTICS -->
+						<svg class="svg-STATISTICS-dims">
+							<use xlink:href="coral1.svg#STATISTICS"></use>
+						</svg>
+
+					</div>
+					<h2>STATISTICS</h2>
+				</li>
+				<li title="SUPPORT">
+					<div class="icon-box">
+
+						<!-- SUPPORT -->
+						<svg class="svg-SUPPORT-dims">
+							<use xlink:href="coral1.svg#SUPPORT"></use>
+						</svg>
+
+					</div>
+					<h2>SUPPORT</h2>
+				</li>
+				<li title="SWIMMING">
+					<div class="icon-box">
+
+						<!-- SWIMMING -->
+						<svg class="svg-SWIMMING-dims">
+							<use xlink:href="coral1.svg#SWIMMING"></use>
+						</svg>
+
+					</div>
+					<h2>SWIMMING</h2>
+				</li>
+				<li title="SYN_SWIMMING">
+					<div class="icon-box">
+
+						<!-- SYN_SWIMMING -->
+						<svg class="svg-SYN_SWIMMING-dims">
+							<use xlink:href="coral1.svg#SYN_SWIMMING"></use>
+						</svg>
+
+					</div>
+					<h2>SYN_SWIMMING</h2>
+				</li>
+				<li title="TABLE_GAMES">
+					<div class="icon-box">
+
+						<!-- TABLE_GAMES -->
+						<svg class="svg-TABLE_GAMES-dims">
+							<use xlink:href="coral1.svg#TABLE_GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>TABLE_GAMES</h2>
+				</li>
+				<li title="TABLE_TENNIS">
+					<div class="icon-box">
+
+						<!-- TABLE_TENNIS -->
+						<svg class="svg-TABLE_TENNIS-dims">
+							<use xlink:href="coral1.svg#TABLE_TENNIS"></use>
+						</svg>
+
+					</div>
+					<h2>TABLE_TENNIS</h2>
+				</li>
+				<li title="TEAKWONDO">
+					<div class="icon-box">
+
+						<!-- TEAKWONDO -->
+						<svg class="svg-TEAKWONDO-dims">
+							<use xlink:href="coral1.svg#TEAKWONDO"></use>
+						</svg>
+
+					</div>
+					<h2>TEAKWONDO</h2>
+				</li>
+				<li title="TENNIS">
+					<div class="icon-box">
+
+						<!-- TENNIS -->
+						<svg class="svg-TENNIS-dims">
+							<use xlink:href="coral1.svg#TENNIS"></use>
+						</svg>
+
+					</div>
+					<h2>TENNIS</h2>
+				</li>
+				<li title="TOP_GAMES">
+					<div class="icon-box">
+
+						<!-- TOP_GAMES -->
+						<svg class="svg-TOP_GAMES-dims">
+							<use xlink:href="coral1.svg#TOP_GAMES"></use>
+						</svg>
+
+					</div>
+					<h2>TOP_GAMES</h2>
+				</li>
+				<li title="TOURNAMENTS">
+					<div class="icon-box">
+
+						<!-- TOURNAMENTS -->
+						<svg class="svg-TOURNAMENTS-dims">
+							<use xlink:href="coral1.svg#TOURNAMENTS"></use>
+						</svg>
+
+					</div>
+					<h2>TOURNAMENTS</h2>
+				</li>
+				<li title="TRANSACTIONS_HISTORY">
+					<div class="icon-box">
+
+						<!-- TRANSACTIONS_HISTORY -->
+						<svg class="svg-TRANSACTIONS_HISTORY-dims">
+							<use xlink:href="coral1.svg#TRANSACTIONS_HISTORY"></use>
+						</svg>
+
+					</div>
+					<h2>TRANSACTIONS_HISTORY</h2>
+				</li>
+				<li title="TRIATHLON">
+					<div class="icon-box">
+
+						<!-- TRIATHLON -->
+						<svg class="svg-TRIATHLON-dims">
+							<use xlink:href="coral1.svg#TRIATHLON"></use>
+						</svg>
+
+					</div>
+					<h2>TRIATHLON</h2>
+				</li>
+				<li title="TVSPECIALS">
+					<div class="icon-box">
+
+						<!-- TVSPECIALS -->
+						<svg class="svg-TVSPECIALS-dims">
+							<use xlink:href="coral1.svg#TVSPECIALS"></use>
+						</svg>
+
+					</div>
+					<h2>TVSPECIALS</h2>
+				</li>
+				<li title="UFCMMA">
+					<div class="icon-box">
+
+						<!-- UFCMMA -->
+						<svg class="svg-UFCMMA-dims">
+							<use xlink:href="coral1.svg#UFCMMA"></use>
+						</svg>
+
+					</div>
+					<h2>UFCMMA</h2>
+				</li>
+				<li title="USER">
+					<div class="icon-box">
+
+						<!-- USER -->
+						<svg class="svg-USER-dims">
+							<use xlink:href="coral1.svg#USER"></use>
+						</svg>
+
+					</div>
+					<h2>USER</h2>
+				</li>
+				<li title="VEGAS">
+					<div class="icon-box">
+
+						<!-- VEGAS -->
+						<svg class="svg-VEGAS-dims">
+							<use xlink:href="coral1.svg#VEGAS"></use>
+						</svg>
+
+					</div>
+					<h2>VEGAS</h2>
+				</li>
+				<li title="VEGAS_JACKPOTS">
+					<div class="icon-box">
+
+						<!-- VEGAS_JACKPOTS -->
+						<svg class="svg-VEGAS_JACKPOTS-dims">
+							<use xlink:href="coral1.svg#VEGAS_JACKPOTS"></use>
+						</svg>
+
+					</div>
+					<h2>VEGAS_JACKPOTS</h2>
+				</li>
+				<li title="VEGAS_TABLES">
+					<div class="icon-box">
+
+						<!-- VEGAS_TABLES -->
+						<svg class="svg-VEGAS_TABLES-dims">
+							<use xlink:href="coral1.svg#VEGAS_TABLES"></use>
+						</svg>
+
+					</div>
+					<h2>VEGAS_TABLES</h2>
+				</li>
+				<li title="VIDEO_POKER">
+					<div class="icon-box">
+
+						<!-- VIDEO_POKER -->
+						<svg class="svg-VIDEO_POKER-dims">
+							<use xlink:href="coral1.svg#VIDEO_POKER"></use>
+						</svg>
+
+					</div>
+					<h2>VIDEO_POKER</h2>
+				</li>
+				<li title="VIP">
+					<div class="icon-box">
+
+						<!-- VIP -->
+						<svg class="svg-VIP-dims">
+							<use xlink:href="coral1.svg#VIP"></use>
+						</svg>
+
+					</div>
+					<h2>VIP</h2>
+				</li>
+				<li title="VIRTUALS">
+					<div class="icon-box">
+
+						<!-- VIRTUALS -->
+						<svg class="svg-VIRTUALS-dims">
+							<use xlink:href="coral1.svg#VIRTUALS"></use>
+						</svg>
+
+					</div>
+					<h2>VIRTUALS</h2>
+				</li>
+				<li title="VIRTUAL_SPORTS">
+					<div class="icon-box">
+
+						<!-- VIRTUAL_SPORTS -->
+						<svg class="svg-VIRTUAL_SPORTS-dims">
+							<use xlink:href="coral1.svg#VIRTUAL_SPORTS"></use>
+						</svg>
+
+					</div>
+					<h2>VIRTUAL_SPORTS</h2>
+				</li>
+				<li title="VOLLEYBALL">
+					<div class="icon-box">
+
+						<!-- VOLLEYBALL -->
+						<svg class="svg-VOLLEYBALL-dims">
+							<use xlink:href="coral1.svg#VOLLEYBALL"></use>
+						</svg>
+
+					</div>
+					<h2>VOLLEYBALL</h2>
+				</li>
+				<li title="VOUCHER">
+					<div class="icon-box">
+
+						<!-- VOUCHER -->
+						<svg class="svg-VOUCHER-dims">
+							<use xlink:href="coral1.svg#VOUCHER"></use>
+						</svg>
+
+					</div>
+					<h2>VOUCHER</h2>
+				</li>
+				<li title="WATERPOLO">
+					<div class="icon-box">
+
+						<!-- WATERPOLO -->
+						<svg class="svg-WATERPOLO-dims">
+							<use xlink:href="coral1.svg#WATERPOLO"></use>
+						</svg>
+
+					</div>
+					<h2>WATERPOLO</h2>
+				</li>
+				<li title="WEATHER">
+					<div class="icon-box">
+
+						<!-- WEATHER -->
+						<svg class="svg-WEATHER-dims">
+							<use xlink:href="coral1.svg#WEATHER"></use>
+						</svg>
+
+					</div>
+					<h2>WEATHER</h2>
+				</li>
+				<li title="WEIGHTLIFTING">
+					<div class="icon-box">
+
+						<!-- WEIGHTLIFTING -->
+						<svg class="svg-WEIGHTLIFTING-dims">
+							<use xlink:href="coral1.svg#WEIGHTLIFTING"></use>
+						</svg>
+
+					</div>
+					<h2>WEIGHTLIFTING</h2>
+				</li>
+				<li title="WINTER_OLYMPICS">
+					<div class="icon-box">
+
+						<!-- WINTER_OLYMPICS -->
+						<svg class="svg-WINTER_OLYMPICS-dims">
+							<use xlink:href="coral1.svg#WINTER_OLYMPICS"></use>
+						</svg>
+
+					</div>
+					<h2>WINTER_OLYMPICS</h2>
+				</li>
+				<li title="WINTER_SPORTS">
+					<div class="icon-box">
+
+						<!-- WINTER_SPORTS -->
+						<svg class="svg-WINTER_SPORTS-dims">
+							<use xlink:href="coral1.svg#WINTER_SPORTS"></use>
+						</svg>
+
+					</div>
+					<h2>WINTER_SPORTS</h2>
+				</li>
+				<li title="WITHDRAW">
+					<div class="icon-box">
+
+						<!-- WITHDRAW -->
+						<svg class="svg-WITHDRAW-dims">
+							<use xlink:href="coral1.svg#WITHDRAW"></use>
+						</svg>
+
+					</div>
+					<h2>WITHDRAW</h2>
+				</li>
+				<li title="WRESTLING">
+					<div class="icon-box">
+
+						<!-- WRESTLING -->
+						<svg class="svg-WRESTLING-dims">
+							<use xlink:href="coral1.svg#WRESTLING"></use>
+						</svg>
+
+					</div>
+					<h2>WRESTLING</h2>
+				</li>
+				<li title="YACHTING">
+					<div class="icon-box">
+
+						<!-- YACHTING -->
+						<svg class="svg-YACHTING-dims">
+							<use xlink:href="coral1.svg#YACHTING"></use>
+						</svg>
+
+					</div>
+					<h2>YACHTING</h2>
+				</li>
+				<li title="YOUR_MESSAGES">
+					<div class="icon-box">
+
+						<!-- YOUR_MESSAGES -->
+						<svg class="svg-YOUR_MESSAGES-dims">
+							<use xlink:href="coral1.svg#YOUR_MESSAGES"></use>
+						</svg>
+
+					</div>
+					<h2>YOUR_MESSAGES</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Thu, 13 Oct 2016 14:20:31 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+		<script defer src="svgxuse.min.js"></script>
+	</body>
+</html>
