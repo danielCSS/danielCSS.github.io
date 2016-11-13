@@ -2068,3 +2068,21 @@ table {
     margin: 2rem; }
 
 /* media queries examples */
+.third {
+  height: 60vh;
+  background: aqua; }
+
+header.third {
+  background: maroon; }
+
+footer.third {
+  background: salmon; }
+
+.search {
+  padding: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  border: 5px solid rebeccapurple; }
+  .search input {
+    width: 80%; }

@@ -148,3 +148,24 @@
 @import "utilities.hide";
 
 @import "_style-guide";
+
+.third {
+  height: 60vh;
+  background: aqua;
+}
+header.third {
+  background: maroon;
+}
+footer.third {
+  background: salmon;
+}
+.search{
+  padding: 50px;
+  position: sticky;
+  top: 20px;
+  border: 5px solid rebeccapurple;
+  input {
+    width: 80%;
+  }
+
+}
