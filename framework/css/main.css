@@ -1547,7 +1547,7 @@ table {
   /* override default element margin bottom (may need to refactor this) */ }
 
 .c-card {
-  background: url(/images/promo.jpeg) no-repeat;
+  background: url(../images/promo.jpeg) no-repeat;
   background-size: cover;
   font-size: 1rem;
   margin-bottom: 1rem; }
