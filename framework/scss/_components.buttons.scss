@@ -18,9 +18,8 @@
 
  /* c-btn base styles */
 
- [class*="c-btn"] {
+ [class*="c-btn--"] {
    display: inline-block; /* [1] */
-   width: 100%;
    vertical-align: middle; /* [2] */
    font: inherit; /* [3] */
    text-align: center; /* [4] */
@@ -33,103 +32,87 @@
    border-radius: $global-radius;
    border: .15em solid transparent; /* mine */
    text-decoration: none; /* mine */
-   font-size: 1.5em;
+   font-size: 1rem;
    &[disabled] {
      opacity: 0.5;
    }
+   @include mq($from: tablet) {
+     &:active,
+     &:focus {
+       border: .15em solid #eee; /* mine */
+       outline: none; /* mine */
+     }
+   }
  }
 .c-btn {
+
+  /* Style variants
+     ========================================================================== */
+  &--primary {
+    color: #fff;
+    background-color: $primaryColor;
+    width: 100%;
+    font-size: 1.5em;
+    @include mq($from: tablet) {
+      &:hover:not([disabled]),
+      &:focus {
+        background-color: lighten($primaryColor,10);
+      }
+    }
+  }
+  &--secondary {
+    color: $textColor;
+    background-color: $secondaryColor;
+    width: 100%;
+    font-size: 1.5em;
+    @include mq($from: tablet) {
+      &:hover:not([disabled]),
+      &:focus {
+        background-color: lighten($secondaryColor,10);
+      }
+    }
+  }
   &--inline {
     width: auto;
     font-size: 1em;
     padding: 1em;
   }
-  @include mq($from: tablet) {
-    &:active,
-    &:focus {
-      border: .15em solid #eee; /* mine */
-      outline: none; /* mine */
-    }
+  &--split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    font-size: 1em;
+    padding: 0.2em 0.8em;
+    border-radius: 1em;
   }
-}
+  &__counter {
+    color: $secondaryColor;
+  }
+  /* Size variants
+     ========================================================================== */
 
-/* Style variants
-   ========================================================================== */
-
-.c-btn--primary {
-  color: #fff;
-  background-color: $primaryColor;
-
-  // &,
-  // &:hover,
-  // &:active,
-  // &:focus {
-  //   text-decoration: none; /* [4] */
-  //   color: #fff;
-  // }
-  @include mq($from: tablet) {
-    &:hover:not([disabled]),
-    &:focus {
-      background-color: lighten($primaryColor,10);
-    }
+  &--small {
+    //padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+    padding: px-to-em(3) px-to-em(9);
+    font-size: 0.8em;
   }
 
-
-}
-
-.c-btn--secondary {
-  color: $black;
-  background-color: $secondaryColor;
-  @include mq($from: tablet) {
-    &:hover:not([disabled]),
-    &:focus {
-      background-color: lighten($secondaryColor,10);
-    }
+  &--large {
+    //padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
+    padding: px-to-em(12) px-to-em(36);
+    font-size: 1.6em;
   }
-  // &,
-  // &:hover,
-  // &:active,
-  // &:focus {
-  //   text-decoration: none;
-  //   color: $black;
-  // }
-
 
 }
 
-// .c-btn--tertiary {
-//   background-color: #fff;
-//   color: #4a8ec2;
-//
-//   &,
-//   &:hover,
-//   &:active,
-//   &:focus {
-//     text-decoration: none;
-//     color: #4a8ec2;
-//   }
-//
-//   &:hover,
-//   &:focus {
-//     color: #3774a2;
-//   }
-//
-// }
 
-/* Size variants
-   ========================================================================== */
 
-.c-btn--small {
-  //padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
-  padding: px-to-em(3) px-to-em(9);
-  font-size: 0.8em;
-}
 
-.c-btn--large {
-  //padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
-  padding: px-to-em(12) px-to-em(36);
-  font-size: 1.6em;
-}
+
+
+
+
 
 /* Ghost buttons
    ========================================================================== */

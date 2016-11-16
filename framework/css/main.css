@@ -1447,10 +1447,9 @@ table {
  * 5. Force all button-styled elements to appear clickable.
  */
 /* c-btn base styles */
-[class*="c-btn"] {
+[class*="c-btn--"] {
   display: inline-block;
   /* [1] */
-  width: 100%;
   vertical-align: middle;
   /* [2] */
   font: inherit;
@@ -1468,47 +1467,60 @@ table {
   /* mine */
   text-decoration: none;
   /* mine */
-  font-size: 1.5em; }
-  [class*="c-btn"][disabled] {
+  font-size: 1rem; }
+  [class*="c-btn--"][disabled] {
     opacity: 0.5; }
-
-.c-btn--inline {
-  width: auto;
-  font-size: 1em;
-  padding: 1em; }
-
-@media (min-width: 47.9375em) {
-  .c-btn:active, .c-btn:focus {
-    border: .15em solid #eee;
-    /* mine */
-    outline: none;
-    /* mine */ } }
-
-/* Style variants
-   ========================================================================== */
-.c-btn--primary {
-  color: #fff;
-  background-color: #ec028d; }
   @media (min-width: 47.9375em) {
-    .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
-      background-color: #fd24a5; } }
+    [class*="c-btn--"]:active, [class*="c-btn--"]:focus {
+      border: .15em solid #eee;
+      /* mine */
+      outline: none;
+      /* mine */ } }
 
-.c-btn--secondary {
-  color: #050a1e;
-  background-color: #fdd941; }
-  @media (min-width: 47.9375em) {
-    .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
-      background-color: #fee373; } }
-
-/* Size variants
-   ========================================================================== */
-.c-btn--small {
-  padding: 0.1875em 0.5625em;
-  font-size: 0.8em; }
-
-.c-btn--large {
-  padding: 0.75em 2.25em;
-  font-size: 1.6em; }
+.c-btn {
+  /* Style variants
+     ========================================================================== */
+  /* Size variants
+     ========================================================================== */ }
+  .c-btn--primary {
+    color: #fff;
+    background-color: #ec028d;
+    width: 100%;
+    font-size: 1.5em; }
+    @media (min-width: 47.9375em) {
+      .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
+        background-color: #fd24a5; } }
+  .c-btn--secondary {
+    color: #112268;
+    background-color: #fdd941;
+    width: 100%;
+    font-size: 1.5em; }
+    @media (min-width: 47.9375em) {
+      .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
+        background-color: #fee373; } }
+  .c-btn--inline {
+    width: auto;
+    font-size: 1em;
+    padding: 1em; }
+  .c-btn--split {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    width: auto;
+    font-size: 1em;
+    padding: 0.2em 0.8em;
+    border-radius: 1em; }
+  .c-btn__counter {
+    color: #fdd941; }
+  .c-btn--small {
+    padding: 0.1875em 0.5625em;
+    font-size: 0.8em; }
+  .c-btn--large {
+    padding: 0.75em 2.25em;
+    font-size: 1.6em; }
 
 /* Ghost buttons
    ========================================================================== */
