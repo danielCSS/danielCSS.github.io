@@ -1,0 +1,21 @@
+.u-relative {
+  position: relative;
+}
+.u-absolute-center {
+  margin: auto;
+}
+.u-absolute-top {
+  top: 0;
+}
+.u-absolute-bottom {
+  bottom: 0;
+}
+.u-absolute-left {
+  left: 0;
+}
+.u-absolute-right {
+  right: 0;
+}
+[class*="u-absolute"] {
+  position: absolute !important;
+}

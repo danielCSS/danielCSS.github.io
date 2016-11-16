@@ -16,25 +16,40 @@
  * 5. Force all button-styled elements to appear clickable.
  */
 
+ /* c-btn base styles */
+
+ [class*="c-btn"] {
+   display: inline-block; /* [1] */
+   width: 100%;
+   vertical-align: middle; /* [2] */
+   font: inherit; /* [3] */
+   text-align: center; /* [4] */
+   margin: 0; /* [4] */
+   cursor: pointer; /* [5] */
+   //padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+   //padding: px-to-em(6) px-to-em(18);
+   padding: 0.5em 0;
+   transition: $global-transition;
+   border-radius: $global-radius;
+   border: .15em solid transparent; /* mine */
+   text-decoration: none; /* mine */
+   font-size: 1.5em;
+   &[disabled] {
+     opacity: 0.5;
+   }
+ }
 .c-btn {
-  display: inline-block; /* [1] */
-  vertical-align: middle; /* [2] */
-  font: inherit; /* [3] */
-  text-align: center; /* [4] */
-  margin: 0; /* [4] */
-  cursor: pointer; /* [5] */
-  //padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
-  padding: px-to-em(6) px-to-em(18);
-  transition: $global-transition;
-  border-radius: $global-radius;
-  border: .15em solid transparent; /* mine */
-  &:active,
-  &:focus {
-    border: .15em solid #eee; /* mine */
-    outline: none; /* mine */
+  &--inline {
+    width: auto;
+    font-size: 1em;
+    padding: 1em;
   }
-  &[disabled] {
-    opacity: 0.5;
+  @include mq($from: tablet) {
+    &:active,
+    &:focus {
+      border: .15em solid #eee; /* mine */
+      outline: none; /* mine */
+    }
   }
 }
 
@@ -42,38 +57,44 @@
    ========================================================================== */
 
 .c-btn--primary {
+  color: #fff;
   background-color: $primaryColor;
 
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none; /* [4] */
-    color: #fff;
+  // &,
+  // &:hover,
+  // &:active,
+  // &:focus {
+  //   text-decoration: none; /* [4] */
+  //   color: #fff;
+  // }
+  @include mq($from: tablet) {
+    &:hover:not([disabled]),
+    &:focus {
+      background-color: lighten($primaryColor,10);
+    }
   }
 
-  &:hover:not([disabled]),
-  &:focus {
-    background-color: lighten($primaryColor,10);
-  }
 
 }
 
 .c-btn--secondary {
+  color: $black;
   background-color: $secondaryColor;
-
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: $black;
+  @include mq($from: tablet) {
+    &:hover:not([disabled]),
+    &:focus {
+      background-color: lighten($secondaryColor,10);
+    }
   }
+  // &,
+  // &:hover,
+  // &:active,
+  // &:focus {
+  //   text-decoration: none;
+  //   color: $black;
+  // }
 
-  &:hover:not([disabled]),
-  &:focus {
-    background-color: lighten($secondaryColor,10);
-  }
+
 }
 
 // .c-btn--tertiary {

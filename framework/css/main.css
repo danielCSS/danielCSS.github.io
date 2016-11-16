@@ -1446,9 +1446,11 @@ table {
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-.c-btn {
+/* c-btn base styles */
+[class*="c-btn"] {
   display: inline-block;
   /* [1] */
+  width: 100%;
   vertical-align: middle;
   /* [2] */
   font: inherit;
@@ -1459,37 +1461,44 @@ table {
   /* [4] */
   cursor: pointer;
   /* [5] */
-  padding: 0.375em 1.125em;
+  padding: 0.5em 0;
   transition: 0.33333s;
   border-radius: 0.375em;
   border: .15em solid transparent;
-  /* mine */ }
+  /* mine */
+  text-decoration: none;
+  /* mine */
+  font-size: 1.5em; }
+  [class*="c-btn"][disabled] {
+    opacity: 0.5; }
+
+.c-btn--inline {
+  width: auto;
+  font-size: 1em;
+  padding: 1em; }
+
+@media (min-width: 47.9375em) {
   .c-btn:active, .c-btn:focus {
     border: .15em solid #eee;
     /* mine */
     outline: none;
-    /* mine */ }
-  .c-btn[disabled] {
-    opacity: 0.5; }
+    /* mine */ } }
 
 /* Style variants
    ========================================================================== */
 .c-btn--primary {
+  color: #fff;
   background-color: #ec028d; }
-  .c-btn--primary, .c-btn--primary:hover, .c-btn--primary:active, .c-btn--primary:focus {
-    text-decoration: none;
-    /* [4] */
-    color: #fff; }
-  .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
-    background-color: #fd24a5; }
+  @media (min-width: 47.9375em) {
+    .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
+      background-color: #fd24a5; } }
 
 .c-btn--secondary {
+  color: #050a1e;
   background-color: #fdd941; }
-  .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
-    text-decoration: none;
-    color: #050a1e; }
-  .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
-    background-color: #fee373; }
+  @media (min-width: 47.9375em) {
+    .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
+      background-color: #fee373; } }
 
 /* Size variants
    ========================================================================== */
@@ -1528,38 +1537,64 @@ table {
   font-size: 1.6em; }
 
 .c-header {
-  border-radius: 0.375em 0.375em 0 0;
-  background: #dadce9;
-  font-size: 1.5em; }
+  font-size: 1rem;
+  padding: 0.5em;
+  color: #112268;
+  background: #dadce9; }
+  .c-header--colored {
+    /* generally used in tabs */
+    color: #fff;
+    background: #112268; }
+  .c-header--inverted {
+    /* generally used in popups */
+    color: #112268;
+    background: #fff; }
   .c-header--small {
-    font-size: 1em; }
+    font-size: .7em; }
   .c-header--large {
     font-size: 2em; }
-
-.c-header__text {
-  padding: 1.5em 0;
-  display: inline-block;
-  margin-bottom: 0;
-  /* override default element margin bottom (may need to refactor this) */
-  font-size: inherit;
-  /* override default element margin bottom (may need to refactor this) */
-  line-height: inherit;
-  /* override default element margin bottom (may need to refactor this) */ }
+  .c-header__text {
+    font-size: 1.5em;
+    display: inline-block;
+    margin-bottom: 0;
+    /* override default element margin bottom (may need to refactor this) */ }
 
 .c-card {
   background: url(../images/promo.jpeg) no-repeat;
   background-size: cover;
   font-size: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  border: 1px solid #112268;
+  /* not sure if this is according to design....but without it - the promo looks weird */ }
 
-.c-card__title {
-  padding: 0.5em;
-  background: #112268;
+.c-caption {
+  font-size: 1rem;
   color: #fdd941;
+  background: #112268;
+  padding: 0.5em;
   text-transform: uppercase;
+  width: 100%;
   position: absolute;
-  bottom: 0;
-  width: 100%; }
+  top: 0; }
+  @media (min-width: 47.9375em) {
+    .c-caption {
+      top: auto;
+      bottom: 0; } }
+  .c-caption--inline {
+    /* generally used in card component */
+    font-size: .9rem;
+    color: #112268;
+    background: #dadce9;
+    padding: 0.5em 1em 0.5em 0.5em;
+    text-transform: none;
+    border-radius: 0 1em 0 0;
+    font-weight: bold;
+    width: auto;
+    bottom: 0;
+    top: auto; }
+    @media (min-width: 47.9375em) {
+      .c-caption--inline {
+        transform: translateY(-100%); } }
 
 /* ==========================================================================
    #CLEARFIX
@@ -2131,6 +2166,27 @@ table {
 .u-hidden {
   display: none !important; }
 
+.u-relative {
+  position: relative; }
+
+.u-absolute-center {
+  margin: auto; }
+
+.u-absolute-top {
+  top: 0; }
+
+.u-absolute-bottom {
+  bottom: 0; }
+
+.u-absolute-left {
+  left: 0; }
+
+.u-absolute-right {
+  right: 0; }
+
+[class*="u-absolute"] {
+  position: absolute !important; }
+
 @font-face {
   font-family: "Headline";
   src: url("../fonts/headline-regular.woff") format("woff"); }
@@ -2151,5 +2207,9 @@ table {
     background: #dadce9; }
   .style-guide > .c-header {
     margin: 2rem; }
+
+.c-btn {
+  display: block;
+  margin: 1rem 0; }
 
 /* media queries examples */

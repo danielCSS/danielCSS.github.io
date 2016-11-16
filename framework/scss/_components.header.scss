@@ -1,19 +1,29 @@
 .c-header {
-  border-radius: $global-radius $global-radius 0 0;
+  //border-radius: $global-radius $global-radius 0 0;
+  font-size: 1rem;
+  padding: 0.5em;
+  color: $textColor;
   background: $lightBackground;
-  font-size: 1.5em;
 
+  &--colored { /* generally used in tabs */
+    color: $white;
+    background: $textColor;
+  }
+  &--inverted { /* generally used in popups */
+    color: $textColor;
+    background: $white;
+  }
   &--small {
-    font-size: 1em;
+    font-size: .7em;
   }
   &--large {
     font-size: 2em;
   }
-}
-.c-header__text {
-  padding: 1.5em 0;
-  display: inline-block;
-  margin-bottom: 0; /* override default element margin bottom (may need to refactor this) */
-  font-size: inherit; /* override default element margin bottom (may need to refactor this) */
-  line-height: inherit;  /* override default element margin bottom (may need to refactor this) */
+  &__text{
+    font-size: 1.5em;
+    display: inline-block;
+    margin-bottom: 0; /* override default element margin bottom (may need to refactor this) */
+    // font-size: inherit; /* override default element margin bottom (may need to refactor this) */
+    // line-height: inherit;  /* override default element margin bottom (may need to refactor this) */
+  }
 }

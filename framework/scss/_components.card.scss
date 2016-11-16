@@ -3,7 +3,14 @@
   background-size: cover;
   font-size: 1rem;
   margin-bottom: 1rem; //$inuit-global-spacing-unit
-
+  //display: flex;
+  //flex-direction: column-reverse;
+  //justify-content: space-between;
+  border: 1px solid $textColor; /* not sure if this is according to design....but without it - the promo looks weird */
+  // @include mq($from: tablet) {
+  //   //flex-direction: column;
+  //   //justify-content: flex-end;
+  // }
   // &--small {
   //   font-size: 1em;
   // }
@@ -11,15 +18,33 @@
   //   font-size: 2em;
   // }
 }
-.c-card__title {
-  padding: 0.5em;
-  background: $textColor;
-  color: $secondaryColor;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  // margin-bottom: 0; /* override default element margin bottom (may need to refactor this) */
-  // font-size: inherit; /* override default element margin bottom (may need to refactor this) */
-  // line-height: inherit;  /* override default element margin bottom (may need to refactor this) */
-}
+// .c-card__promo {
+//   //align-self: flex-start; /* not full width */
+//   padding: 0.5em 1em 0.5em 0.5em;
+//   font-size: 1em;
+//   color: $textColor;
+//   background: $lightBackground;
+//   border-radius: 0 1em 0 0;
+//   //order: -1;
+//   font-weight: bold;
+//   position: absolute;
+//   bottom: 0;
+//   @include mq($from: tablet) {
+//     //order: 0;
+//     transform: translateY(-100%);
+//   }
+// }
+// .c-card__title {
+//   padding: 0.5em;
+//   background: $textColor;
+//   color: $secondaryColor;
+//   text-transform: uppercase;
+//   width: 100%;
+//   position: absolute;
+//   top:0;
+//   @include mq($from: tablet) {
+//     //order: 0;
+//     top: auto;
+//     bottom: 0;
+//   }
+// }
