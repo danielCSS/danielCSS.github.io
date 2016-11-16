@@ -1,5 +1,5 @@
 var svgFolder = 'coral1';
-var currentSrc = 'experiments';
+var currentSrc = 'framework';
 
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');

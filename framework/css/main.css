@@ -560,7 +560,20 @@ html {
   overflow-y: scroll;
   /* [2] */
   min-height: 100%;
-  /* [3] */ }
+  /* [3] */
+  color: red; }
+
+@media (max-width: 47.9275em) {
+  html {
+    font-size: 0.75em; } }
+
+@media (min-width: 47.9375em) {
+  html {
+    font-size: calc(0.00663 * 100vw + 6.91211px); } }
+
+@media (min-width: 85.625em) {
+  html {
+    font-size: 1em; } }
 
 /* ==========================================================================
    #HEADINGS
@@ -685,12 +698,10 @@ table {
   .o-grid > .o-grid__item {
     padding-left: 24px;
     -ms-flex: 1;
-        flex: 1; }
-    @media (max-width: 47.9275em) {
-      .o-grid > .o-grid__item {
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
-        /* mobile first ?!? */ } }
+        flex: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
     .o-grid > .o-grid__item--top {
       -ms-flex-item-align: start;
           align-self: flex-start; }
@@ -761,6 +772,62 @@ table {
     .o-grid--no-flex > .o-grid__item {
       -ms-flex: none;
           flex: none; }
+
+/*
+  mobile = s
+  tablet = md
+  desktop = lg
+  wide = xl
+*/
+@media (max-width: 47.9275em) {
+  .m-1\/2\@s > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; } }
+
+@media (min-width: 47.9375em) {
+  .m-1\/2\@md > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  .m-1\/3\@md > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; } }
+
+@media (min-width: 47.9375em) and (orientation: landscape) {
+  .m-1\/2\@md > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  .m-1\/3\@md > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; }
+  .m-1\/4\@md > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; } }
+
+@media (min-width: 75em) {
+  .m-1\/3\@lg > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; }
+  .m-1\/4\@lg > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; } }
+
+@media (min-width: 85.625em) {
+  .m-1\/4\@xl > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; }
+  .m-1\/5\@xl > .o-grid__item {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    max-width: 20%; } }
 
 /* ==========================================================================
    #MEDIA
@@ -1122,6 +1189,9 @@ table {
 .o-ratio--4\:3:before {
   padding-bottom: 75%; }
 
+.o-ratio--7\:5:before {
+  padding-bottom: 71.42857%; }
+
 .o-ratio--16\:9:before {
   padding-bottom: 56.25%; }
 
@@ -1475,6 +1545,21 @@ table {
   /* override default element margin bottom (may need to refactor this) */
   line-height: inherit;
   /* override default element margin bottom (may need to refactor this) */ }
+
+.c-card {
+  background: url(/images/promo.jpeg) no-repeat;
+  background-size: cover;
+  font-size: 1rem;
+  margin-bottom: 1rem; }
+
+.c-card__title {
+  padding: 0.5em;
+  background: #112268;
+  color: #fdd941;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 /* ==========================================================================
    #CLEARFIX

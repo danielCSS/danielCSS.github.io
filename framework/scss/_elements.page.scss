@@ -19,4 +19,33 @@ html {
   line-height: $inuit-global-line-height / $inuit-global-font-size; /* [1] */
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
+  color: red;
+}
+
+$narrow-viewport: 767;
+$wide-viewport: 1370;
+$narrow-font-size: 12;
+$wide-font-size: 16;
+$slope: ($wide-font-size - $narrow-font-size) / ($wide-viewport - $narrow-viewport);
+$initial-constant-font-size: ($narrow-font-size - $slope * $narrow-viewport) * 1px;
+$start-font-size-lock: ($narrow-font-size / 16) * 1em;
+$end-font-size-lock: ($wide-font-size / 16) * 1em;
+
+
+@include mq($until: tablet) {
+  html {
+    font-size: $start-font-size-lock;
+  }
+}
+
+@include mq($from: tablet) {
+  html {
+    font-size: calc(#{$slope} * 100vw + #{$initial-constant-font-size});
+  }
+}
+
+@include mq($from: wide) {
+  html {
+    font-size: $end-font-size-lock;
+  }
 }

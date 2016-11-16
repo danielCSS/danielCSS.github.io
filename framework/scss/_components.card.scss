@@ -1,0 +1,25 @@
+.c-card {
+  background: url(/images/promo.jpeg) no-repeat;
+  background-size: cover;
+  font-size: 1rem;
+  margin-bottom: 1rem; //$inuit-global-spacing-unit
+
+  // &--small {
+  //   font-size: 1em;
+  // }
+  // &--large {
+  //   font-size: 2em;
+  // }
+}
+.c-card__title {
+  padding: 0.5em;
+  background: $textColor;
+  color: $secondaryColor;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // margin-bottom: 0; /* override default element margin bottom (may need to refactor this) */
+  // font-size: inherit; /* override default element margin bottom (may need to refactor this) */
+  // line-height: inherit;  /* override default element margin bottom (may need to refactor this) */
+}
