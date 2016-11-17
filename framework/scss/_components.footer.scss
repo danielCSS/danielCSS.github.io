@@ -1,0 +1,9 @@
+.c-footer {
+  background: $textColor;
+  color: $white;
+  padding-right: 3em; /* to allow for right absolute button  */
+  &__icon-right {
+    background: $secondaryColor;
+    padding: 0 1em
+  }
+}

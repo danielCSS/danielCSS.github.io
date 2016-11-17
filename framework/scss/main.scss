@@ -129,7 +129,7 @@
 // Build and include your project’s UI Compoments here.
 @import "components.input-text";
 @import "components.buttons";
-@import "components.checkbox";
+@import "components.checkable";
 @import "components.header";
 @import "components.dropdown";
 @import "components.drawer";
@@ -138,6 +138,7 @@
 @import "components.tabs";
 @import "components.card";
 @import "components.caption";
+@import "components.footer";
 
 // UTILITIES
 @import "utilities.clearfix";

@@ -1,19 +1,19 @@
-.c-checkbox [type="checkbox"] {
+.c-checkable__input {
   display: none;
 }
-.c-checkbox [type="checkbox"]:checked + .o-icon {
+.c-checkable__input:checked + [class*="o-icon"] {
   color: $textColor;
 }
 
-.c-checkbox [type="checkbox"] ~ label {
+.c-checkable__input ~ label {
   padding-left: 2.2em; /* needs refactoring? */
   /* the following is optional - I find the 'auto' selection here a bit annoying */
   user-select: none;
 }
 
-.c-checkbox--small {
+.c-checkable--small {
   font-size: 0.8em;
 }
-.c-checkbox--large {
+.c-checkable--large {
   font-size: 1.6em;
 }

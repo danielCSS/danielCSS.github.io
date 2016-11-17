@@ -1363,7 +1363,7 @@ table {
   .o-pack--rev > .o-pack__item {
     direction: ltr; }
 
-.o-icon, [class*="o-icon--"] {
+[class*="o-icon"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -1407,6 +1407,7 @@ table {
 .c-input-text {
   border-radius: 0.375em;
   background: #fff;
+  color: currentColor;
   border: 0.15em solid #fff;
   padding: 0.5em;
   width: 100%; }
@@ -1495,7 +1496,7 @@ table {
   .c-btn--inline {
     width: auto;
     font-size: 1em;
-    padding: 1em; }
+    padding: .2em 2em; }
   .c-btn--split {
     display: -ms-flexbox;
     display: flex;
@@ -1521,13 +1522,13 @@ table {
 /**
  * Ghost buttons have see-through backgrounds and are bordered.
  */
-.c-checkbox [type="checkbox"] {
+.c-checkable__input {
   display: none; }
 
-.c-checkbox [type="checkbox"]:checked + .o-icon {
+.c-checkable__input:checked + [class*="o-icon"] {
   color: #112268; }
 
-.c-checkbox [type="checkbox"] ~ label {
+.c-checkable__input ~ label {
   padding-left: 2.2em;
   /* needs refactoring? */
   /* the following is optional - I find the 'auto' selection here a bit annoying */
@@ -1536,10 +1537,10 @@ table {
       -ms-user-select: none;
           user-select: none; }
 
-.c-checkbox--small {
+.c-checkable--small {
   font-size: 0.8em; }
 
-.c-checkbox--large {
+.c-checkable--large {
   font-size: 1.6em; }
 
 .c-header {
@@ -1601,6 +1602,15 @@ table {
     @media (min-width: 47.9375em) {
       .c-caption--inline {
         transform: translateY(-100%); } }
+
+.c-footer {
+  background: #112268;
+  color: #fff;
+  padding-right: 3em;
+  /* to allow for right absolute button  */ }
+  .c-footer__icon-right {
+    background: #fdd941;
+    padding: 0 1em; }
 
 /* ==========================================================================
    #CLEARFIX
@@ -2172,11 +2182,28 @@ table {
 .u-hidden {
   display: none !important; }
 
+/* misc utilities - still needs some thought */
+.u-margin-auto {
+  margin: auto; }
+
+.u-margin-left-auto {
+  margin-left: auto; }
+
+.u-align-left {
+  text-align: left; }
+
+.u-align-right {
+  text-align: right; }
+
 .u-relative {
   position: relative; }
 
 .u-absolute-center {
-  margin: auto; }
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 .u-absolute-top {
   top: 0; }
@@ -2185,10 +2212,14 @@ table {
   bottom: 0; }
 
 .u-absolute-left {
-  left: 0; }
+  left: 0;
+  top: 0;
+  bottom: 0; }
 
 .u-absolute-right {
-  right: 0; }
+  right: 0;
+  top: 0;
+  bottom: 0; }
 
 [class*="u-absolute"] {
   position: absolute !important; }
@@ -2216,6 +2247,9 @@ table {
       background: #112268; }
   .style-guide > .c-header {
     margin: 2rem; }
+
+hr {
+  margin-top: 2rem; }
 
 .paletteWpr.paletteWpr {
   background: #fff; }

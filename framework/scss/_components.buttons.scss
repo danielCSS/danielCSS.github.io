@@ -83,7 +83,8 @@
   &--inline {
     width: auto;
     font-size: 1em;
-    padding: 1em;
+    //padding: 1em; /* need to check this!!!!!! */
+    padding: .2em 2em;
   }
   &--split {
     display: flex;
