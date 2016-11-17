@@ -15,6 +15,139 @@
 
       </nav>
       <div class="o-wrapper style-guide">
+        <h2>1. Color Palette</h2>
+        <div class="o-box paletteWpr">
+          <div class="o-grid u-textCenter m-1/3@md palette">
+            <div class="o-grid__item">
+              <div class="primaryColor">
+                <span>Primary</span>
+                <span>#4a5a51</span>
+              </div>
+              <div class="textColor-light">
+                <span>#23337e</span>
+              </div>
+              <div class="textColor">
+                <span>#112268</span>
+              </div>
+            </div>
+            <div class="o-grid__item">
+              <div class="secondaryColor">
+                <span>Secondary</span>
+                <span>#fdd941</span>
+              </div>
+              <div class="actionColor-light">
+                <span>#fa25a4</span>
+              </div>
+              <div class="actionColor">
+                <span>#ec028d</span>
+              </div>
+            </div>
+            <div class="o-grid__item">
+              <div class="grayColor">
+                <div>
+                  <span>Gray</span>
+                  <span>#f1f2f7</span>
+                </div>
+                <div class="white">
+                  <span>#fff</span>
+                </div>
+              </div>
+              <div class="grayColor-dark">
+                <span>#dadce9</span>
+              </div>
+              <div class="blackColor">
+                <span>#050a1e</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>6. Buttons</h2>
+        <div class="o-box">
+          <h3>Button unstyled</h3>
+          <button class="c-btn u-margin-top-small">Button</button>
+        </div>
+        <div class="o-box">
+          <h3>Primary</h3>
+          <h5>Default</h5>
+          <!-- <span>Button Primary: small/normal/disabled/large</span> -->
+          <button class="c-btn--primary u-margin-top-small">Play Now</button>
+          <button class="c-btn--primary c-btn--inline u-margin-top-small">Join Now</button>
+          <button disabled class="c-btn--primary c-btn--inline u-margin-top-small">Join Now</button>
+          <h5>Icon Button</h5>
+          <button class="c-btn--primary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon"><use xlink:href="images/sprite.svg#MY_ACCOUNT" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <button class="c-btn--primary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon"><use xlink:href="images/sprite.svg#HOME" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <button class="c-btn--primary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon--inverted"><use xlink:href="images/sprite.svg#CLUB_FINDER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <button class="c-btn--primary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon"><use xlink:href="images/sprite.svg#EMAIL" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <button class="c-btn--primary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon--inverted"><use xlink:href="images/sprite.svg#CONTACT_US" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <h5>Variation</h5>
+          <button class="c-btn--primary c-btn--split u-margin-top-small">
+            <span>Play</span>
+            <span class="c-btn__counter u-padding-left-small">00:23</span>
+          </button>
+        </div>
+        <div class="o-box">
+          <h3>Secondary</h3>
+          <h5>Default</h5>
+          <!-- <span>Button Secondary: small/normal/disabled/large</span> -->
+          <button class="c-btn--secondary u-margin-top-small">Play Now</button>
+          <button class="c-btn--secondary c-btn--inline u-margin-top-small">Join Now</button>
+          <button disabled class="c-btn--secondary c-btn--inline u-margin-top-small">Join Now</button>
+          <h5>Icon Button</h5>
+          <button class="c-btn--secondary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon--colored"><use xlink:href="images/sprite.svg#MENU" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <button class="c-btn--secondary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon--colored"><use xlink:href="images/sprite.svg#MENU_2" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <button class="c-btn--secondary c-btn--inline u-padding-tiny u-margin-right">
+            <svg class="o-icon--colored"><use xlink:href="images/sprite.svg#CHEERY" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+
+          <h5>Variation</h5>
+          <button class="c-btn--secondary c-btn--split u-margin-top-small">
+            <span>Filter</span>
+            <svg class="o-icon--colored u-padding-left-small"><use xlink:href="images/sprite.svg#FILTERS_2" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+        </div>
+        <div class="o-box">
+          <h3>Text Button</h3>
+          <button class="c-btn--text u-padding-tiny u-margin-right">
+            <span class="c-btn__link">View all</span>
+          </button>
+          <button class="c-btn--text u-padding-tiny u-margin-right">
+            <span class="c-btn__link">Read more</span>
+          </button>
+        </div>
+        <div class="o-box">
+          <h3>Icon + Text Button</h3>
+          <button class="c-btn--text u-padding-tiny u-margin-right">
+            <span>Close</span>
+            <svg class="o-icon--colored u-margin-left-tiny"><use xlink:href="images/sprite.svg#CLOSE_INVERTED" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          </button>
+          <button class="c-btn--text u-padding-tiny u-margin-right">
+            <svg class="o-icon--primary"><use xlink:href="images/sprite.svg#ARROW_BACK" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            <span class="c-btn__link">Back</span>
+          </button>
+          <button class="c-btn--text u-padding-tiny u-margin-right">
+            <svg class="o-icon--primary"><use xlink:href="images/sprite.svg#EXPAND" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            <span class="c-btn__link">Set Deposit limit</span>
+          </button>
+          <button class="c-btn--text u-padding-tiny u-margin-right">
+            <svg class="o-icon--primary"><use xlink:href="images/sprite.svg#EXPAND" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            <span class="c-btn__link">Add Friend</span>
+          </button>
+        </div>
+        <h2>8. Forms</h2>
         <div class="o-box">
           <div class="o-grid o-grid--center">
             <div class="o-grid__item o-grid__item--flex-none"><label>Text Input - Pristine/Focused</label></div>
@@ -32,78 +165,54 @@
           <span class="u-margin-right">Checkboxes - Small,Normal,Large:</span>
           <div class="c-checkbox c-checkbox--small u-inline-block u-relative" >
             <input type="checkbox" id="cb1" />
-            <svg class="o-icon o-icon--bordered o-icon--positioned"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            <svg class="o-icon--bordered o-icon--positioned"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
             <label for="cb1">click here</label>
           </div>
           <div class="c-checkbox u-inline-block u-relative">
             <input type="checkbox" id="cb2" />
-            <svg class="o-icon o-icon--bordered o-icon--positioned"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            <svg class="o-icon--bordered o-icon--positioned"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
             <label for="cb2">click here</label>
           </div>
           <div class="c-checkbox c-checkbox--large u-inline-block u-relative" >
             <input type="checkbox" id="cb3" />
-            <svg class="o-icon o-icon--bordered o-icon--positioned"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            <svg class="o-icon--bordered o-icon--positioned"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
             <label for="cb3">click here</label>
           </div>
         </div>
         <div class="o-box">
-          <span>Button unstyled</span>
-          <button class="c-btn u-margin-top">Button</button>
-        </div>
-        <div class="o-box">
-          <span>Button Primary: small/normal/disabled/large</span>
-          <button class="c-btn--primary u-margin-top">Button</button>
-          <button class="c-btn--primary c-btn--inline u-margin-top">Button</button>
-          <button disabled class="c-btn--primary c-btn--inline u-margin-top">Button</button>
-          <button class="c-btn--primary c-btn--split u-margin-top">
-            <span>Play</span>
-            <span class="c-btn__counter u-padding-left-small">00:23</span>
-          </button>
-        </div>
-        <div class="o-box">
-          <span>Button Secondary: small/normal/disabled/large</span>
-          <button class="c-btn--secondary u-margin-top">Button</button>
-          <button class="c-btn--secondary c-btn--inline u-margin-top">Button</button>
-          <button disabled class="c-btn--secondary c-btn--inline u-margin-top">Button</button>
-          <button class="c-btn--secondary c-btn--split u-margin-top">
-            <span>Filter</span>
-            <svg class="o-icon o-icon--colored u-padding-left-small"><use xlink:href="images/sprite.svg#FILTERS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
-          </button>
-        </div>
-        <div class="o-box">
           <span>Icons</span>
-          <svg class="o-icon o-icon--primary u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--primary u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Arrow icon - primary</span>
-          <svg class="o-icon o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#JACKPOTS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#JACKPOTS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Jackpots icon - colored</span>
-          <svg class="o-icon o-icon--inverted u-margin-left"><use xlink:href="images/sprite.svg#CLOSE_INVERTED" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--inverted u-margin-left"><use xlink:href="images/sprite.svg#CLOSE_INVERTED" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Arrow icon - inverted</span>
-          <svg class="o-icon o-icon--bordered u-margin-left"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--bordered u-margin-left"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Checkbox icon - with stroke</span>
-          <svg class="o-icon o-icon--bordered o-icon--inverted u-margin-left"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--bordered o-icon--inverted u-margin-left"><use xlink:href="images/sprite.svg#CHECKBOX" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Checkbox icon - inverted with stroke</span>
         </div>
         <div class="o-box">
           <span>Icons - Sizes</span>
-          <svg class="o-icon o-icon--primary o-icon--small u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--primary o-icon--small u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Arrow icon - primary + small</span>
-          <svg class="o-icon o-icon--primary o-icon--medium u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--primary o-icon--medium u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Arrow icon - primary + medium</span>
-          <svg class="o-icon o-icon--primary u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--primary u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Arrow icon - primary + normal</span>
-          <svg class="o-icon o-icon--primary o-icon--large u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--primary o-icon--large u-margin-left"><use xlink:href="images/sprite.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <span>Arrow icon - primary + large</span>
         </div>
         <div class="c-header c-header--small">
-          <svg class="o-icon o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#BINGO_SCHEDULE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#BINGO_SCHEDULE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <h2 class="c-header__text">Small Header</h2>
         </div>
         <div class="c-header">
-          <svg class="o-icon o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#BINGO_SCHEDULE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#BINGO_SCHEDULE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <h2 class="c-header__text">Normal Header</h2>
         </div>
         <div class="c-header c-header--large">
-          <svg class="o-icon o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#BINGO_SCHEDULE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="o-icon--colored u-margin-left"><use xlink:href="images/sprite.svg#BINGO_SCHEDULE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           <h2 class="c-header__text">Large Header</h2>
         </div>
         <div class="o-box">
@@ -188,7 +297,7 @@
         </div>
 
       </div>
-      <!-- <svg class="o-icon o-icon--positioned u-margin-left"><use xlink:href="images/sprite.svg#GOOGLE+" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+      <!-- <svg class="o-icon--positioned u-margin-left"><use xlink:href="images/sprite.svg#GOOGLE+" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
       <span>Arrow icon - positioned</span> -->
       <!-- <div class="o-grid o-grid--center">
         <div class="o-grid__item u-1/2@tablet u-1/3@desktop"><label>Text Input - Pristine/Focused</label></div>

@@ -18,32 +18,32 @@
 
  /* c-btn base styles */
 
- [class*="c-btn--"] {
-   display: inline-block; /* [1] */
-   vertical-align: middle; /* [2] */
-   font: inherit; /* [3] */
-   text-align: center; /* [4] */
-   margin: 0; /* [4] */
-   cursor: pointer; /* [5] */
-   //padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
-   //padding: px-to-em(6) px-to-em(18);
-   padding: 0.5em 0;
-   transition: $global-transition;
-   border-radius: $global-radius;
-   border: .15em solid transparent; /* mine */
-   text-decoration: none; /* mine */
-   font-size: 1rem;
-   &[disabled] {
-     opacity: 0.5;
+.c-btn,[class*="c-btn--"] {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  //padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  //padding: px-to-em(6) px-to-em(18);
+  padding: 0.5em 0;
+  transition: $global-transition;
+  border-radius: $global-radius;
+  border: .15em solid transparent; /* mine */
+  text-decoration: none; /* mine */
+  font-size: 1rem;
+  &[disabled] {
+   opacity: 0.5;
+  }
+  @include mq($from: tablet) {
+   &:active,
+   &:focus {
+     border: .15em solid #eee; /* mine */
+     outline: none; /* mine */
    }
-   @include mq($from: tablet) {
-     &:active,
-     &:focus {
-       border: .15em solid #eee; /* mine */
-       outline: none; /* mine */
-     }
-   }
- }
+  }
+}
 .c-btn {
 
   /* Style variants
@@ -71,6 +71,14 @@
         background-color: lighten($secondaryColor,10);
       }
     }
+  }
+  &--text {
+    background: none;
+    border: none;
+    color: currentColor;
+  }
+  &__link {
+     text-decoration: underline;
   }
   &--inline {
     width: auto;

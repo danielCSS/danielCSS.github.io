@@ -1,4 +1,4 @@
-.o-icon {
+.o-icon,[class*="o-icon--"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -11,7 +11,7 @@
   box-sizing: content-box;
   //padding: 0 0.5rem 0.2rem 0;
   //padding: 0 px-to-em(3) px-to-em(2) 0;
-  padding: 0 0 px-to-em(2) 0;
+  //padding: 0 0 px-to-em(2) 0;
   margin: auto;
   overflow: hidden;
   pointer-events: none; /* TODO: decide whether to use .ie .o-icon {} selector for this */
@@ -19,43 +19,45 @@
   //   padding: 0 0.3rem 0 0;
   // }
 }
-.o-icon--small {
-  font-size: 1.3em;
-}
-.o-icon--medium {
-  font-size: 1.7em;
-}
-.o-icon--large {
-  font-size: 2.4em;
-  //padding-right: 1.3rem;
-}
-
-.o-icon--positioned {
-  position: absolute;
-  top:0;
-  bottom:0;
-  padding:0;
-}
-.o-icon--colored {
-  fill: $textColor;
-}
-.o-icon--inverted {
-  color: $textColor;
-}
-.o-icon--bordered {
-  stroke: $textColor;
-}
-.o-icon--primary {
-  fill: $primaryColor;
-}
-.o-icon--secondary {
-  fill: $secondaryColor;
-}
-.active {
-  > .o-icon {
+.o-icon {
+  &--small {
+    font-size: 1.3em;
+  }
+  &--medium {
+    font-size: 1.7em;
+  }
+  &--large {
+    font-size: 2.4em;
+    //padding-right: 1.3rem;
+  }
+  /* use utility positioning classes instead */
+  // &--positioned {
+  //   position: absolute;
+  //   top:0;
+  //   bottom:0;
+  //   padding:0;
+  // }
+  &--colored {
     fill: $textColor;
   }
-  > .o-icon--colored {
-    fill: $white;
+  &--inverted {
+    color: $textColor;
+  }
+  &--bordered {
+    stroke: $textColor;
+  }
+  &--primary {
+    fill: $primaryColor;
+  }
+  &--secondary {
+    fill: $secondaryColor;
+  }
+  .active {
+    > [class*="o-icon--"] {
+      fill: $textColor;
+    }
+    > .o-icon--colored {
+      fill: $white;
+    }
   }
 }

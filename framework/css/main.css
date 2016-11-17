@@ -72,8 +72,10 @@
  * Hide.................Helper classes to hide content
  */
 /* dark blue */
-/* pink */
 /* yellow */
+/* pink temp!!! */
+/* pink */
+/* pink */
 /* gray */
 body:before {
   background-color: #FCF8E3;
@@ -1361,7 +1363,7 @@ table {
   .o-pack--rev > .o-pack__item {
     direction: ltr; }
 
-.o-icon {
+.o-icon, [class*="o-icon--"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -1374,47 +1376,33 @@ table {
   text-align: center;
   vertical-align: middle;
   box-sizing: content-box;
-  padding: 0 0 0.125em 0;
   margin: auto;
   overflow: hidden;
   pointer-events: none;
   /* TODO: decide whether to use .ie .o-icon {} selector for this */ }
 
-.o-icon--small {
-  font-size: 1.3em; }
-
-.o-icon--medium {
-  font-size: 1.7em; }
-
-.o-icon--large {
-  font-size: 2.4em; }
-
-.o-icon--positioned {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding: 0; }
-
-.o-icon--colored {
-  fill: #112268; }
-
-.o-icon--inverted {
-  color: #112268; }
-
-.o-icon--bordered {
-  stroke: #112268; }
-
-.o-icon--primary {
-  fill: #ec028d; }
-
-.o-icon--secondary {
-  fill: #fdd941; }
-
-.active > .o-icon {
-  fill: #112268; }
-
-.active > .o-icon--colored {
-  fill: #fff; }
+.o-icon {
+  /* use utility positioning classes instead */ }
+  .o-icon--small {
+    font-size: 1.3em; }
+  .o-icon--medium {
+    font-size: 1.7em; }
+  .o-icon--large {
+    font-size: 2.4em; }
+  .o-icon--colored {
+    fill: #112268; }
+  .o-icon--inverted {
+    color: #112268; }
+  .o-icon--bordered {
+    stroke: #112268; }
+  .o-icon--primary {
+    fill: #ec028d; }
+  .o-icon--secondary {
+    fill: #fdd941; }
+  .o-icon .active > [class*="o-icon--"] {
+    fill: #112268; }
+  .o-icon .active > .o-icon--colored {
+    fill: #fff; }
 
 .c-input-text {
   border-radius: 0.375em;
@@ -1447,7 +1435,7 @@ table {
  * 5. Force all button-styled elements to appear clickable.
  */
 /* c-btn base styles */
-[class*="c-btn--"] {
+.c-btn, [class*="c-btn--"] {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -1468,10 +1456,10 @@ table {
   text-decoration: none;
   /* mine */
   font-size: 1rem; }
-  [class*="c-btn--"][disabled] {
+  .c-btn[disabled], [class*="c-btn--"][disabled] {
     opacity: 0.5; }
   @media (min-width: 47.9375em) {
-    [class*="c-btn--"]:active, [class*="c-btn--"]:focus {
+    .c-btn:active, .c-btn:focus, [class*="c-btn--"]:active, [class*="c-btn--"]:focus {
       border: .15em solid #eee;
       /* mine */
       outline: none;
@@ -1498,6 +1486,12 @@ table {
     @media (min-width: 47.9375em) {
       .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
         background-color: #fee373; } }
+  .c-btn--text {
+    background: none;
+    border: none;
+    color: currentColor; }
+  .c-btn__link {
+    text-decoration: underline; }
   .c-btn--inline {
     width: auto;
     font-size: 1em;
@@ -1552,7 +1546,7 @@ table {
   font-size: 1rem;
   padding: 0.5em;
   color: #112268;
-  background: #dadce9; }
+  background: #f1f2f7; }
   .c-header--colored {
     /* generally used in tabs */
     color: #fff;
@@ -1596,7 +1590,7 @@ table {
     /* generally used in card component */
     font-size: .9rem;
     color: #112268;
-    background: #dadce9;
+    background: #f1f2f7;
     padding: 0.5em 1em 0.5em 0.5em;
     text-transform: none;
     border-radius: 0 1em 0 0;
@@ -2216,12 +2210,67 @@ table {
   max-width: 100em; }
   .style-guide > .o-box {
     margin: 2em;
-    background: #dadce9; }
+    background: #f1f2f7; }
+    .style-guide > .o-box.dark {
+      color: #f1f2f7;
+      background: #112268; }
   .style-guide > .c-header {
     margin: 2rem; }
 
-.c-btn {
-  display: block;
-  margin: 1rem 0; }
+.paletteWpr.paletteWpr {
+  background: #fff; }
+
+.palette {
+  color: #fff; }
+  .palette div {
+    min-height: 40px; }
+  .palette .o-grid__item > div {
+    padding: 1em; }
+
+.primaryColor {
+  background: #4a5ab1;
+  height: 160px; }
+
+.textColor-light {
+  background: #23337e; }
+
+.textColor {
+  background: #112268; }
+
+.secondaryColor {
+  background: #fdd941;
+  height: 160px; }
+
+.actionColor-light {
+  background: #fa25a4; }
+
+.actionColor {
+  background: #ec028d; }
+
+.grayColor.grayColor.grayColor {
+  background: #f1f2f7;
+  height: 160px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0;
+  color: #050a1e; }
+
+.grayColor > div:first-child {
+  margin: auto; }
+
+.white {
+  background: #fff; }
+
+.grayColor-dark {
+  background: #dadce9; }
+
+.blackColor {
+  background: #050a1e; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  margin-top: 2rem; }
 
 /* media queries examples */
