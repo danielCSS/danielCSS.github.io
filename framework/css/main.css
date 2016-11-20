@@ -1374,9 +1374,10 @@ table {
   font-size: 2em;
   /* default-size */
   text-align: center;
+  padding-right: 0.1em;
+  /* to override this - use utility class ?? */
   vertical-align: middle;
   box-sizing: content-box;
-  margin: auto;
   overflow: hidden;
   pointer-events: none;
   /* TODO: decide whether to use .ie .o-icon {} selector for this */ }
@@ -1456,7 +1457,8 @@ table {
   /* mine */
   text-decoration: none;
   /* mine */
-  font-size: 1rem; }
+  font-size: 1em;
+  /* ems here! */ }
   .c-btn[disabled], [class*="c-btn--"][disabled] {
     opacity: 0.5; }
   @media (min-width: 47.9375em) {
@@ -1497,9 +1499,11 @@ table {
     width: auto;
     font-size: 1em;
     padding: .2em 2em; }
+  .c-btn--icon {
+    padding: .4em; }
   .c-btn--split {
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -ms-flex-pack: justify;
         justify-content: space-between;
     -ms-flex-align: center;
@@ -1509,7 +1513,8 @@ table {
     padding: 0.2em 0.8em;
     border-radius: 1em; }
   .c-btn__counter {
-    color: #fdd941; }
+    color: #fdd941;
+    padding-left: 0.8em; }
   .c-btn--small {
     padding: 0.1875em 0.5625em;
     font-size: 0.8em; }
@@ -1543,28 +1548,50 @@ table {
 .c-checkable--large {
   font-size: 1.6em; }
 
-.c-header {
-  font-size: 1rem;
-  padding: 0.5em;
+.c-header, [class*="c-header--"] {
+  font-size: 1.3rem;
+  padding: 0 1em;
+  height: 4rem;
   color: #112268;
-  background: #f1f2f7; }
-  .c-header--colored {
-    /* generally used in tabs */
-    color: #fff;
-    background: #112268; }
-  .c-header--inverted {
-    /* generally used in popups */
-    color: #112268;
-    background: #fff; }
-  .c-header--small {
-    font-size: .7em; }
-  .c-header--large {
-    font-size: 2em; }
-  .c-header__text {
-    font-size: 1.5em;
-    display: inline-block;
-    margin-bottom: 0;
-    /* override default element margin bottom (may need to refactor this) */ }
+  background: #f1f2f7;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.c-header--main {
+  height: 5rem;
+  font-size: 1.5rem; }
+
+.c-header__text {
+  font-size: 1em;
+  /* override h2 element style */
+  display: inline-block;
+  margin: 0 auto 0 0.5em;
+  /* override default h2 element margin bottom (auto right margin is to space the flex-items) */ }
+
+.c-header--colored {
+  /* generally used in tabs */
+  color: #fff;
+  background: #112268; }
+
+.c-header--inverted {
+  /* generally used in popups */
+  color: #112268;
+  background: #fff; }
+
+[class*="c-link"] {
+  color: currentColor;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block; }
+
+.c-link--no-underline {
+  text-decoration: none; }
+
+.c-link--icon {
+  padding-left: 2em;
+  /* use when icon is position absolute and pointer is need on icon as well */ }
 
 .c-card {
   background: url(../images/promo.jpeg) no-repeat;
@@ -1604,13 +1631,25 @@ table {
         transform: translateY(-100%); } }
 
 .c-footer {
+  position: relative;
   background: #112268;
   color: #fff;
-  padding-right: 3em;
-  /* to allow for right absolute button  */ }
-  .c-footer__icon-right {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .c-footer__item {
+    padding: 0.5em;
+    color: #fff;
+    position: relative; }
+  .c-footer__item--spacer {
+    margin-right: auto; }
+  .c-footer__item--right {
     background: #fdd941;
-    padding: 0 1em; }
+    color: #112268;
+    margin-left: 1em;
+    position: relative;
+    /* PROBLEM: Feedback has no icon whereas help does this causes the feebcack item to not take up all vertical space */ }
 
 /* ==========================================================================
    #CLEARFIX
@@ -2182,6 +2221,18 @@ table {
 .u-hidden {
   display: none !important; }
 
+@media (max-width: 47.9275em) {
+  .u-hidden--mobile {
+    display: none !important; } }
+
+@media (min-width: 47.9375em) and (max-width: 74.99em) {
+  .u-hidden--tablet {
+    display: none !important; } }
+
+@media (min-width: 75em) {
+  .u-hidden--desktop {
+    display: none !important; } }
+
 /* misc utilities - still needs some thought */
 .u-margin-auto {
   margin: auto; }
@@ -2197,6 +2248,12 @@ table {
 
 .u-relative {
   position: relative; }
+
+.u-inline-block {
+  display: inline-block; }
+
+.u-reset-case {
+  text-transform: none; }
 
 .u-absolute-center {
   margin: auto;
@@ -2228,12 +2285,6 @@ table {
   font-family: "Headline";
   src: url("../fonts/headline-regular.woff") format("woff"); }
 
-.u-relative {
-  position: relative; }
-
-.u-inline-block {
-  display: inline-block; }
-
 .style-guide {
   font-family: "Headline",sans-serif;
   color: #112268;
@@ -2245,7 +2296,7 @@ table {
     .style-guide > .o-box.dark {
       color: #f1f2f7;
       background: #112268; }
-  .style-guide > .c-header {
+  .style-guide > .c-header, .style-guide [class*="c-header--"] {
     margin: 2rem; }
 
 hr {

@@ -4,13 +4,6 @@
     src: url("../fonts/headline-regular.woff") format('woff');
 }
 
-.u-relative {
-  position: relative;
-}
-.u-inline-block {
-  display: inline-block;
-}
-
 .style-guide {
   font-family: "Headline",sans-serif;
   color: $textColor;
@@ -24,7 +17,7 @@
       background: $textColor;
     }
   }
-  > .c-header {
+  > .c-header,[class*="c-header--"] {
     margin: 2rem;
   }
 

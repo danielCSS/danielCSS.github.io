@@ -1,10 +1,25 @@
-.c-header {
-  //border-radius: $global-radius $global-radius 0 0;
-  font-size: 1rem;
-  padding: 0.5em;
+
+.c-header,[class*="c-header--"] {
+  font-size: 1.3rem;
+  padding: 0 1em;
+  height: 4rem;
   color: $textColor;
   background: $lightBackground;
+  display:flex;
+  align-items: center;
+}
 
+.c-header {
+  //border-radius: $global-radius $global-radius 0 0;
+  &--main {
+    height: 5rem;
+    font-size: 1.5rem;
+  }
+  &__text {
+    font-size: 1em; /* override h2 element style */
+    display: inline-block;
+    margin: 0 auto 0 0.5em; /* override default h2 element margin bottom (auto right margin is to space the flex-items) */
+  }
   &--colored { /* generally used in tabs */
     color: $white;
     background: $textColor;
@@ -13,17 +28,10 @@
     color: $textColor;
     background: $white;
   }
-  &--small {
-    font-size: .7em;
-  }
-  &--large {
-    font-size: 2em;
-  }
-  &__text{
-    font-size: 1.5em;
-    display: inline-block;
-    margin-bottom: 0; /* override default element margin bottom (may need to refactor this) */
-    // font-size: inherit; /* override default element margin bottom (may need to refactor this) */
-    // line-height: inherit;  /* override default element margin bottom (may need to refactor this) */
-  }
+  // &--small {
+  //   font-size: .7em;
+  // }
+  // &--large {
+  //   font-size: 1.5em;
+  // }
 }

@@ -3,16 +3,18 @@
   width: 1em;
   height: 1em;
   fill: $white; /* default color */
+  //fill: currentColor;
   color: $white; /* default color when currentColor is used */
+  //color: currentColor;
   font-size: 2em; /* default-size */
   text-align: center;
-
+  padding-right: 0.1em; /* to override this - use utility class ?? */
   vertical-align: middle;
   box-sizing: content-box;
   //padding: 0 0.5rem 0.2rem 0;
   //padding: 0 px-to-em(3) px-to-em(2) 0;
   //padding: 0 0 px-to-em(2) 0;
-  margin: auto;
+  //margin: auto; /* need to check whether I can remove this - it effects flexbox items */
   overflow: hidden;
   pointer-events: none; /* TODO: decide whether to use .ie .o-icon {} selector for this */
   // @include respond-to(mobile) {
