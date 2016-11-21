@@ -1363,7 +1363,7 @@ table {
   .o-pack--rev > .o-pack__item {
     direction: ltr; }
 
-[class*="o-icon"] {
+.o-icon, [class*="o-icon--"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -1381,6 +1381,8 @@ table {
   overflow: hidden;
   pointer-events: none;
   /* TODO: decide whether to use .ie .o-icon {} selector for this */ }
+  .is-active .o-icon, .is-active [class*="o-icon--"] {
+    fill: #112268; }
 
 .o-icon {
   /* use utility positioning classes instead */ }
@@ -1392,6 +1394,10 @@ table {
     font-size: 2.4em; }
   .o-icon--colored {
     fill: #112268; }
+    .is-active .o-icon--colored {
+      fill: #fff; }
+    .c-tab .o-icon--colored {
+      transition: all 0.3s; }
   .o-icon--inverted {
     color: #112268; }
   .o-icon--bordered {
@@ -1400,26 +1406,35 @@ table {
     fill: #ec028d; }
   .o-icon--secondary {
     fill: #fdd941; }
-  .o-icon .active > [class*="o-icon--"] {
-    fill: #112268; }
-  .o-icon .active > .o-icon--colored {
-    fill: #fff; }
+    .is-active .o-icon--secondary {
+      fill: #112268; }
 
-.c-input-text {
-  border-radius: 0.375em;
-  background: #fff;
-  color: currentColor;
-  border: 0.15em solid #fff;
-  padding: 0.5em;
-  width: 100%; }
-  .c-input-text:focus {
-    border: 0.15em solid #112268;
-    outline: none; }
-  .invalid .c-input-text {
-    border: 0.15em solid #ec028d; }
-
-.invalid .error {
-  color: #ec028d; }
+.c-input {
+  /* By default this component refers to a text input */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .c-input__input {
+    border-radius: 0.375em;
+    background: #fff;
+    color: currentColor;
+    border: 0.15em solid #fff;
+    padding: 0.5em;
+    width: 100%; }
+    .c-input__input:focus {
+      border: 0.15em solid #112268;
+      outline: none; }
+  .c-input__label {
+    padding-bottom: 0.5em; }
+  .c-input__msg {
+    padding-top: 0.5em;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+    .has-error .c-input__msg {
+      color: #ec028d; }
+  .c-input.has-error .c-input__input {
+    border-color: #ec028d; }
 
 /* ==========================================================================
    #BUTTONS
@@ -1450,7 +1465,7 @@ table {
   /* [4] */
   cursor: pointer;
   /* [5] */
-  padding: 0.5em 0;
+  padding: 0.1em 0.5em;
   transition: 0.33333s;
   border-radius: 0.375em;
   border: .15em solid transparent;
@@ -1461,6 +1476,9 @@ table {
   /* ems here! */ }
   .c-btn[disabled], [class*="c-btn--"][disabled] {
     opacity: 0.5; }
+  .c-btn.is-active, [class*="c-btn--"].is-active {
+    background: #fdd941;
+    color: #112268; }
   @media (min-width: 47.9375em) {
     .c-btn:active, .c-btn:focus, [class*="c-btn--"]:active, [class*="c-btn--"]:focus {
       border: .15em solid #eee;
@@ -1477,7 +1495,8 @@ table {
     color: #fff;
     background-color: #ec028d;
     width: 100%;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    padding: 0.5em; }
     @media (min-width: 47.9375em) {
       .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
         background-color: #fd24a5; } }
@@ -1485,7 +1504,8 @@ table {
     color: #112268;
     background-color: #fdd941;
     width: 100%;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    padding: 0.5em; }
     @media (min-width: 47.9375em) {
       .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
         background-color: #fee373; } }
@@ -1498,7 +1518,7 @@ table {
   .c-btn--inline {
     width: auto;
     font-size: 1em;
-    padding: .2em 2em; }
+    padding: .1em 2em; }
   .c-btn--icon {
     padding: .4em; }
   .c-btn--split {
@@ -1510,7 +1530,7 @@ table {
         align-items: center;
     width: auto;
     font-size: 1em;
-    padding: 0.2em 0.8em;
+    padding: 0.1em 0.8em;
     border-radius: 1em; }
   .c-btn__counter {
     color: #fdd941;
@@ -1527,6 +1547,10 @@ table {
 /**
  * Ghost buttons have see-through backgrounds and are bordered.
  */
+.c-checkable, [class*="c-checkable--"] {
+  position: relative;
+  display: inline-block; }
+
 .c-checkable__input {
   display: none; }
 
@@ -1542,11 +1566,23 @@ table {
       -ms-user-select: none;
           user-select: none; }
 
+.c-checkable--terms {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 1.3rem; }
+
 .c-checkable--small {
   font-size: 0.8em; }
 
 .c-checkable--large {
   font-size: 1.6em; }
+
+.c-checkable__label-wpr {
+  -ms-flex: 1;
+      flex: 1;
+  font-size: 0.9rem; }
 
 .c-header, [class*="c-header--"] {
   font-size: 1.3rem;
@@ -1586,12 +1622,35 @@ table {
   cursor: pointer;
   display: inline-block; }
 
-.c-link--no-underline {
+.c-link--no-deco {
   text-decoration: none; }
 
 .c-link--icon {
   padding-left: 2em;
   /* use when icon is position absolute and pointer is need on icon as well */ }
+
+.c-tab {
+  font-size: 1.3rem;
+  padding: 0 1em;
+  height: 4rem;
+  color: #112268;
+  background: #f1f2f7;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 0.2em; }
+  .c-tab.is-active {
+    background: #112268;
+    color: #fff;
+    /* not the best solution because we break i/o priinciple
+    (we change the meaning icon--colored based on context), but
+    maybe the most pragmatic */ }
+    .c-tab.is-active .o-icon--colored {
+      color: #112268;
+      fill: #fdd941;
+      transform: rotateX(180deg); }
 
 .c-card {
   background: url(../images/promo.jpeg) no-repeat;
@@ -2271,12 +2330,14 @@ table {
 .u-absolute-left {
   left: 0;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  margin: auto; }
 
 .u-absolute-right {
   right: 0;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  margin: auto; }
 
 [class*="u-absolute"] {
   position: absolute !important; }

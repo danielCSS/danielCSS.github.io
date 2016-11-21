@@ -1,3 +1,8 @@
+
+.c-checkable, [class*="c-checkable--"] {
+  position: relative;
+  display: inline-block;
+}
 .c-checkable__input {
   display: none;
 }
@@ -10,10 +15,20 @@
   /* the following is optional - I find the 'auto' selection here a bit annoying */
   user-select: none;
 }
-
-.c-checkable--small {
-  font-size: 0.8em;
-}
-.c-checkable--large {
-  font-size: 1.6em;
+.c-checkable {
+  &--terms {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+  }
+  &--small {
+    font-size: 0.8em;
+  }
+  &--large {
+    font-size: 1.6em;
+  }
+  &__label-wpr {
+    flex: 1;
+    font-size: 0.9rem;
+  }
 }

@@ -1,4 +1,4 @@
-[class*="o-icon"] {
+.o-icon,[class*="o-icon--"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -20,6 +20,9 @@
   // @include respond-to(mobile) {
   //   padding: 0 0.3rem 0 0;
   // }
+  .is-active & {
+    fill: $textColor;
+  }
 }
 .o-icon {
   &--small {
@@ -41,6 +44,12 @@
   // }
   &--colored {
     fill: $textColor;
+    .is-active & {
+      fill: $white;
+    }
+    .c-tab & {
+      transition: all 0.3s;
+    }
   }
   &--inverted {
     color: $textColor;
@@ -53,13 +62,8 @@
   }
   &--secondary {
     fill: $secondaryColor;
-  }
-  .active {
-    > [class*="o-icon--"] {
+    .is-active & {
       fill: $textColor;
-    }
-    > .o-icon--colored {
-      fill: $white;
     }
   }
 }

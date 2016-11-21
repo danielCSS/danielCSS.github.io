@@ -39,10 +39,12 @@
 .u-absolute-left {
   left: 0;
   top:0;bottom:0;
+  margin: auto;
 }
 .u-absolute-right {
   right: 0;
   top:0;bottom:0;
+  margin: auto;
 }
 [class*="u-absolute"] {
   position: absolute !important;

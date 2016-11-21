@@ -1,0 +1,24 @@
+
+.c-tab { //},[class*="c-tab--"] {
+  font-size: 1.3rem;
+  padding: 0 1em;
+  height: 4rem;
+  color: $textColor;
+  background: $lightBackground;
+  display:flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+  &.is-active {
+    background: $textColor;
+    color: $white;
+    /* not the best solution because we break i/o priinciple
+    (we change the meaning icon--colored based on context), but
+    maybe the most pragmatic */
+    .o-icon--colored {
+      color: $textColor;
+      fill: $secondaryColor;
+      transform: rotateX(180deg);
+    }
+  }
+}

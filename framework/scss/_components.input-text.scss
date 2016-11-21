@@ -1,21 +1,33 @@
-.c-input-text {
-  border-radius: px-to-em(6);
-  background: $white;
-  color: currentColor;
-  border: 0.15em solid $white;
-  padding: 0.5em;
-  width: 100%;
 
-  &:focus {
-    border: 0.15em solid $textColor;
-    outline: none;
+.c-input { /* By default this component refers to a text input */
+  display:flex;
+  flex-direction: column;
+
+  &__input {
+    border-radius: px-to-em(6);
+    background: $white;
+    color: currentColor;
+    border: 0.15em solid $white;
+    padding: 0.5em;
+    width: 100%;
+    &:focus {
+      border: 0.15em solid $textColor;
+      outline: none;
+    }
   }
-  .invalid & {
-    border: 0.15em solid $primaryColor;
+  &__label {
+    padding-bottom: 0.5em;
   }
-}
-.error {
-  .invalid & {
-    color: $primaryColor;
+  &__msg {
+    padding-top: 0.5em;
+    align-self: flex-end;
+    .has-error & {
+      color: $primaryColor;
+    }
+  }
+  &.has-error {
+    .c-input__input {
+      border-color: $primaryColor
+    }
   }
 }

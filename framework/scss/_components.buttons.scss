@@ -27,7 +27,8 @@
   cursor: pointer; /* [5] */
   //padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
   //padding: px-to-em(6) px-to-em(18);
-  padding: 0.5em 0;
+  //padding: 0.5em 0;
+  padding: 0.1em 0.5em;
   transition: $global-transition;
   border-radius: $global-radius;
   border: .15em solid transparent; /* mine */
@@ -35,6 +36,10 @@
   font-size: 1em; /* ems here! */
   &[disabled] {
    opacity: 0.5;
+  }
+  &.is-active {
+    background: $secondaryColor;
+    color: $textColor;
   }
   @include mq($from: tablet) {
    &:active,
@@ -53,6 +58,7 @@
     background-color: $primaryColor;
     width: 100%;
     font-size: 1.5em;
+    padding: 0.5em;
     @include mq($from: tablet) {
       &:hover:not([disabled]),
       &:focus {
@@ -65,6 +71,7 @@
     background-color: $secondaryColor;
     width: 100%;
     font-size: 1.5em;
+    padding: 0.5em;
     @include mq($from: tablet) {
       &:hover:not([disabled]),
       &:focus {
@@ -84,7 +91,7 @@
     width: auto;
     font-size: 1em;
     //padding: 1em; /* need to check this!!!!!! */
-    padding: .2em 2em;
+    padding: .1em 2em;
   }
   &--icon {
      padding: .4em;
@@ -95,9 +102,10 @@
     align-items: center;
     width: auto;
     font-size: 1em;
-    padding: 0.2em 0.8em;
+    padding: 0.1em 0.8em;
     border-radius: 1em;
   }
+
   &__counter {
     color: $secondaryColor;
     padding-left: 0.8em;
