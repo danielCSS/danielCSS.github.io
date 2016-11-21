@@ -1571,7 +1571,11 @@ table {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  /* less than optimal - but it does the job */ }
+  .c-checkable--terms .terms__label {
+    height: 2em;
+    padding-left: 2.5em; }
 
 .c-checkable--small {
   font-size: 0.8em; }
