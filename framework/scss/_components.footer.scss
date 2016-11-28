@@ -2,14 +2,14 @@
   position: relative;
   background: $textColor;
   color: $white;
-  //padding-right: 3em; /* to allow for right absolute button  */
   display: flex;
-  align-items: center;
-  //height: 3rem;
+  align-items: stretch;
   &__item {
     padding: 0.5em;
     color: $white;
     position: relative;
+    display: flex;
+    align-items: center;
   }
   &__item--spacer {
     margin-right: auto;
@@ -19,25 +19,5 @@
     color: $textColor;
     margin-left: 1em;
     position: relative;
-    //height: 3rem;
-    // &:before {
-    //   content: '';
-    //   height: 3rem;
-    //   line-height: 3rem;
-    // }
-    /* PROBLEM: Feedback has no icon whereas help does this causes the feebcack item to not take up all vertical space */
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top:0;
-    //   //z-index: -1;
-    //   width: 100%;
-    //   height: 3rem;
-    //   background: $secondaryColor;
-    // }
-    //position: absolute;
-    //right: 0;
-    //top: 0;
-    //bottom: 0;
   }
 }

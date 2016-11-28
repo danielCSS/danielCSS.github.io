@@ -1699,20 +1699,23 @@ table {
   color: #fff;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center; }
+  -ms-flex-align: stretch;
+      align-items: stretch; }
   .c-footer__item {
     padding: 0.5em;
     color: #fff;
-    position: relative; }
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
   .c-footer__item--spacer {
     margin-right: auto; }
   .c-footer__item--right {
     background: #fdd941;
     color: #112268;
     margin-left: 1em;
-    position: relative;
-    /* PROBLEM: Feedback has no icon whereas help does this causes the feebcack item to not take up all vertical space */ }
+    position: relative; }
 
 /* ==========================================================================
    #CLEARFIX
