@@ -2068,21 +2068,59 @@ table {
     margin: 2rem; }
 
 /* media queries examples */
-.third {
-  height: 60vh;
+body {
+  margin: 0; }
+
+main {
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden; }
+
+a {
+  color: inherit; }
+
+main > section {
+  position: relative;
+  min-height: 100vh; }
+
+.popup {
+  background: rebeccaPurple;
+  -ms-flex: 0 0 100vw;
+      flex: 0 0 100vw;
+  display: none;
+  -ms-flex-order: 5;
+      order: 5;
+  color: white; }
+  .popup:target {
+    display: block;
+    -ms-flex-order: -1;
+        order: -1; }
+
+.menu {
+  -ms-flex: 0 0 30vw;
+      flex: 0 0 30vw;
   background: aqua; }
+  .menu:target ~ .page {
+    transform: translateX(0); }
 
-header.third {
-  background: maroon; }
+.page {
+  transform: translateX(-30vw);
+  background: orange;
+  -ms-flex: 0 0 100vw;
+      flex: 0 0 100vw;
+  transition: transform 0.3s; }
+  .page:target ~ .popup {
+    display: none; }
 
-footer.third {
+.login {
+  -ms-flex: 0 0 30vw;
+      flex: 0 0 30vw;
+  -ms-flex-order: 1;
+      order: 1;
+  z-index: -1;
+  transform: translateX(-60vw);
   background: salmon; }
-
-.search {
-  padding: 50px;
-  position: fixed;
-  width: 100%;
-  top: 20px;
-  border: 5px solid rebeccapurple; }
-  .search input {
-    width: 80%; }
+  .login:target {
+    z-index: 0; }
+    .login:target ~ .page {
+      transform: translateX(-60vw); }

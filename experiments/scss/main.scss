@@ -149,25 +149,61 @@
 
 @import "_style-guide";
 
-.third {
-  height: 60vh;
-  background: aqua;
+body {
+  margin: 0;
 }
-header.third {
-  background: maroon;
+main {
+  display: flex;
+  overflow: hidden;
 }
-footer.third {
-  background: salmon;
+a {
+  color: inherit;
 }
-.search{
-  padding: 50px;
-  position: fixed;
-  //position: sticky;
-  width: 100%;
-  top: 20px;
-  border: 5px solid rebeccapurple;
-  input {
-    width: 80%;
+main > section {
+  position: relative;
+  min-height: 100vh;
+}
+.popup {
+  background: rebeccaPurple;
+  flex: 0 0 100vw;
+  display: none;
+  order: 5;
+  color: white;
+  &:target {
+      display: block;
+      order: -1;
   }
-
+}
+.menu {
+  flex: 0 0 30vw;
+  background: aqua;
+  &:target {
+    ~ .page {
+      transform: translateX(0);
+    }
+  }
+}
+.page {
+  transform: translateX(-30vw);
+  background: orange;
+  flex: 0 0 100vw;
+  transition: transform 0.3s;
+  &:target {
+    ~ .popup {
+      display: none;
+    }
+  }
+}
+.login {
+  flex: 0 0 30vw;
+  order:1;
+  z-index: -1;
+  transform: translateX(-60vw);
+  background: salmon;
+  &:target {
+    z-index: 0;
+    ~ .page {
+      transform: translateX(-60vw);
+    }
+  }
 }
