@@ -1,0 +1,23 @@
+.c-footer {
+  position: relative;
+  background: $textColor;
+  color: $white;
+  display: flex;
+  align-items: stretch;
+  &__item {
+    padding: 0.5em;
+    color: $white;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__item--spacer {
+    margin-right: auto;
+  }
+  &__item--right {
+    background: $secondaryColor;
+    color: $textColor;
+    margin-left: 1em;
+    position: relative;
+  }
+}

@@ -72,8 +72,10 @@
  * Hide.................Helper classes to hide content
  */
 /* dark blue */
-/* pink */
 /* yellow */
+/* pink temp!!! */
+/* pink */
+/* pink */
 /* gray */
 body:before {
   background-color: #FCF8E3;
@@ -560,7 +562,20 @@ html {
   overflow-y: scroll;
   /* [2] */
   min-height: 100%;
-  /* [3] */ }
+  /* [3] */
+  color: red; }
+
+@media (max-width: 47.9275em) {
+  html {
+    font-size: 0.75em; } }
+
+@media (min-width: 47.9375em) {
+  html {
+    font-size: calc(0.00663 * 100vw + 6.91211px); } }
+
+@media (min-width: 85.625em) {
+  html {
+    font-size: 1em; } }
 
 /* ==========================================================================
    #HEADINGS
@@ -685,12 +700,10 @@ table {
   .o-grid > .o-grid__item {
     padding-left: 24px;
     -ms-flex: 1;
-        flex: 1; }
-    @media (max-width: 47.9275em) {
-      .o-grid > .o-grid__item {
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
-        /* mobile first ?!? */ } }
+        flex: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
     .o-grid > .o-grid__item--top {
       -ms-flex-item-align: start;
           align-self: flex-start; }
@@ -761,6 +774,62 @@ table {
     .o-grid--no-flex > .o-grid__item {
       -ms-flex: none;
           flex: none; }
+
+/*
+  mobile = s
+  tablet = md
+  desktop = lg
+  wide = xl
+*/
+@media (max-width: 47.9275em) {
+  .m-1\/2\@s > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; } }
+
+@media (min-width: 47.9375em) {
+  .m-1\/2\@md > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  .m-1\/3\@md > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; } }
+
+@media (min-width: 47.9375em) and (orientation: landscape) {
+  .m-1\/2\@md > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  .m-1\/3\@md > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; }
+  .m-1\/4\@md > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; } }
+
+@media (min-width: 75em) {
+  .m-1\/3\@lg > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; }
+  .m-1\/4\@lg > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; } }
+
+@media (min-width: 85.625em) {
+  .m-1\/4\@xl > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; }
+  .m-1\/5\@xl > .o-grid__item {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    max-width: 20%; } }
 
 /* ==========================================================================
    #MEDIA
@@ -1122,6 +1191,9 @@ table {
 .o-ratio--4\:3:before {
   padding-bottom: 75%; }
 
+.o-ratio--7\:5:before {
+  padding-bottom: 71.42857%; }
+
 .o-ratio--16\:9:before {
   padding-bottom: 56.25%; }
 
@@ -1291,7 +1363,7 @@ table {
   .o-pack--rev > .o-pack__item {
     direction: ltr; }
 
-.o-icon {
+.o-icon, [class*="o-icon--"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -1302,64 +1374,67 @@ table {
   font-size: 2em;
   /* default-size */
   text-align: center;
+  padding-right: 0.1em;
+  /* to override this - use utility class ?? */
   vertical-align: middle;
   box-sizing: content-box;
-  padding: 0 0 0.125em 0;
-  margin: auto;
   overflow: hidden;
   pointer-events: none;
   /* TODO: decide whether to use .ie .o-icon {} selector for this */ }
+  .is-active .o-icon, .is-active [class*="o-icon--"] {
+    fill: #112268; }
 
-.o-icon--small {
-  font-size: 1.3em; }
+.o-icon {
+  /* use utility positioning classes instead */ }
+  .o-icon--small {
+    font-size: 1.3em; }
+  .o-icon--medium {
+    font-size: 1.7em; }
+  .o-icon--large {
+    font-size: 2.4em; }
+  .o-icon--colored {
+    fill: #112268; }
+    .is-active .o-icon--colored {
+      fill: #fff; }
+    .c-tab .o-icon--colored {
+      transition: all 0.3s; }
+  .o-icon--inverted {
+    color: #112268; }
+  .o-icon--bordered {
+    stroke: #112268; }
+  .o-icon--primary {
+    fill: #ec028d; }
+  .o-icon--secondary {
+    fill: #fdd941; }
+    .is-active .o-icon--secondary {
+      fill: #112268; }
 
-.o-icon--medium {
-  font-size: 1.7em; }
-
-.o-icon--large {
-  font-size: 2.4em; }
-
-.o-icon--positioned {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding: 0; }
-
-.o-icon--colored {
-  fill: #112268; }
-
-.o-icon--inverted {
-  color: #112268; }
-
-.o-icon--bordered {
-  stroke: #112268; }
-
-.o-icon--primary {
-  fill: #ec028d; }
-
-.o-icon--secondary {
-  fill: #fdd941; }
-
-.active > .o-icon {
-  fill: #112268; }
-
-.active > .o-icon--colored {
-  fill: #fff; }
-
-.c-input-text {
-  border-radius: 0.375em;
-  background: #fff;
-  border: 0.15em solid #fff;
-  padding: 0.5em;
-  width: 100%; }
-  .c-input-text:focus {
-    border: 0.15em solid #112268;
-    outline: none; }
-  .invalid .c-input-text {
-    border: 0.15em solid #ec028d; }
-
-.invalid .error {
-  color: #ec028d; }
+.c-input {
+  /* By default this component refers to a text input */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .c-input__input {
+    border-radius: 0.375em;
+    background: #fff;
+    color: currentColor;
+    border: 0.15em solid #fff;
+    padding: 0.5em;
+    width: 100%; }
+    .c-input__input:focus {
+      border: 0.15em solid #112268;
+      outline: none; }
+  .c-input__label {
+    padding-bottom: 0.5em; }
+  .c-input__msg {
+    padding-top: 0.5em;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+    .has-error .c-input__msg {
+      color: #ec028d; }
+  .c-input.has-error .c-input__input {
+    border-color: #ec028d; }
 
 /* ==========================================================================
    #BUTTONS
@@ -1376,7 +1451,8 @@ table {
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-.c-btn {
+/* c-btn base styles */
+.c-btn, [class*="c-btn--"] {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -1389,60 +1465,99 @@ table {
   /* [4] */
   cursor: pointer;
   /* [5] */
-  padding: 0.375em 1.125em;
+  padding: 0.1em 0.5em;
   transition: 0.33333s;
   border-radius: 0.375em;
   border: .15em solid transparent;
-  /* mine */ }
-  .c-btn:active, .c-btn:focus {
-    border: .15em solid #eee;
-    /* mine */
-    outline: none;
-    /* mine */ }
-  .c-btn[disabled] {
+  /* mine */
+  text-decoration: none;
+  /* mine */
+  font-size: 1em;
+  /* ems here! */ }
+  .c-btn[disabled], [class*="c-btn--"][disabled] {
     opacity: 0.5; }
+  .c-btn.is-active, [class*="c-btn--"].is-active {
+    background: #fdd941;
+    color: #112268; }
+  @media (min-width: 47.9375em) {
+    .c-btn:active, .c-btn:focus, [class*="c-btn--"]:active, [class*="c-btn--"]:focus {
+      border: .15em solid #eee;
+      /* mine */
+      outline: none;
+      /* mine */ } }
 
-/* Style variants
-   ========================================================================== */
-.c-btn--primary {
-  background-color: #ec028d; }
-  .c-btn--primary, .c-btn--primary:hover, .c-btn--primary:active, .c-btn--primary:focus {
-    text-decoration: none;
-    /* [4] */
-    color: #fff; }
-  .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
-    background-color: #fd24a5; }
-
-.c-btn--secondary {
-  background-color: #fdd941; }
-  .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
-    text-decoration: none;
-    color: #050a1e; }
-  .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
-    background-color: #fee373; }
-
-/* Size variants
-   ========================================================================== */
-.c-btn--small {
-  padding: 0.1875em 0.5625em;
-  font-size: 0.8em; }
-
-.c-btn--large {
-  padding: 0.75em 2.25em;
-  font-size: 1.6em; }
+.c-btn {
+  /* Style variants
+     ========================================================================== */
+  /* Size variants
+     ========================================================================== */ }
+  .c-btn--primary {
+    color: #fff;
+    background-color: #ec028d;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 0.5em; }
+    @media (min-width: 47.9375em) {
+      .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
+        background-color: #fd24a5; } }
+  .c-btn--secondary {
+    color: #112268;
+    background-color: #fdd941;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 0.5em; }
+    @media (min-width: 47.9375em) {
+      .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
+        background-color: #fee373; } }
+  .c-btn--text {
+    background: none;
+    border: none;
+    color: currentColor; }
+  .c-btn__link {
+    text-decoration: underline; }
+  .c-btn--inline {
+    width: auto;
+    font-size: 1em;
+    padding: .1em 2em; }
+  .c-btn--icon {
+    padding: .4em; }
+  .c-btn--split {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    width: auto;
+    font-size: 1em;
+    padding: 0.1em 0.8em;
+    border-radius: 1em; }
+  .c-btn__counter {
+    color: #fdd941;
+    padding-left: 0.8em; }
+  .c-btn--small {
+    padding: 0.1875em 0.5625em;
+    font-size: 0.8em; }
+  .c-btn--large {
+    padding: 0.75em 2.25em;
+    font-size: 1.6em; }
 
 /* Ghost buttons
    ========================================================================== */
 /**
  * Ghost buttons have see-through backgrounds and are bordered.
  */
-.c-checkbox [type="checkbox"] {
+.c-checkable, [class*="c-checkable--"] {
+  position: relative;
+  display: inline-block; }
+
+.c-checkable__input {
   display: none; }
 
-.c-checkbox [type="checkbox"]:checked + .o-icon {
+.c-checkable__input:checked + [class*="o-icon"] {
   color: #112268; }
 
-.c-checkbox [type="checkbox"] ~ label {
+.c-checkable__input ~ label {
   padding-left: 2.2em;
   /* needs refactoring? */
   /* the following is optional - I find the 'auto' selection here a bit annoying */
@@ -1451,30 +1566,156 @@ table {
       -ms-user-select: none;
           user-select: none; }
 
-.c-checkbox--small {
+.c-checkable--terms {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 1.3rem;
+  /* less than optimal - but it does the job */ }
+  .c-checkable--terms .terms__label {
+    height: 2em;
+    padding-left: 2.5em; }
+
+.c-checkable--small {
   font-size: 0.8em; }
 
-.c-checkbox--large {
+.c-checkable--large {
   font-size: 1.6em; }
 
-.c-header {
-  border-radius: 0.375em 0.375em 0 0;
-  background: #dadce9;
-  font-size: 1.5em; }
-  .c-header--small {
-    font-size: 1em; }
-  .c-header--large {
-    font-size: 2em; }
+.c-checkable__label-wpr {
+  -ms-flex: 1;
+      flex: 1;
+  font-size: 0.9rem; }
+
+.c-header, [class*="c-header--"] {
+  font-size: 1.3rem;
+  padding: 0 1em;
+  height: 4rem;
+  color: #112268;
+  background: #f1f2f7;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.c-header--main {
+  height: 5rem;
+  font-size: 1.5rem; }
 
 .c-header__text {
-  padding: 1.5em 0;
+  font-size: 1em;
+  /* override h2 element style */
   display: inline-block;
-  margin-bottom: 0;
-  /* override default element margin bottom (may need to refactor this) */
-  font-size: inherit;
-  /* override default element margin bottom (may need to refactor this) */
-  line-height: inherit;
-  /* override default element margin bottom (may need to refactor this) */ }
+  margin: 0 auto 0 0.5em;
+  /* override default h2 element margin bottom (auto right margin is to space the flex-items) */ }
+
+.c-header--colored {
+  /* generally used in tabs */
+  color: #fff;
+  background: #112268; }
+
+.c-header--inverted {
+  /* generally used in popups */
+  color: #112268;
+  background: #fff; }
+
+[class*="c-link"] {
+  color: currentColor;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block; }
+
+.c-link--no-deco {
+  text-decoration: none; }
+
+.c-link--icon {
+  padding-left: 2em;
+  /* use when icon is position absolute and pointer is need on icon as well */ }
+
+.c-tab {
+  font-size: 1.3rem;
+  padding: 0 1em;
+  height: 4rem;
+  color: #112268;
+  background: #f1f2f7;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 0.2em; }
+  .c-tab.is-active {
+    background: #112268;
+    color: #fff;
+    /* not the best solution because we break i/o priinciple
+    (we change the meaning icon--colored based on context), but
+    maybe the most pragmatic */ }
+    .c-tab.is-active .o-icon--colored {
+      color: #112268;
+      fill: #fdd941;
+      transform: rotateX(180deg); }
+
+.c-card {
+  background: url(../images/promo.jpeg) no-repeat;
+  background-size: cover;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #112268;
+  /* not sure if this is according to design....but without it - the promo looks weird */ }
+
+.c-caption {
+  font-size: 1rem;
+  color: #fdd941;
+  background: #112268;
+  padding: 0.5em;
+  text-transform: uppercase;
+  width: 100%;
+  position: absolute;
+  top: 0; }
+  @media (min-width: 47.9375em) {
+    .c-caption {
+      top: auto;
+      bottom: 0; } }
+  .c-caption--inline {
+    /* generally used in card component */
+    font-size: .9rem;
+    color: #112268;
+    background: #f1f2f7;
+    padding: 0.5em 1em 0.5em 0.5em;
+    text-transform: none;
+    border-radius: 0 1em 0 0;
+    font-weight: bold;
+    width: auto;
+    bottom: 0;
+    top: auto; }
+    @media (min-width: 47.9375em) {
+      .c-caption--inline {
+        transform: translateY(-100%); } }
+
+.c-footer {
+  position: relative;
+  background: #112268;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
+  .c-footer__item {
+    padding: 0.5em;
+    color: #fff;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+  .c-footer__item--spacer {
+    margin-right: auto; }
+  .c-footer__item--right {
+    background: #fdd941;
+    color: #112268;
+    margin-left: 1em;
+    position: relative; }
 
 /* ==========================================================================
    #CLEARFIX
@@ -2046,15 +2287,71 @@ table {
 .u-hidden {
   display: none !important; }
 
-@font-face {
-  font-family: "Headline";
-  src: url("../fonts/headline-regular.woff") format("woff"); }
+@media (max-width: 47.9275em) {
+  .u-hidden--mobile {
+    display: none !important; } }
+
+@media (min-width: 47.9375em) and (max-width: 74.99em) {
+  .u-hidden--tablet {
+    display: none !important; } }
+
+@media (min-width: 75em) {
+  .u-hidden--desktop {
+    display: none !important; } }
+
+/* misc utilities - still needs some thought */
+.u-margin-auto {
+  margin: auto; }
+
+.u-margin-left-auto {
+  margin-left: auto; }
+
+.u-align-left {
+  text-align: left; }
+
+.u-align-right {
+  text-align: right; }
 
 .u-relative {
   position: relative; }
 
 .u-inline-block {
   display: inline-block; }
+
+.u-reset-case {
+  text-transform: none; }
+
+.u-absolute-center {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.u-absolute-top {
+  top: 0; }
+
+.u-absolute-bottom {
+  bottom: 0; }
+
+.u-absolute-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+.u-absolute-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+[class*="u-absolute"] {
+  position: absolute !important; }
+
+@font-face {
+  font-family: "Headline";
+  src: url("../fonts/headline-regular.woff") format("woff"); }
 
 .style-guide {
   font-family: "Headline",sans-serif;
@@ -2063,11 +2360,76 @@ table {
   max-width: 100em; }
   .style-guide > .o-box {
     margin: 2em;
-    background: #dadce9; }
-  .style-guide > .c-header {
+    background: #f1f2f7; }
+    .style-guide > .o-box.dark {
+      color: #f1f2f7;
+      background: #112268; }
+  .style-guide > .c-header, .style-guide [class*="c-header--"] {
     margin: 2rem; }
 
+hr {
+  margin-top: 2rem; }
+
+.paletteWpr.paletteWpr {
+  background: #fff; }
+
+.palette {
+  color: #fff; }
+  .palette div {
+    min-height: 40px; }
+  .palette .o-grid__item > div {
+    padding: 1em; }
+
+.primaryColor {
+  background: #4a5ab1;
+  height: 160px; }
+
+.textColor-light {
+  background: #23337e; }
+
+.textColor {
+  background: #112268; }
+
+.secondaryColor {
+  background: #fdd941;
+  height: 160px; }
+
+.actionColor-light {
+  background: #fa25a4; }
+
+.actionColor {
+  background: #ec028d; }
+
+.grayColor.grayColor.grayColor {
+  background: #f1f2f7;
+  height: 160px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0;
+  color: #050a1e; }
+
+.grayColor > div:first-child {
+  margin: auto; }
+
+.white {
+  background: #fff; }
+
+.grayColor-dark {
+  background: #dadce9; }
+
+.blackColor {
+  background: #050a1e; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  margin-top: 2rem; }
+
 /* media queries examples */
+html {
+  color: #333; }
+
 body {
   margin: 0; }
 
@@ -2081,16 +2443,16 @@ a {
 
 main > section {
   position: relative;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding: 2rem; }
 
 .popup {
-  background: rebeccaPurple;
+  background: #f1f2f7;
   -ms-flex: 0 0 100vw;
       flex: 0 0 100vw;
   display: none;
   -ms-flex-order: 5;
-      order: 5;
-  color: white; }
+      order: 5; }
   .popup:target {
     display: block;
     -ms-flex-order: -1;
@@ -2124,3 +2486,6 @@ main > section {
     z-index: 0; }
     .login:target ~ .page {
       transform: translateX(-60vw); }
+
+.c-input {
+  margin-bottom: 2rem; }

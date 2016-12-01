@@ -15,9 +15,11 @@
     //padding: $inuit-global-spacing-unit 0 0 $inuit-global-spacing-unit;
     padding-left: $inuit-global-spacing-unit;
     flex: 1;
-    @include mq($until: tablet) {
-      flex-basis: 100%; /* mobile first ?!? */
-    }
+    flex-basis: 100%;
+    max-width: 100%;
+    // @include mq($until: tablet) {
+    //   flex-basis: 100%; /* mobile first ?!? */
+    // }
     &--top {
       align-self: flex-start;
     }
@@ -125,3 +127,112 @@
     }
   }
 }
+
+/*
+  mobile = s
+  tablet = md
+  desktop = lg
+  wide = xl
+*/
+@include mq($until: tablet) {
+  .m- {
+    // &1\/1\@s > .o-grid__item {
+    //   flex-basis: 100%;
+    //   max-width: 100%;
+    // }
+    &1\/2\@s > .o-grid__item {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+  @include mq($from: tablet) { //$from: tablet, $until: desktop
+    .m- {
+      &1\/2\@md > .o-grid__item {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      &1\/3\@md > .o-grid__item {
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+      }
+    }
+  }
+  @include mq($from: tablet, $and: '(orientation: landscape)') { //$from: tablet, $until: desktop, $and: '(orientation: landscape)'
+    .m- {
+      &1\/2\@md > .o-grid__item {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      &1\/3\@md > .o-grid__item {
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+      }
+      &1\/4\@md > .o-grid__item{
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+    }
+  }
+  @include mq($from: desktop) { //$from: desktop, $until: wide
+    .m- {
+      &1\/3\@lg > .o-grid__item {
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+      }
+      &1\/4\@lg > .o-grid__item{
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+    }
+  }
+  @include mq($from: wide) {
+    .m- {
+      &1\/4\@xl > .o-grid__item {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+      &1\/5\@xl > .o-grid__item {
+        flex-basis: 20%;
+        max-width: 20%;
+      }
+    }
+  }
+
+// @include respond-to(tablet-portrait) {
+//   .m- {
+//     &1\/2\@s > .o-grid__item {
+//       flex-basis: 50%;
+//       max-width: 50%;
+//     }
+//     &1\/3\@s > .o-grid__item {
+//       flex-basis: 33.333%;
+//       max-width: 33.333%;
+//     }
+//   }
+// }
+// @include respond-to(tablet) {
+//
+// }
+// @include respond-to(desktop) {
+//   .m- {
+//     &1\/3\@lg > .o-grid__item {
+//       flex-basis: 33.333%;
+//       max-width: 33.333%;
+//     }
+//     &1\/4\@lg > .o-grid__item{
+//       flex-basis: 25%;
+//       max-width: 25%;
+//     }
+//   }
+//   .um- {
+//     &1\/3\@lg {
+//       flex-basis: 33.333%;
+//       max-width: 33.333%;
+//     }
+//   }
+// }
+// @include respond-to(desktop-14) {
+//
+// }

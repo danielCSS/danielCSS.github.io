@@ -1,0 +1,53 @@
+
+/* misc utilities - still needs some thought */
+.u-margin-auto {
+  margin: auto;
+}
+.u-margin-left-auto {
+  margin-left: auto;
+}
+.u-align-left {
+  text-align: left;
+}
+
+.u-align-right {
+  text-align: right;
+}
+
+.u-relative {
+  position: relative;
+}
+.u-inline-block {
+  display: inline-block;
+}
+.u-reset-case {
+  text-transform: none;
+}
+.u-absolute-center {
+  margin: auto;
+  top:0;bottom:0;
+  left:0;right:0;
+}
+.u-absolute-top {
+  top: 0;
+  //left:0;right:0;
+}
+.u-absolute-bottom {
+  bottom: 0;
+  //left:0;right:0;
+}
+.u-absolute-left {
+  left: 0;
+  top:0;bottom:0;
+  margin: auto;
+}
+.u-absolute-right {
+  right: 0;
+  top:0;bottom:0;
+  margin: auto;
+}
+[class*="u-absolute"] {
+  position: absolute !important;
+  //top:0;bottom:0;
+  //left:0;right:0;
+}

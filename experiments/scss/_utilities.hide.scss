@@ -19,3 +19,19 @@
 .u-hidden {
   display: none !important;
 }
+
+.u-hidden--mobile {
+  @include mq($until: tablet) {
+    display: none !important;
+  }
+}
+.u-hidden--tablet {
+  @include mq($from: tablet, $until: desktop) {
+    display: none !important;
+  }
+}
+.u-hidden--desktop {
+  @include mq($from: desktop) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,39 @@
+
+.c-checkable, [class*="c-checkable--"] {
+  position: relative;
+  display: inline-block;
+}
+.c-checkable__input {
+  display: none;
+}
+.c-checkable__input:checked + [class*="o-icon"] {
+  color: $textColor;
+}
+
+.c-checkable__input ~ label {
+  padding-left: 2.2em; /* needs refactoring? */
+  /* the following is optional - I find the 'auto' selection here a bit annoying */
+  user-select: none;
+}
+.c-checkable {
+  &--terms {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    /* less than optimal - but it does the job */
+    .terms__label {
+      height: 2em;
+      padding-left: 2.5em;
+    }
+  }
+  &--small {
+    font-size: 0.8em;
+  }
+  &--large {
+    font-size: 1.6em;
+  }
+  &__label-wpr {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+}

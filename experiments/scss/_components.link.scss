@@ -1,0 +1,18 @@
+[class*="c-link"] {
+  color: currentColor;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.c-link {
+  &--no-deco {
+    text-decoration: none;
+  }
+  &--icon {
+    padding-left: 2em; /* use when icon is position absolute and pointer is need on icon as well */
+  }
+  // &--colored {
+  //   color: $textColor; /* may not be necessary because of currentColor on base class */
+  // }
+}

@@ -129,13 +129,16 @@
 // Build and include your project’s UI Compoments here.
 @import "components.input-text";
 @import "components.buttons";
-@import "components.checkbox";
+@import "components.checkable";
 @import "components.header";
 @import "components.dropdown";
 @import "components.drawer";
 @import "components.link";
 @import "components.modal";
 @import "components.tabs";
+@import "components.card";
+@import "components.caption";
+@import "components.footer";
 
 // UTILITIES
 @import "utilities.clearfix";
@@ -146,9 +149,12 @@
 @import "utilities.spacing";
 @import "utilities.print";
 @import "utilities.hide";
+@import "utilities.position";
 
 @import "_style-guide";
-
+html {
+  color: #333;
+}
 body {
   margin: 0;
 }
@@ -162,13 +168,13 @@ a {
 main > section {
   position: relative;
   min-height: 100vh;
+  padding: 2rem;
 }
 .popup {
-  background: rebeccaPurple;
+  background: #f1f2f7;
   flex: 0 0 100vw;
   display: none;
   order: 5;
-  color: white;
   &:target {
       display: block;
       order: -1;
@@ -206,4 +212,7 @@ main > section {
       transform: translateX(-60vw);
     }
   }
+}
+.c-input {
+  margin-bottom: 2rem;
 }
