@@ -220,6 +220,13 @@ main > section {
   position: sticky;
   top: 0;
 }
-input {
-  font-size: 1em
+// input {
+//   font-size: 1em; //attempt to disble zoom in when focusing input elements
+// }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
 }
