@@ -216,6 +216,7 @@ main > section {
 .c-input {
   margin-bottom: 2rem;
 }
+// remove default style from iOS inputs
 .c-input__input {
   appearance: none;
 }
@@ -226,10 +227,12 @@ main > section {
 // input {
 //   font-size: 1em; //attempt to disble zoom in when focusing input elements
 // }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  select,
-  textarea,
-  input {
-    font-size: 16px;
-  }
-}
+
+//disble zoom in when focusing input elements
+// @media screen and (-webkit-min-device-pixel-ratio:0) {
+//   select,
+//   textarea,
+//   input {
+//     font-size: 16px;
+//   }
+// }
