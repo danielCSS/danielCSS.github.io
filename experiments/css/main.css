@@ -2491,7 +2491,9 @@ main > section {
       transform: translateX(-60vw); }
 
 .c-input {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; }
+
+.c-input__input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
