@@ -2,7 +2,10 @@
 .c-input { /* By default this component refers to a text input */
   display:flex;
   flex-direction: column;
-
+  &--search {
+    padding: 0.5em 1em;
+    background: #999;
+  }
   &__input {
     border-radius: px-to-em(6);
     background: $white;
