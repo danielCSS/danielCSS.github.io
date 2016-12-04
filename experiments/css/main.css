@@ -2491,7 +2491,10 @@ main > section {
       transform: translateX(-60vw); }
 
 .c-input {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
 
 .c-header--colored {
   position: -webkit-sticky;
