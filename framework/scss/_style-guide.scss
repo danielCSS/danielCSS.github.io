@@ -24,8 +24,7 @@
   > .c-header,[class*="c-header--"] {
     margin: 2rem;
     @include mq($until: tablet) {
-      margin: 0;
-      //padding: 1em;
+      margin: 0 0 1rem 0;
     }
   }
 
