@@ -12,6 +12,10 @@
   > .o-box {
     margin: 2em;
     background: $lightBackground;
+    @include mq($until: tablet) {
+      margin: 0;
+      padding: 1em;
+    }
     &.dark {
       color: $lightBackground;
       background: $textColor;
@@ -19,6 +23,10 @@
   }
   > .c-header,[class*="c-header--"] {
     margin: 2rem;
+    @include mq($until: tablet) {
+      margin: 0;
+      //padding: 1em;
+    }
   }
 
 }

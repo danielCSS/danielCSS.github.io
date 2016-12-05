@@ -20,6 +20,8 @@ html {
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
   -webkit-overflow-scrolling: touch;
+  font-smoothing: antialiased; /* need to check this out */
+  -webkit-text-size-adjust: none; /* need to check this out */
 }
 
 $narrow-viewport: 767;
