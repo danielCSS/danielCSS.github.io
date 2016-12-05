@@ -563,7 +563,7 @@ html {
   /* [2] */
   min-height: 100%;
   /* [3] */
-  color: red; }
+  -webkit-overflow-scrolling: touch; }
 
 @media (max-width: 47.9275em) {
   html {
@@ -1415,6 +1415,9 @@ table {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
+  .c-input--search {
+    padding: 0.5em 1em;
+    background: #999; }
   .c-input__input {
     border-radius: 0.375em;
     background: #fff;
@@ -1530,8 +1533,8 @@ table {
         align-items: center;
     width: auto;
     font-size: 1em;
-    padding: 0.1em 0.8em;
-    border-radius: 1em; }
+    padding: 0 0 0 0.8em;
+    border-radius: 0.5em; }
   .c-btn__counter {
     color: #fdd941;
     padding-left: 0.8em; }

@@ -13,6 +13,7 @@
     border: 0.15em solid $white;
     padding: 0.5em;
     width: 100%;
+    appearance: none; /* remove default OS appearance  */
     &:focus {
       border: 0.15em solid $textColor;
       outline: none;

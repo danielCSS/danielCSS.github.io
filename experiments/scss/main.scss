@@ -216,13 +216,13 @@ main > section {
 .c-input {
   margin-bottom: 2rem;
 }
-// remove default style from iOS inputs
-.c-input__input {
-  appearance: none;
-}
+
 .c-header--colored {
   // position: sticky; /* won't work because it is wrapped within overflow:hidden of main elememnt */
   // top: 0;
+}
+p {
+  font-size: 1.5em;
 }
 // input {
 //   font-size: 1em; //attempt to disble zoom in when focusing input elements

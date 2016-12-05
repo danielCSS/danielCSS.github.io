@@ -1424,7 +1424,11 @@ table {
     color: currentColor;
     border: 0.15em solid #fff;
     padding: 0.5em;
-    width: 100%; }
+    width: 100%;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    /* remove default OS appearance  */ }
     .c-input__input:focus {
       border: 0.15em solid #112268;
       outline: none; }
@@ -2493,7 +2497,5 @@ main > section {
 .c-input {
   margin-bottom: 2rem; }
 
-.c-input__input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
+p {
+  font-size: 1.5em; }
