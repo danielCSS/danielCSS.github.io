@@ -563,7 +563,11 @@ html {
   /* [2] */
   min-height: 100%;
   /* [3] */
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  font-smoothing: antialiased;
+  /* need to check this out */
+  -webkit-text-size-adjust: none;
+  /* need to check this out */ }
 
 @media (max-width: 47.9275em) {
   html {
@@ -1424,7 +1428,11 @@ table {
     color: currentColor;
     border: 0.15em solid #fff;
     padding: 0.5em;
-    width: 100%; }
+    width: 100%;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    /* remove default OS appearance  */ }
     .c-input__input:focus {
       border: 0.15em solid #112268;
       outline: none; }
@@ -1525,15 +1533,9 @@ table {
   .c-btn--icon {
     padding: .4em; }
   .c-btn--split {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center;
     width: auto;
     font-size: 1em;
-    padding: 0 0 0 0.8em;
+    padding: 0 0.2em 0 0.8em;
     border-radius: 0.5em; }
   .c-btn__counter {
     color: #fdd941;
@@ -2364,11 +2366,18 @@ table {
   .style-guide > .o-box {
     margin: 2em;
     background: #f1f2f7; }
+    @media (max-width: 47.9275em) {
+      .style-guide > .o-box {
+        margin: 0;
+        padding: 1em; } }
     .style-guide > .o-box.dark {
       color: #f1f2f7;
       background: #112268; }
   .style-guide > .c-header, .style-guide [class*="c-header--"] {
     margin: 2rem; }
+    @media (max-width: 47.9275em) {
+      .style-guide > .c-header, .style-guide [class*="c-header--"] {
+        margin: 0; } }
 
 hr {
   margin-top: 2rem; }
