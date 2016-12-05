@@ -221,8 +221,8 @@ main > section {
   appearance: none;
 }
 .c-header--colored {
-  position: sticky;
-  top: 0;
+  // position: sticky; /* won't work because it is wrapped within overflow:hidden of main elememnt */
+  // top: 0;
 }
 // input {
 //   font-size: 1em; //attempt to disble zoom in when focusing input elements

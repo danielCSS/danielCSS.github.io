@@ -2497,8 +2497,3 @@ main > section {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
-
-.c-header--colored {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0; }
