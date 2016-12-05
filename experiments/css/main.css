@@ -563,7 +563,7 @@ html {
   /* [2] */
   min-height: 100%;
   /* [3] */
-  color: red; }
+  -webkit-overflow-scrolling: touch; }
 
 @media (max-width: 47.9275em) {
   html {
