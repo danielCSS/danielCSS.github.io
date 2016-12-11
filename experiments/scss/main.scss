@@ -160,7 +160,7 @@ body {
 }
 main {
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 a {
   color: inherit;
@@ -215,11 +215,15 @@ main > section {
 }
 .c-input {
   margin-bottom: 2rem;
+  // &--search {
+  //   position: sticky; /* won't work because it is wrapped within overflow:hidden of main elememnt */
+  //   top: 4rem;
+  // }
 }
 
 .c-header--colored {
-  // position: sticky; /* won't work because it is wrapped within overflow:hidden of main elememnt */
-  // top: 0;
+  position: sticky; /* won't work because it is wrapped within overflow:hidden of main elememnt */
+  top: 0;
 }
 p {
   font-size: 1.5em;
