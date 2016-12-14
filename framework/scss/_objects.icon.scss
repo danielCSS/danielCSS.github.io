@@ -5,7 +5,6 @@
   fill: $white; /* default color */
   //fill: currentColor;
   color: $white; /* default color when currentColor is used */
-  //color: currentColor;
   font-size: 2em; /* default-size */
   text-align: center;
   padding-right: 0.1em; /* to override this - use utility class ?? */
@@ -20,9 +19,6 @@
   // @include respond-to(mobile) {
   //   padding: 0 0.3rem 0 0;
   // }
-  .is-active & {
-    fill: $textColor;
-  }
 }
 .o-icon {
   &--small {
@@ -51,6 +47,9 @@
       transition: all 0.3s;
     }
   }
+  &--current-color {
+    color: currentColor; /* When currentColor is used in SVG - need to set color on ancestor element */
+  }
   &--inverted {
     color: $textColor;
   }
@@ -65,5 +64,10 @@
     .is-active & {
       fill: $textColor;
     }
+  }
+}
+.is-active {
+  > .o-icon, > [class*="o-icon--"] {
+    fill: $textColor;
   }
 }

@@ -640,6 +640,10 @@ img[height] {
   /* [1] */
   max-width: none; }
 
+ul {
+  list-style: none;
+  margin: 0; }
+
 /* ==========================================================================
    #TABLES
    ========================================================================== */
@@ -1385,8 +1389,6 @@ table {
   overflow: hidden;
   pointer-events: none;
   /* TODO: decide whether to use .ie .o-icon {} selector for this */ }
-  .is-active .o-icon, .is-active [class*="o-icon--"] {
-    fill: #112268; }
 
 .o-icon {
   /* use utility positioning classes instead */ }
@@ -1402,6 +1404,9 @@ table {
       fill: #fff; }
     .c-tab .o-icon--colored {
       transition: all 0.3s; }
+  .o-icon--current-color {
+    color: currentColor;
+    /* When currentColor is used in SVG - need to set color on ancestor element */ }
   .o-icon--inverted {
     color: #112268; }
   .o-icon--bordered {
@@ -1412,6 +1417,82 @@ table {
     fill: #fdd941; }
     .is-active .o-icon--secondary {
       fill: #112268; }
+
+.is-active > .o-icon, .is-active > [class*="o-icon--"] {
+  fill: #112268; }
+
+.c-aside-banner {
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+  background: #4a5ab1;
+  border-radius: 0.6rem;
+  width: 17.5em;
+  position: relative;
+  overflow: hidden; }
+  .c-aside-banner__content {
+    display: -ms-flexbox;
+    display: flex; }
+  .c-aside-banner__item {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: 19.5em;
+    transition: transform 0.3s;
+    -ms-flex-order: 2;
+        order: 2; }
+    .c-aside-banner__item.is-active {
+      -ms-flex-order: 0;
+          order: 0;
+      transform: translateX(-100%); }
+    .c-aside-banner__item.is-prev {
+      -ms-flex-order: -1;
+          order: -1;
+      transform: translateX(-100%); }
+    .c-aside-banner__item.is-next {
+      -ms-flex-order: 0;
+          order: 0;
+      transform: translateX(-100%); }
+  .c-aside-banner__header {
+    font-size: 1.2em;
+    padding: 0.8rem;
+    font-weight: normal;
+    margin: 0; }
+  .c-aside-banner__footer {
+    padding: 0.5rem 0.8rem; }
+  .c-aside-banner__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex: 1;
+        flex: 1; }
+  .c-aside-banner__inner-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1;
+        flex: 1;
+    position: relative;
+    padding-right: 2rem;
+    -ms-flex-align: center;
+        align-items: center;
+    color: #112268;
+    /* so that the icon inherits the correct color */ }
+    .c-aside-banner__inner-item:nth-child(odd) {
+      background-color: #23337e; }
+    .c-aside-banner__inner-item:only-child {
+      padding: 0; }
+  .c-aside-banner__img {
+    width: 6em; }
+  .c-aside-banner__text {
+    color: #fff;
+    margin-left: 0.8em;
+    font-size: 0.8em;
+    -ms-flex: 1;
+        flex: 1; }
 
 .c-input {
   /* By default this component refers to a text input */
@@ -1595,7 +1676,7 @@ table {
 .c-header, [class*="c-header--"] {
   font-size: 1.3rem;
   padding: 0.4em 1em;
-  color: #112268;
+  color: currentColor;
   background: #f1f2f7;
   display: -ms-flexbox;
   display: flex;

@@ -102,6 +102,7 @@
 @import "elements.page";
 @import "elements.headings";
 @import "elements.images";
+@import "elements.misc";
 @import "elements.tables";
 
 // OBJECTS
@@ -127,6 +128,7 @@
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
+@import "components.aside-banner";
 @import "components.input-text";
 @import "components.buttons";
 @import "components.checkable";

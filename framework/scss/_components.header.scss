@@ -2,7 +2,8 @@
 .c-header,[class*="c-header--"] {
   font-size: 1.3rem;
   padding: 0.4em 1em;
-  color: $textColor;
+  //color: $textColor;
+  color: currentColor;
   background: $lightBackground;
   display:flex;
   align-items: center;

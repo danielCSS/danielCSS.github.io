@@ -1,0 +1,105 @@
+// <section class="c-carousel c-aside-banner">
+//   <ul class="c-aside-banner__content">
+//     <li class="c-aside-banner__item">
+//       <h3 class="c-aside-banner__header">
+//         <svg class="o-icon"><use xlink:href="images/sprite.svg#GAME_OF_THE_WEEK" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+//         Check your <strong>inbox</strong>
+//       </h3>
+//       <ul class="c-aside-banner__inner">
+//         <div class="c-aside-banner__inner-item">
+//           <img src="images/inbox-GOTW.jpg" alt="">
+//         </div>
+//       </ul>
+//       <div class="c-aside-banner__footer">
+//         <a href="#" class="c-link">Click here</a>
+// $primary: #4a5ab1;
+// $textColor-light: #23337e;
+// $textColor: #112268; /* dark blue */
+
+.c-aside-banner {
+  color: $white;
+  font-size: 1rem;
+  position: relative;
+  background: $primary;
+  border-radius: 0.6rem;
+  width: 17.5em;
+  position: relative;
+  overflow: hidden;
+  &__content {
+    display: flex;
+  }
+  &__item {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    height: 19.5em;
+    transition: transform 0.3s;
+
+    //position: absolute;
+    //transform: translateX(100%);
+    //width: 100%;
+    //left:0;
+    //top:0;
+    order:2;
+    //display: none;
+    &.is-active {
+      //transform: translateX(-100%);
+      order: 0;
+      //order: -1;
+      //position: absolute;
+      transform: translateX(-100%);
+      //display: flex;
+      //width: 100%;
+    }
+    &.is-prev {
+      order: -1;
+      transform: translateX(-100%);
+      //display: flex;
+    }
+    &.is-next {
+      order: 0;
+      // order: -1;
+      // transform: translateX(200%);
+      //position: absolute;
+      transform: translateX(-100%);
+      //width: 100%;
+    }
+  }
+  &__header {
+    font-size: 1.2em;
+    padding: 0.8rem;
+    font-weight: normal;
+    margin: 0;
+  }
+  &__footer {
+    padding: 0.5rem 0.8rem;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  &__inner-item {
+    display: flex;
+    flex:1;
+    position: relative;
+    padding-right: 2rem;
+    align-items: center;
+    color: $textColor; /* so that the icon inherits the correct color */
+    &:nth-child(odd) {
+      background-color: $textColor-light;
+    }
+    &:only-child {
+      padding: 0;
+    }
+  }
+  &__img {
+    width: 6em;
+  }
+  &__text {
+    color: $white;
+    margin-left: 0.8em;
+    font-size: 0.8em;
+    flex:1;
+  }
+}
