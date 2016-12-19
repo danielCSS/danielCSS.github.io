@@ -27,12 +27,40 @@
       margin: 0 0 1rem 0;
     }
   }
-
+  .c-loyalty {
+    display: inline-block;
+    margin: 0 2%;
+  }
 }
 hr {
   margin-top: 2rem;
 }
+.c-loyalty {
+  background-color: #dadada;
+  overflow: hidden;
+  padding-bottom: 1em;
+  border-radius: 0.5em;
 
+  &__header {
+    font-size: 1em;
+    padding: 0 1em;
+    line-height: normal;
+    margin: 0.8em 0;
+    text-transform: none;
+  }
+  &__content {
+    background-color: $white;
+    font-size: 5em;
+    text-align: center;
+  }
+  &__text {
+    font-size: 1rem;
+    text-align: left;
+    position: relative;
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+}
 // $primary #4a5ab1;
 // $textColor-light: #23337e;
 // $textColor: #112268; /* dark blue */
