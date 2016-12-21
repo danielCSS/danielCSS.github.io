@@ -1435,7 +1435,11 @@ table {
   overflow: hidden; }
   .c-aside-banner__content {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transform: translateX(0);
+    transition: transform 0.3s; }
   .c-aside-banner__item {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -1443,22 +1447,7 @@ table {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    height: 19.5em;
-    transition: transform 0.3s;
-    -ms-flex-order: 2;
-        order: 2; }
-    .c-aside-banner__item.is-active {
-      -ms-flex-order: 0;
-          order: 0;
-      transform: translateX(-100%); }
-    .c-aside-banner__item.is-prev {
-      -ms-flex-order: -1;
-          order: -1;
-      transform: translateX(-100%); }
-    .c-aside-banner__item.is-next {
-      -ms-flex-order: 0;
-          order: 0;
-      transform: translateX(-100%); }
+    height: 19.5em; }
   .c-aside-banner__header {
     font-size: 1.2em;
     padding: 0.8rem;
