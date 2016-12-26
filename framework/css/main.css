@@ -1374,56 +1374,6 @@ table {
   .o-pack--rev > .o-pack__item {
     direction: ltr; }
 
-.o-icon, [class*="o-icon--"] {
-  /* Allows sizing by changing the icon’s font-size */
-  width: 1em;
-  height: 1em;
-  fill: #fff;
-  /* default color */
-  color: #fff;
-  /* default color when currentColor is used */
-  font-size: 2em;
-  /* default-size */
-  text-align: center;
-  padding-right: 0.1em;
-  /* to override this - use utility class ?? */
-  vertical-align: middle;
-  box-sizing: content-box;
-  overflow: hidden;
-  pointer-events: none;
-  /* TODO: decide whether to use .ie .o-icon {} selector for this */ }
-
-.o-icon {
-  /* use utility positioning classes instead */ }
-  .o-icon--small {
-    font-size: 1.3em; }
-  .o-icon--medium {
-    font-size: 1.7em; }
-  .o-icon--large {
-    font-size: 2.4em; }
-  .o-icon--colored {
-    fill: #112268; }
-    .is-active .o-icon--colored {
-      fill: #fff; }
-    .c-tab .o-icon--colored {
-      transition: all 0.3s; }
-  .o-icon--current-color {
-    color: currentColor;
-    /* When currentColor is used in SVG - need to set color on ancestor element */ }
-  .o-icon--inverted {
-    color: #112268; }
-  .o-icon--bordered {
-    stroke: #112268; }
-  .o-icon--primary {
-    fill: #ec028d; }
-  .o-icon--secondary {
-    fill: #fdd941; }
-    .is-active .o-icon--secondary {
-      fill: #112268; }
-
-.is-active > .o-icon, .is-active > [class*="o-icon--"] {
-  fill: #112268; }
-
 .c-carousel__dots {
   position: absolute;
   right: 0;
@@ -1683,6 +1633,56 @@ table {
   -ms-flex: 1;
       flex: 1;
   font-size: 0.9rem; }
+
+.c-icon, [class*="c-icon--"] {
+  /* Allows sizing by changing the icon’s font-size */
+  width: 1em;
+  height: 1em;
+  fill: #fff;
+  /* default color */
+  color: #fff;
+  /* default color when currentColor is used */
+  font-size: 2em;
+  /* default-size */
+  text-align: center;
+  padding-right: 0.1em;
+  /* to override this - use utility class ?? */
+  vertical-align: middle;
+  box-sizing: content-box;
+  overflow: hidden;
+  pointer-events: none;
+  /* TODO: decide whether to use .ie .c-icon {} selector for this */ }
+
+.c-icon {
+  /* use utility positioning classes instead */ }
+  .c-icon--small {
+    font-size: 1.3em; }
+  .c-icon--medium {
+    font-size: 1.7em; }
+  .c-icon--large {
+    font-size: 2.4em; }
+  .c-icon--colored {
+    fill: #112268; }
+    .is-active .c-icon--colored {
+      fill: #fff; }
+    .c-tab .c-icon--colored {
+      transition: all 0.3s; }
+  .c-icon--current-color {
+    color: currentColor;
+    /* When currentColor is used in SVG - need to set color on ancestor element */ }
+  .c-icon--inverted {
+    color: #112268; }
+  .c-icon--bordered {
+    stroke: #112268; }
+  .c-icon--primary {
+    fill: #ec028d; }
+  .c-icon--secondary {
+    fill: #fdd941; }
+    .is-active .c-icon--secondary {
+      fill: #112268; }
+
+.is-active > .c-icon, .is-active > [class*="c-icon--"] {
+  fill: #112268; }
 
 .c-header, [class*="c-header--"] {
   font-size: 1.3rem;

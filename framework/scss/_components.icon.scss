@@ -1,4 +1,4 @@
-.o-icon,[class*="o-icon--"] {
+.c-icon,[class*="c-icon--"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -15,12 +15,12 @@
   //padding: 0 0 px-to-em(2) 0;
   //margin: auto; /* need to check whether I can remove this - it effects flexbox items */
   overflow: hidden;
-  pointer-events: none; /* TODO: decide whether to use .ie .o-icon {} selector for this */
+  pointer-events: none; /* TODO: decide whether to use .ie .c-icon {} selector for this */
   // @include respond-to(mobile) {
   //   padding: 0 0.3rem 0 0;
   // }
 }
-.o-icon {
+.c-icon {
   &--small {
     font-size: 1.3em;
   }
@@ -67,7 +67,7 @@
   }
 }
 .is-active {
-  > .o-icon, > [class*="o-icon--"] {
+  > .c-icon, > [class*="c-icon--"] {
     fill: $textColor;
   }
 }
