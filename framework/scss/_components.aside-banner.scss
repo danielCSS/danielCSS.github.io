@@ -15,7 +15,27 @@
 // $primary: #4a5ab1;
 // $textColor-light: #23337e;
 // $textColor: #112268; /* dark blue */
-
+.c-carousel {
+  &__dots {
+    position: absolute;
+    right: 0;
+    bottom: 0.6em;
+    padding-right: 0.6em;
+    background: $primary; /* so that text runs underneath */
+  }
+  &__dot {
+    border-radius: 50%;
+    margin-right: 0.5em;
+    width: 0.5em;
+    height: 0.5em;
+    background: $textColor;
+    display: inline-block;
+    cursor: pointer;
+    &.is-active {
+      background: $secondaryColor;
+    }
+  }
+}
 .c-aside-banner {
   color: $white;
   font-size: 1rem;
