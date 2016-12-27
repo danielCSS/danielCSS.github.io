@@ -71,6 +71,11 @@
  * Print................Reset-like styles taken from the HTML5 Boilerplate.
  * Hide.................Helper classes to hide content
  */
+/*!
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
 /* dark blue */
 /* yellow */
 /* pink temp!!! */
@@ -541,47 +546,6 @@ dd, ol, ul {
 
 /* stylelint-enable selector-list-comma-newline-after */
 /* ==========================================================================
-   #PAGE
-   ========================================================================== */
-/**
- * Simple page-level setup.
- *
- * 1. Set the default `font-size` and `line-height` for the entire project,
- *    sourced from our default variables. The `font-size` is calculated to exist
- *    in ems, the `line-height` is calculated to exist unitlessly.
- * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 3. Ensure the page always fills at least the entire height of the viewport.
- */
-html {
-  font-size: 1em;
-  /* [1] */
-  line-height: 1.5;
-  /* [1] */
-  overflow-y: scroll;
-  /* [2] */
-  min-height: 100%;
-  /* [3] */
-  -webkit-overflow-scrolling: touch;
-  font-smoothing: antialiased;
-  /* need to check this out */
-  -webkit-text-size-adjust: none;
-  /* need to check this out */ }
-
-@media (max-width: 47.9275em) {
-  html {
-    font-size: 0.75em; } }
-
-@media (min-width: 47.9375em) {
-  html {
-    font-size: calc(0.00663 * 100vw + 6.91211px); } }
-
-@media (min-width: 85.625em) {
-  html {
-    font-size: 1em; } }
-
-/* ==========================================================================
    #HEADINGS
    ========================================================================== */
 /**
@@ -648,6 +612,48 @@ h2 {
   font-family: inherit; }
 
 /* ==========================================================================
+   #PAGE
+   ========================================================================== */
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */
+  -webkit-overflow-scrolling: touch;
+  /* need to check this out */
+  font-smoothing: antialiased;
+  /* need to check this out */
+  -webkit-text-size-adjust: none;
+  /* need to check this out */ }
+
+@media (max-width: 47.9275em) {
+  html {
+    font-size: 0.75em; } }
+
+@media (min-width: 47.9375em) {
+  html {
+    font-size: calc(0.00663 * 100vw + 6.91211px); } }
+
+@media (min-width: 85.625em) {
+  html {
+    font-size: 1em; } }
+
+/* ==========================================================================
    #TABLES
    ========================================================================== */
 /**
@@ -658,44 +664,41 @@ table {
   /* [1] */ }
 
 /* ==========================================================================
-   #WRAPPERS
+   #BOX
    ========================================================================== */
 /**
- * Page-level constraining and wrapping elements.
+ * The box object simply boxes off content. Extend with cosmetic styles in the
+ * Components layer.
+ *
+ * 1. So we can apply the `.o-box` class to naturally-inline elements.
  */
-/* mine */
-/* stylelint-disable */
-/* stylelint-enable */
-.o-wrapper {
-  padding-right: 24px;
-  padding-left: 24px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1600px;
-  position: relative;
-  /* mine */ }
-  .o-wrapper:after {
+.o-box {
+  display: block;
+  /* [1] */
+  padding: 24px; }
+  .o-box:after {
     content: "" !important;
     display: block !important;
     clear: both !important; }
+  .o-box > :last-child {
+    margin-bottom: 0; }
 
-/* Size variants.
+/* Size variants
    ========================================================================== */
-.o-wrapper--tiny {
-  padding-right: 6px;
-  padding-left: 6px; }
+.o-box--flush {
+  padding: 0; }
 
-.o-wrapper--small {
-  padding-right: 12px;
-  padding-left: 12px; }
+.o-box--tiny {
+  padding: 6px; }
 
-.o-wrapper--large {
-  padding-right: 48px;
-  padding-left: 48px; }
+.o-box--small {
+  padding: 12px; }
 
-.o-wrapper--huge {
-  padding-right: 96px;
-  padding-left: 96px; }
+.o-box--large {
+  padding: 48px; }
+
+.o-box--huge {
+  padding: 96px; }
 
 /* ==========================================================================
    #GRID - Flexbox based grid system
@@ -792,367 +795,77 @@ table {
   desktop = lg
   wide = xl
 */
+/*
+
+Need to decide which notation is the most understandable:
+
+1) o-grid u-textCenter m-1/3@md m-1/4@lg m-1/5@xl
+2) o-grid u-textCenter m-1-3@md m-1-4@lg m-1-5@xl
+3) o-grid u-textCenter m-1-3-md m-1-4-lg m-1-5-xl
+4) o-grid u-textCenter m-1-3-tab m-1-4-desc m-1-5-wide
+
+*/
+/*
+  mobile = s
+  tablet = md
+  desktop = lg
+  wide = xl
+*/
 @media (max-width: 47.9275em) {
-  .m-1\/2\@s > .o-grid__item {
+  .m-1-2-s > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; } }
+
+@media (max-width: 47.9275em) {
+  .m-1-2-s > .o-grid__item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; } }
 
 @media (min-width: 47.9375em) {
-  .m-1\/2\@md > .o-grid__item {
+  .m-1-2-md > .o-grid__item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
-  .m-1\/3\@md > .o-grid__item {
+  .m-1-3-md > .o-grid__item {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
     max-width: 33.333%; } }
 
 @media (min-width: 47.9375em) and (orientation: landscape) {
-  .m-1\/2\@md > .o-grid__item {
+  .m-1-2-md > .o-grid__item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
-  .m-1\/3\@md > .o-grid__item {
+  .m-1-3-md > .o-grid__item {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
     max-width: 33.333%; }
-  .m-1\/4\@md > .o-grid__item {
+  .m-1-4-md > .o-grid__item {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%; } }
 
 @media (min-width: 75em) {
-  .m-1\/3\@lg > .o-grid__item {
+  .m-1-3-lg > .o-grid__item {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
     max-width: 33.333%; }
-  .m-1\/4\@lg > .o-grid__item {
+  .m-1-4-lg > .o-grid__item {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%; } }
 
 @media (min-width: 85.625em) {
-  .m-1\/4\@xl > .o-grid__item {
+  .m-1-4-xl > .o-grid__item {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%; }
-  .m-1\/5\@xl > .o-grid__item {
+  .m-1-5-xl > .o-grid__item {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     max-width: 20%; } }
-
-/* ==========================================================================
-   #MEDIA
-   ========================================================================== */
-/**
- * Place any image- and text-like content side-by-side, as per:
- * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- */
-.o-media {
-  display: block; }
-  .o-media:after {
-    content: "" !important;
-    display: block !important;
-    clear: both !important; }
-
-.o-media__img {
-  float: left;
-  margin-right: 24px; }
-  .o-media__img > img {
-    display: block; }
-
-.o-media__body {
-  overflow: hidden;
-  display: block; }
-  .o-media__body,
-  .o-media__body > :last-child {
-    margin-bottom: 0; }
-
-/* Size variants
-   ========================================================================== */
-/**
- * Modify the amount of space between our image and our text. We also have
- * reversible options for all available sizes.
- */
-.o-media--tiny > .o-media__img {
-  margin-right: 6px; }
-
-.o-media--tiny.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 6px; }
-
-.o-media--small > .o-media__img {
-  margin-right: 12px; }
-
-.o-media--small.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 12px; }
-
-.o-media--large > .o-media__img {
-  margin-right: 48px; }
-
-.o-media--large.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 48px; }
-
-.o-media--huge > .o-media__img {
-  margin-right: 96px; }
-
-.o-media--huge.o-media--reverse > .o-media__img {
-  margin-right: 0;
-  margin-left: 96px; }
-
-/* Reversed media objects
-   ========================================================================== */
-.o-media--reverse > .o-media__img {
-  float: right;
-  margin-right: 0;
-  margin-left: 24px; }
-
-/* Gutterless media objects
-   ========================================================================== */
-.o-media--flush > .o-media__img {
-  margin-right: 0;
-  margin-left: 0; }
-
-/* ==========================================================================
-   #FLAG
-   ========================================================================== */
-/**
- * The flag object is a design pattern similar to the media object, however it
- * utilises `display: table[-cell];` to give us control over the vertical
- * alignments of the text and image.
- *
- * http://csswizardry.com/2013/05/the-flag-object/
- *
- * 1. Allows us to control vertical alignments.
- * 2. Force the object to be the full width of its parent. Combined with [1],
- *    this makes the object behave in a quasi-`display: block;` manner.
- */
-.o-flag {
-  display: table;
-  /* [1] */
-  width: 100%;
-  /* [2] */ }
-
-/**
-   * Items within a flag object. There should only ever be one of each.
-   *
-   * 1. Default to aligning content to their middles.
-   */
-.o-flag__img,
-.o-flag__body {
-  display: table-cell;
-  vertical-align: middle;
-  /* [1] */ }
-
-/**
-   * Flag images have a space between them and the body of the object.
-   *
-   * 1. Force `.flag__img` to take up as little space as possible:
-   *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
-   */
-.o-flag__img {
-  width: 1px;
-  /* [1] */
-  padding-right: 24px;
-  /**
-     * 1. Fixes problem with images disappearing.
-     */ }
-  .o-flag__img > img {
-    max-width: none;
-    /* [1] */ }
-
-/**
-   * The container for the main content of the flag object.
-   *
-   * 1. Forces the `.flag__body` to take up all remaining space.
-   */
-.o-flag__body {
-  width: auto;
-  /* [1] */ }
-  .o-flag__body,
-  .o-flag__body > :last-child {
-    margin-bottom: 0; }
-
-/* Size variants.
-   ========================================================================== */
-.o-flag--tiny > .o-flag__img {
-  padding-right: 6px; }
-
-.o-flag--tiny.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 6px; }
-
-.o-flag--small > .o-flag__img {
-  padding-right: 12px; }
-
-.o-flag--small.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 12px; }
-
-.o-flag--large > .o-flag__img {
-  padding-right: 48px; }
-
-.o-flag--large.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 48px; }
-
-.o-flag--huge > .o-flag__img {
-  padding-right: 96px; }
-
-.o-flag--huge.o-flag--reverse > .o-flag__img {
-  padding-right: 0;
-  padding-left: 96px; }
-
-.o-flag--flush > .o-flag__img {
-  padding-right: 0;
-  padding-left: 0; }
-
-/* Reversed flag.
-   ========================================================================== */
-/**
- * 1. Swap the rendered direction of the object…
- * 2. …and reset it.
- * 3. Reassign margins to the correct sides.
- */
-.o-flag--reverse {
-  direction: rtl;
-  /* [1] */ }
-  .o-flag--reverse > .o-flag__img,
-  .o-flag--reverse > .o-flag__body {
-    direction: ltr;
-    /* [2] */ }
-  .o-flag--reverse > .o-flag__img {
-    padding-right: 0;
-    /* [3] */
-    padding-left: 24px;
-    /* [3] */ }
-
-/* Alignment variants.
-   ========================================================================== */
-/**
- * Vertically align the image- and body-content differently. Defaults to middle.
- */
-.o-flag--top > .o-flag__img,
-.o-flag--top > .o-flag__body {
-  vertical-align: top; }
-
-.o-flag--bottom > .o-flag__img,
-.o-flag--bottom > .o-flag__body {
-  vertical-align: bottom; }
-
-/* ==========================================================================
-   #LIST-BARE
-   ========================================================================== */
-/**
- * Strip list-like appearance from lists by removing their bullets, and any
- * indentation.
- */
-.o-list-bare {
-  list-style: none;
-  margin-left: 0; }
-
-/* ==========================================================================
-   #LIST-INLINE
-   ========================================================================== */
-/**
- * The list-inline object simply displays a list of items in one line.
- */
-.o-list-inline {
-  margin-left: 0;
-  list-style: none; }
-
-.o-list-inline__item {
-  display: inline-block; }
-
-/* Delimited list.
-   ========================================================================== */
-/**
- * By default, applying this class will comma separate your list items. You can
- * change the delimiter by predefining the following variable:
- */
-.o-list-inline--delimited {
-  font-size: 0; }
-  .o-list-inline--delimited > .o-list-inline__item {
-    font-size: 1rem; }
-  .o-list-inline--delimited > .o-list-inline__item + .o-list-inline__item:before {
-    content: ", "; }
-
-/* ==========================================================================
-   #BOX
-   ========================================================================== */
-/**
- * The box object simply boxes off content. Extend with cosmetic styles in the
- * Components layer.
- *
- * 1. So we can apply the `.o-box` class to naturally-inline elements.
- */
-.o-box {
-  display: block;
-  /* [1] */
-  padding: 24px; }
-  .o-box:after {
-    content: "" !important;
-    display: block !important;
-    clear: both !important; }
-  .o-box > :last-child {
-    margin-bottom: 0; }
-
-/* Size variants
-   ========================================================================== */
-.o-box--flush {
-  padding: 0; }
-
-.o-box--tiny {
-  padding: 6px; }
-
-.o-box--small {
-  padding: 12px; }
-
-.o-box--large {
-  padding: 48px; }
-
-.o-box--huge {
-  padding: 96px; }
-
-/* ==========================================================================
-   #BLOCK
-   ========================================================================== */
-/**
- * Stacked image-with-text object. A simple abstraction to cover a very commonly
- * occurring design pattern.
- */
-.o-block {
-  display: block;
-  text-align: center; }
-
-.o-block__img {
-  margin-bottom: 24px;
-  /* Size variants.
-       ====================================================================== */ }
-  .o-block--flush > .o-block__img {
-    margin-bottom: 0; }
-  .o-block--tiny > .o-block__img {
-    margin-bottom: 6px; }
-  .o-block--small > .o-block__img {
-    margin-bottom: 12px; }
-  .o-block--large > .o-block__img {
-    margin-bottom: 48px; }
-  .o-block--huge > .o-block__img {
-    margin-bottom: 96px; }
-
-.o-block__body {
-  display: block; }
-
-/* Alignment variants.
-   ========================================================================== */
-.o-block--right {
-  text-align: right; }
-
-.o-block--left {
-  text-align: left; }
 
 /* ==========================================================================
    #RATIO
@@ -1210,73 +923,6 @@ table {
 
 /* stylelint-enable */
 /* ==========================================================================
-   #CROP
-   ========================================================================== */
-/**
- * Provide a cropping container in order to display media (usually images)
- * cropped to certain ratios.
- *
- * 1. Set up a positioning context in which the image can sit.
- * 2. This is the crucial part: where the cropping happens.
- */
-.o-crop {
-  position: relative;
-  /* [1] */
-  display: block;
-  overflow: hidden;
-  /* [2] */ }
-
-/**
-   * Apply this class to the content (usually `img`) that needs cropping.
-   *
-   * 1. Image’s default positioning is top-left in the cropping box.
-   * 2. Make sure the media doesn’t stop itself too soon.
-   */
-.o-crop__content {
-  position: absolute;
-  top: 0;
-  /* [1] */
-  left: 0;
-  /* [1] */
-  max-width: none;
-  /* [2] */ }
-
-/**
-   * We can position the media in different locations within the cropping area.
-   */
-.o-crop__content--right {
-  right: 0;
-  left: auto; }
-
-.o-crop__content--bottom {
-  top: auto;
-  bottom: 0; }
-
-.o-crop__content--center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-/* stylelint-disable */
-/* Crop-ratio variants.
-   ========================================================================== */
-/**
- * Generate a series of crop classes to be used like so:
- *
- *   <div class="o-crop  o-crop--16:9">
- *
- */
-.o-crop--2\:1 {
-  padding-bottom: 50%; }
-
-.o-crop--4\:3 {
-  padding-bottom: 75%; }
-
-.o-crop--16\:9 {
-  padding-bottom: 56.25%; }
-
-/* stylelint-enable */
-/* ==========================================================================
    #TABLES
    ========================================================================== */
 /**
@@ -1316,63 +962,44 @@ table {
   padding: 96px; }
 
 /* ==========================================================================
-   #PACK
+   #WRAPPERS
    ========================================================================== */
 /**
- * The pack object simply causes any number of elements pack up horizontally to
- * automatically fill an equal, fluid width of their parent.
- *
- * 1. Fill all available space.
- * 2. Remove any leftover styling from lists.
- * 3. Cause children to be automatically equally sized.
+ * Page-level constraining and wrapping elements.
  */
-.o-pack {
-  width: 100%;
-  /* [1] */
-  margin-left: 0;
-  /* [2] */
-  display: table;
-  table-layout: fixed;
-  /* [3] */ }
-
-/**
-   * 1. Cause children to adopt table-like structure.
-   */
-.o-pack__item {
-  display: table-cell;
-  /* [1] */
-  /* Vertical alignment variants.
-       ====================================================================== */ }
-  .o-pack--middle > .o-pack__item {
-    vertical-align: middle; }
-  .o-pack--bottom > .o-pack__item {
-    vertical-align: bottom; }
-
-/* Unequal-width items.
-   ========================================================================== */
-.o-pack--auto {
-  table-layout: auto; }
+/* mine */
+/* stylelint-disable */
+/* stylelint-enable */
+.o-wrapper {
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  position: relative;
+  /* mine */ }
+  .o-wrapper:after {
+    content: "" !important;
+    display: block !important;
+    clear: both !important; }
 
 /* Size variants.
    ========================================================================== */
-.o-pack--tiny {
-  border-spacing: 6px; }
+.o-wrapper--tiny {
+  padding-right: 6px;
+  padding-left: 6px; }
 
-.o-pack--small {
-  border-spacing: 12px; }
+.o-wrapper--small {
+  padding-right: 12px;
+  padding-left: 12px; }
 
-.o-pack--large {
-  border-spacing: 48px; }
+.o-wrapper--large {
+  padding-right: 48px;
+  padding-left: 48px; }
 
-.o-pack--huge {
-  border-spacing: 96px; }
-
-/* Reversed order packs
-   ========================================================================== */
-.o-pack--rev {
-  direction: rtl; }
-  .o-pack--rev > .o-pack__item {
-    direction: ltr; }
+.o-wrapper--huge {
+  padding-right: 96px;
+  padding-left: 96px; }
 
 .c-carousel__dots {
   position: absolute;
@@ -1824,252 +1451,6 @@ table {
   clear: both !important; }
 
 /* ==========================================================================
-   #WIDTHS
-   ========================================================================== */
-/**
- * inuitcss generates a series of utility classes that give a fluid width to
- * whichever element they’re applied, e.g.:
- *
- *   <img src="" alt="" class="u-1/2" />
- *
- * These classes are most commonly used in conjunction with our layout system,
- * e.g.:
- *
- *   <div class="o-layout__item  u-1/2">
- *
- * By default, inuitcss will also generate responsive variants of each of these
- * classes by using your Sass MQ configuration, e.g.:
- *
- *   <div class="o-layout__item  u-1/1  u-1/2@tablet  u-1/3@desktop">
- *
- * Optionally, inuitcss can generate offset classes which can push and pull
- * elements left and right by a specified amount, e.g.:
- *
- *   <div class="o-layout__item  u-2/3  u-pull-1/3">
- *
- * This is useful for making very granular changes to the rendered order of
- * items in a layout.
- *
- * N.B. This option is turned off by default.
- */
-/**
- * A series of width helper classes that you can use to size things like grid
- * systems. Classes take a fraction-like format (e.g. `.u-2/3`). Use these in
- * your markup:
- *
- * <div class="u-7/12">
- *
- * The following will generate widths helper classes based on the fractions
- * defined in the `$inuit-fractions` list.
- */
-.u-1\/1 {
-  -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
-
-.u-1\/2 {
-  -ms-flex-preferred-size: 50% !important;
-      flex-basis: 50% !important; }
-
-.u-2\/2 {
-  -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
-
-.u-1\/3 {
-  -ms-flex-preferred-size: 33.33333% !important;
-      flex-basis: 33.33333% !important; }
-
-.u-2\/3 {
-  -ms-flex-preferred-size: 66.66667% !important;
-      flex-basis: 66.66667% !important; }
-
-.u-3\/3 {
-  -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
-
-.u-1\/4 {
-  -ms-flex-preferred-size: 25% !important;
-      flex-basis: 25% !important; }
-
-.u-2\/4 {
-  -ms-flex-preferred-size: 50% !important;
-      flex-basis: 50% !important; }
-
-.u-3\/4 {
-  -ms-flex-preferred-size: 75% !important;
-      flex-basis: 75% !important; }
-
-.u-4\/4 {
-  -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
-
-.u-1\/5 {
-  -ms-flex-preferred-size: 20% !important;
-      flex-basis: 20% !important; }
-
-.u-2\/5 {
-  -ms-flex-preferred-size: 40% !important;
-      flex-basis: 40% !important; }
-
-.u-3\/5 {
-  -ms-flex-preferred-size: 60% !important;
-      flex-basis: 60% !important; }
-
-.u-4\/5 {
-  -ms-flex-preferred-size: 80% !important;
-      flex-basis: 80% !important; }
-
-.u-5\/5 {
-  -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
-
-/**
- * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
- * defined breakpoints, and give them a Responsive Suffix, e.g.:
- *
- * <div class="u-3/12@mobile">
- */
-@media (min-width: 47.9375em) {
-  .u-1\/1\@tablet {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/2\@tablet {
-    -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
-  .u-2\/2\@tablet {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/3\@tablet {
-    -ms-flex-preferred-size: 33.33333% !important;
-        flex-basis: 33.33333% !important; }
-  .u-2\/3\@tablet {
-    -ms-flex-preferred-size: 66.66667% !important;
-        flex-basis: 66.66667% !important; }
-  .u-3\/3\@tablet {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/4\@tablet {
-    -ms-flex-preferred-size: 25% !important;
-        flex-basis: 25% !important; }
-  .u-2\/4\@tablet {
-    -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
-  .u-3\/4\@tablet {
-    -ms-flex-preferred-size: 75% !important;
-        flex-basis: 75% !important; }
-  .u-4\/4\@tablet {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/5\@tablet {
-    -ms-flex-preferred-size: 20% !important;
-        flex-basis: 20% !important; }
-  .u-2\/5\@tablet {
-    -ms-flex-preferred-size: 40% !important;
-        flex-basis: 40% !important; }
-  .u-3\/5\@tablet {
-    -ms-flex-preferred-size: 60% !important;
-        flex-basis: 60% !important; }
-  .u-4\/5\@tablet {
-    -ms-flex-preferred-size: 80% !important;
-        flex-basis: 80% !important; }
-  .u-5\/5\@tablet {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; } }
-
-@media (min-width: 75em) {
-  .u-1\/1\@desktop {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/2\@desktop {
-    -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
-  .u-2\/2\@desktop {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/3\@desktop {
-    -ms-flex-preferred-size: 33.33333% !important;
-        flex-basis: 33.33333% !important; }
-  .u-2\/3\@desktop {
-    -ms-flex-preferred-size: 66.66667% !important;
-        flex-basis: 66.66667% !important; }
-  .u-3\/3\@desktop {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/4\@desktop {
-    -ms-flex-preferred-size: 25% !important;
-        flex-basis: 25% !important; }
-  .u-2\/4\@desktop {
-    -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
-  .u-3\/4\@desktop {
-    -ms-flex-preferred-size: 75% !important;
-        flex-basis: 75% !important; }
-  .u-4\/4\@desktop {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/5\@desktop {
-    -ms-flex-preferred-size: 20% !important;
-        flex-basis: 20% !important; }
-  .u-2\/5\@desktop {
-    -ms-flex-preferred-size: 40% !important;
-        flex-basis: 40% !important; }
-  .u-3\/5\@desktop {
-    -ms-flex-preferred-size: 60% !important;
-        flex-basis: 60% !important; }
-  .u-4\/5\@desktop {
-    -ms-flex-preferred-size: 80% !important;
-        flex-basis: 80% !important; }
-  .u-5\/5\@desktop {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; } }
-
-@media (min-width: 85.625em) {
-  .u-1\/1\@wide {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/2\@wide {
-    -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
-  .u-2\/2\@wide {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/3\@wide {
-    -ms-flex-preferred-size: 33.33333% !important;
-        flex-basis: 33.33333% !important; }
-  .u-2\/3\@wide {
-    -ms-flex-preferred-size: 66.66667% !important;
-        flex-basis: 66.66667% !important; }
-  .u-3\/3\@wide {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/4\@wide {
-    -ms-flex-preferred-size: 25% !important;
-        flex-basis: 25% !important; }
-  .u-2\/4\@wide {
-    -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
-  .u-3\/4\@wide {
-    -ms-flex-preferred-size: 75% !important;
-        flex-basis: 75% !important; }
-  .u-4\/4\@wide {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
-  .u-1\/5\@wide {
-    -ms-flex-preferred-size: 20% !important;
-        flex-basis: 20% !important; }
-  .u-2\/5\@wide {
-    -ms-flex-preferred-size: 40% !important;
-        flex-basis: 40% !important; }
-  .u-3\/5\@wide {
-    -ms-flex-preferred-size: 60% !important;
-        flex-basis: 60% !important; }
-  .u-4\/5\@wide {
-    -ms-flex-preferred-size: 80% !important;
-        flex-basis: 80% !important; }
-  .u-5\/5\@wide {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; } }
-
-/* ==========================================================================
    #HEADINGS
    ========================================================================== */
 /**
@@ -2103,6 +1484,91 @@ table {
 .u-h6 {
   font-size: 1rem !important;
   line-height: 1.5 !important; }
+
+/* ==========================================================================
+   #HIDE
+   ========================================================================== */
+/**
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.u-hidden-visually {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important; }
+
+/**
+ * Hide visually and from screen readers.
+ */
+.u-hidden {
+  display: none !important; }
+
+@media (max-width: 47.9275em) {
+  .u-hidden--mobile {
+    display: none !important; } }
+
+@media (min-width: 47.9375em) and (max-width: 74.99em) {
+  .u-hidden--tablet {
+    display: none !important; } }
+
+@media (min-width: 75em) {
+  .u-hidden--desktop {
+    display: none !important; } }
+
+/* misc utilities - still needs some thought */
+.u-margin-auto {
+  margin: auto; }
+
+.u-margin-left-auto {
+  margin-left: auto; }
+
+.u-align-left {
+  text-align: left; }
+
+.u-align-right {
+  text-align: right; }
+
+.u-relative {
+  position: relative; }
+
+.u-inline-block {
+  display: inline-block; }
+
+.u-reset-case {
+  text-transform: none; }
+
+.u-absolute-center {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.u-absolute-top {
+  top: 0; }
+
+.u-absolute-bottom {
+  bottom: 0; }
+
+.u-absolute-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+.u-absolute-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+[class*="u-absolute"] {
+  position: absolute !important; }
 
 /* ==========================================================================
    #SPACING
@@ -2300,150 +1766,6 @@ table {
   margin-left: 0 !important; }
 
 /* stylelint-enable string-quotes */
-/* ==========================================================================
-   #PRINT
-   ========================================================================== */
-/**
- * Very crude, reset-like styles taken from the HTML5 Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/5.3.0/dist/doc/css.md#print-styles
- * https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L205-L282
- */
-@media print {
-  /**
-   * 1. Black prints faster: http://www.sanbeiji.com/archives/953
-   */
-  *,
-  *:before,
-  *:after,
-  *:first-letter,
-  *:first-line {
-    background: transparent !important;
-    color: #000 !important;
-    /* [1] */
-    box-shadow: none !important;
-    text-shadow: none !important; }
-  a,
-  a:visited {
-    text-decoration: underline; }
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-  /**
-   * Don't show links that are fragment identifiers, or use the `javascript:`
-   * pseudo protocol.
-   */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-  /**
-   * Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  img {
-    max-width: 100% !important; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-  h2,
-  h3 {
-    page-break-after: avoid; } }
-
-/* ==========================================================================
-   #HIDE
-   ========================================================================== */
-/**
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-.u-hidden-visually {
-  border: 0 !important;
-  clip: rect(0 0 0 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important; }
-
-/**
- * Hide visually and from screen readers.
- */
-.u-hidden {
-  display: none !important; }
-
-@media (max-width: 47.9275em) {
-  .u-hidden--mobile {
-    display: none !important; } }
-
-@media (min-width: 47.9375em) and (max-width: 74.99em) {
-  .u-hidden--tablet {
-    display: none !important; } }
-
-@media (min-width: 75em) {
-  .u-hidden--desktop {
-    display: none !important; } }
-
-/* misc utilities - still needs some thought */
-.u-margin-auto {
-  margin: auto; }
-
-.u-margin-left-auto {
-  margin-left: auto; }
-
-.u-align-left {
-  text-align: left; }
-
-.u-align-right {
-  text-align: right; }
-
-.u-relative {
-  position: relative; }
-
-.u-inline-block {
-  display: inline-block; }
-
-.u-reset-case {
-  text-transform: none; }
-
-.u-absolute-center {
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-.u-absolute-top {
-  top: 0; }
-
-.u-absolute-bottom {
-  bottom: 0; }
-
-.u-absolute-left {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto; }
-
-.u-absolute-right {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto; }
-
-[class*="u-absolute"] {
-  position: absolute !important; }
-
 @font-face {
   font-family: "Headline";
   src: url("../fonts/headline-regular.woff") format("woff"); }

@@ -80,52 +80,55 @@
 // SETTINGS
 @import "settings.config";
 @import "settings.core";
+@import "settings.defaults"; //<-- added
 @import "settings.global";
 
 // TOOLS
-@import "tools.rem";
-@import "tools.font-size";
 @import "tools.clearfix";
-@import "tools.hidden";
-//@import "node_modules/sass-mq/mq";
-@import "mq";
-
+@import "tools.font-size";
 @import "tools.functions";
+@import "tools.hidden";
+//@import "tools.mixins"; //<-- causes error
+@import "tools.rem";
+
+@import "mq";
 
 // GENERIC
 @import "generic.box-sizing";
 @import "generic.normalize";
 @import "generic.reset";
-@import "generic.shared";
+@import "generic.shared"; //<-- remove?
 
 // ELEMENTS
-@import "elements.page";
-@import "elements.headings";
+@import "elements.headings"; //<-- remove?
 @import "elements.images";
 @import "elements.misc";
+@import "elements.page";
 @import "elements.tables";
 
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
-@import "objects.wrapper";
+
 //@import "objects.layout";
-@import "objects.grid";
-@import "objects.media";
-@import "objects.flag";
-@import "objects.list-bare";
-@import "objects.list-inline";
+//@import "objects.block"; //display text under image
 @import "objects.box";
-@import "objects.block";
-@import "objects.ratio";
-@import "objects.crop";
-@import "objects.tables";
-@import "objects.pack";
 @import "objects.columns";
+//@import "objects.crop";
+//import "objects.flag";
+@import "objects.grid";
+//@import "objects.list-bare";
+//@import "objects.list-inline";
+//@import "objects.media";
+//@import "objects.pack";
+@import "objects.ratio";
+@import "objects.tables";
+@import "objects.wrapper";
 
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
+
 @import "components.aside-banner";
 @import "components.input-text";
 @import "components.buttons";
@@ -145,11 +148,10 @@
 @import "utilities.clearfix";
 
 //$inuit-offsets: true;
-@import "utilities.widths";
 @import "utilities.headings";
-@import "utilities.spacing";
-@import "utilities.print";
 @import "utilities.hide";
 @import "utilities.position";
-
+//@import "utilities.print";
+@import "utilities.spacing";
+//@import "utilities.widths";
 @import "_style-guide";
