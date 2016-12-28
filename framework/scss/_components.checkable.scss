@@ -6,7 +6,7 @@
 .c-checkable__input {
   display: none;
 }
-.c-checkable__input:checked + [class*="o-icon"] {
+.c-checkable__input:checked + [class*="c-icon"] {
   color: $textColor;
 }
 

@@ -1053,7 +1053,7 @@ Need to decide which notation is the most understandable:
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    height: 20.5em; }
+    height: 18.5em; }
   .c-aside-banner__header {
     font-size: 1.2em;
     padding: 0 0.8em;
@@ -1241,7 +1241,7 @@ Need to decide which notation is the most understandable:
 .c-checkable__input {
   display: none; }
 
-.c-checkable__input:checked + [class*="o-icon"] {
+.c-checkable__input:checked + [class*="c-icon"] {
   color: #112268; }
 
 .c-checkable__input ~ label {
