@@ -19,19 +19,30 @@
   &__dots {
     position: absolute;
     right: 0;
-    bottom: 0.6em;
+    bottom: 0.5em;
+    height: 1.5em;
     padding-right: 0.6em;
     background: $primary; /* so that text runs underneath */
   }
   &__dot {
-    border-radius: 50%;
-    margin-right: 0.5em;
-    width: 0.5em;
-    height: 0.5em;
-    background: $textColor;
+    position: relative;
+    height: 1.5em;
     display: inline-block;
     cursor: pointer;
-    &.is-active {
+    width: 0.5em;
+    margin-right: 0.5em;
+    &:after {
+      content: '';
+      border-radius: 50%;
+      width: 0.5em;
+      height: 0.5em;
+      background: $textColor;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      margin: auto;
+    }
+    &.is-active:after {
       background: $secondaryColor;
     }
   }
@@ -56,16 +67,23 @@
     flex: 0 0 100%;
     display: flex;
     flex-direction: column;
-    height: 19.5em;
+    //height: 19.5em;
+    height: 20.5em;
   }
   &__header {
     font-size: 1.2em;
-    padding: 0.8rem;
+    //padding: 0.8rem;
+    padding: 0 0.8em;
+    line-height: 2.5em;
+    height: 2.5em;
     font-weight: normal;
     margin: 0;
   }
   &__footer {
-    padding: 0.5rem 0.8rem;
+    //padding: 0.5rem 0.8rem;
+    padding: 0 0.8em;
+    height: 2.5em;
+    line-height: 2.5em;
   }
   &__inner {
     display: flex;
