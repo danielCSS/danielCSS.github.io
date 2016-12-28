@@ -1556,6 +1556,10 @@ Need to decide which notation is the most understandable:
 .u-reset-case {
   text-transform: none; }
 
+.u-dark {
+  color: #f1f2f7;
+  background: #112268; }
+
 .u-absolute-center {
   margin: auto;
   top: 0;
@@ -1784,9 +1788,11 @@ Need to decide which notation is the most understandable:
   font-family: "Headline";
   src: url("../fonts/headline-regular.woff") format("woff"); }
 
+body {
+  color: #112268; }
+
 .style-guide {
   font-family: "Headline",sans-serif;
-  color: #112268;
   margin: 0 auto;
   max-width: 100em; }
   .style-guide > .o-box {
@@ -1796,7 +1802,7 @@ Need to decide which notation is the most understandable:
       .style-guide > .o-box {
         margin: 0;
         padding: 1em; } }
-    .style-guide > .o-box.dark {
+    .style-guide > .o-box.u-dark {
       color: #f1f2f7;
       background: #112268; }
   .style-guide > .c-header, .style-guide [class*="c-header--"] {

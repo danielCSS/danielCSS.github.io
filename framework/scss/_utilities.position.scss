@@ -23,6 +23,10 @@
 .u-reset-case {
   text-transform: none;
 }
+.u-dark {
+  color: $lightBackground;
+  background: $textColor;
+}
 .u-absolute-center {
   margin: auto;
   top:0;bottom:0;

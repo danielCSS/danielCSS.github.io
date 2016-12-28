@@ -6,9 +6,7 @@
   var myTimer = setInterval(updateCarousel, 5000);
   dotContainer.addEventListener("click", function(e) {
   	if(e.target && e.target.nodeName == "SPAN") {
-        console.log(e);
         var index = getElIndex(e.target);
-        console.log("index = " + index);
         clearInterval(myTimer);
         setOrder(index - 1);
         document.querySelector(".js-carousel > .is-active").classList.remove('is-active');

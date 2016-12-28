@@ -3,10 +3,12 @@
     font-family: "Headline";
     src: url("../fonts/headline-regular.woff") format('woff');
 }
-
+body {
+  color: $textColor;
+}
 .style-guide {
   font-family: "Headline",sans-serif;
-  color: $textColor;
+
   margin: 0 auto;
   max-width: 100em;
   > .o-box {
@@ -16,7 +18,7 @@
       margin: 0;
       padding: 1em;
     }
-    &.dark {
+    &.u-dark {
       color: $lightBackground;
       background: $textColor;
     }
