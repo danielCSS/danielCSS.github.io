@@ -11,6 +11,8 @@
         console.log("index = " + index);
         clearInterval(myTimer);
         setOrder(index - 1);
+        document.querySelector(".js-carousel > .is-active").classList.remove('is-active');
+        document.querySelector(".js-carousel").children[index].classList.add('is-active');
         document.querySelector(".c-carousel__dot.is-active").classList.remove('is-active');
         dotContainer.children[index].classList.add('is-active');
         myTimer = setInterval(updateCarousel, 5000);
