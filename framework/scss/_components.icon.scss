@@ -2,9 +2,9 @@
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
-  fill: $white; /* default color */
-  //fill: currentColor;
-  color: $white; /* default color when currentColor is used */
+  //fill: $white; /* default color */
+  fill: currentColor; /* this should replace icon--colored because in such a case the color should have been set on the root of the component */
+  //color: $white; /* default color when currentColor is used */
   font-size: 2em; /* default-size */
   text-align: center;
   padding-right: 0.1em; /* to override this - use utility class ?? */
@@ -19,7 +19,26 @@
   // @include respond-to(mobile) {
   //   padding: 0 0.3rem 0 0;
   // }
+
+  //TODO: Where is this used?
+  // .u-dark & {
+  //   color: $textColor;
+  //   fill: $white; //necessary because the color here will change the default fill:currentColor to blue
+  // }
+
+
+  //the icon has to be within an immmediate sibling of is-active (aside banner icons break when written like this)
+  // .is-active & {
+  //   color: $white;
+  //   fill: $textColor; //use case: nav icons with active icon of yellow background
+  // }
 }
+.is-active > [class*="c-icon"] {
+  color: $white;
+  fill: $textColor; //use case: nav icons with active icon of yellow background
+}
+
+/* TODO: are small medium and large necessary? - maybe should just change the font size of the component apropriately?? */
 .c-icon {
   &--small {
     font-size: 1.3em;
@@ -38,36 +57,51 @@
   //   bottom:0;
   //   padding:0;
   // }
+  /* TODO: is 'colored' necessary? Maybe should just use currentCOlor in base */
+  /* Update: I think this is necessary - look at 1) mobile tabs 2) Close icon within button 3) footer icon within yellow background */
   &--colored {
     fill: $textColor;
-    .is-active & {
-      fill: $white;
-    }
+    color: $white;
+    // .is-active & { //TODO: what use case does this cover?
+    //   fill: $white;
+    //   color: $textColor;
+    // }
     .c-tab & {
       transition: all 0.3s;
     }
+    .c-tab.is-active & {
+      fill: $secondaryColor;
+      color: $textColor;
+    }
   }
-  &--current-color {
-    color: currentColor; /* When currentColor is used in SVG - need to set color on ancestor element */
-  }
+    /* TODO: Is this necessary... what's the use case? */
+    /* Yes,  Close button within a dark header */
   &--inverted {
     color: $textColor;
+    fill: $white;
+  }
+  &--checkable {
+    color: $white;
+    fill: $white;
   }
   &--bordered {
     stroke: $textColor;
   }
   &--primary {
     fill: $primaryColor;
+    color: $white;
   }
   &--secondary {
     fill: $secondaryColor;
-    .is-active & {
-      fill: $textColor;
-    }
+    color: $white;
+    // .is-active & {
+    //   fill: $textColor;
+    // }
   }
 }
-.is-active {
-  > .c-icon, > [class*="c-icon--"] {
-    fill: $textColor;
-  }
-}
+// .is-active {
+//   > .c-icon, > [class*="c-icon--"] {
+//     color: $textColor;
+//     fill: $white;
+//   }
+// }

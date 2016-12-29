@@ -1279,10 +1279,8 @@ Need to decide which notation is the most understandable:
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
-  fill: #fff;
-  /* default color */
-  color: #fff;
-  /* default color when currentColor is used */
+  fill: currentColor;
+  /* this should replace icon--colored because in such a case the color should have been set on the root of the component */
   font-size: 2em;
   /* default-size */
   text-align: center;
@@ -1294,8 +1292,17 @@ Need to decide which notation is the most understandable:
   pointer-events: none;
   /* TODO: decide whether to use .ie .c-icon {} selector for this */ }
 
+.is-active > [class*="c-icon"] {
+  color: #fff;
+  fill: #112268; }
+
+/* TODO: are small medium and large necessary? - maybe should just change the font size of the component apropriately?? */
 .c-icon {
-  /* use utility positioning classes instead */ }
+  /* use utility positioning classes instead */
+  /* TODO: is 'colored' necessary? Maybe should just use currentCOlor in base */
+  /* Update: I think this is necessary - look at 1) mobile tabs 2) Close icon within button 3) footer icon within yellow background */
+  /* TODO: Is this necessary... what's the use case? */
+  /* Yes,  Close button within a dark header */ }
   .c-icon--small {
     font-size: 1.3em; }
   .c-icon--medium {
@@ -1303,27 +1310,27 @@ Need to decide which notation is the most understandable:
   .c-icon--large {
     font-size: 2.4em; }
   .c-icon--colored {
-    fill: #112268; }
-    .is-active .c-icon--colored {
-      fill: #fff; }
+    fill: #112268;
+    color: #fff; }
     .c-tab .c-icon--colored {
       transition: all 0.3s; }
-  .c-icon--current-color {
-    color: currentColor;
-    /* When currentColor is used in SVG - need to set color on ancestor element */ }
+    .c-tab.is-active .c-icon--colored {
+      fill: #fdd941;
+      color: #112268; }
   .c-icon--inverted {
-    color: #112268; }
+    color: #112268;
+    fill: #fff; }
+  .c-icon--checkable {
+    color: #fff;
+    fill: #fff; }
   .c-icon--bordered {
     stroke: #112268; }
   .c-icon--primary {
-    fill: #ec028d; }
+    fill: #ec028d;
+    color: #fff; }
   .c-icon--secondary {
-    fill: #fdd941; }
-    .is-active .c-icon--secondary {
-      fill: #112268; }
-
-.is-active > .c-icon, .is-active > [class*="c-icon--"] {
-  fill: #112268; }
+    fill: #fdd941;
+    color: #fff; }
 
 .c-header, [class*="c-header--"] {
   font-size: 1.3rem;
@@ -1335,26 +1342,21 @@ Need to decide which notation is the most understandable:
   -ms-flex-align: center;
       align-items: center; }
 
-.c-header--main {
-  height: 5rem;
-  font-size: 1.5rem; }
-
-.c-header__text {
-  font-size: 1em;
-  /* override h2 element style */
-  display: inline-block;
-  margin: 0 auto 0 0.5em;
-  /* override default h2 element margin bottom (auto right margin is to space the flex-items) */ }
-
-.c-header--colored {
-  /* generally used in tabs */
-  color: #fff;
-  background: #112268; }
-
-.c-header--inverted {
-  /* generally used in popups */
-  color: #112268;
-  background: #fff; }
+.c-header {
+  /* deprecated - this can/should be component-wide on the root or with a utility like u-dark */ }
+  .c-header--main {
+    height: 5rem;
+    font-size: 1.5rem; }
+  .c-header__text {
+    font-size: 1em;
+    /* override h2 element style */
+    display: inline-block;
+    margin: 0 auto 0 0.5em;
+    /* override default h2 element margin bottom (auto right margin is to space the flex-items) */ }
+  .c-header--inverted {
+    /* generally used in popups */
+    color: #112268;
+    background: #fff; }
 
 [class*="c-link"] {
   color: currentColor;
@@ -1557,8 +1559,8 @@ Need to decide which notation is the most understandable:
   text-transform: none; }
 
 .u-dark {
-  color: #f1f2f7;
-  background: #112268; }
+  color: #f1f2f7 !important;
+  background: #112268 !important; }
 
 .u-absolute-center {
   margin: auto;

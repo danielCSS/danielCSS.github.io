@@ -20,10 +20,11 @@
     display: inline-block;
     margin: 0 auto 0 0.5em; /* override default h2 element margin bottom (auto right margin is to space the flex-items) */
   }
-  &--colored { /* generally used in tabs */
-    color: $white;
-    background: $textColor;
-  }
+  /* deprecated - this can/should be component-wide on the root or with a utility like u-dark */
+  // &--colored { /* generally used in tabs */
+  //   color: $white;
+  //   background: $textColor;
+  // }
   &--inverted { /* generally used in popups */
     color: $textColor;
     background: $white;

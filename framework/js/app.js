@@ -35,6 +35,8 @@
         return i;
       }
     }
+    //no element with is-active found, so set first element as is-active
+    list.children[0].classList.add('is-active');
     return 0; //if is-active class is not found - make the first element active
   }
   function createDots(len) {
@@ -46,6 +48,8 @@
     }
     list.parentNode.insertBefore(dotContainer, list.nextSibling);
     dotContainer.classList.add('c-carousel__dots');
+    //initialize first dot to be active
+    dotContainer.children[0].classList.add('is-active');
   }
 
   function updateCarousel() {
