@@ -3,6 +3,14 @@
   text-decoration: underline;
   cursor: pointer;
   display: inline-block;
+  @include mq($from: tablet) {
+    &:active, &:focus {
+      padding: 2px;
+      outline: none; /* mine */
+      box-shadow: 0 0 2px 2px currentColor;
+      border-radius: $global-radius;
+    }
+  }
 }
 
 .c-link {
@@ -12,7 +20,4 @@
   &--icon {
     padding-left: 2em; /* use when icon is position absolute and pointer is need on icon as well */
   }
-  // &--colored {
-  //   color: $textColor; /* may not be necessary because of currentColor on base class */
-  // }
 }

@@ -1160,9 +1160,8 @@ Need to decide which notation is the most understandable:
   cursor: pointer;
   /* [5] */
   padding: 0.1em 0.5em;
-  transition: 0.33333s;
   border-radius: 0.375em;
-  border: .15em solid transparent;
+  border: 2px solid transparent;
   /* mine */
   text-decoration: none;
   /* mine */
@@ -1175,10 +1174,9 @@ Need to decide which notation is the most understandable:
     color: #112268; }
   @media (min-width: 47.9375em) {
     .c-btn:active, .c-btn:focus, [class*="c-btn--"]:active, [class*="c-btn--"]:focus {
-      border: .15em solid #eee;
-      /* mine */
       outline: none;
-      /* mine */ } }
+      /* mine */
+      box-shadow: inset 0 0 0 1px #eee; } }
 
 .c-btn {
   /* Style variants
@@ -1363,6 +1361,13 @@ Need to decide which notation is the most understandable:
   text-decoration: underline;
   cursor: pointer;
   display: inline-block; }
+  @media (min-width: 47.9375em) {
+    [class*="c-link"]:active, [class*="c-link"]:focus {
+      padding: 2px;
+      outline: none;
+      /* mine */
+      box-shadow: 0 0 2px 2px currentColor;
+      border-radius: 0.375em; } }
 
 .c-link--no-deco {
   text-decoration: none; }
