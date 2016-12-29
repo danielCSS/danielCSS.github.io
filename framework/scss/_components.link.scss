@@ -5,10 +5,9 @@
   display: inline-block;
   @include mq($from: tablet) {
     &:active, &:focus {
-      padding: 2px;
       outline: none; /* mine */
       box-shadow: 0 0 2px 2px currentColor;
-      border-radius: $global-radius;
+      //border-radius: $global-radius; //makes elements jump
     }
   }
 }
