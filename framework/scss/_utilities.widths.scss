@@ -80,7 +80,8 @@ $inuit-offsets: false !default;
       // Build a class in the format `.u-3/4[@<breakpoint>]`.
       .u-#{$numerator}\/#{$denominator}#{$breakpoint} {
         //width: ($numerator / $denominator) * 100% !important;
-        flex-basis: ($numerator / $denominator) * 100% !important;
+        //flex-basis: ($numerator / $denominator) * 100% !important;
+        width: ($numerator / $denominator) * 100%;
         //max-width: 33.333%;
       }
 

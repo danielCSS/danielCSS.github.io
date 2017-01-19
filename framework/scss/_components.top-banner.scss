@@ -1,0 +1,61 @@
+.c-top-banner {
+  color: $white;
+  font-size: 1rem;
+  position: relative;
+  background: $primary;
+  contain: content;
+  overflow: hidden;
+  &__content {
+    width: 38%;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+  &__item {
+    position: relative;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:nth-child(1) {
+      background-image: url(/images/banner/banner-1.jpeg);
+    }
+    &:nth-child(2) {
+      background-image: url(/images/banner/banner-2.jpeg);
+    }
+    &:nth-child(3) {
+      background-image: url(/images/banner/banner-3.jpeg);
+    }
+    &:nth-child(4) {
+      background-image: url(/images/banner/banner-4.jpeg);
+    }
+  }
+  [class*='__dots'] {
+    background: $textColor; /* so that text runs underneath */
+  }
+  [class*='__dot'] {
+    &:after {
+      background: $primary;
+    }
+    &.is-active:after {
+      background: $secondaryColor;
+    }
+  }
+  a {
+    font-size: 0.8em;
+    text-decoration: none;
+    display: inline-block;
+  }
+  h2 {
+    font-size: 3em;
+    color: $secondaryColor;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+  }
+  h4 {
+    text-transform: none;
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+}

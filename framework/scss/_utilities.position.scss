@@ -1,5 +1,8 @@
 
 /* misc utilities - still needs some thought */
+.u-width-auto {
+  width: auto
+}
 .u-margin-auto {
   margin: auto;
 }
@@ -16,6 +19,9 @@
 
 .u-relative {
   position: relative;
+}
+.u-block {
+  display: block;
 }
 .u-inline-block {
   display: inline-block;

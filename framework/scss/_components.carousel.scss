@@ -1,0 +1,43 @@
+.c-carousel {
+  display: flex;
+  padding:0;
+  margin:0;
+  transform: translateX(0);
+  transition: transform 0.3s;
+  > [class*='__item'] {
+    flex: 0 0 100%;
+  }
+  &__dots {
+    position: absolute;
+    right: 0;
+    bottom: 0.5em;
+    height: 1.5em;
+    padding-right: 0.6em;
+    background: $primary; /* so that text runs underneath */
+  }
+  &__dot {
+    position: relative;
+    height: 1.5em;
+    display: inline-block;
+    cursor: pointer;
+    width: 0.5em;
+    margin-right: 0.5em;
+    &:after {
+      content: '';
+      border-radius: 50%;
+      width: 0.5em;
+      height: 0.5em;
+      background: $textColor;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      margin: auto;
+    }
+    &.is-active:after {
+      background: $secondaryColor;
+    }
+  }
+  &[data-direction = 'ltr'] {
+    flex-direction: row-reverse;
+  }
+}

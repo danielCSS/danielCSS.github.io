@@ -611,6 +611,12 @@ ul {
 h2 {
   font-family: inherit; }
 
+a {
+  color: inherit; }
+
+p {
+  font-family: Arial; }
+
 /* ==========================================================================
    #PAGE
    ========================================================================== */
@@ -909,6 +915,9 @@ Need to decide which notation is the most understandable:
  *   <div class="o-ratio  o-ratio--16:9">
  *
  */
+.o-ratio--3\:1:before {
+  padding-bottom: 33.33333%; }
+
 .o-ratio--2\:1:before {
   padding-bottom: 50%; }
 
@@ -1001,35 +1010,6 @@ Need to decide which notation is the most understandable:
   padding-right: 96px;
   padding-left: 96px; }
 
-.c-carousel__dots {
-  position: absolute;
-  right: 0;
-  bottom: 0.5em;
-  height: 1.5em;
-  padding-right: 0.6em;
-  background: #4a5ab1;
-  /* so that text runs underneath */ }
-
-.c-carousel__dot {
-  position: relative;
-  height: 1.5em;
-  display: inline-block;
-  cursor: pointer;
-  width: 0.5em;
-  margin-right: 0.5em; }
-  .c-carousel__dot:after {
-    content: '';
-    border-radius: 50%;
-    width: 0.5em;
-    height: 0.5em;
-    background: #112268;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto; }
-  .c-carousel__dot.is-active:after {
-    background: #fdd941; }
-
 .c-aside-banner {
   color: #fff;
   font-size: 1rem;
@@ -1038,17 +1018,9 @@ Need to decide which notation is the most understandable:
   border-radius: 0.6rem;
   width: 17.5em;
   position: relative;
-  overflow: hidden; }
-  .c-aside-banner__content {
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    transform: translateX(0);
-    transition: transform 0.3s; }
+  overflow: hidden;
+  contain: content; }
   .c-aside-banner__item {
-    -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1232,6 +1204,47 @@ Need to decide which notation is the most understandable:
 /**
  * Ghost buttons have see-through backgrounds and are bordered.
  */
+.c-carousel {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  transform: translateX(0);
+  transition: transform 0.3s; }
+  .c-carousel > [class*='__item'] {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%; }
+  .c-carousel__dots {
+    position: absolute;
+    right: 0;
+    bottom: 0.5em;
+    height: 1.5em;
+    padding-right: 0.6em;
+    background: #4a5ab1;
+    /* so that text runs underneath */ }
+  .c-carousel__dot {
+    position: relative;
+    height: 1.5em;
+    display: inline-block;
+    cursor: pointer;
+    width: 0.5em;
+    margin-right: 0.5em; }
+    .c-carousel__dot:after {
+      content: '';
+      border-radius: 50%;
+      width: 0.5em;
+      height: 0.5em;
+      background: #112268;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+    .c-carousel__dot.is-active:after {
+      background: #fdd941; }
+  .c-carousel[data-direction='ltr'] {
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse; }
+
 .c-checkable, [class*="c-checkable--"] {
   position: relative;
   display: inline-block; }
@@ -1397,6 +1410,54 @@ Need to decide which notation is the most understandable:
       fill: #fdd941;
       transform: rotateX(180deg); }
 
+.c-top-banner {
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+  background: #4a5ab1;
+  contain: content;
+  overflow: hidden; }
+  .c-top-banner__content {
+    width: 38%;
+    position: absolute;
+    top: 3rem;
+    left: 3rem; }
+  .c-top-banner__item {
+    position: relative;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .c-top-banner__item:nth-child(1) {
+      background-image: url(/images/banner/banner-1.jpeg); }
+    .c-top-banner__item:nth-child(2) {
+      background-image: url(/images/banner/banner-2.jpeg); }
+    .c-top-banner__item:nth-child(3) {
+      background-image: url(/images/banner/banner-3.jpeg); }
+    .c-top-banner__item:nth-child(4) {
+      background-image: url(/images/banner/banner-4.jpeg); }
+  .c-top-banner [class*='__dots'] {
+    background: #112268;
+    /* so that text runs underneath */ }
+  .c-top-banner [class*='__dot']:after {
+    background: #4a5ab1; }
+  .c-top-banner [class*='__dot'].is-active:after {
+    background: #fdd941; }
+  .c-top-banner a {
+    font-size: 0.8em;
+    text-decoration: none;
+    display: inline-block; }
+  .c-top-banner h2 {
+    font-size: 3em;
+    color: #fdd941;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    font-weight: normal; }
+  .c-top-banner h4 {
+    text-transform: none;
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: normal; }
+
 .c-card {
   background: url(../images/promo.jpeg) no-repeat;
   background-size: cover;
@@ -1540,6 +1601,9 @@ Need to decide which notation is the most understandable:
     display: none !important; } }
 
 /* misc utilities - still needs some thought */
+.u-width-auto {
+  width: auto; }
+
 .u-margin-auto {
   margin: auto; }
 
@@ -1554,6 +1618,9 @@ Need to decide which notation is the most understandable:
 
 .u-relative {
   position: relative; }
+
+.u-block {
+  display: block; }
 
 .u-inline-block {
   display: inline-block; }
@@ -1789,6 +1856,192 @@ Need to decide which notation is the most understandable:
   margin-left: 0 !important; }
 
 /* stylelint-enable string-quotes */
+/* ==========================================================================
+   #WIDTHS
+   ========================================================================== */
+/**
+ * inuitcss generates a series of utility classes that give a fluid width to
+ * whichever element they’re applied, e.g.:
+ *
+ *   <img src="" alt="" class="u-1/2" />
+ *
+ * These classes are most commonly used in conjunction with our layout system,
+ * e.g.:
+ *
+ *   <div class="o-layout__item  u-1/2">
+ *
+ * By default, inuitcss will also generate responsive variants of each of these
+ * classes by using your Sass MQ configuration, e.g.:
+ *
+ *   <div class="o-layout__item  u-1/1  u-1/2@tablet  u-1/3@desktop">
+ *
+ * Optionally, inuitcss can generate offset classes which can push and pull
+ * elements left and right by a specified amount, e.g.:
+ *
+ *   <div class="o-layout__item  u-2/3  u-pull-1/3">
+ *
+ * This is useful for making very granular changes to the rendered order of
+ * items in a layout.
+ *
+ * N.B. This option is turned off by default.
+ */
+/**
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes take a fraction-like format (e.g. `.u-2/3`). Use these in
+ * your markup:
+ *
+ * <div class="u-7/12">
+ *
+ * The following will generate widths helper classes based on the fractions
+ * defined in the `$inuit-fractions` list.
+ */
+.u-1\/1 {
+  width: 100%; }
+
+.u-1\/2 {
+  width: 50%; }
+
+.u-2\/2 {
+  width: 100%; }
+
+.u-1\/3 {
+  width: 33.33333%; }
+
+.u-2\/3 {
+  width: 66.66667%; }
+
+.u-3\/3 {
+  width: 100%; }
+
+.u-1\/4 {
+  width: 25%; }
+
+.u-2\/4 {
+  width: 50%; }
+
+.u-3\/4 {
+  width: 75%; }
+
+.u-4\/4 {
+  width: 100%; }
+
+.u-1\/5 {
+  width: 20%; }
+
+.u-2\/5 {
+  width: 40%; }
+
+.u-3\/5 {
+  width: 60%; }
+
+.u-4\/5 {
+  width: 80%; }
+
+.u-5\/5 {
+  width: 100%; }
+
+/**
+ * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
+ * defined breakpoints, and give them a Responsive Suffix, e.g.:
+ *
+ * <div class="u-3/12@mobile">
+ */
+@media (min-width: 47.9375em) {
+  .u-1\/1\@tablet {
+    width: 100%; }
+  .u-1\/2\@tablet {
+    width: 50%; }
+  .u-2\/2\@tablet {
+    width: 100%; }
+  .u-1\/3\@tablet {
+    width: 33.33333%; }
+  .u-2\/3\@tablet {
+    width: 66.66667%; }
+  .u-3\/3\@tablet {
+    width: 100%; }
+  .u-1\/4\@tablet {
+    width: 25%; }
+  .u-2\/4\@tablet {
+    width: 50%; }
+  .u-3\/4\@tablet {
+    width: 75%; }
+  .u-4\/4\@tablet {
+    width: 100%; }
+  .u-1\/5\@tablet {
+    width: 20%; }
+  .u-2\/5\@tablet {
+    width: 40%; }
+  .u-3\/5\@tablet {
+    width: 60%; }
+  .u-4\/5\@tablet {
+    width: 80%; }
+  .u-5\/5\@tablet {
+    width: 100%; } }
+
+@media (min-width: 75em) {
+  .u-1\/1\@desktop {
+    width: 100%; }
+  .u-1\/2\@desktop {
+    width: 50%; }
+  .u-2\/2\@desktop {
+    width: 100%; }
+  .u-1\/3\@desktop {
+    width: 33.33333%; }
+  .u-2\/3\@desktop {
+    width: 66.66667%; }
+  .u-3\/3\@desktop {
+    width: 100%; }
+  .u-1\/4\@desktop {
+    width: 25%; }
+  .u-2\/4\@desktop {
+    width: 50%; }
+  .u-3\/4\@desktop {
+    width: 75%; }
+  .u-4\/4\@desktop {
+    width: 100%; }
+  .u-1\/5\@desktop {
+    width: 20%; }
+  .u-2\/5\@desktop {
+    width: 40%; }
+  .u-3\/5\@desktop {
+    width: 60%; }
+  .u-4\/5\@desktop {
+    width: 80%; }
+  .u-5\/5\@desktop {
+    width: 100%; } }
+
+@media (min-width: 85.625em) {
+  .u-1\/1\@wide {
+    width: 100%; }
+  .u-1\/2\@wide {
+    width: 50%; }
+  .u-2\/2\@wide {
+    width: 100%; }
+  .u-1\/3\@wide {
+    width: 33.33333%; }
+  .u-2\/3\@wide {
+    width: 66.66667%; }
+  .u-3\/3\@wide {
+    width: 100%; }
+  .u-1\/4\@wide {
+    width: 25%; }
+  .u-2\/4\@wide {
+    width: 50%; }
+  .u-3\/4\@wide {
+    width: 75%; }
+  .u-4\/4\@wide {
+    width: 100%; }
+  .u-1\/5\@wide {
+    width: 20%; }
+  .u-2\/5\@wide {
+    width: 40%; }
+  .u-3\/5\@wide {
+    width: 60%; }
+  .u-4\/5\@wide {
+    width: 80%; }
+  .u-5\/5\@wide {
+    width: 100%; } }
+
 @font-face {
   font-family: "Headline";
   src: url("../fonts/headline-regular.woff") format("woff"); }
