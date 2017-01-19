@@ -2,7 +2,6 @@
   color: $white;
   font-size: 1rem;
   position: relative;
-  background: $primary;
   contain: content;
   overflow: hidden;
   &__content {
@@ -17,16 +16,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     &:nth-child(1) {
-      background-image: url(/images/banner/banner-1.jpeg);
+      background-image: url(/framework/images/banner/banner-1.jpeg);
     }
     &:nth-child(2) {
-      background-image: url(/images/banner/banner-2.jpeg);
+      background-image: url(/framework/images/banner/banner-2.jpeg);
     }
     &:nth-child(3) {
-      background-image: url(/images/banner/banner-3.jpeg);
+      background-image: url(/framework/images/banner/banner-3.jpeg);
     }
     &:nth-child(4) {
-      background-image: url(/images/banner/banner-4.jpeg);
+      background-image: url(/framework/images/banner/banner-4.jpeg);
     }
   }
   [class*='__dots'] {
