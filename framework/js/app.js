@@ -7,7 +7,6 @@
     this.element = element;
     this.dotContainer = document.createElement('div');
     this.numItems = element.children ? element.children.length : 0;
-    console.log('data-duration: ' + element.getAttribute('data-duration'));
     this.slideDuration = element.getAttribute('data-duration') ? Number(element.getAttribute('data-duration')) : 3000;
     this.count = 0;
     this.orderIndex = 0;
@@ -28,7 +27,6 @@
   };
 
   Carousel.prototype.setOrder = function (currentIndex) {
-    console.log('setOrder');
     this.element.style.transitionProperty = "none"; //temorarily disable transition on transform
     for(var i=0; i< this.numItems; i++) {
       this.element.children[(currentIndex+i) % this.numItems].style.order = i;
@@ -53,7 +51,6 @@
     }
   };
   Carousel.prototype.slide = function () {
-    console.log(this.slideDuration);
     var duration = this.slideDuration;
     return setInterval(this.updateCarousel.bind(this), duration);
   };
@@ -67,7 +64,7 @@
   carouselElements = Array.prototype.slice.call(carouselElements);
   var carousels = carouselElements.map(function(carouselElement) { return new Carousel(carouselElement); });
   carousels.forEach(function (carousel) {
-    console.log(carousel);
+    //console.log(carousel);
     carousel.init();
     carousel.dotContainer.addEventListener('click', function(e) {
     	if(e.target && e.target.nodeName == "SPAN") {
