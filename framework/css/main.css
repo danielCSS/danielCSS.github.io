@@ -1412,15 +1412,27 @@ Need to decide which notation is the most understandable:
 
 .c-top-banner {
   color: #fff;
-  font-size: 1rem;
   position: relative;
   contain: content;
   overflow: hidden; }
+  @media (max-width: 47.9275em) {
+    .c-top-banner {
+      font-size: 0.6em; } }
+  @media (min-width: 47.9375em) {
+    .c-top-banner {
+      font-size: 0.8em; } }
+  @media (min-width: 75em) {
+    .c-top-banner {
+      font-size: 0.9em; } }
+  @media (min-width: 85.625em) {
+    .c-top-banner {
+      font-size: 1em; } }
   .c-top-banner__content {
-    width: 38%;
+    max-width: 34rem;
     position: absolute;
-    top: 3rem;
-    left: 3rem; }
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3em; }
   .c-top-banner__item {
     position: relative;
     height: 100%;

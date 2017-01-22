@@ -1,14 +1,27 @@
 .c-top-banner {
   color: $white;
-  font-size: 1rem;
+  //font-size: 1rem;
   position: relative;
   contain: content;
   overflow: hidden;
+  @include mq($until: tablet) {
+    font-size: 0.6em;
+  }
+  @include mq($from: tablet) {
+    font-size: 0.8em;
+  }
+  @include mq($from: desktop) {
+    font-size: 0.9em;
+  }
+  @include mq($from: wide) {
+    font-size: 1em;
+  }
   &__content {
-    width: 38%;
+    max-width: 34rem; //rem here
     position: absolute;
-    top: 3rem;
-    left: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3em;
   }
   &__item {
     position: relative;
