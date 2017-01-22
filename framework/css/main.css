@@ -2164,4 +2164,21 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-top: 2rem; }
 
+.c-counter {
+  color: white;
+  position: relative;
+  contain: content;
+  overflow: hidden;
+  width: 10em; }
+  .c-counter__item {
+    background: #4a5ab1;
+    height: 10rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 6em; }
+
 /* media queries examples */
