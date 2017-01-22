@@ -1427,13 +1427,13 @@ Need to decide which notation is the most understandable:
     background-repeat: no-repeat;
     background-size: cover; }
     .c-top-banner__item:nth-child(1) {
-      background-image: url(/images/banner/banner-1.jpeg); }
+      background-image: url(../images/banner/banner-1.jpeg); }
     .c-top-banner__item:nth-child(2) {
-      background-image: url(/images/banner/banner-2.jpeg); }
+      background-image: url(../images/banner/banner-2.jpeg); }
     .c-top-banner__item:nth-child(3) {
-      background-image: url(/images/banner/banner-3.jpeg); }
+      background-image: url(../images/banner/banner-3.jpeg); }
     .c-top-banner__item:nth-child(4) {
-      background-image: url(/images/banner/banner-4.jpeg); }
+      background-image: url(../images/banner/banner-4.jpeg); }
   .c-top-banner [class*='__dots'] {
     background: #112268;
     /* so that text runs underneath */ }
