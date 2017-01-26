@@ -15,7 +15,7 @@ body {
     margin: 2em;
     background: $lightBackground;
     @include mq($until: tablet) {
-      margin: 0;
+      margin: 2em 0;
       padding: 1em;
     }
     &.u-dark {
@@ -32,6 +32,11 @@ body {
   .c-loyalty {
     display: inline-block;
     margin: 0 2%;
+  }
+  .c-chat-container {
+    @include mq($from: desktop) {
+      background: $textColor;
+    }
   }
 }
 hr {
@@ -151,6 +156,8 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 6em;
   }
 }
+
+
 /* media queries examples */
 // .media {
 //   background: salmon;

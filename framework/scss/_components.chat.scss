@@ -1,23 +1,65 @@
-// <h3>chat</h3>
-// <div class="o-box">
-//   <section class="c-chat">
-//     <div class="u-1-4">
-//       <svg class="c-icon u-padding-none"><use xlink:href="images/sprite.svg#LIVE_CALLER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
-//       <div class="c-chat__name">Adam Baddas</div>
-//     </div>
-//     <div class="c-chat__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-//     <button class="c-btn--primary">Reply</button>
-//     <button class="u-1-4">
-//       <span>Close</span>
-//       <svg class="c-icon u-padding-none"><use xlink:href="images/sprite.svg#CLOSE_INVERTED" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
-//     </button>
-//   </section>
-// </div>
-
 .c-chat {
   color: $textColor;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  &__profile {
+    flex: 1 0 0;
+    position: relative;
+    padding-left: 2.5em;
+    line-height: 1;
+  }
+  &__time {
+    font-size: 0.8rem;
+  }
   &__text {
-    flex:1;
+    flex: 1 0 100%;
+    margin: 1.5em 0 1em;
+  }
+  button {
+    font-size: 1.2em; /* not good practice - need to see if there's a design pattern here */
+    padding: .3em 3.3em; /* "" "" */
+  }
+  @media (min-width: 767px) and (max-width: 1199px), (orientation: landscape) {
+    flex-wrap: nowrap;
+    &__profile {
+      flex: 0 0 22%;
+      max-width: 25%;
+    }
+    &__close {
+      order: 1;
+      padding-left: 2em;
+    }
+    &__text {
+      flex: 1 0 0;
+      padding: 0 1em;
+    }
+    button {
+      font-size: 1em; /* not good practice - need to see if there's a design pattern here */
+      padding: .1em 2em; /* "" "" */
+    }
+  }
+  @include mq($from: desktop) {
+    width: 25em;
+    position: relative;
+    padding: 1em;
+    min-height: 4em;
+    border-radius: 1em;
+    background: $white;
+    float: right;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      background: transparent;
+      right: 0;
+      top: 50%;
+      transform: translateX(100%) translateY(-50%);
+      border-width: 0.4em 0 0.4em 0.8em;
+      border-color: transparent transparent transparent $white;
+    }
   }
 }
