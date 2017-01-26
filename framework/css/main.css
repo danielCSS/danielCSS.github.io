@@ -1245,6 +1245,14 @@ Need to decide which notation is the most understandable:
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
 
+.c-chat {
+  color: #112268;
+  display: -ms-flexbox;
+  display: flex; }
+  .c-chat__text {
+    -ms-flex: 1;
+        flex: 1; }
+
 .c-checkable, [class*="c-checkable--"] {
   position: relative;
   display: inline-block; }
