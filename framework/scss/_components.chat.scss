@@ -21,7 +21,7 @@
     font-size: 1.2em; /* not good practice - need to see if there's a design pattern here */
     padding: .3em 3.3em; /* "" "" */
   }
-  @media (min-width: 767px) and (max-width: 1199px), (orientation: landscape) {
+  @media (min-width: 767px) and (max-width: 1199px), (max-width: 1199px) and (orientation: landscape) {
     flex-wrap: nowrap;
     &__profile {
       flex: 0 0 22%;
