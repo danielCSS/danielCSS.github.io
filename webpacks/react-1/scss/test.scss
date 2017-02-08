@@ -1,0 +1,10 @@
+$color: #122262;
+
+.test {
+  width: 500px;
+  background: $color;
+  color: white;
+  h2 {
+    text-transform: uppercase;
+  }
+}
