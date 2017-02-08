@@ -1,0 +1,37 @@
+[class*='c-badge'] {
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: aqua;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  flex-direction: column;
+  vertical-align: top;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.c-badge--vip {
+  background-color: #28c6e0;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+  &:after {
+    content: 'approved';
+    display: block;
+    font-size: 1rem;
+  }
+}
+.c-badge--chipper {
+  background-color: #9d62f8;
+  font-size: 1.4rem;
+  justify-content: center;
+  &:after {
+    content: 'exclusive';
+    display: block;
+    font-size: 1rem;
+  }
+}

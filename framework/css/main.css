@@ -732,17 +732,16 @@ table {
           align-self: flex-end; }
     .o-grid > .o-grid__item--center {
       -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
           align-self: center; }
     .o-grid > .o-grid__item--flex-none {
       -ms-flex: none;
           flex: none; }
   .o-grid--bottom {
     -ms-flex-align: end;
-        -ms-grid-row-align: flex-end;
         align-items: flex-end; }
   .o-grid--center {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .o-grid--justify-left {
     -ms-flex-pack: start;
@@ -752,7 +751,6 @@ table {
         justify-content: center; }
   .o-grid--center {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .o-grid--vertical {
     -ms-flex-direction: column;
@@ -1256,7 +1254,7 @@ Need to decide which notation is the most understandable:
   -ms-flex-align: center;
       align-items: center; }
   .c-chat__profile {
-    -ms-flex: 1 0 0;
+    -ms-flex: 1 0 0px;
         flex: 1 0 0;
     position: relative;
     padding-left: 2.5em;
@@ -1285,7 +1283,7 @@ Need to decide which notation is the most understandable:
             order: 1;
         padding-left: 2em; }
       .c-chat__text {
-        -ms-flex: 1 0 0;
+        -ms-flex: 1 0 0px;
             flex: 1 0 0;
         padding: 0 1em; }
       .c-chat button {
@@ -1599,6 +1597,45 @@ Need to decide which notation is the most understandable:
     color: #112268;
     margin-left: 1em;
     position: relative; }
+
+[class*='c-badge'] {
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: aqua;
+  color: white;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  vertical-align: top;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 1px; }
+
+.c-badge--vip {
+  background-color: #28c6e0;
+  font-size: 2.5rem;
+  padding-top: 1.5rem; }
+  .c-badge--vip:after {
+    content: 'approved';
+    display: block;
+    font-size: 1rem; }
+
+.c-badge--chipper {
+  background-color: #9d62f8;
+  font-size: 1.4rem;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .c-badge--chipper:after {
+    content: 'exclusive';
+    display: block;
+    font-size: 1rem; }
 
 /* ==========================================================================
    #CLEARFIX
