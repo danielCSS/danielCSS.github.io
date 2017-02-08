@@ -29,9 +29,10 @@
   background-color: #9d62f8;
   font-size: 1.4rem;
   justify-content: center;
+  line-height: 1.3;
   &:after {
     content: 'exclusive';
     display: block;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
