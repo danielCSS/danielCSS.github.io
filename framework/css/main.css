@@ -1625,7 +1625,7 @@ Need to decide which notation is the most understandable:
   .c-badge--vip:after {
     content: 'approved';
     display: block;
-    font-size: 1rem; }
+    font-size: 0.9rem; }
 
 .c-badge--chipper {
   background-color: #9d62f8;
