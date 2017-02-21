@@ -1,0 +1,9 @@
+@import "two";
+$bluegrey: tomato;
+
+p {
+  padding: 20px;
+  background: $bluegrey;
+  color: $color;
+  text-shadow: 0 1px 1px rgba(#000, .5);
+}
