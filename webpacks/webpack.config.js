@@ -9,16 +9,14 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const config = {
   context: path.resolve(__dirname, 'src'),
-  entry: './app.js',
+  devtool : 'source-map',
+  entry: {
+    index: './app.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  // devServer: {
-  //   contentBase: path.join(__dirname, "dist"),
-  //   compress: true,
-  //   port: 8100
-  // },
   module: {
     rules: [
       {
@@ -34,17 +32,15 @@ const config = {
       include: /(\/core-scss)/
     },
     {
-      test: /\.js$/,
-      include: path.resolve(__dirname, 'src'),
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['es2015', { modules: false }]
-          ]
+      test: /\.(js|jsx)$/,
+      use : {
+        loader : 'babel-loader',
+        options : {
+          presets : ['react','es2015']
         }
-      }]
+      }
     }]
+
   },
   plugins: [
     extractCSS,
