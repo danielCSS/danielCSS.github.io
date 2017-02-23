@@ -1,4 +1,5 @@
-$componentColor: green;
+$componentColor: gold;
 div {
   border: 2rem solid $componentColor;
+  display: flex;
 }
