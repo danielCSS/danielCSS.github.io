@@ -1,0 +1,194 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+ /* c-btn base styles */
+
+@import "main.scss";
+
+.c-btn,[class*="c-btn--"] {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  //padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  //padding: px-to-em(6) px-to-em(18);
+  //padding: 0.5em 0;
+  padding: 0.1em 0.5em;
+  //transition: $global-transition;
+  border-radius: $global-radius;
+  border: 2px solid transparent; /* mine */
+  text-decoration: none; /* mine */
+  font-size: 1em; /* ems here! */
+  &[disabled] {
+   opacity: 0.5;
+  }
+  &.is-active {
+    background: $secondaryColor;
+    color: $textColor;
+  }
+  @include mq($from: tablet) {
+   &:active,
+   &:focus {
+     outline: none; /* mine */
+     box-shadow: inset 0 0 0 1px #eee;
+   }
+  }
+}
+.c-btn {
+
+  /* Style variants
+     ========================================================================== */
+  &--primary {
+    color: #fff;
+    background-color: $primaryColor;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 0.5em;
+    @include mq($from: tablet) {
+      &:hover:not([disabled]),
+      &:focus {
+        background-color: lighten($primaryColor,10);
+      }
+    }
+  }
+  &--secondary {
+    color: $textColor;
+    background-color: $secondaryColor;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 0.5em;
+    @include mq($from: tablet) {
+      &:hover:not([disabled]),
+      &:focus {
+        background-color: lighten($secondaryColor,10);
+      }
+    }
+  }
+  &--text {
+    background: none;
+    border: none;
+    color: currentColor;
+  }
+  &__link {
+     text-decoration: underline;
+  }
+  &--inline {
+    width: auto;
+    font-size: 1em;
+    //padding: 1em; /* need to check this!!!!!! */
+    padding: .1em 2em;
+  }
+  &--icon {
+     padding: .4em;
+  }
+  &--split {
+    width: auto;
+    font-size: 1em;
+    padding: 0 0.2em 0 0.8em;
+    border-radius: 0.5em;
+  }
+
+  &__counter {
+    color: $secondaryColor;
+  }
+  /* Size variants
+     ========================================================================== */
+
+  &--small {
+    //padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+    padding: px-to-em(3) px-to-em(9);
+    font-size: 0.8em;
+  }
+
+  &--large {
+    //padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
+    padding: px-to-em(12) px-to-em(36);
+    font-size: 1.6em;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+// $btn-ghost-border-width: 2px;
+//
+// .c-btn--ghost {
+//   border: $btn-ghost-border-width solid currentColor;
+//   padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+//
+//   &,
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     background: none;
+//   }
+//
+//   &.c-btn--small {
+//     padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+//   }
+//
+//   &.c-btn--large {
+//     padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+//   }
+//
+//   &.c-btn--primary {
+//     color: #4a8ec2;
+//
+//     &:hover,
+//     &:focus {
+//       color: #3774a2;
+//     }
+//
+//   }
+//
+//   &.c-btn--secondary {
+//     color: #2f4054;
+//
+//     &:hover,
+//     &:focus {
+//       color: #1d2733;
+//     }
+//
+//   }
+//
+//   &.c-btn--tertiary {
+//     color: #fff;
+//
+//     &:hover,
+//     &:focus {
+//       color: #fff;
+//     }
+//
+//   }
+//
+// }

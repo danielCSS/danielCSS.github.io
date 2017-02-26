@@ -1,5 +1,22 @@
-$componentColor: gold;
-div {
-  border: 2rem solid $componentColor;
-  display: flex;
-}
+// $componentColor: gold;
+// div {
+//   border: 2rem solid $componentColor;
+//   display: flex;
+// }
+
+
+// SETTINGS
+@import "settings.config";
+@import "settings.core";
+@import "settings.defaults"; //<-- added
+@import "settings.global";
+
+// TOOLS
+@import "tools.clearfix";
+@import "tools.font-size";
+@import "tools.functions";
+@import "tools.hidden";
+//@import "tools.mixins"; //<-- causes error
+@import "tools.rem";
+
+@import "mq";
