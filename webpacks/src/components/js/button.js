@@ -4,7 +4,9 @@ import '../../components/scss/button.scss';
 import React from 'react';
 
 const Button = (props) => (
-  <button type="button" className={props.classes}>{props.text}</button>
+  <button type="button" className={props.classes}>{props.text}
+  { props.svg ? <div>hello there</div> : null }
+  </button>
 )
 
 export default Button;

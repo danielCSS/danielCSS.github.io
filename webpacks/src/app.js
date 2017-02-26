@@ -9,6 +9,7 @@ const App = () => {
    return (
   <div>
     <Button classes="c-btn--primary u-margin-top-small" text="Play Now" />
+    <Button classes="c-btn--primary u-margin-top-small" svg="bla" text="Play Now" />
   </div>
 )};
 //
