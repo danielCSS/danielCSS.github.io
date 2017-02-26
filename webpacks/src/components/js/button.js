@@ -1,12 +1,13 @@
 
 import '../../components/scss/button.scss';
 
+import React from 'react';
+
 const Button = (props) => (
-  <button className={props.classes}>{props.text}</button>
+  <button type="button" className={props.classes}>{props.text}</button>
 )
 
-//export default Button;
-export { Button };
+export default Button;
 
 
 // <h2>3. Buttons</h2>

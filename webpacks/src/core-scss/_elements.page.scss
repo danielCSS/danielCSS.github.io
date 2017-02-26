@@ -1,7 +1,6 @@
 /* ==========================================================================
    #PAGE
    ========================================================================== */
-
 /**
  * Simple page-level setup.
  *
@@ -13,7 +12,10 @@
  *    scrollbars naturally.
  * 3. Ensure the page always fills at least the entire height of the viewport.
  */
-
+@font-face {
+  font-family: "Headline";
+  src: url("../assets/fonts/headline-regular.woff") format('woff');
+}
 html {
   font-size: ($inuit-global-font-size / 16px) * 1em; /* [1] */
   line-height: $inuit-global-line-height / $inuit-global-font-size; /* [1] */
@@ -22,6 +24,7 @@ html {
   -webkit-overflow-scrolling: touch; /* need to check this out */
   font-smoothing: antialiased; /* need to check this out */
   -webkit-text-size-adjust: none; /* need to check this out */
+  font-family: "Headline",sans-serif;
 }
 
 $narrow-viewport: 767;
