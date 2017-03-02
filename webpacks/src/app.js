@@ -7,12 +7,14 @@ import Icon from './components/js/icon.js';
 
 const App = () => {
    return (
-  <div>
-    <Icon classes="c-icon" icon="facebook" />
-    <Icon classes="c-icon" icon="google" />
-    <Icon classes="c-icon" icon="twitter" />
+  <div className="o-box c-style-box">
+    <Icon classes="c-icon--colored" icon="ARROW" />
+    <Icon classes="c-icon" icon="BINGO_SCHEDULE"  />
+
     <Button classes="c-btn--primary u-margin-top-small" text="Play Now" />
-    <Button classes="c-btn--primary u-margin-top-small" svg="bla" text="Play bingo Now" />
+    <Button classes="c-btn--primary u-margin-top-small" text="Play bingo Now">
+      <Icon classes="c-icon--colored" icon="CLOSE_INVERTED"  />
+    </Button>
   </div>
 )};
 //
