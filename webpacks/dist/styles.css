@@ -1,6 +1,1465 @@
+@charset "UTF-8";
+/* ==========================================================================
+   INUITCSS
+   ========================================================================== */
+/**
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+/**
+ * This is an example inuitcss manifest file. DO NOT MODIFY THIS FILE DIRECTLY.
+ * Instead, copy and paste it into your own CSS directory and make additions,
+ * extensions, and modifications there.
+ */
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Config...............Project-level configuration and feature switches.
+ * Core.................inuitcss’ core and setup settings.
+ * Global...............Project-wide variables and settings.
+ *
+ * TOOLS
+ * Rem..................Tools for converting pixel inputs into their rem
+ *                      equivalents.
+ * Font-size............A mixin which guarantees baseline-friendly line-heights.
+ * Clearfix.............Micro clearfix mixin.
+ * Hidden...............Mixin for hiding elements.
+ * Sass MQ..............inuitcss’ default media query manager.
+ *
+ * GENERIC
+ * Box-sizing...........Better default `box-sizing`.
+ * Normalize.css........A level playing field using @necolas’ Normalize.css.
+ * Reset................A tiny reset to complement Normalize.css.
+ * Shared...............Sensibly and tersely share some global commonalities
+ *                      (particularly useful when managing vertical rhythm).
+ *
+ * ELEMENTS
+ * Page.................Set up our document’s default `font-size` and
+ *                      `line-height`.
+ * Headings.............Very minimal (i.e. only font-size information) for
+ *                      headings 1 through 6.
+ * Images...............Base image styles.
+ * Tables...............Simple table styles.
+ *
+ * OBJECTS
+ * Wrapper..............Page constraint object.
+ * Layout...............Generic layout module.
+ * Media................Image- and text-like content side by side. The
+ *                      poster-child of OOCSS.
+ * Flag.................Table-layout-based advancement on the Media object.
+ * List-bare............Lists with no bullets or indents.
+ * List-inline..........A list whose items all site in a line.
+ * Box..................Simple boxing abstraction.
+ * Block................Image-on-top-of-text object.
+ * Ratio................A container for maintaining aspect ratio of content.
+ * Crop.................Provide a cropping context for media (images, etc.).
+ * Tables...............Classes for manipulating `table`s.
+ * Pack.................Pack items into available horizontal space.
+ *
+ * COMPONENTS
+ * Buttons..............An example button component, and how it fits into the
+ *                      inuitcss framework.
+ *
+ * UTILITIES
+ * Clearfix.............Bind our clearfix onto a utility class.
+ * Widths...............Simple width helper classes.
+ * Headings.............Reassigning our heading styles to helper classes.
+ * Spacing..............Nudge bits of the DOM around with these spacing
+ *                      classes.
+ * Print................Reset-like styles taken from the HTML5 Boilerplate.
+ * Hide.................Helper classes to hide content
+ */
 /*!
  * inuitcss, by @csswizardry
  *
  * github.com/inuitcss | inuitcss.com
- */body:before{background-color:#fcf8e3;border-bottom:1px solid #fbeed5;border-left:1px solid #fbeed5;color:#c09853;font:small-caption;padding:3px 6px;pointer-events:none;position:fixed;right:0;top:0;z-index:100}@media (min-width:47.9375em){body:before{content:"tablet \2265   767px (47.9375em)"}}@media (min-width:75em){body:before{content:"desktop \2265   1200px (75em)"}}@media (min-width:85.625em){body:before{content:"wide \2265   1370px (85.625em)"}}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}blockquote,body,dd,dl,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,legend,ol,p,pre,ul{margin:0;padding:0}li>ol,li>ul{margin-bottom:0}table{border-collapse:collapse;border-spacing:0}img{max-width:100%;font-style:italic;vertical-align:middle}img[height],img[width]{max-width:none}ul{list-style:none;margin:0}h2{font-family:inherit}a{color:inherit}p{font-family:Arial}@font-face{font-family:Headline;src:url(624c7f670ed1bed14e862f1b14fd73d9.woff) format("woff")}html{font-size:1em;line-height:1.5;overflow-y:scroll;min-height:100%;-webkit-overflow-scrolling:touch;font-smoothing:antialiased;-webkit-text-size-adjust:none;font-family:Headline,sans-serif}@media (max-width:47.9275em){html{font-size:.75em}}@media (min-width:47.9375em){html{font-size:calc(.00663 * 100vw + 6.91211px)}}@media (min-width:85.625em){html{font-size:1em}}.o-box{display:block;padding:24px}.o-box:after{content:""!important;display:block!important;clear:both!important}.o-box>:last-child{margin-bottom:0}.o-box--flush{padding:0}.o-box--tiny{padding:6px}.o-box--small{padding:12px}.o-box--large{padding:48px}.o-box--huge{padding:96px}.o-grid{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none;margin-left:-24px;padding:0}.o-grid>.o-grid__item{padding-left:24px;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.o-grid>.o-grid__item--top{-ms-flex-item-align:start;align-self:flex-start}.o-grid>.o-grid__item--bottom{-ms-flex-item-align:end;align-self:flex-end}.o-grid>.o-grid__item--center{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.o-grid>.o-grid__item--flex-none{-webkit-box-flex:0;-ms-flex:none;flex:none}.o-grid--bottom{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.o-grid--justify-left{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start}.o-grid--justify-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.o-grid--center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.o-grid--vertical{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.o-grid--justified{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.o-grid--justified>.o-grid__item{-webkit-box-flex:0;-ms-flex:none;flex:none}.o-grid--no-gutters{margin:0}.o-grid--no-gutters>.o-grid__item{padding:0}.o-grid--tiny{margin-left:-6px}.o-grid--tiny>.o-grid__item{padding-left:6px}.o-grid--small{margin-left:-12px}.o-grid--small>.o-grid__item{padding-left:12px}.o-grid--large{margin-left:-48px}.o-grid--large>.o-grid__item{padding-left:48px}.o-grid--huge{margin-left:-96px}.o-grid--huge>.o-grid__item{padding-left:96px}.o-grid--flexCells>.o-grid__item{display:-webkit-box;display:-ms-flexbox;display:flex}.o-grid--no-flex{overflow:auto}.o-grid--no-flex>.o-grid__item{-webkit-box-flex:0;-ms-flex:none;flex:none}@media (max-width:47.9275em){.m-1-2-s>.o-grid__item{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}}@media (min-width:47.9375em){.m-1-2-md>.o-grid__item{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.m-1-3-md>.o-grid__item{-ms-flex-preferred-size:33.333%;flex-basis:33.333%;max-width:33.333%}}@media (min-width:47.9375em) and (orientation:landscape){.m-1-2-md>.o-grid__item{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.m-1-3-md>.o-grid__item{-ms-flex-preferred-size:33.333%;flex-basis:33.333%;max-width:33.333%}.m-1-4-md>.o-grid__item{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}}@media (min-width:75em){.m-1-3-lg>.o-grid__item{-ms-flex-preferred-size:33.333%;flex-basis:33.333%;max-width:33.333%}.m-1-4-lg>.o-grid__item{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}}@media (min-width:85.625em){.m-1-4-xl>.o-grid__item{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.m-1-5-xl>.o-grid__item{-ms-flex-preferred-size:20%;flex-basis:20%;max-width:20%}}.o-ratio{position:relative;display:block;overflow:hidden}.o-ratio:before{content:"";display:block;width:100%;padding-bottom:100%}.o-ratio>embed,.o-ratio>iframe,.o-ratio>object,.o-ratio__content{position:absolute;top:0;bottom:0;left:0;height:100%;width:100%}.o-ratio--3\:1:before{padding-bottom:33.33333%}.o-ratio--2\:1:before{padding-bottom:50%}.o-ratio--4\:3:before{padding-bottom:75%}.o-ratio--7\:5:before{padding-bottom:71.42857%}.o-ratio--16\:9:before{padding-bottom:56.25%}.o-wrapper{padding-right:24px;padding-left:24px;margin-right:auto;margin-left:auto;max-width:1600px;position:relative}.o-wrapper:after{content:""!important;display:block!important;clear:both!important}.o-wrapper--tiny{padding-right:6px;padding-left:6px}.o-wrapper--small{padding-right:12px;padding-left:12px}.o-wrapper--large{padding-right:48px;padding-left:48px}.o-wrapper--huge{padding-right:96px;padding-left:96px}.u-clearfix:after{content:""!important;display:block!important;clear:both!important}.u-hidden-visually{border:0!important;clip:rect(0 0 0 0)!important;height:1px!important;margin:-1px!important;overflow:hidden!important;padding:0!important;position:absolute!important;width:1px!important}.u-hidden{display:none!important}@media (max-width:47.9275em){.u-hidden--mobile{display:none!important}}@media (min-width:47.9375em) and (max-width:74.99em){.u-hidden--tablet{display:none!important}}@media (min-width:75em){.u-hidden--desktop{display:none!important}}.u-width-auto{width:auto}.u-margin-auto{margin:auto}.u-margin-left-auto{margin-left:auto}.u-align-left{text-align:left}.u-align-right{text-align:right}.u-relative{position:relative}.u-block{display:block}.u-inline-block{display:inline-block}.u-reset-case{text-transform:none}.u-dark{color:#f1f2f7!important;background:#112268!important}.u-absolute-center{margin:auto;top:0;bottom:0;left:0;right:0}.u-absolute-top{top:0}.u-absolute-bottom{bottom:0}.u-absolute-left{left:0;top:0;bottom:0;margin:auto}.u-absolute-right{right:0;top:0;bottom:0;margin:auto}[class*=u-absolute]{position:absolute!important}.u-padding{padding:24px!important}.u-padding-tiny{padding:6px!important}.u-padding-small{padding:12px!important}.u-padding-large{padding:48px!important}.u-padding-huge{padding:96px!important}.u-padding-none{padding:0!important}.u-padding-top{padding-top:24px!important}.u-padding-top-tiny{padding-top:6px!important}.u-padding-top-small{padding-top:12px!important}.u-padding-top-large{padding-top:48px!important}.u-padding-top-huge{padding-top:96px!important}.u-padding-top-none{padding-top:0!important}.u-padding-right{padding-right:24px!important}.u-padding-right-tiny{padding-right:6px!important}.u-padding-right-small{padding-right:12px!important}.u-padding-right-large{padding-right:48px!important}.u-padding-right-huge{padding-right:96px!important}.u-padding-right-none{padding-right:0!important}.u-padding-bottom{padding-bottom:24px!important}.u-padding-bottom-tiny{padding-bottom:6px!important}.u-padding-bottom-small{padding-bottom:12px!important}.u-padding-bottom-large{padding-bottom:48px!important}.u-padding-bottom-huge{padding-bottom:96px!important}.u-padding-bottom-none{padding-bottom:0!important}.u-padding-left{padding-left:24px!important}.u-padding-left-tiny{padding-left:6px!important}.u-padding-left-small{padding-left:12px!important}.u-padding-left-large{padding-left:48px!important}.u-padding-left-huge{padding-left:96px!important}.u-padding-left-none{padding-left:0!important}.u-margin{margin:24px!important}.u-margin-tiny{margin:6px!important}.u-margin-small{margin:12px!important}.u-margin-large{margin:48px!important}.u-margin-huge{margin:96px!important}.u-margin-none{margin:0!important}.u-margin-top{margin-top:24px!important}.u-margin-top-tiny{margin-top:6px!important}.u-margin-top-small{margin-top:12px!important}.u-margin-top-large{margin-top:48px!important}.u-margin-top-huge{margin-top:96px!important}.u-margin-top-none{margin-top:0!important}.u-margin-right{margin-right:24px!important}.u-margin-right-tiny{margin-right:6px!important}.u-margin-right-small{margin-right:12px!important}.u-margin-right-large{margin-right:48px!important}.u-margin-right-huge{margin-right:96px!important}.u-margin-right-none{margin-right:0!important}.u-margin-bottom{margin-bottom:24px!important}.u-margin-bottom-tiny{margin-bottom:6px!important}.u-margin-bottom-small{margin-bottom:12px!important}.u-margin-bottom-large{margin-bottom:48px!important}.u-margin-bottom-huge{margin-bottom:96px!important}.u-margin-bottom-none{margin-bottom:0!important}.u-margin-left{margin-left:24px!important}.u-margin-left-tiny{margin-left:6px!important}.u-margin-left-small{margin-left:12px!important}.u-margin-left-large{margin-left:48px!important}.u-margin-left-huge{margin-left:96px!important}.u-margin-left-none{margin-left:0!important}.u-1\/1{width:100%}.u-1\/2{width:50%}.u-2\/2{width:100%}.u-1\/3{width:33.33333%}.u-2\/3{width:66.66667%}.u-3\/3{width:100%}.u-1\/4{width:25%}.u-2\/4{width:50%}.u-3\/4{width:75%}.u-4\/4{width:100%}.u-1\/5{width:20%}.u-2\/5{width:40%}.u-3\/5{width:60%}.u-4\/5{width:80%}.u-5\/5{width:100%}@media (min-width:47.9375em){.u-1\/1\@tablet{width:100%}.u-1\/2\@tablet{width:50%}.u-2\/2\@tablet{width:100%}.u-1\/3\@tablet{width:33.33333%}.u-2\/3\@tablet{width:66.66667%}.u-3\/3\@tablet{width:100%}.u-1\/4\@tablet{width:25%}.u-2\/4\@tablet{width:50%}.u-3\/4\@tablet{width:75%}.u-4\/4\@tablet{width:100%}.u-1\/5\@tablet{width:20%}.u-2\/5\@tablet{width:40%}.u-3\/5\@tablet{width:60%}.u-4\/5\@tablet{width:80%}.u-5\/5\@tablet{width:100%}}@media (min-width:75em){.u-1\/1\@desktop{width:100%}.u-1\/2\@desktop{width:50%}.u-2\/2\@desktop{width:100%}.u-1\/3\@desktop{width:33.33333%}.u-2\/3\@desktop{width:66.66667%}.u-3\/3\@desktop{width:100%}.u-1\/4\@desktop{width:25%}.u-2\/4\@desktop{width:50%}.u-3\/4\@desktop{width:75%}.u-4\/4\@desktop{width:100%}.u-1\/5\@desktop{width:20%}.u-2\/5\@desktop{width:40%}.u-3\/5\@desktop{width:60%}.u-4\/5\@desktop{width:80%}.u-5\/5\@desktop{width:100%}}@media (min-width:85.625em){.u-1\/1\@wide{width:100%}.u-1\/2\@wide{width:50%}.u-2\/2\@wide{width:100%}.u-1\/3\@wide{width:33.33333%}.u-2\/3\@wide{width:66.66667%}.u-3\/3\@wide{width:100%}.u-1\/4\@wide{width:25%}.u-2\/4\@wide{width:50%}.u-3\/4\@wide{width:75%}.u-4\/4\@wide{width:100%}.u-1\/5\@wide{width:20%}.u-2\/5\@wide{width:40%}.u-3\/5\@wide{width:60%}.u-4\/5\@wide{width:80%}.u-5\/5\@wide{width:100%}}body{background:#f1f2f7}h2{margin:0 0 1.5em;font-size:2.3em}h3{margin:1em 0}h5{margin:1em 0 0}.c-style-header{height:10rem;color:#fff;font-size:3em;-webkit-box-align:center;-ms-flex-align:center;align-items:center;z-index:0;padding-left:calc(50vw - 800px + 48px);width:100vw;left:50%;margin-left:-50vw;background-color:#4a5ab1}.c-style-content,.c-style-header{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex}.c-style-content{min-height:calc(100vh - 10rem)}.c-style-container{-webkit-box-flex:1;-ms-flex:1;flex:1}.c-style-nav{min-height:calc(100vh - 10rem);padding:1em}@media (max-width:47.9275em){.c-style-box{margin:2em 0;padding:1em}}.c-style-box.u-dark{color:#f1f2f7;background:#112268}
+ */
+/* dark blue */
+/* yellow */
+/* pink temp!!! */
+/* pink */
+/* pink */
+/* gray */
+body:before {
+  background-color: #FCF8E3;
+  border-bottom: 1px solid #FBEED5;
+  border-left: 1px solid #FBEED5;
+  color: #C09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  @media (min-width: 47.9375em) {
+    body:before {
+      content: "tablet \2265   767px (47.9375em)"; } }
+  @media (min-width: 75em) {
+    body:before {
+      content: "desktop \2265   1200px (75em)"; } }
+  @media (min-width: 85.625em) {
+    body:before {
+      content: "wide \2265   1370px (85.625em)"; } }
+
+/* ==========================================================================
+   #BOX-SIZING
+   ========================================================================== */
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+/**
+ * A very simple reset that sits on top of Normalize.css.
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+li > ol,
+li > ul {
+  margin-bottom: 0; }
+
+/**
+ * Remove default table spacing.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */ }
+
+/**
+ * 1. If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+img[width],
+img[height] {
+  /* [1] */
+  max-width: none; }
+
+ul {
+  list-style: none;
+  margin: 0; }
+
+h2 {
+  font-family: inherit; }
+
+a {
+  color: inherit; }
+
+p {
+  font-family: Arial; }
+
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+@font-face {
+  font-family: "Headline";
+  src: url(624c7f670ed1bed14e862f1b14fd73d9.woff) format("woff"); }
+
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */
+  -webkit-overflow-scrolling: touch;
+  /* need to check this out */
+  font-smoothing: antialiased;
+  /* need to check this out */
+  -webkit-text-size-adjust: none;
+  /* need to check this out */
+  font-family: "Headline",sans-serif; }
+
+@media (max-width: 47.9275em) {
+  html {
+    font-size: 0.75em; } }
+
+@media (min-width: 47.9375em) {
+  html {
+    font-size: calc(0.00663 * 100vw + 6.91211px); } }
+
+@media (min-width: 85.625em) {
+  html {
+    font-size: 1em; } }
+
+/* ==========================================================================
+   #BOX
+   ========================================================================== */
+/**
+ * The box object simply boxes off content. Extend with cosmetic styles in the
+ * Components layer.
+ *
+ * 1. So we can apply the `.o-box` class to naturally-inline elements.
+ */
+.o-box {
+  display: block;
+  /* [1] */
+  padding: 24px; }
+  .o-box:after {
+    content: "" !important;
+    display: block !important;
+    clear: both !important; }
+  .o-box > :last-child {
+    margin-bottom: 0; }
+
+/* Size variants
+   ========================================================================== */
+.o-box--flush {
+  padding: 0; }
+
+.o-box--tiny {
+  padding: 6px; }
+
+.o-box--small {
+  padding: 12px; }
+
+.o-box--large {
+  padding: 48px; }
+
+.o-box--huge {
+  padding: 96px; }
+
+/* ==========================================================================
+   #GRID - Flexbox based grid system
+   ========================================================================== */
+.o-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin-left: -24px;
+  padding: 0; }
+  .o-grid > .o-grid__item {
+    padding-left: 24px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
+    .o-grid > .o-grid__item--top {
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
+    .o-grid > .o-grid__item--bottom {
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+    .o-grid > .o-grid__item--center {
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center; }
+    .o-grid > .o-grid__item--flex-none {
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none; }
+  .o-grid--bottom {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .o-grid--center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .o-grid--justify-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start; }
+  .o-grid--justify-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .o-grid--center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .o-grid--vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .o-grid--justified {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .o-grid--justified > .o-grid__item {
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none; }
+  .o-grid--no-gutters {
+    margin: 0; }
+    .o-grid--no-gutters > .o-grid__item {
+      padding: 0; }
+  .o-grid--tiny {
+    margin-left: -6px; }
+    .o-grid--tiny > .o-grid__item {
+      padding-left: 6px; }
+  .o-grid--small {
+    margin-left: -12px; }
+    .o-grid--small > .o-grid__item {
+      padding-left: 12px; }
+  .o-grid--large {
+    margin-left: -48px; }
+    .o-grid--large > .o-grid__item {
+      padding-left: 48px; }
+  .o-grid--huge {
+    margin-left: -96px; }
+    .o-grid--huge > .o-grid__item {
+      padding-left: 96px; }
+  .o-grid--flexCells > .o-grid__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .o-grid--no-flex {
+    overflow: auto;
+    /* or hidden when there are arrows?? */ }
+    .o-grid--no-flex > .o-grid__item {
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none; }
+
+/*
+  mobile = s
+  tablet = md
+  desktop = lg
+  wide = xl
+*/
+/*
+
+Need to decide which notation is the most understandable:
+
+1) o-grid u-textCenter m-1/3@md m-1/4@lg m-1/5@xl
+2) o-grid u-textCenter m-1-3@md m-1-4@lg m-1-5@xl
+3) o-grid u-textCenter m-1-3-md m-1-4-lg m-1-5-xl
+4) o-grid u-textCenter m-1-3-tab m-1-4-desc m-1-5-wide
+
+*/
+/*
+  mobile = s
+  tablet = md
+  desktop = lg
+  wide = xl
+*/
+@media (max-width: 47.9275em) {
+  .m-1-2-s > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; } }
+
+@media (max-width: 47.9275em) {
+  .m-1-2-s > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; } }
+
+@media (min-width: 47.9375em) {
+  .m-1-2-md > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  .m-1-3-md > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; } }
+
+@media (min-width: 47.9375em) and (orientation: landscape) {
+  .m-1-2-md > .o-grid__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  .m-1-3-md > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; }
+  .m-1-4-md > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; } }
+
+@media (min-width: 75em) {
+  .m-1-3-lg > .o-grid__item {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    max-width: 33.333%; }
+  .m-1-4-lg > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; } }
+
+@media (min-width: 85.625em) {
+  .m-1-4-xl > .o-grid__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 25%; }
+  .m-1-5-xl > .o-grid__item {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    max-width: 20%; } }
+
+/* ==========================================================================
+   #RATIO
+   ========================================================================== */
+/**
+ * Create ratio-bound content blocks, to keep media (e.g. images, videos) in
+ * their correct aspect ratios.
+ *
+ * http://alistapart.com/article/creating-intrinsic-ratios-for-video
+ *
+ * 1. Default cropping is a 1:1 ratio (i.e. a perfect square).
+ */
+.o-ratio {
+  position: relative;
+  display: block;
+  overflow: hidden; }
+  .o-ratio:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    /* [1] */ }
+
+.o-ratio__content,
+.o-ratio > iframe,
+.o-ratio > embed,
+.o-ratio > object {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
+/* stylelint-disable */
+/* Ratio variants.
+   ========================================================================== */
+/**
+ * Generate a series of ratio classes to be used like so:
+ *
+ *   <div class="o-ratio  o-ratio--16:9">
+ *
+ */
+.o-ratio--3\:1:before {
+  padding-bottom: 33.33333%; }
+
+.o-ratio--2\:1:before {
+  padding-bottom: 50%; }
+
+.o-ratio--4\:3:before {
+  padding-bottom: 75%; }
+
+.o-ratio--7\:5:before {
+  padding-bottom: 71.42857%; }
+
+.o-ratio--16\:9:before {
+  padding-bottom: 56.25%; }
+
+/* stylelint-enable */
+/* ==========================================================================
+   #WRAPPERS
+   ========================================================================== */
+/**
+ * Page-level constraining and wrapping elements.
+ */
+/* mine */
+/* stylelint-disable */
+/* stylelint-enable */
+.o-wrapper {
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  position: relative;
+  /* mine */ }
+  .o-wrapper:after {
+    content: "" !important;
+    display: block !important;
+    clear: both !important; }
+
+/* Size variants.
+   ========================================================================== */
+.o-wrapper--tiny {
+  padding-right: 6px;
+  padding-left: 6px; }
+
+.o-wrapper--small {
+  padding-right: 12px;
+  padding-left: 12px; }
+
+.o-wrapper--large {
+  padding-right: 48px;
+  padding-left: 48px; }
+
+.o-wrapper--huge {
+  padding-right: 96px;
+  padding-left: 96px; }
+
+/* ==========================================================================
+   #CLEARFIX
+   ========================================================================== */
+/**
+ * Attach our clearfix mixin to a utility class.
+ */
+.u-clearfix:after {
+  content: "" !important;
+  display: block !important;
+  clear: both !important; }
+
+/* ==========================================================================
+   #HIDE
+   ========================================================================== */
+/**
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.u-hidden-visually {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important; }
+
+/**
+ * Hide visually and from screen readers.
+ */
+.u-hidden {
+  display: none !important; }
+
+@media (max-width: 47.9275em) {
+  .u-hidden--mobile {
+    display: none !important; } }
+
+@media (min-width: 47.9375em) and (max-width: 74.99em) {
+  .u-hidden--tablet {
+    display: none !important; } }
+
+@media (min-width: 75em) {
+  .u-hidden--desktop {
+    display: none !important; } }
+
+/* misc utilities - still needs some thought */
+.u-width-auto {
+  width: auto; }
+
+.u-margin-auto {
+  margin: auto; }
+
+.u-margin-left-auto {
+  margin-left: auto; }
+
+.u-align-left {
+  text-align: left; }
+
+.u-align-right {
+  text-align: right; }
+
+.u-relative {
+  position: relative; }
+
+.u-block {
+  display: block; }
+
+.u-inline-block {
+  display: inline-block; }
+
+.u-reset-case {
+  text-transform: none; }
+
+.u-dark {
+  color: #f1f2f7 !important;
+  background: #112268 !important; }
+
+.u-absolute-center {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.u-absolute-top {
+  top: 0; }
+
+.u-absolute-bottom {
+  bottom: 0; }
+
+.u-absolute-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+.u-absolute-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+[class*="u-absolute"] {
+  position: absolute !important; }
+
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-margin-top {}
+ *   .u-padding-left-large {}
+ *   .u-margin-right-small {}
+ *   .u-padding {}
+ *   .u-padding-right-none {}
+ *   .u-[margin|padding]-[top|bottom|left|right]?-[none|tiny|small|large|huge]
+ */
+/* stylelint-disable string-quotes */
+.u-padding {
+  padding: 24px !important; }
+
+.u-padding-tiny {
+  padding: 6px !important; }
+
+.u-padding-small {
+  padding: 12px !important; }
+
+.u-padding-large {
+  padding: 48px !important; }
+
+.u-padding-huge {
+  padding: 96px !important; }
+
+.u-padding-none {
+  padding: 0 !important; }
+
+.u-padding-top {
+  padding-top: 24px !important; }
+
+.u-padding-top-tiny {
+  padding-top: 6px !important; }
+
+.u-padding-top-small {
+  padding-top: 12px !important; }
+
+.u-padding-top-large {
+  padding-top: 48px !important; }
+
+.u-padding-top-huge {
+  padding-top: 96px !important; }
+
+.u-padding-top-none {
+  padding-top: 0 !important; }
+
+.u-padding-right {
+  padding-right: 24px !important; }
+
+.u-padding-right-tiny {
+  padding-right: 6px !important; }
+
+.u-padding-right-small {
+  padding-right: 12px !important; }
+
+.u-padding-right-large {
+  padding-right: 48px !important; }
+
+.u-padding-right-huge {
+  padding-right: 96px !important; }
+
+.u-padding-right-none {
+  padding-right: 0 !important; }
+
+.u-padding-bottom {
+  padding-bottom: 24px !important; }
+
+.u-padding-bottom-tiny {
+  padding-bottom: 6px !important; }
+
+.u-padding-bottom-small {
+  padding-bottom: 12px !important; }
+
+.u-padding-bottom-large {
+  padding-bottom: 48px !important; }
+
+.u-padding-bottom-huge {
+  padding-bottom: 96px !important; }
+
+.u-padding-bottom-none {
+  padding-bottom: 0 !important; }
+
+.u-padding-left {
+  padding-left: 24px !important; }
+
+.u-padding-left-tiny {
+  padding-left: 6px !important; }
+
+.u-padding-left-small {
+  padding-left: 12px !important; }
+
+.u-padding-left-large {
+  padding-left: 48px !important; }
+
+.u-padding-left-huge {
+  padding-left: 96px !important; }
+
+.u-padding-left-none {
+  padding-left: 0 !important; }
+
+.u-margin {
+  margin: 24px !important; }
+
+.u-margin-tiny {
+  margin: 6px !important; }
+
+.u-margin-small {
+  margin: 12px !important; }
+
+.u-margin-large {
+  margin: 48px !important; }
+
+.u-margin-huge {
+  margin: 96px !important; }
+
+.u-margin-none {
+  margin: 0 !important; }
+
+.u-margin-top {
+  margin-top: 24px !important; }
+
+.u-margin-top-tiny {
+  margin-top: 6px !important; }
+
+.u-margin-top-small {
+  margin-top: 12px !important; }
+
+.u-margin-top-large {
+  margin-top: 48px !important; }
+
+.u-margin-top-huge {
+  margin-top: 96px !important; }
+
+.u-margin-top-none {
+  margin-top: 0 !important; }
+
+.u-margin-right {
+  margin-right: 24px !important; }
+
+.u-margin-right-tiny {
+  margin-right: 6px !important; }
+
+.u-margin-right-small {
+  margin-right: 12px !important; }
+
+.u-margin-right-large {
+  margin-right: 48px !important; }
+
+.u-margin-right-huge {
+  margin-right: 96px !important; }
+
+.u-margin-right-none {
+  margin-right: 0 !important; }
+
+.u-margin-bottom {
+  margin-bottom: 24px !important; }
+
+.u-margin-bottom-tiny {
+  margin-bottom: 6px !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 12px !important; }
+
+.u-margin-bottom-large {
+  margin-bottom: 48px !important; }
+
+.u-margin-bottom-huge {
+  margin-bottom: 96px !important; }
+
+.u-margin-bottom-none {
+  margin-bottom: 0 !important; }
+
+.u-margin-left {
+  margin-left: 24px !important; }
+
+.u-margin-left-tiny {
+  margin-left: 6px !important; }
+
+.u-margin-left-small {
+  margin-left: 12px !important; }
+
+.u-margin-left-large {
+  margin-left: 48px !important; }
+
+.u-margin-left-huge {
+  margin-left: 96px !important; }
+
+.u-margin-left-none {
+  margin-left: 0 !important; }
+
+/* stylelint-enable string-quotes */
+/* ==========================================================================
+   #WIDTHS
+   ========================================================================== */
+/**
+ * inuitcss generates a series of utility classes that give a fluid width to
+ * whichever element they’re applied, e.g.:
+ *
+ *   <img src="" alt="" class="u-1/2" />
+ *
+ * These classes are most commonly used in conjunction with our layout system,
+ * e.g.:
+ *
+ *   <div class="o-layout__item  u-1/2">
+ *
+ * By default, inuitcss will also generate responsive variants of each of these
+ * classes by using your Sass MQ configuration, e.g.:
+ *
+ *   <div class="o-layout__item  u-1/1  u-1/2@tablet  u-1/3@desktop">
+ *
+ * Optionally, inuitcss can generate offset classes which can push and pull
+ * elements left and right by a specified amount, e.g.:
+ *
+ *   <div class="o-layout__item  u-2/3  u-pull-1/3">
+ *
+ * This is useful for making very granular changes to the rendered order of
+ * items in a layout.
+ *
+ * N.B. This option is turned off by default.
+ */
+/**
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes take a fraction-like format (e.g. `.u-2/3`). Use these in
+ * your markup:
+ *
+ * <div class="u-7/12">
+ *
+ * The following will generate widths helper classes based on the fractions
+ * defined in the `$inuit-fractions` list.
+ */
+.u-1\/1 {
+  width: 100%; }
+
+.u-1\/2 {
+  width: 50%; }
+
+.u-2\/2 {
+  width: 100%; }
+
+.u-1\/3 {
+  width: 33.33333%; }
+
+.u-2\/3 {
+  width: 66.66667%; }
+
+.u-3\/3 {
+  width: 100%; }
+
+.u-1\/4 {
+  width: 25%; }
+
+.u-2\/4 {
+  width: 50%; }
+
+.u-3\/4 {
+  width: 75%; }
+
+.u-4\/4 {
+  width: 100%; }
+
+.u-1\/5 {
+  width: 20%; }
+
+.u-2\/5 {
+  width: 40%; }
+
+.u-3\/5 {
+  width: 60%; }
+
+.u-4\/5 {
+  width: 80%; }
+
+.u-5\/5 {
+  width: 100%; }
+
+/**
+ * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
+ * defined breakpoints, and give them a Responsive Suffix, e.g.:
+ *
+ * <div class="u-3/12@mobile">
+ */
+@media (min-width: 47.9375em) {
+  .u-1\/1\@tablet {
+    width: 100%; }
+  .u-1\/2\@tablet {
+    width: 50%; }
+  .u-2\/2\@tablet {
+    width: 100%; }
+  .u-1\/3\@tablet {
+    width: 33.33333%; }
+  .u-2\/3\@tablet {
+    width: 66.66667%; }
+  .u-3\/3\@tablet {
+    width: 100%; }
+  .u-1\/4\@tablet {
+    width: 25%; }
+  .u-2\/4\@tablet {
+    width: 50%; }
+  .u-3\/4\@tablet {
+    width: 75%; }
+  .u-4\/4\@tablet {
+    width: 100%; }
+  .u-1\/5\@tablet {
+    width: 20%; }
+  .u-2\/5\@tablet {
+    width: 40%; }
+  .u-3\/5\@tablet {
+    width: 60%; }
+  .u-4\/5\@tablet {
+    width: 80%; }
+  .u-5\/5\@tablet {
+    width: 100%; } }
+
+@media (min-width: 75em) {
+  .u-1\/1\@desktop {
+    width: 100%; }
+  .u-1\/2\@desktop {
+    width: 50%; }
+  .u-2\/2\@desktop {
+    width: 100%; }
+  .u-1\/3\@desktop {
+    width: 33.33333%; }
+  .u-2\/3\@desktop {
+    width: 66.66667%; }
+  .u-3\/3\@desktop {
+    width: 100%; }
+  .u-1\/4\@desktop {
+    width: 25%; }
+  .u-2\/4\@desktop {
+    width: 50%; }
+  .u-3\/4\@desktop {
+    width: 75%; }
+  .u-4\/4\@desktop {
+    width: 100%; }
+  .u-1\/5\@desktop {
+    width: 20%; }
+  .u-2\/5\@desktop {
+    width: 40%; }
+  .u-3\/5\@desktop {
+    width: 60%; }
+  .u-4\/5\@desktop {
+    width: 80%; }
+  .u-5\/5\@desktop {
+    width: 100%; } }
+
+@media (min-width: 85.625em) {
+  .u-1\/1\@wide {
+    width: 100%; }
+  .u-1\/2\@wide {
+    width: 50%; }
+  .u-2\/2\@wide {
+    width: 100%; }
+  .u-1\/3\@wide {
+    width: 33.33333%; }
+  .u-2\/3\@wide {
+    width: 66.66667%; }
+  .u-3\/3\@wide {
+    width: 100%; }
+  .u-1\/4\@wide {
+    width: 25%; }
+  .u-2\/4\@wide {
+    width: 50%; }
+  .u-3\/4\@wide {
+    width: 75%; }
+  .u-4\/4\@wide {
+    width: 100%; }
+  .u-1\/5\@wide {
+    width: 20%; }
+  .u-2\/5\@wide {
+    width: 40%; }
+  .u-3\/5\@wide {
+    width: 60%; }
+  .u-4\/5\@wide {
+    width: 80%; }
+  .u-5\/5\@wide {
+    width: 100%; } }
+
+body {
+  background: #f1f2f7; }
+
+h2 {
+  margin: 0 0 1.5em;
+  font-size: 2.3em; }
+
+h3 {
+  margin: 1em 0; }
+
+h5 {
+  margin: 1em 0 0; }
+
+.c-style-header {
+  height: 10rem;
+  color: #fff;
+  font-size: 3em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+  padding-left: calc(50vw - 800px + 48px);
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  background-color: #4a5ab1; }
+
+.c-style-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: calc(100vh - 10rem);
+  position: relative; }
+
+.c-style-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.c-style-nav {
+  min-height: calc(100vh - 10rem);
+  padding: 1em; }
+
+@media (max-width: 47.9275em) {
+  .c-style-box {
+    margin: 2em 0;
+    padding: 1em; } }
+
+.c-style-box.u-dark {
+  color: #f1f2f7;
+  background: #112268; }
+
 /*# sourceMappingURL=styles.css.map*/
