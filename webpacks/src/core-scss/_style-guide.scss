@@ -1,25 +1,22 @@
 @mixin fullWidthBg($bgColor: inherit) {
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 100vw;
-  //   height: 100%;
-  //   left: 50%;
-  //   top: 0;
-  //   margin-left: -50vw;
-  //   background-color: $bgColor;
-  //   z-index: -1;
-  // }
   width: 100vw;
-  //height: 100%;
   left: 50%;
-  //top: 0;
   margin-left: -50vw;
   background-color: $bgColor;
 }
 
 body {
   background: $lightBackground;
+}
+h2 {
+  margin: 0 0 1.5em;
+  font-size: 2.3em;
+}
+h3 {
+  margin: 1em 0;
+}
+h5 {
+  margin: 1em 0 0;
 }
 .c-style-header {
   height: 10rem;
