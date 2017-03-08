@@ -1,0 +1,291 @@
+<style>
+    ul.games {
+        list-style: none;
+        padding: 0 0 1rem 0;
+        display: table;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        text-align: left;
+    }
+
+    ul.games li {
+        width: 16.6%;
+        display: inline-block;
+        position: relative;
+    }
+
+    ul.games li img {
+        padding: 0 .4rem 0 .4rem;
+        max-width: 100%;
+    }
+
+    ul.games li:nth-child(3n-2) {}
+
+    @media only screen and (max-width: 767px) {
+        ul.games li {
+            width: 100%;
+        }
+    }
+
+    @media (max-height: 850px) and (min-width: 1000px) {
+        .bonus-multiview-detailedview .btn.btn__play-bingo.in_header {
+            top: 30rem;
+        }
+    }
+</style>
+
+
+
+<style>
+    a.pp_banner_terms {
+        margin-top: -7rem;
+        position: absolute;
+        left: 5rem;
+        text-decoration: none;
+        cursor: pointer;
+        max-width: 560px;
+    }
+
+    a.pp_banner_terms p {
+        color: #fff;
+    }
+
+    #pp_bottom_terms {
+        display: none;
+    }
+
+    .desktop .pp_banner_terms.desktop {
+        display: block;
+    }
+
+    .mobile .pp_banner_terms.desktop {
+        display: none;
+    }
+
+    .desktop .pp_banner_terms.mobile {
+        display: none;
+    }
+
+    .mobile .pp_banner_terms.mobile {
+        display: block;
+        left: 1rem;
+    }
+</style>
+
+
+<style>
+    iframe {
+        width: 100%;
+        height: 492px;
+        z-index: 99999999;
+    }
+
+    .detail_promo_banner.cre_iframedPP {
+        height: initial !important;
+        min-height: initial !important;
+    }
+
+
+    @media only screen and (max-width: 760px) {
+     iframe {
+        height: 560px;
+    }
+    }
+
+
+
+</style>
+
+<div class="detail_promo_header_block">
+    <h1 class="detail_promo_header_text">$Banner.Header.data</h1>
+    <h3 class="detail_promo_header_text_white">$Banner.Subheader.data</h3>
+</div>
+
+
+
+#if ($Banner.CTA.cta_check.data == 0) #end #if ($Banner.CTA.cta_check.data == 1) <a class="user-show btn btn_bonus_action fn-launch-game btn__play-bingo btn_type_custom in_header" data-game-code="null">Play Bingo Now</a>
+<a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($Banner.CTA.cta_check.data == 2) <a href="/my-account/deposit" class="user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Deposit Now</a>
+<a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($Banner.CTA.cta_check.data == 3) <a href="$Banner.CTA.cta_url.data" class="user-show btn btn_bonus_action  btn__play-bingo btn_type_custom in_header">$Banner.CTA.cta_text.data</a>
+<a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($Banner.CTA.cta_check.data == 4) <a class="fn-launch-game user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header" data-game-code="$Banner.CTA.cta_url.data" href="#" data-cgi-gtm="true">$Banner.CTA.cta_text.data</a>
+<a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end
+
+
+
+
+
+
+<div class="detail_promo_banner cre_iframedPP #if ($Banner.vipe.data == true) vip_exclusive #end">
+
+    <iframe src="$iframeurl.data" frameborder="0"></iframe>
+
+</div>
+
+
+#if ($dTerms.data == '') #else
+<a class="pp_banner_terms desktop" id="tnc-float">
+    <p>$dTerms.data</p>
+</a>#end #if ($mTerms.data == '') #else
+<a class="pp_banner_terms mobile" id="tnc-float">
+    <p>$mTerms.data</p>
+</a>#end
+
+
+#if ($boxesHide.data != true)
+
+<div class="main_detail_promo_content">
+    <div class="promos_blocks_wrapper">
+        <div class="detail_promo_block_wrapper one_of_three">
+            <article>
+                <main>
+                    <div class="fn-portlet portlet is-mobile mobile-tab-switch mobile-tab-switch-first">
+                        <div class="fn-switch-tab mobile-tab-trigger" data-tab-index="1">
+                            <span class="promo-menu__icon $What-is-it.icon_class.data">&nbsp;</span>$What-is-it.box01_promo_header_text.data</div>
+                    </div>
+                    <div class="top_tab_wrap is-desktop-tablet">
+                        <div class="promo_header_text">
+                            <span class="promo-menu__icon $What-is-it.icon_class.data">&nbsp;</span>$What-is-it.box01_promo_header_text.data</div>
+                    </div>
+                    <div class="fn-tab-body-content fn-tab-body-1 layout-tab-body">
+                        <div class="detail_promo_block_text">
+                            $What-is-it.block_text.data
+                        </div>
+                        <div class="detail_promo_bottom_block">
+                            <div class="fl">
+                                $What-is-it.bluebox.data
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </article>
+        </div>
+        <div class="detail_promo_block_wrapper one_of_three">
+            <article>
+                <main>
+                    <div class="fn-portlet portlet is-mobile mobile-tab-switch mobile-tab-switch-first">
+                        <div class="fn-switch-tab mobile-tab-trigger" data-tab-index="2">
+                            <span class="promo-menu__icon $Where-is-it.icon_class.data">&nbsp;</span>$Where-is-it.box02_promo_header_text.data</div>
+                    </div>
+                    <div class="top_tab_wrap is-desktop-tablet">
+                        <div class="promo_header_text">
+                            <span class="promo-menu__icon $Where-is-it.icon_class.data">&nbsp;</span>$Where-is-it.box02_promo_header_text.data</div>
+                    </div>
+                    <div class="fn-tab-body-content fn-tab-body-2 layout-tab-body">
+                        <div class="detail_promo_block_text">$Where-is-it.block_text.data</div>
+                        <div class="detail_promo_bottom_block">
+                            <div class="fl">
+                                $Where-is-it.bluebox.data
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </article>
+        </div>
+        <div class="detail_promo_block_wrapper one_of_three">
+            <article>
+                <main>
+                    <div class="fn-portlet portlet is-mobile mobile-tab-switch mobile-tab-switch-first">
+                        <div class="fn-switch-tab mobile-tab-trigger" data-tab-index="3">
+                            <span class="promo-menu__icon $When-is-it.icon_class.data">&nbsp;</span>$When-is-it.box03_promo_header_text.data</div>
+                    </div>
+                    <div class="top_tab_wrap is-desktop-tablet">
+                        <div class="promo_header_text">
+                            <span class="promo-menu__icon $When-is-it.icon_class.data">&nbsp;</span>$When-is-it.box03_promo_header_text.data</div>
+                    </div>
+                    <div class="fn-tab-body-content fn-tab-body-3 layout-tab-body">
+                        <div class="detail_promo_bottom_block text_align_c">
+                            <span class="white_text bottom bottom-custom">$When-is-it.bottom_block.data</span>
+                        </div>
+                    </div>
+                </main>
+            </article>
+        </div>
+    </div>
+    #foreach($bb in $Bottom-box.getSiblings()) #if ($bb.btype.data == 2) #set ($tab = 50 + $velocityCount )
+
+    <div>
+        <article>
+            <div class="detail_promo_block_wrapper">
+                <div class="fn-portlet portlet is-mobile mobile-tab-switch mobile-tab-switch-first">
+                    <div class="fn-switch-tab mobile-tab-trigger" data-tab-index="$tab">
+                        <span class="promo-menu__icon $bb.icon_class.data">&nbsp;</span>$bb.box04_promo_header_text.data</div>
+                </div>
+                <div class="top_tab_wrap is-desktop-tablet">
+                    <div class="promo_header_text">
+                        <span class="promo-menu__icon $bb.icon_class.data">&nbsp;</span>$bb.box04_promo_header_text.data</div>
+                </div>
+                <div class="fn-tab-body-content fn-tab-body-$tab layout-tab-body">
+                    <div class="detail_promo_block_text custom">
+                        $bb.cbox.data
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    #end #end #if ($Eligible-games.game.gameCode.data != '')
+
+    <div>
+        #foreach($u in $Eligible-games.getSiblings()) #set ($tab2 = $tab + 20 + $velocityCount )
+        <article>
+            <div class="detail_promo_block_wrapper">
+                <div class="fn-portlet portlet is-mobile mobile-tab-switch mobile-tab-switch-first">
+                    <div class="fn-switch-tab mobile-tab-trigger" data-tab-index="$tab2">
+                        <span class="promo-menu__icon icon-chat">&nbsp;</span>$u.title.data</div>
+                </div>
+                <div class="top_tab_wrap is-desktop-tablet">
+                    <div class="promo_header_text">
+                        <span class="promo-menu__icon icon-chat">&nbsp;</span>$u.title.data</div>
+                </div>
+                <div class="fn-tab-body-content fn-tab-body-$tab2 layout-tab-body">
+                    <div class="detail_promo_block_text">
+                        <ul class="games">
+                            #foreach($g in $u.game.getSiblings())
+                            <li class="game">
+                                <a class="fn-launch-game" data-game-code="$g.gameCode.data" href="" title="$g.data"><img src="$g.gameImage.data" alt="$g.data" title="$g.data" /></a>
+                            </li>
+                            #end
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        #end
+    </div>
+
+
+</div>
+
+#end
+
+#end
+
+
+
+
+
+
+
+#if ($Banner.CTA.cta_check.data == 0) #end #if ($Banner.CTA.cta_check.data == 1)
+
+<a class="user-show btn btn__play-bingo fn-launch-game" data-game-code="null">Play Bingo Now</a>
+
+<a href="/register" class="btn btn__play-bingo guest-show">Join Now</a> #end #if ($Banner.CTA.cta_check.data == 2) <a href="/my-account/deposit" class="user-show btn btn__play-bingo fn-launch-game">Deposit Now</a>
+<a href="/register" class="btn btn__play-bingo guest-show">Join Now</a> #end #if ($Banner.CTA.cta_check.data == 3) <a href="$Banner.CTA.cta_url.data" class="user-show btn btn__play-bingo fn-launch-game">$Banner.CTA.cta_text.data</a>
+<a href="/register" class="btn btn__play-bingo guest-show">Join Now</a> #end #if ($Banner.CTA.cta_check.data == 4) <a class="user-show btn btn__play-bingo fn-launch-game fn-launch-game" data-game-code="$Banner.CTA.cta_url.data" href="#" data-cgi-gtm="true">$Banner.CTA.cta_text.data</a>
+<a href="/register" class="btn btn__play-bingo guest-show">Join Now</a> #end #if ($ccss.data != '')
+
+
+
+
+
+<style type="text/css">
+    $ccss.data
+</style>
+
+
+#end
+
+
+<p id="termscon"></p>
