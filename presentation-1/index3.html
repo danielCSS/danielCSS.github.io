@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  		<meta charset="utf-8">
+
+  		<title>CSS Presentation on Selectors, units, calc and background - By Daniel David</title>
+
+  		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  		<meta name="author" content="Hakim El Hattab">
+
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  		<link rel="stylesheet" href="css/reveal.css">
+  		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+      <link rel="stylesheet" href="css/main.css">
+      <!-- <script src="js/app.js"></script> -->
+  		<!-- Code syntax highlighting -->
+  		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+  		<!-- Printing and PDF exports -->
+  		<script>
+  			var link = document.createElement( 'link' );
+  			link.rel = 'stylesheet';
+  			link.type = 'text/css';
+  			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  			document.getElementsByTagName( 'head' )[0].appendChild( link );
+  		</script>
+
+  		<!--[if lt IE 9]>
+  		<script src="lib/js/html5shiv.js"></script>
+  		<![endif]-->
+  	</head>
+
+    <body>
+        <div id="tip"></div>
+        <div id="pitfall"></div>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                  <h2>Styling components in core for all brands via variables</h2>
+                  <ul>
+                    <li>
+                      <div>Limits the design</div>
+                      <ul>
+                        <li>Business may not be happy. 'We can't do this design' doesn't sound very good. (eg: maximizer)</li>
+                        <li>Dssigners won't be happy</li>
+                      </ul>
+                    </li>
+                    <li>CSS developers won't be happy</li>
+                    <li>Extra layer of complexity</li>
+                    <li>Lots of overides</li>
+                    <li>Naive to expect that core can make changes to markup without brands having to refactor</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2>Alternative:</h2>
+                  <ol>
+                    <li>CORE CSS will contain variables for site settings (eg theme colors etc), scafolding (eg normalize), architecture (CSS 'objects' for layout ) and typography</li>
+                    <li>CSS style guide which must be refined and agreed upon and thoroughly understood by CSS devs</li>
+                    <li>CORE writes component markup (according to HTML style-guide) and CORE-specific CSS for components (according to CSS style-guide)</li>
+                    <li>CORE component CSS will be passed on to brands as boilerplate(ish) code which may be edited freely by devs.</li>
+                    <li>Pull requests to component CSS by brands will be examined to make sure it complies with style-guide requirements</li>
+                  </ol>
+                </section>
+            </div>
+        </div>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        <script src="lib/js/head.min.js"></script>
+    		<script src="js/reveal.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          //controls: true,
+          //progress: true,
+          history: true,
+          //center: true,
+
+          transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+          // Optional reveal.js plugins
+          dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+          ]
+        });
+        </script>
+    </body>
+</html>
