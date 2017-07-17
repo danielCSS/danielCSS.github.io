@@ -229,6 +229,13 @@ main > section {
 p {
   font-size: 1.5em;
 }
+my-img {
+  background-image: url(./images/1.png);
+  background-image: url(./images/2.png);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}
 // input {
 //   font-size: 1em; //attempt to disble zoom in when focusing input elements
 // }

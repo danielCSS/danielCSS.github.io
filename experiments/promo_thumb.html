@@ -1,0 +1,32 @@
+<div class="bonus-title_img #if ($vipex.data == true) vip_exclusive #end" style="background-image: url('$image.data')">
+    &nbsp;</div>
+
+#if ($ode.data == true)
+<div class="bonus_promo_info_label">One Day Exclusive!</div>#end
+<div class="bonus-title_description">
+    <h5 class="bonus-title_description_title">$title.data</h5>
+    <div class="bonus-title_description_content">$description.data</div>
+</div>
+
+
+<div class="ctaBtns">
+    #if ($CTA.cta_check.data == 0)
+    #end
+    #if ($CTA.cta_check.data == 1)
+    <a class="user-show btn btn_bonus_action fn-launch-game btn__play-bingo btn_type_custom in_header" data-game-code="null">Play Bingo Now</a>
+    <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+    <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a>
+    #end
+    #if ($CTA.cta_check.data == 2)
+    <a href="/my-account/deposit" class="user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Deposit Now</a>
+    <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a>
+    #end
+    #if ($CTA.cta_check.data == 3)
+    <a href="$CTA.cta_url.data" class="user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">$CTA.cta_text.data</a>
+    <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a>
+    #end
+    #if ($CTA.cta_check.data == 4)
+    <a class="fn-launch-game user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header" data-game-code="$CTA.cta_url.data" href="#" data-cgi-gtm="true">Play Game</a>
+    <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a>
+    #end
+</div>

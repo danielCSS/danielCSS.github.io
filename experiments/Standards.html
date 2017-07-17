@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Standards</title>
+    <link href="css/main.css" rel="stylesheet"></link>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+<ul>
+  <li>Move all code which involve :hover states OR properties which only
+    make sense when users are using an accurate pointing device such as
+    a mouse (like cursor:pointer) to an interaction media quries like:
+    @media (pointer:fine) {
+      /* custom css for "touch targets" */
+    }
+    see http://caniuse.com/#feat=css-media-interaction
+    and https://stackoverflow.com/questions/12469875/how-to-code-css-media-queries-targeting-all-mobile-devices-and-tablets/42835826#42835826
+    NB: Need to wait for firefox support and not needing to support IE11 OR MAYBE
+    use @supports to overcome this.
+    see https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/?utm_source=frontendfocus&utm_medium=email
+  </li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+</body>
+
+</html>
