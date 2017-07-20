@@ -127,7 +127,7 @@
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
-@import "components.aside-banner";
+//@import "components.aside-banner";
 @import "components.input-text";
 @import "components.buttons";
 @import "components.checkable";
@@ -229,12 +229,17 @@ main > section {
 p {
   font-size: 1.5em;
 }
-my-img {
-  background-image: url(./images/1.png);
-  background-image: url(./images/2.png);
+
+/* for preload.html */
+.my-img {
+  background-image: url(../images/2.png);
   background-repeat: no-repeat;
+  background-color: purple;
   width: 200px;
   height: 200px;
+}
+ {
+  background-image: url(../images/1.png);
 }
 // input {
 //   font-size: 1em; //attempt to disble zoom in when focusing input elements

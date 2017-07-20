@@ -8,15 +8,12 @@
   padding: 0; }
   .o-grid--top {
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start; }
   .o-grid--bottom {
     -ms-flex-align: end;
-        -ms-grid-row-align: flex-end;
         align-items: flex-end; }
   .o-grid--center {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .o-grid--justifyCenter {
     -ms-flex-pack: center;
@@ -36,6 +33,7 @@
         align-self: flex-end; }
   .o-grid__cell--center {
     -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center; }
   .o-grid__cell--autoSize {
     -ms-flex: none;

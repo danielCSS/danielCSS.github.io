@@ -712,17 +712,16 @@ table {
           align-self: flex-end; }
     .o-grid > .o-grid__item--center {
       -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
           align-self: center; }
     .o-grid > .o-grid__item--flex-none {
       -ms-flex: none;
           flex: none; }
   .o-grid--bottom {
     -ms-flex-align: end;
-        -ms-grid-row-align: flex-end;
         align-items: flex-end; }
   .o-grid--center {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .o-grid--justify-left {
     -ms-flex-pack: start;
@@ -732,7 +731,6 @@ table {
         justify-content: center; }
   .o-grid--center {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .o-grid--vertical {
     -ms-flex-direction: column;
@@ -2505,3 +2503,10 @@ main > section {
 
 p {
   font-size: 1.5em; }
+
+.my-img {
+  background-image: url(../images/2.png);
+  background-repeat: no-repeat;
+  background-color: purple;
+  width: 200px;
+  height: 200px; }
