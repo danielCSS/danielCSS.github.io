@@ -1,0 +1,2204 @@
+
+
+CMS_FIX
+=====
+
+1) delete and re-upload the 2 sprite files in images folder
+
+
+2) web contents:
+
+
+
+ACCOUNT-MENU-CONTENT
+====================
+
+old
+=======
+
+<div class="slide-menu__header">
+	<div class="slide-account-user">
+		<div class="slide-account-user__name">
+			Hi, [USER_NAME]</div>
+		<div class="slide-account-user__status">
+			[LOYALTY-LEVEL]</div>
+	</div>
+</div>
+<div class="slide-menu__wrap fn-menu-wrap">
+	<div class="slide-balance-scroller">
+		<ul class="slide-balance-list">
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+				<div class="tooltip">
+					Your Cash Balance is your real cash funds,<br />
+					which you may use at anytime.</div>
+				<strong><span class="slide-balance__item__title">Cash Balance</span> </strong> <span class="slide-balance__item__total">[REAL_GAMING_BALANCE]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="4000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+				<div class="tooltip">
+					By earning and redeeming "Happy Points".<br />
+					You can also start redeeming as soon as you reach 100 Happy Points!</div>
+				<span class="slide-balance__item__title">Happy Points</span> <span class="slide-balance__item__total">[LOYALTY-POINTS]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+				<div class="tooltip">
+					Your bingo bonus balance can be used to buy bingo tickets.</div>
+				<span class="slide-balance__item__title"><strong>Bingo</strong> Bonus<br />
+				Balance </span> <span class="slide-balance__item__total">[BINGO-BONUS]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+				<div class="tooltip">
+					Your games bonus balance can be used on the games within the "Slots&amp;Games" tab.</div>
+				<span class="slide-balance__item__title"><strong>Slots &amp; Games</strong><br />
+				Bonus Balance </span> <span class="slide-balance__item__total">[ALL-GAMES-BONUS]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+				<div class="tooltip">
+					Your casino bonus balance can be used on the games within the "Casino" tab.</div>
+				<span class="slide-balance__item__title"><strong>Casino</strong> Bonus<br />
+				Balance </span> <span class="slide-balance__item__total">[BONUS_BALANCE]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"> </use> </svg>
+				<div class="tooltip">
+					Your casino playable funds is a combination of your real funds with your casino bonuses.</div>
+				<span class="slide-balance__item__title"><strong>Casino</strong> Playable<br />
+				Funds </span> <span class="slide-balance__item__total">[CASINO_GAMING_BALANCE]</span></li>
+		</ul>
+	</div>
+	<div class="fn-menu-list">
+		<ul class="slide-menu__list">
+			<li class="slide-menu__point fn-redirect" data-force-navigate="true" data-url="/my-account/deposit#deposit">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#DEPOSIT_CASHIER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>Deposit</span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/loyalty">
+				<span class="slide-menu__point__name"><span class="micon-buzz slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BUZZ" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>Happy Points</span></li>
+			<li class="slide-menu__point" data-url="#">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#ENTER_PROMO_CODE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><a class="redeem_btn_title fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#">Casino Promo Code</a></span></li>
+			<li class="slide-menu__point fn-redirect" data-force-navigate="true" data-url="/my-account/deposit#my-history">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#TRANSACTION_HISTORY" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>History</span></li>
+			<li class="slide-menu__point fn-redirect" data-force-navigate="true" data-url="/my-account/deposit#withdraw">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#WITHDRAW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>Withdraw</span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/my-details">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#SETTINGS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>Settings</span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/messages">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#MESSAGES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>My messages <span class="account-msg"> <span class="account-msg__count">[UNREAD_MESSAGES_COUNT]</span> <span class="account-msg__notification">Notification</span> </span> </span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/responsible-gambling">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#RESPONSIBLE_GAMBLING" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>Responsible gambling</span></li>
+			<li class="slide-menu__point fn-logout" data-url="/">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CLOSE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span>[LOGOUT]</span></li>
+		</ul>
+	</div>
+	<div class="account-menu-btns">
+		<p class="account-menu-btns__title">
+			Download our apps:</p>
+		<a class="account-menu-btns__link" href="/mobile-apps"> <img alt="" class="account-menu-btns__img" src="/library/Footer/footer-apps-apple.png" /> </a> <a class="account-menu-btns__link" href="/mobile-apps"> <img alt="" class="account-menu-btns__img" src="/library/Footer/footer-apps-android.png" /> </a></div>
+</div>
+
+
+
+new
+=======
+
+
+<div class="slide-menu__header">
+	<div class="slide-account-user">
+		<div class="slide-account-user__name">
+			Hi, [USER_NAME]</div>
+		<div class="slide-account-user__status">
+			[LOYALTY-LEVEL]</div>
+	</div>
+</div>
+<div class="slide-menu__wrap fn-menu-wrap">
+	<div class="slide-balance-scroller">
+		<ul class="slide-balance-list">
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+				<div class="tooltip">
+					Your Cash Balance is your real cash funds,<br />
+					which you may use at anytime.</div>
+				<strong><span class="slide-balance__item__title">Cash Balance</span> </strong> <span class="slide-balance__item__total">[REAL_GAMING_BALANCE]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="4000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+				<div class="tooltip">
+					By earning and redeeming "Happy Points".<br />
+					You can also start redeeming as soon as you reach 100 Happy Points!</div>
+				<span class="slide-balance__item__title">Happy Points</span> <span class="slide-balance__item__total">[LOYALTY-POINTS]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+				<div class="tooltip">
+					Your bingo bonus balance can be used to buy bingo tickets.</div>
+				<span class="slide-balance__item__title"><strong>Bingo</strong> Bonus<br />
+				Balance </span> <span class="slide-balance__item__total">[BINGO-BONUS]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+				<div class="tooltip">
+					Your games bonus balance can be used on the games within the "Slots&amp;Games" tab.</div>
+				<span class="slide-balance__item__title"><strong>Slots &amp; Games</strong><br />
+				Bonus Balance </span> <span class="slide-balance__item__total">[ALL-GAMES-BONUS]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+				<div class="tooltip">
+					Your casino bonus balance can be used on the games within the "Casino" tab.</div>
+				<span class="slide-balance__item__title"><strong>Casino</strong> Bonus<br />
+				Balance </span> <span class="slide-balance__item__total">[BONUS_BALANCE]</span></li>
+			<li class="slide-balance__item">
+				<svg class="Icon" data-tooltip="3000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+				<div class="tooltip">
+					Your casino playable funds is a combination of your real funds with your casino bonuses.</div>
+				<span class="slide-balance__item__title"><strong>Casino</strong> Playable<br />
+				Funds </span> <span class="slide-balance__item__total">[CASINO_GAMING_BALANCE]</span></li>
+		</ul>
+	</div>
+	<div class="fn-menu-list">
+		<ul class="slide-menu__list">
+			<li class="slide-menu__point fn-redirect" data-force-navigate="true" data-url="/my-account/deposit#deposit">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#DEPOSIT_CASHIER"/></svg> </span>Deposit</span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/loyalty">
+				<span class="slide-menu__point__name"><span class="micon-buzz slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#BUZZ"/></svg> </span>Happy Points</span></li>
+			<li class="slide-menu__point" data-url="#">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#ENTER_PROMO_CODE"/></svg> </span><a class="redeem_btn_title fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#">Casino Promo Code</a></span></li>
+			<li class="slide-menu__point fn-redirect" data-force-navigate="true" data-url="/my-account/deposit#my-history">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#TRANSACTION_HISTORY"/></svg> </span>History</span></li>
+			<li class="slide-menu__point fn-redirect" data-force-navigate="true" data-url="/my-account/deposit#withdraw">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#WITHDRAW"/></svg> </span>Withdraw</span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/my-details">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#SETTINGS"/></svg> </span>Settings</span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/messages">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#MESSAGES"/></svg> </span>My messages <span class="account-msg"> <span class="account-msg__count">[UNREAD_MESSAGES_COUNT]</span> <span class="account-msg__notification">Notification</span> </span> </span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/my-account/responsible-gambling">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#RESPONSIBLE_GAMBLING"/></svg> </span>Responsible gambling</span></li>
+			<li class="slide-menu__point fn-logout" data-url="/">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#CLOSE"/></svg> </span>[LOGOUT]</span></li>
+		</ul>
+	</div>
+	<div class="account-menu-btns">
+		<p class="account-menu-btns__title">
+			Download our apps:</p>
+		<a class="account-menu-btns__link" href="/mobile-apps"> <img alt="" class="account-menu-btns__img" src="/library/Footer/footer-apps-apple.png" /> </a> <a class="account-menu-btns__link" href="/mobile-apps"> <img alt="" class="account-menu-btns__img" src="/library/Footer/footer-apps-android.png" /> </a></div>
+</div>
+
+
+MOBILE-MENU-CONTENT
+===================
+
+old
+=======
+
+<div class="slide-menu__header">
+	<div class="slide-menu__search">
+		<div class="fn-search">
+			<div class="fn-search-bar slide-menu__search__field">
+				<input class="fn-search-input slide-menu__search__input" placeholder="Type to search" type="text" /></div>
+		</div>
+		<p style="text-align: center;">
+			<span class="slide-menu__search__icon slide-menu__icon"><svg class="Icon Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#SEARCH" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span></p>
+	</div>
+	<div class="user-show fr">
+		[LOGOUT]</div>
+</div>
+<div class="slide-menu__wrap fn-menu-wrap">
+	<div class="fn-menu-list">
+		<ul class="slide-menu__list">
+			<li class="slide-menu__point fn-redirect active" data-url="/home">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#HOME" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>Home</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/bingo">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BINGO" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>BINGO</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/slotsandgames">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#SLOTS_GAMES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>SLOTS &amp; GAMES</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/casino">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CASINO" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>CASINO</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/promotions">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#PROMOS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>PROMOS</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/happy-hub">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#HAPPY_HUB" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>HAPPY HUB</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/clubs">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CLUB_FINDER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>CLUBS</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/vip">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#REWARDS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>VIP</span></span></li>
+			<li class="slide-menu__point blue fn-redirect" data-url="/contact-us">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CONTACT_US" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>Contact Us</span></span></li>
+			<li class="slide-menu__point blue fn-show-help-popup">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--positioned-center"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#HELP" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </span><span>Help</span></span></li>
+		</ul>
+	</div>
+</div>
+
+
+
+new
+=======
+
+<div class="slide-menu__header">
+	<div class="slide-menu__search">
+		<div class="fn-search">
+			<div class="fn-search-bar slide-menu__search__field">
+				<input class="fn-search-input slide-menu__search__input" placeholder="Type to search" type="text" /></div>
+		</div>
+		<p style="text-align: center;">
+			<span class="slide-menu__search__icon slide-menu__icon"><svg class="Icon Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#SEARCH"/></svg> </span></p>
+	</div>
+	<div class="user-show fr">
+		[LOGOUT]</div>
+</div>
+<div class="slide-menu__wrap fn-menu-wrap">
+	<div class="fn-menu-list">
+		<ul class="slide-menu__list">
+			<li class="slide-menu__point fn-redirect active" data-url="/home">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#HOME"/></svg> </span><span>Home</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/bingo">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#BINGO"/></svg> </span><span>BINGO</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/slotsandgames">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#SLOTS_GAMES"/></svg> </span><span>SLOTS &amp; GAMES</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/casino">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#CASINO"/></svg> </span><span>CASINO</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/promotions">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#PROMOS"/></svg> </span><span>PROMOS</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/happy-hub">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#HAPPY_HUB"/></svg> </span><span>HAPPY HUB</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/clubs">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#CLUB_FINDER"/></svg> </span><span>CLUBS</span></span></li>
+			<li class="slide-menu__point fn-redirect" data-url="/vip">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--colored Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#REWARDS"/></svg> </span><span>VIP</span></span></li>
+			<li class="slide-menu__point blue fn-redirect" data-url="/contact-us">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#CONTACT_US"/></svg> </span><span>Contact Us</span></span></li>
+			<li class="slide-menu__point blue fn-show-help-popup">
+				<span class="slide-menu__point__name"><span class="slide-menu__icon "><svg class="Icon Icon--positioned-center"><use xlink:href="/library/images/sprite-home.svg#HELP"/></svg> </span><span>Help</span></span></li>
+		</ul>
+	</div>
+</div>
+
+
+SPLASH_PAGE_PROMO
+==================
+
+old
+====
+
+<div class="splash-page-promo__content cre_splash_page">
+	<!--
+	<div class="tv-advert-ico-sp">
+		&nbsp;</div>
+-->
+	<div class="splash-page-promo__background" style="background-image:url(/library/splash-page/dark-destroyer-1732x559.jpg);">
+		&nbsp; <a class="terms-text" href="/promotions/welcome-offer">New GalaBingo.com customers 18+ only. Dep. &amp; spend £10 on Bingo. £30 credited as Bingo bonus. Wagering and T+C apply.</a></div>
+	<a class="main-logo" href="/"><img alt="" class="main-logo__img" src="library/images/logo-text.svg" /></a>
+	<div class="splash-page-promo__existing-costumer">
+		<a href="/home">Existing Customer? Go to Gala Bingo <svg class="Icon Icon--action-primary"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> </a></div>
+	<div class="fn-slide-content slide-content" data-content-index="1" data-slide-index="0">
+		<div class="banner-title">
+			£30 WELCOME OFFER!<br />
+			When you spend<br />
+			£10 on Bingo</div>
+		<div class="banner-note">
+			<span>Plus over £10,000 in FREE Bingo<br />
+			in your first 7 days!</span><br />
+			*New customers only</div>
+		<div class="banner-action-wrap">
+			<button class="banner-action banner-action__join-now fn-redirect" data-cgi-gtm="true" data-url="/register">Join Now</button></div>
+	</div>
+</div>
+
+
+
+new
+====
+
+<div class="splash-page-promo__content cre_splash_page">
+	<!--
+	<div class="tv-advert-ico-sp">
+		&nbsp;</div>
+-->
+	<div class="splash-page-promo__background" style="background-image:url(/library/splash-page/dark-destroyer-1732x559.jpg);">
+		&nbsp; <a class="terms-text" href="/promotions/welcome-offer">New GalaBingo.com customers 18+ only. Dep. &amp; spend £10 on Bingo. £30 credited as Bingo bonus. Wagering and T+C apply.</a></div>
+	<a class="main-logo" href="/"><img alt="" class="main-logo__img" src="library/images/logo-text.svg" /></a>
+	<div class="splash-page-promo__existing-costumer">
+		<a href="/home">Existing Customer? Go to Gala Bingo <svg class="Icon Icon--action-primary"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg> </a></div>
+	<div class="fn-slide-content slide-content" data-content-index="1" data-slide-index="0">
+		<div class="banner-title">
+			£30 WELCOME OFFER!<br />
+			When you spend<br />
+			£10 on Bingo</div>
+		<div class="banner-note">
+			<span>Plus over £10,000 in FREE Bingo<br />
+			in your first 7 days!</span><br />
+			*New customers only</div>
+		<div class="banner-action-wrap">
+			<button class="banner-action banner-action__join-now fn-redirect" data-cgi-gtm="true" data-url="/register">Join Now</button></div>
+	</div>
+</div>
+
+
+
+
+============
+MESSAGES-TITLE
+
+old
+====
+
+<div class="account-headline account-headline_combined account-headline_email">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#MESSAGES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <strong>MESSAGES</strong></span></div>
+
+
+
+new
+====
+
+<div class="account-headline account-headline_combined account-headline_email">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-main.svg#MESSAGES"/></svg> <strong>MESSAGES</strong></span></div>
+
+
+=====
+
+BACK-TO-MENU
+==============
+
+old
+====
+
+<div class="back-to-menu is-desktop">
+	<a class="btn back-to-menu__btn" href="/my-account"> <svg class="Icon Icon--action-primary"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#ARROW_BACK" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Back</a></div>
+
+
+
+new
+====
+
+
+<div class="back-to-menu is-desktop">
+	<a class="btn back-to-menu__btn" href="/my-account"> <svg class="Icon Icon--action-primary"><use xlink:href="/library/images/sprite-home.svg#ARROW_BACK"/></svg>Back</a></div>
+
+====
+
+TOP SLOTS & GAMES
+
+
+old
+====
+
+
+
+
+new
+====
+
+
+
+
+======
+
+BINGO SCHEDULE (not working at the moment)
+
+
+
+old
+====
+
+
+
+
+new
+====
+
+
+
+
+
+
+========
+
+Right Hand Slider Banner 1 (RH_SLIDER_BANNER1)
+
+none
+
+==========
+
+Right Hand Slider Banner 2
+
+
+
+old
+====
+
+<h3 class="lci-carousel__title">
+	<svg class="lci-icon"><use xlink:href="/library/images/sprite-home.svg#BINGO_ROOMS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Bingo <strong>Rooms</strong></h3>
+<ul class="lci-carousel__game-list">
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Coronation Street Bingo">
+		<img alt="Coronation Street Bingo" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_CorrieSt_bingo_rooms.jpg" />
+		<div class="lci-carousel__game-text">
+			Coronation Street Bingo</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Castle">
+		<img alt="Castle" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_castle_bingo_rooms.jpg" />
+		<div class="lci-carousel__game-text">
+			Castle</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Emmerdale Bingo Gala Coral">
+		<img alt="Emmerdale Bingo Gala Coral" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_emmerdale_bingo_rooms.jpg" />
+		<div class="lci-carousel__game-text">
+			Emmerdale Bingo Gala Coral</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+</ul>
+<p>
+	<a class="lci-carousel__footer-link" href="/bingo">View more…</a></p>
+
+
+
+new
+====
+
+<h3 class="lci-carousel__title">
+	<svg class="lci-icon"><use xlink:href="/library/images/sprite-home.svg#BINGO_ROOMS"/></svg> Bingo <strong>Rooms</strong></h3>
+<ul class="lci-carousel__game-list">
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Coronation Street Bingo">
+		<img alt="Coronation Street Bingo" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_CorrieSt_bingo_rooms.jpg" />
+		<div class="lci-carousel__game-text">
+			Coronation Street Bingo</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Castle">
+		<img alt="Castle" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_castle_bingo_rooms.jpg" />
+		<div class="lci-carousel__game-text">
+			Castle</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Emmerdale Bingo Gala Coral">
+		<img alt="Emmerdale Bingo Gala Coral" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_emmerdale_bingo_rooms.jpg" />
+		<div class="lci-carousel__game-text">
+			Emmerdale Bingo Gala Coral</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+</ul>
+<p>
+	<a class="lci-carousel__footer-link" href="/bingo">View more…</a></p>
+
+
+
+
+==========
+
+Right Hand Slider Banner 3
+
+
+old
+====
+
+<h3 class="lci-carousel__title">
+	<svg class="lci-icon"><use xlink:href="/library/images/sprite-home.svg#JACKPOTS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Bingo <strong>Jackpots</strong></h3>
+<ul class="lci-carousel__game-list">
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="null">
+		<img alt="Super Spotlight" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_super_spotlight_bingo_jackpots.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Super Spotlight</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="Super Spotlight">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Mountain">
+		<img alt="Cash Climber" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_cash_climber_bingo_jackpots.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Cash Climber</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="Cash Climber">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40058">
+		<img alt="SuperStar" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_superstar_jackpot_bingo_jackpots.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				SuperStar</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="SuperStar">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+</ul>
+<p>
+	<a class="lci-carousel__footer-link" href="/bingo">View more…</a></p>
+
+
+
+new
+====
+
+<h3 class="lci-carousel__title">
+	<svg class="lci-icon"><use xlink:href="/library/images/sprite-home.svg#JACKPOTS"/></svg> Bingo <strong>Jackpots</strong></h3>
+<ul class="lci-carousel__game-list">
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="null">
+		<img alt="Super Spotlight" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_super_spotlight_bingo_jackpots.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Super Spotlight</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="Super Spotlight">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="Mountain">
+		<img alt="Cash Climber" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_cash_climber_bingo_jackpots.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Cash Climber</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="Cash Climber">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40058">
+		<img alt="SuperStar" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_superstar_jackpot_bingo_jackpots.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				SuperStar</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="SuperStar">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+</ul>
+<p>
+	<a class="lci-carousel__footer-link" href="/bingo">View more…</a></p>
+
+
+
+
+===========
+
+Right Hand Slider Banner 4
+
+
+
+old
+====
+
+<h3 class="lci-carousel__title">
+	<svg class="lci-icon"><use xlink:href="/library/images/sprite-home.svg#JACKPOTS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Slots <strong>Jackpots</strong></h3>
+<ul class="lci-carousel__game-list">
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40095">
+		<img alt="Clover Rollover" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_clover_rollover_slots_jackpot.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Clover Rollover</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="MC CC,PL,PP,SQM,LL 88,CR,MM">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40427">
+		<img alt="Winnings Of Oz" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_winnings_of_oz_slots_jackpot.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Winnings Of Oz</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="Winnings of Oz Jackpot">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40614">
+		<img alt="Cleopatra Megajackpots" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_cleopatra_megajackpots_slots_jackpot.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Cleopatra Megajackpots</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="MC CC,PL,PP,SQM,LL 88,CR,MM">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></li>
+</ul>
+<p>
+	<a class="lci-carousel__footer-link" href="/slotsandgames?cat=ALL&amp;activeCat=JACKPOTS">View more…</a></p>
+
+
+
+new
+====
+
+<h3 class="lci-carousel__title">
+	<svg class="lci-icon"><use xlink:href="/library/images/sprite-home.svg#JACKPOTS"/></svg> Slots <strong>Jackpots</strong></h3>
+<ul class="lci-carousel__game-list">
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40095">
+		<img alt="Clover Rollover" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_clover_rollover_slots_jackpot.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Clover Rollover</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="MC CC,PL,PP,SQM,LL 88,CR,MM">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40427">
+		<img alt="Winnings Of Oz" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_winnings_of_oz_slots_jackpot.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Winnings Of Oz</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="Winnings of Oz Jackpot">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+	<li class="lci-carousel__game-item fn-launch-game" data-game-code="vf40614">
+		<img alt="Cleopatra Megajackpots" class="lci-carousel__game-img" src="/library/games_images/Bingo/181x129/181x129_cleopatra_megajackpots_slots_jackpot.jpg" />
+		<div class="lci-carousel__game-text">
+			<div>
+				Cleopatra Megajackpots</div>
+			<div class="lci-carousel__game-jackpot" cre-jp-type="vf" data-cre-jp="MC CC,PL,PP,SQM,LL 88,CR,MM">
+				loading...</div>
+		</div>
+		<svg class="lci-icon--inverted lci-carousel__arrow"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg></li>
+</ul>
+<p>
+	<a class="lci-carousel__footer-link" href="/slotsandgames?cat=ALL&amp;activeCat=JACKPOTS">View more…</a></p>
+
+
+
+============
+MY PINS
+
+
+
+old
+====
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#UNPIN" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg><strong>MY</strong> PINS
+
+
+
+new
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#MY_PINS"/></svg><strong>MY</strong> PINS
+
+
+============
+bingo rooms (unused??)
+
+
+
+old
+====
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#BINGO_ROOMS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <strong>TOP</strong> BINGO GAMES
+
+new
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#BINGO_ROOMS"/></svg> <strong>TOP</strong> BINGO GAMES
+
+
+============
+Top Bingo Games
+
+
+
+old
+====
+<div class="gamesinfo portlet-top-games portlet-wrapper portlet-games-info portlet_type_border" style="display:block">
+	<div class="portlet-title slots-games">
+		<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#BINGO_ROOMS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <span class="fn-portlet-title-region"><span class="portlet-title-text"><strong>TOP</strong> BINGO GAMES</span> <span class="portlet-title__controls"> <span class="view-all"><a href="/bingo">View all</a></span> </span> </span></div>
+	<div class="portlet-content">
+		<div class="top-games">
+			<div class="top-games-list">
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="The Chase Bingo" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/thechasebingo-300x214.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="Metropolis" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-metropolis.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="Castle" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-castle.jpg" /></a></div>
+				<!--<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game" data-game-code="Coronation Street Bingo" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/Bingo_Room/corrie_bingo_181x129.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game" data-game-code="Emmerdale Bingo Gala Coral" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-emmerdale.jpg" /></a></div>
+
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="City" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-city.jpg" /></a></div>
+                <div class="top-games-list__item">
+                    <img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/incredible_hulk_476x340.jpg" />
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="Dynamite Digger SA" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/dynamite_digger.png" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="foy" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/fountain_of_youth_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="kkg" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/kong_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="pnp" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/pink_panther_.png" /></a>
+                </div>
+--></div>
+			<a class="top-games-img-wrapper fn-launch-game" data-game-code="Coronation Street Bingo" href="" style="background-image: url('/library/bingo_images/Coronation Street Bingo')">&nbsp;</a></div>
+	</div>
+</div>
+
+new
+====
+
+<div class="gamesinfo portlet-top-games portlet-wrapper portlet-games-info portlet_type_border" style="display:block">
+	<div class="portlet-title slots-games">
+		<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#BINGO_ROOMS"/></svg> <span class="fn-portlet-title-region"><span class="portlet-title-text"><strong>TOP</strong> BINGO GAMES</span> <span class="portlet-title__controls"> <span class="view-all"><a href="/bingo">View all</a></span> </span> </span></div>
+	<div class="portlet-content">
+		<div class="top-games">
+			<div class="top-games-list">
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="The Chase Bingo" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/thechasebingo-300x214.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="Metropolis" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-metropolis.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="Castle" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-castle.jpg" /></a></div>
+				<!--<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game" data-game-code="Coronation Street Bingo" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/Bingo_Room/corrie_bingo_181x129.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game" data-game-code="Emmerdale Bingo Gala Coral" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-emmerdale.jpg" /></a></div>
+
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="City" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/300x214/300x214-bingoroom-city.jpg" /></a></div>
+                <div class="top-games-list__item">
+                    <img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/incredible_hulk_476x340.jpg" />
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="Dynamite Digger SA" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/dynamite_digger.png" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="foy" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/fountain_of_youth_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="kkg" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/kong_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="pnp" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/pink_panther_.png" /></a>
+                </div>
+--></div>
+			<a class="top-games-img-wrapper fn-launch-game" data-game-code="Coronation Street Bingo" href="" style="background-image: url('/library/bingo_images/Coronation Street Bingo')">&nbsp;</a></div>
+	</div>
+</div>
+======================
+
+Top Slots and Games
+
+old
+---
+
+<div class="gamesinfo portlet-top-games portlet-wrapper portlet-games-info portlet_type_border">
+	<div class="portlet-title slots-games">
+		<svg class="Icon Icon--colored Icon--large"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#SLOTS_GAMES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <span class="fn-portlet-title-region"><span class="portlet-title-text"><strong>TOP</strong> SLOTS &amp; GAMES</span> <span class="portlet-title__controls"> <span class="view-all"><a href="/slotsandgames">View all</a></span> </span> </span></div>
+	<div class="portlet-content">
+		<div class="top-games">
+			<div class="top-games-list">
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="vf41113" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/The-Chase-New_476x340.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="vf41141" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/767x549/super-spinner-bar-x_767x549.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="vf40095" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/286x204/clover-rollover_286x204.jpg" /></a></div>
+				<!--
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="glrj" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/gladiator_jackpot_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="George And The Dragon SA" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/george_and_the_dragon_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/incredible_hulk_476x340.jpg" />
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="Dynamite Digger SA" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/dynamite_digger.png" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="foy" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/fountain_of_youth_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="kkg" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/kong_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="pnp" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/pink_panther_.png" /></a>
+                </div>
+--></div>
+			<a class="top-games-img-wrapper fn-launch-game" data-game-code="vf41160" href="" style="background-image: url('/library/games_images/rainbow-rewards_647x297.jpg')">&nbsp;</a></div>
+	</div>
+</div>
+
+
+
+
+new
+-----
+
+<div class="gamesinfo portlet-top-games portlet-wrapper portlet-games-info portlet_type_border">
+	<div class="portlet-title slots-games">
+		<svg class="Icon Icon--colored Icon--large"><use xlink:href="/library/images/sprite-home.svg#SLOTS_GAMES"/></svg> <span class="fn-portlet-title-region"><span class="portlet-title-text"><strong>TOP</strong> SLOTS &amp; GAMES</span> <span class="portlet-title__controls"> <span class="view-all"><a href="/slotsandgames">View all</a></span> </span> </span></div>
+	<div class="portlet-content">
+		<div class="top-games">
+			<div class="top-games-list">
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="vf41113" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/The-Chase-New_476x340.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="vf41141" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/767x549/super-spinner-bar-x_767x549.jpg" /></a></div>
+				<div class="top-games-list__item">
+					<a class="top-games-list__link fn-launch-game hidden-games" data-game-code="vf40095" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/286x204/clover-rollover_286x204.jpg" /></a></div>
+				<!--
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="glrj" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/gladiator_jackpot_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="George And The Dragon SA" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/george_and_the_dragon_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/incredible_hulk_476x340.jpg" />
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="Dynamite Digger SA" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/dynamite_digger.png" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="foy" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/fountain_of_youth_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="kkg" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/Bingo/476x340/kong_476x340.jpg" /></a>
+                </div>
+                <div class="top-games-list__item">
+                    <a class="top-games-list__link fn-launch-game" data-game-code="pnp" href="#"><img alt="" class="top-games-list__img" src="/library/games_images/NEW_2/pink_panther_.png" /></a>
+                </div>
+--></div>
+			<a class="top-games-img-wrapper fn-launch-game" data-game-code="vf41160" href="" style="background-image: url('/library/games_images/rainbow-rewards_647x297.jpg')">&nbsp;</a></div>
+	</div>
+</div>
+
+
+============
+
+
+RECENT GAMES
+==============
+
+
+old
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#40-And-50-ball"></use></svg> <strong>RECENT GAMES</strong>
+
+
+new
+====
+
+
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#40-And-50-ball"/></svg> <strong>RECENT GAMES</strong>
+
+===========
+
+Top slots & Games (in use?):
+
+
+old
+====
+
+<svg class="Icon Icon--colored Icon--large"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#SLOTS_GAMES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg><strong>TOP</strong> SLOTS &amp; GAMES
+
+
+
+new
+====
+
+<svg class="Icon Icon--colored Icon--large"><use xlink:href="/library/images/sprite-home.svg#SLOTS_GAMES" /></svg><strong>TOP</strong> SLOTS &amp; GAMES
+
+
+===========
+
+Most Popular:
+
+
+old
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#40-And-50-ball"></use></svg> <strong>MOST</strong> POPULAR
+
+new
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#40-And-50-ball"/></svg> <strong>MOST</strong> POPULAR
+
+===========
+
+Slots Giveaway: (in use?)
+
+old
+====
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#40-And-50-ball"></use></svg> <strong>1 MILLION  </strong> SLOTS GIVEAWAY
+
+
+
+
+new
+====
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#40-And-50-ball"/></svg> <strong>1 MILLION  </strong> SLOTS GIVEAWAY
+
+
+
+
+
+==========
+NEW & EXCLUSIVE
+
+
+old
+====
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#NEW"></use></svg> <strong>NEW</strong>&<strong>EXCLUSIVE</strong>
+
+
+
+new
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#NEW"/></svg> <strong>NEW</strong>&<strong>EXCLUSIVE</strong>
+
+
+=========
+
+GALA GOLD
+
+
+old
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#GALA%20GOLD"></use></svg> <strong>GALA GOLD</strong>
+
+
+new
+====
+
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#GALA_GOLD"/></svg> <strong>GALA GOLD</strong>
+
+
+==========
+ JACKPOTS
+
+
+ old
+ ====
+
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#JACKPOTS"></use></svg> <strong>JACKPOTS</strong>
+
+
+ new
+ ====
+
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#JACKPOTS"/></svg> <strong>JACKPOTS</strong>
+
+
+============
+
+FOOTER_BINGO
+
+
+
+old
+====
+
+<div class="footer">
+	<ul class="social-list">
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_fb" href="https://www.facebook.com/Gala-Bingo-306292544446" target="_blank"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#FACEBOOK" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <span>Facebook</span> <!--<span class="social-list__count">234 342 likes</span> --></a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_yt" href="https://www.youtube.com/mygalabingotv" target="_blank"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#YOUTUBE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <span>Youtube</span> </a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_tw" href="https://twitter.com/galabingo" target="_blank"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#TWITTER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <span>Twitter</span> <!--<span class="social-list__count">112 334 tweets</span> --></a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_g" href="https://plus.google.com/+GalaBingoPlayHappy/posts" target="_blank"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#GOOGLE+" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <span>Google plus</span> </a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_i" href="https://www.instagram.com/gala.bingo/" target="_blank"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INSTAGRAM" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <span>Instagram</span> </a></li>
+	</ul>
+	<div id="staticFooter">
+		&nbsp;</div>
+	<div class="footer-section footer-section__tagline">
+		<div class="footer-container">
+			<img alt="" src="/library/Footer/footer-play-happy.png" /></div>
+	</div>
+	<div class="footer-section footer-section__feedback">
+		<div class="footer-container">
+			<img alt="" src="/library/Footer/footer-testimonials2.png" /></div>
+	</div>
+	<div class="footer-section footer-section__nav">
+		<div class="footer-container footer-section__nav-columns">
+			<div class="footer-section__nav_left">
+				<ul class="footer-nav">
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="aboutUs" data-type-current-window="" href="http://galabingo-eng.custhelp.com/app/answers/detail/a_id/2159" target="_blank">About Us</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="TnC" data-type-current-window="" href="https://galabingo-eng.custhelp.com/app/answers/detail/a_id/2181" target="_blank">Terms &amp; Conditions</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="fairness" data-type-current-window="" href="https://galabingo-eng.custhelp.com/app/answers/detail/a_id/2348" target="_blank">Fairness</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="privacy" data-type-current-window="" href="http://galabingo-eng.custhelp.com/app/answers/detail/a_id/2163" target="_blank">Privacy Policy</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link trusted-link" href="http://responsiblegambling.galabingo.com" target="_blank">Responsible Gambling</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="http://galapartners.co.uk/" target="_blank">Affiliates</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="/happy-hub">News</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="/sitemap">Site Map</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="/contact-us">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-section__nav_right">
+				<div class="footer-apps">
+					<div class="footer-btns">
+						<a class="footer-btn" href="/mobile-apps"> <img alt="" src="/library/Footer/footer-apps-apple.png" /> </a> <a class="footer-btn" href="/mobile-apps#2"> <img alt="" src="/library/Footer/footer-apps-android.png" /> </a></div>
+				</div>
+				<div class="footer-awards">
+					<h3 class="footer-awards-title">
+						&nbsp;</h3>
+					<ul class="footer-awards-list">
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/mobile-bing-product.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/bingo-operator.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/operator-year.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/unique-game-coconut.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/best-mobile-experience.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/gia-operator-year.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/gia-responsable.png" /></li>
+					</ul>
+				</div>
+				<div class="footer-payments">
+					<h3 class="footer-payments-title">
+						Payment methods:</h3>
+					<ul class="footer-payments-list">
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/visa.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/visa-2.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/mastercard.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/maestro.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/bank.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/clickandbuy.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/master-secure.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/skrill.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/neteller.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/paypal.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/paysafe.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/eco.jpg" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-section footer-section__info">
+		<div class="footer-container">
+			<div class="footer-section__text">
+				<p class="footer-text">
+					GalaBingo.com is operated by Gala Interactive (Gibraltar) Limited (company number 106322). Gala Interactive (Gibraltar) Limited's address is 2nd Floor, Regal House, Queensway, Gibraltar GX11 1AA. Gala Interactive (Gibraltar) Limited is licensed by the Government of Gibraltar &amp; regulated by the <a class="footer-section__link" href="https://www.gibraltar.gov.gi/new/remote-gambling" target="_blank">Gibraltar Gambling Commissioner</a> (RGL 059 &amp; 060).</p>
+				<p class="footer-text">
+					For customers accessing GalaBingo.com from Great Britain, the service is licensed and regulated by the <a class="footer-section__link" href="https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39069" target="_blank">Gambling Commission</a> (000-039069-R-319426-001). Gala Bingo is the registered trademark of Coral Group Trading Limited. © Coral Group Trading Limited. All rights reserved.</p>
+			</div>
+			<p class="footer-text-mobile">
+				Enjoy the game but play responsibly. <a class="footer-section__link" data-cgi-gtm="true" href="http://www.gambleaware.co.uk/">www.gambleaware.co.uk</a></p>
+			<div class="cr-footer">
+				<ul class="cr-compliance-logos">
+					<li class="cr-remote-gambling">
+						<a href="https://www.gibraltar.gov.gi/new/remote-gambling/" target="_blank"> </a></li>
+					<li class="cr-responsible-gambling">
+						<a href="http://responsiblegambling.galabingo.com/" target="_blank"> </a></li>
+					<li class="cr-gamecare-certified">
+						<a href="/gamcare-certified/"> </a></li>
+					<li class="cr-problem-gambling-support">
+						<a href="http://www.gamcare.org.uk/" target="_blank"> </a></li>
+					<li class="cr-ibas">
+						<a href="http://www.ibas-uk.com/" target="_blank"> </a></li>
+					<li class="cr-gambling-trust">
+						<a href="http://www.responsiblegamblingtrust.org.uk/" target="_blank"> </a></li>
+					<li class="cr-verisign">
+						<a href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=www.galabingo.com&amp;lang=en&amp;lang=20&amp;sid=20&amp;ms=MS" target="_blank"> </a></li>
+					<li class="cr-gambling-commission">
+						<a href="https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39069" target="_blank"> </a></li>
+					<li class="cr-funstops">
+						<a href="http://www.whenthefunstops.co.uk/" target="_blank"> </a></li>
+					<li class="cr-gambleaware">
+						<a href="http://www.gambleaware.co.uk/" target="_blank"> </a></li>
+					<li class="cr-play-responsibly">
+						<a class="cr-play-responsibly-title" data-cgi-gtm="true"> Enjoy the game but play responsibly.</a> <a class="cr-play-responsibly-link" data-cgi-gtm="true" href="http://gambleaware.co.uk" target="_blank">www.gambleaware.co.uk</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+.desktop li[data-game-code="The Chase Bingo"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Big Banker Bingo Gala Coral"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Breakfast Club Gala Coral"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Emmerdale Bingo Gala Coral"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Cash Cubes Bingo Gala Coral"] .gamesinfo__bottom-flags:after {
+    content:"New Lobby Only";
+    position:relative;
+    right:0px;
+    bottom:0px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #ff0000;
+    padding: 0 1.3rem;
+    color: #fff;
+    line-height: 3rem;
+    text-transform: capitalize;
+    border-top-right-radius: .5rem;
+    z-index:2;
+}
+ .desktop li[data-game-code="The Chase Bingo"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Big Banker Bingo Gala Coral"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Breakfast Club Gala Coral"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Emmerdale Bingo Gala Coral"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Cash Cubes Bingo Gala Coral"]:hover .gamesinfo__bottom-flags:after { display:none;}</style>
+
+
+
+new
+====
+
+<div class="footer">
+	<ul class="social-list">
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_fb" href="https://www.facebook.com/Gala-Bingo-306292544446" target="_blank"> <svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#FACEBOOK"/></svg> <span>Facebook</span> <!--<span class="social-list__count">234 342 likes</span> --></a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_yt" href="https://www.youtube.com/mygalabingotv" target="_blank"> <svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#YOUTUBE"/></svg> <span>Youtube</span> </a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_tw" href="https://twitter.com/galabingo" target="_blank"> <svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#TWITTER"/></svg> <span>Twitter</span> <!--<span class="social-list__count">112 334 tweets</span> --></a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_g" href="https://plus.google.com/+GalaBingoPlayHappy/posts" target="_blank"> <svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#GOOGLE+"/></svg> <span>Google plus</span> </a></li>
+		<li class="social-list__item">
+			<a class="social-list__link social-icon social-icon_i" href="https://www.instagram.com/gala.bingo/" target="_blank"> <svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#INSTAGRAM"/></svg> <span>Instagram</span> </a></li>
+	</ul>
+	<div id="staticFooter">
+		&nbsp;</div>
+	<div class="footer-section footer-section__tagline">
+		<div class="footer-container">
+			<img alt="" src="/library/Footer/footer-play-happy.png" /></div>
+	</div>
+	<div class="footer-section footer-section__feedback">
+		<div class="footer-container">
+			<img alt="" src="/library/Footer/footer-testimonials2.png" /></div>
+	</div>
+	<div class="footer-section footer-section__nav">
+		<div class="footer-container footer-section__nav-columns">
+			<div class="footer-section__nav_left">
+				<ul class="footer-nav">
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="aboutUs" data-type-current-window="" href="http://galabingo-eng.custhelp.com/app/answers/detail/a_id/2159" target="_blank">About Us</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="TnC" data-type-current-window="" href="https://galabingo-eng.custhelp.com/app/answers/detail/a_id/2181" target="_blank">Terms &amp; Conditions</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="fairness" data-type-current-window="" href="https://galabingo-eng.custhelp.com/app/answers/detail/a_id/2348" target="_blank">Fairness</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" data-help-center-link-alias="privacy" data-type-current-window="" href="http://galabingo-eng.custhelp.com/app/answers/detail/a_id/2163" target="_blank">Privacy Policy</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link trusted-link" href="http://responsiblegambling.galabingo.com" target="_blank">Responsible Gambling</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="http://galapartners.co.uk/" target="_blank">Affiliates</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="/happy-hub">News</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="/sitemap">Site Map</a></li>
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="/contact-us">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-section__nav_right">
+				<div class="footer-apps">
+					<div class="footer-btns">
+						<a class="footer-btn" href="/mobile-apps"> <img alt="" src="/library/Footer/footer-apps-apple.png" /> </a> <a class="footer-btn" href="/mobile-apps#2"> <img alt="" src="/library/Footer/footer-apps-android.png" /> </a></div>
+				</div>
+				<div class="footer-awards">
+					<h3 class="footer-awards-title">
+						&nbsp;</h3>
+					<ul class="footer-awards-list">
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/mobile-bing-product.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/bingo-operator.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/operator-year.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/unique-game-coconut.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/best-mobile-experience.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/gia-operator-year.png" /></li>
+						<li class="footer-awards__item">
+							<img alt="" src="/library/Footer/awards/gia-responsable.png" /></li>
+					</ul>
+				</div>
+				<div class="footer-payments">
+					<h3 class="footer-payments-title">
+						Payment methods:</h3>
+					<ul class="footer-payments-list">
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/visa.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/visa-2.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/mastercard.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/maestro.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/bank.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/clickandbuy.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/master-secure.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/skrill.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/neteller.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/paypal.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/paysafe.jpg" /></li>
+						<li class="footer-payments__item">
+							<img alt="" src="/library/Footer/Icons/eco.jpg" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-section footer-section__info">
+		<div class="footer-container">
+			<div class="footer-section__text">
+				<p class="footer-text">
+					GalaBingo.com is operated by Gala Interactive (Gibraltar) Limited (company number 106322). Gala Interactive (Gibraltar) Limited's address is 2nd Floor, Regal House, Queensway, Gibraltar GX11 1AA. Gala Interactive (Gibraltar) Limited is licensed by the Government of Gibraltar &amp; regulated by the <a class="footer-section__link" href="https://www.gibraltar.gov.gi/new/remote-gambling" target="_blank">Gibraltar Gambling Commissioner</a> (RGL 059 &amp; 060).</p>
+				<p class="footer-text">
+					For customers accessing GalaBingo.com from Great Britain, the service is licensed and regulated by the <a class="footer-section__link" href="https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39069" target="_blank">Gambling Commission</a> (000-039069-R-319426-001). Gala Bingo is the registered trademark of Coral Group Trading Limited. © Coral Group Trading Limited. All rights reserved.</p>
+			</div>
+			<p class="footer-text-mobile">
+				Enjoy the game but play responsibly. <a class="footer-section__link" data-cgi-gtm="true" href="http://www.gambleaware.co.uk/">www.gambleaware.co.uk</a></p>
+			<div class="cr-footer">
+				<ul class="cr-compliance-logos">
+					<li class="cr-remote-gambling">
+						<a href="https://www.gibraltar.gov.gi/new/remote-gambling/" target="_blank"> </a></li>
+					<li class="cr-responsible-gambling">
+						<a href="http://responsiblegambling.galabingo.com/" target="_blank"> </a></li>
+					<li class="cr-gamecare-certified">
+						<a href="/gamcare-certified/"> </a></li>
+					<li class="cr-problem-gambling-support">
+						<a href="http://www.gamcare.org.uk/" target="_blank"> </a></li>
+					<li class="cr-ibas">
+						<a href="http://www.ibas-uk.com/" target="_blank"> </a></li>
+					<li class="cr-gambling-trust">
+						<a href="http://www.responsiblegamblingtrust.org.uk/" target="_blank"> </a></li>
+					<li class="cr-verisign">
+						<a href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=www.galabingo.com&amp;lang=en&amp;lang=20&amp;sid=20&amp;ms=MS" target="_blank"> </a></li>
+					<li class="cr-gambling-commission">
+						<a href="https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39069" target="_blank"> </a></li>
+					<li class="cr-funstops">
+						<a href="http://www.whenthefunstops.co.uk/" target="_blank"> </a></li>
+					<li class="cr-gambleaware">
+						<a href="http://www.gambleaware.co.uk/" target="_blank"> </a></li>
+					<li class="cr-play-responsibly">
+						<a class="cr-play-responsibly-title" data-cgi-gtm="true"> Enjoy the game but play responsibly.</a> <a class="cr-play-responsibly-link" data-cgi-gtm="true" href="http://gambleaware.co.uk" target="_blank">www.gambleaware.co.uk</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+.desktop li[data-game-code="The Chase Bingo"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Big Banker Bingo Gala Coral"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Breakfast Club Gala Coral"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Emmerdale Bingo Gala Coral"] .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Cash Cubes Bingo Gala Coral"] .gamesinfo__bottom-flags:after {
+    content:"New Lobby Only";
+    position:relative;
+    right:0px;
+    bottom:0px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #ff0000;
+    padding: 0 1.3rem;
+    color: #fff;
+    line-height: 3rem;
+    text-transform: capitalize;
+    border-top-right-radius: .5rem;
+    z-index:2;
+}
+ .desktop li[data-game-code="The Chase Bingo"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Big Banker Bingo Gala Coral"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Breakfast Club Gala Coral"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Emmerdale Bingo Gala Coral"]:hover .gamesinfo__bottom-flags:after,.desktop li[data-game-code="Cash Cubes Bingo Gala Coral"]:hover .gamesinfo__bottom-flags:after { display:none;}
+ </style>
+
+
+
+
+
+===============
+
+ACCOUNT-MENU-DESKTOP
+
+
+
+old
+====
+
+<div class="portlet portlet_default account-details portlet_default_hidden-bc">
+	<div class="portlet-wrapper">
+		<div class="portlet-title slots-games account-details">
+			<span class="portlet-title-text icons detail-man"><svg class="Icon Icon--large Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#MY_DETAILS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> MY ACCOUNT <strong>DETAILS</strong></span> <span class="portlet-title-level"><strong>[USER_NAME]</strong>, your <strong class="portlet-title-level_text">Happy Points Level</strong> is: [LOYALTY-LEVEL] </span></div>
+		<div class="portlet-content">
+			<div class="slide-balance-scroller">
+				<ul class="slide-balance-list">
+					<li class="slide-balance__item">
+						<svg class="Icon Icon--colored" data-tooltip="2000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+						<div class="tooltip">
+							Your Cash Balance is your real cash funds,<br />
+							which you may use at anytime.</div>
+						<strong><span class="slide-balance__item__title">Cash Balance</span> </strong> <span class="slide-balance__item__total">[REAL_GAMING_BALANCE]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+						<div class="tooltip">
+							By earning and redeeming "Happy Points".<br />
+							You can also start redeeming as soon as you reach 100 Happy Points!</div>
+						<span class="slide-balance__item__title">Happy Points</span> <span class="slide-balance__item__total">[LOYALTY-POINTS]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+						<div class="tooltip">
+							Your bingo bonus balance can be used to buy bingo tickets.</div>
+						<span class="slide-balance__item__title"><strong>Bingo</strong> Bonus<br />
+						Balance </span> <span class="slide-balance__item__total">[BINGO-BONUS]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+						<div class="tooltip">
+							Your games bonus balance can be used on the games within the "Slots&amp;Games" tab.</div>
+						<span class="slide-balance__item__title"><strong>Slots &amp; Games</strong><br />
+						Bonus Balance </span> <span class="slide-balance__item__total">[ALL-GAMES-BONUS]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+						<div class="tooltip">
+							Your casino bonus balance can be used on the games within the "Casino" tab.</div>
+						<span class="slide-balance__item__title"><strong>Casino</strong> Bonus<br />
+						Balance </span> <span class="slide-balance__item__total">[BONUS_BALANCE]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INFORMATION" xmlns:xlink="http://www.w3.org/1999/xlink"> </use> </svg>
+						<div class="tooltip">
+							Your casino playable funds is a combination of your real funds with your casino bonuses.</div>
+						<span class="slide-balance__item__title"><strong>Casino</strong> Playable<br />
+						Funds </span> <span class="slide-balance__item__total">[CASINO_GAMING_BALANCE]</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+new
+====
+
+<div class="portlet portlet_default account-details portlet_default_hidden-bc">
+	<div class="portlet-wrapper">
+		<div class="portlet-title slots-games account-details">
+			<span class="portlet-title-text icons detail-man"><svg class="Icon Icon--large Icon--colored"><use xlink:href="/library/images/sprite-main.svg#MY_DETAILS"/></svg> MY ACCOUNT <strong>DETAILS</strong></span> <span class="portlet-title-level"><strong>[USER_NAME]</strong>, your <strong class="portlet-title-level_text">Happy Points Level</strong> is: [LOYALTY-LEVEL] </span></div>
+		<div class="portlet-content">
+			<div class="slide-balance-scroller">
+				<ul class="slide-balance-list">
+					<li class="slide-balance__item">
+						<svg class="Icon Icon--colored" data-tooltip="2000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+						<div class="tooltip">
+							Your Cash Balance is your real cash funds,<br />
+							which you may use at anytime.</div>
+						<strong><span class="slide-balance__item__title">Cash Balance</span> </strong> <span class="slide-balance__item__total">[REAL_GAMING_BALANCE]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+						<div class="tooltip">
+							By earning and redeeming "Happy Points".<br />
+							You can also start redeeming as soon as you reach 100 Happy Points!</div>
+						<span class="slide-balance__item__title">Happy Points</span> <span class="slide-balance__item__total">[LOYALTY-POINTS]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+						<div class="tooltip">
+							Your bingo bonus balance can be used to buy bingo tickets.</div>
+						<span class="slide-balance__item__title"><strong>Bingo</strong> Bonus<br />
+						Balance </span> <span class="slide-balance__item__total">[BINGO-BONUS]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+						<div class="tooltip">
+							Your games bonus balance can be used on the games within the "Slots&amp;Games" tab.</div>
+						<span class="slide-balance__item__title"><strong>Slots &amp; Games</strong><br />
+						Bonus Balance </span> <span class="slide-balance__item__total">[ALL-GAMES-BONUS]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+						<div class="tooltip">
+							Your casino bonus balance can be used on the games within the "Casino" tab.</div>
+						<span class="slide-balance__item__title"><strong>Casino</strong> Bonus<br />
+						Balance </span> <span class="slide-balance__item__total">[BONUS_BALANCE]</span></li>
+					<li class="slide-balance__item">
+						<svg class="Icon" data-tooltip="2000"> <use xlink:href="/library/images/sprite-home.svg#INFORMATION"/> </svg>
+						<div class="tooltip">
+							Your casino playable funds is a combination of your real funds with your casino bonuses.</div>
+						<span class="slide-balance__item__title"><strong>Casino</strong> Playable<br />
+						Funds </span> <span class="slide-balance__item__total">[CASINO_GAMING_BALANCE]</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+===========
+
+MY-ACCOUNT-MENU
+
+
+
+old
+====
+
+<div class="portlet portlet_default account-options">
+	<div class="portlet-wrapper">
+		<div class="portlet-title slots-games account-menu">
+			<span class="portlet-title-text icons options-man"><svg class="Icon Icon--large Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#USER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> MY ACCOUNT OPTIONS</span></div>
+		<div class="portlet-content">
+			<ul class="account-nav">
+				<li class="account-nav__item fn-redirect" data-url="/my-account/deposit#deposit">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#DEPOSIT_CASHIER" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title">Deposit</span> </span></li>
+				<li class="account-nav__item fn-redirect fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-cgi-gtm="true" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" data-url="#" href="#">
+					<span class="account-nav__content fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-cgi-gtm="true" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#"><span class="account-nav__icon fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-cgi-gtm="true" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#ENTER_PROMO_CODE" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title"> <a class="redeem_btn_title fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#">Add Casino Promo Code</a> </span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/loyalty">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHEERY" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title">Loyalty</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/deposit#my-history">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#TRANSACTION_HISTORY" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title">History</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/deposit#withdraw">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#WITHDRAW" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title">Withdraw</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/my-details">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#SETTINGS" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title">Settings</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/messages">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#MESSAGES" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> <span class="account-msg_count">[UNREAD_MESSAGES_COUNT]</span> </span> <span class="account-nav__title account-msg">Messages</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/responsible-gambling">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#RESPONSIBLE_GAMBLING" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title">Responsible gambling</span> </span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+new
+====
+
+<div class="portlet portlet_default account-options">
+	<div class="portlet-wrapper">
+		<div class="portlet-title slots-games account-menu">
+			<span class="portlet-title-text icons options-man"><svg class="Icon Icon--large Icon--colored"><use xlink:href="/library/images/sprite-home.svg#USER"/></svg> MY ACCOUNT OPTIONS</span></div>
+		<div class="portlet-content">
+			<ul class="account-nav">
+				<li class="account-nav__item fn-redirect" data-url="/my-account/deposit#deposit">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-main.svg#DEPOSIT_CASHIER"/> </svg> </span> <span class="account-nav__title">Deposit</span> </span></li>
+				<li class="account-nav__item fn-redirect fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-cgi-gtm="true" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" data-url="#" href="#">
+					<span class="account-nav__content fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-cgi-gtm="true" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#"><span class="account-nav__icon fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-cgi-gtm="true" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-main.svg#ENTER_PROMO_CODE" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg> </span> <span class="account-nav__title"> <a class="redeem_btn_title fn-popup-open" data-article-id="PROMO_CODE_POPUP" data-custom-class="info-popup redeem-bonus-popup promocode-popup" data-show-close="1" data-title="Casino Promo Code" href="#">Add Casino Promo Code</a> </span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/loyalty">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-main.svg#CHEERY"/> </svg> </span> <span class="account-nav__title">Loyalty</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/deposit#my-history">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-main.svg#TRANSACTION_HISTORY"/> </svg> </span> <span class="account-nav__title">History</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/deposit#withdraw">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-main.svg#WITHDRAW"/> </svg> </span> <span class="account-nav__title">Withdraw</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/my-details">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-main.svg#SETTINGS" /> </svg> </span> <span class="account-nav__title">Settings</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/messages">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-main.svg#MESSAGES" /> </svg> <span class="account-msg_count">[UNREAD_MESSAGES_COUNT]</span> </span> <span class="account-nav__title account-msg">Messages</span> </span></li>
+				<li class="account-nav__item fn-redirect" data-url="/my-account/responsible-gambling">
+					<span class="account-nav__content"><span class="account-nav__icon"><svg class="Icon Icon--colored"> <use xlink:href="/library/images/sprite-home.svg#RESPONSIBLE_GAMBLING"/> </svg> </span> <span class="account-nav__title">Responsible gambling</span> </span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+=======================
+
+BINGO-TABS
+
+
+
+old
+====
+
+<nav class="layout-tabs-nav layout-tabs-nav_width-50 layout-tabs-nav_big">
+	<div class="fn-switch-tab layout-tabs-switch layout-tabs-switch_normal tab-icon-slots bingo_rooms_tab_icon active" data-tab-index="2">
+		<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#BINGO_ROOMS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;BINGO <strong>ROOMS</strong></div>
+	<div class="fn-switch-tab layout-tabs-switch layout-tabs-switch_normal tab-icon-slots bingo-schedule-tab bingo_schedule_tab_icon" data-tab-index="1">
+		<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#BINGO_SCHEDULE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;BINGO <strong>SCHEDULE</strong>
+		<div class="bingo-schedule-switcher">
+			<div class="bingo-schedule-switcher__text">
+				Grid / List view</div>
+			<div class="fn-switch-view bingo-schedule-switcher__item bingo-schedule-switcher__item-grid active" data-view="items" tracker="{  &quot;event&quot; : &quot;trackEvent&quot;,&quot;eventCategory&quot; : &quot;bingo schedule&quot;,&quot;eventAction&quot;:&quot;view type&quot;, &quot;eventLabel&quot; : &quot;grid&quot;}">
+				<svg class="Icon Icon--small Icon--positioned"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#GRID_VIEW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+			<div class="fn-switch-view bingo-schedule-switcher__item bingo-schedule-switcher__item-list" data-view="list" tracker="{  &quot;event&quot; : &quot;trackEvent&quot;,&quot;eventCategory&quot; : &quot;bingo schedule&quot;,&quot;eventAction&quot;:&quot;view type&quot;, &quot;eventLabel&quot; : &quot;list&quot;}">
+				<svg class="Icon Icon--small Icon--positioned"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#LISTVIEW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+		</div>
+	</div>
+</nav>
+
+
+
+new
+====
+
+<nav class="layout-tabs-nav layout-tabs-nav_width-50 layout-tabs-nav_big">
+	<div class="fn-switch-tab layout-tabs-switch layout-tabs-switch_normal tab-icon-slots bingo_rooms_tab_icon active" data-tab-index="2">
+		<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#BINGO_ROOMS"/></svg>&nbsp;BINGO <strong>ROOMS</strong></div>
+	<div class="fn-switch-tab layout-tabs-switch layout-tabs-switch_normal tab-icon-slots bingo-schedule-tab bingo_schedule_tab_icon" data-tab-index="1">
+		<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#BINGO_SCHEDULE"/></svg>&nbsp;BINGO <strong>SCHEDULE</strong>
+		<div class="bingo-schedule-switcher">
+			<div class="bingo-schedule-switcher__text">
+				Grid / List view</div>
+			<div class="fn-switch-view bingo-schedule-switcher__item bingo-schedule-switcher__item-grid active" data-view="items" tracker="{  &quot;event&quot; : &quot;trackEvent&quot;,&quot;eventCategory&quot; : &quot;bingo schedule&quot;,&quot;eventAction&quot;:&quot;view type&quot;, &quot;eventLabel&quot; : &quot;grid&quot;}">
+				<svg class="Icon Icon--small Icon--positioned"><use xlink:href="/library/images/sprite-main.svg#GRID_VIEW"/></svg></div>
+			<div class="fn-switch-view bingo-schedule-switcher__item bingo-schedule-switcher__item-list" data-view="list" tracker="{  &quot;event&quot; : &quot;trackEvent&quot;,&quot;eventCategory&quot; : &quot;bingo schedule&quot;,&quot;eventAction&quot;:&quot;view type&quot;, &quot;eventLabel&quot; : &quot;list&quot;}">
+				<svg class="Icon Icon--small Icon--positioned"><use xlink:href="/library/images/sprite-main.svg#LISTVIEW"/></svg></div>
+		</div>
+	</div>
+</nav>
+
+
+
+
+
+============
+PROMOS_TABS_FILTER
+
+
+old
+====
+
+<div class="filter__item fn-gb-switcher-promos active" data-tab-index="1">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#ALL" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+		ALL</div>
+</div>
+<div class="filter__item fn-gb-switcher-promos" data-tab-index="2">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BINGO" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+		BINGO</div>
+</div>
+<div class="filter__item fn-gb-switcher-promos" data-tab-index="3">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#SLOTS_GAMES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+		Slots &amp; Games</div>
+</div>
+<div class="filter__item fn-gb-switcher-promos" data-tab-index="4">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHIPPER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+		CHIPPER</div>
+</div>
+
+
+
+new
+====
+
+<div class="filter__item fn-gb-switcher-promos active" data-tab-index="1">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-main.svg#ALL"/></svg></div>
+		ALL</div>
+</div>
+<div class="filter__item fn-gb-switcher-promos" data-tab-index="2">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-main.svg#BINGO"/></svg></div>
+		BINGO</div>
+</div>
+<div class="filter__item fn-gb-switcher-promos" data-tab-index="3">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#SLOTS_GAMES"/></svg></div>
+		Slots &amp; Games</div>
+</div>
+<div class="filter__item fn-gb-switcher-promos" data-tab-index="4">
+	<div class="filter-container">
+		<div class="filter-icon">
+			<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-main.svg#CHIPPER"/></svg></div>
+		CHIPPER</div>
+</div>
+
+
+
+
+========
+HAPPY-HUB-TAB5-CHAT
+
+
+
+old
+====
+
+<div class="layout-subtabs-nav fn-tab-body-6 fn-tab-body-content">
+	<div class="flex flex_justify custom-tabs">
+		<span class="fn-switch-tab active layout-subtabs-switch slots-ico meet-hosts-tab" data-tab-index="6-1"><svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#CHAT" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> MEET THE HOSTS</span> <span class="fn-switch-tab layout-subtabs-switch slots-ico games-chat-tab" data-tab-index="6-2"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHAT_GAMES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> CHAT GAMES</span> <span class="fn-switch-tab layout-subtabs-switch games-ico chat-lingo-chat" data-tab-index="6-3"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHAT_LINGO" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> CHAT LINGO</span> <span class="fn-switch-tab layout-subtabs-switch promos-chat" data-tab-index="6-4"><svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#PROMOS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> PROMOS</span></div>
+</div>
+
+
+
+new
+====
+
+<div class="layout-subtabs-nav fn-tab-body-6 fn-tab-body-content">
+	<div class="flex flex_justify custom-tabs">
+		<span class="fn-switch-tab active layout-subtabs-switch slots-ico meet-hosts-tab" data-tab-index="6-1"><svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#CHAT"/></svg> MEET THE HOSTS</span> <span class="fn-switch-tab layout-subtabs-switch slots-ico games-chat-tab" data-tab-index="6-2"> <svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#CHAT_GAMES"/></svg> CHAT GAMES</span> <span class="fn-switch-tab layout-subtabs-switch games-ico chat-lingo-chat" data-tab-index="6-3"> <svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#CHAT_LINGO"/></svg> CHAT LINGO</span> <span class="fn-switch-tab layout-subtabs-switch promos-chat" data-tab-index="6-4"><svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#PROMOS"/></svg> PROMOS</span></div>
+</div>
+
+
+
+============
+
+search: welcome_offer
+
+
+Welcome Offer March 2016
+
+
+
+old
+====
+
+
+
+
+new
+====
+
+
+
+
+
+====
+VIP-TAB1-BENEFITS
+
+
+
+old
+====
+
+<article class="gray-box vip-box vip-box_top">
+	<h6 class="default_title">
+		<strong>Become a Gala Bingo VIP...</strong></h6>
+	<div class="default_descr">
+		<p>
+			Want to feel appreciated, valued and important? Our VIP players know all about that. They stay loyal to the end because we recognise and reward their long-term commitment to us with a hugely generous VIP program.</p>
+		<p>
+			Climb your way up the loyalty ladder and you too can enjoy all the amazing benefits being a VIP can bring... <strong>exclusive promotions, extra-special prizes, FREE Bingo three nights a week in a private room, exclusive bonuses and weekly deposit rewards</strong> (up to four deposit bonuses every single week!), <strong>double loyalty points on all your play every Saturday</strong>... The list goes on.</p>
+		<p>
+			And that's not to mention amazing celebrity meet and greets, VIP events and legendary parties!</p>
+		<p>
+			Our VIPs deserve the best and that's exactly what they get.</p>
+	</div>
+</article>
+<div class="vip-box vip-box_btm">
+	<div class="layout-subtabs-nav fn-tab-body-1 active mobile-active layout-subtabs-nav_benefits">
+		<span class="fn-switch-tab layout-subtabs-switch bronze-ico active" data-tab-index="1-1"><svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BENEFITS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> BRONZE<span class="small">VIP</span></span> <span class="fn-switch-tab layout-subtabs-switch silver-ico" data-tab-index="1-2"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BENEFITS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> SILVER <span class="small">VIP</span></span> <span class="fn-switch-tab layout-subtabs-switch gold-ico" data-tab-index="1-3"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BENEFITS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> GOLD <span class="small">VIP</span></span> <span class="fn-switch-tab layout-subtabs-switch platinum-ico" data-tab-index="1-4"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BENEFITS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> PLATINUM <span class="small">VIP</span></span></div>
+</div>
+
+
+
+new
+====
+
+<article class="gray-box vip-box vip-box_top">
+	<h6 class="default_title">
+		<strong>Become a Gala Bingo VIP...</strong></h6>
+	<div class="default_descr">
+		<p>
+			Want to feel appreciated, valued and important? Our VIP players know all about that. They stay loyal to the end because we recognise and reward their long-term commitment to us with a hugely generous VIP program.</p>
+		<p>
+			Climb your way up the loyalty ladder and you too can enjoy all the amazing benefits being a VIP can bring... <strong>exclusive promotions, extra-special prizes, FREE Bingo three nights a week in a private room, exclusive bonuses and weekly deposit rewards</strong> (up to four deposit bonuses every single week!), <strong>double loyalty points on all your play every Saturday</strong>... The list goes on.</p>
+		<p>
+			And that's not to mention amazing celebrity meet and greets, VIP events and legendary parties!</p>
+		<p>
+			Our VIPs deserve the best and that's exactly what they get.</p>
+	</div>
+</article>
+<div class="vip-box vip-box_btm">
+	<div class="layout-subtabs-nav fn-tab-body-1 active mobile-active layout-subtabs-nav_benefits">
+		<span class="fn-switch-tab layout-subtabs-switch bronze-ico active" data-tab-index="1-1"><svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#BENEFITS"/></svg> BRONZE<span class="small">VIP</span></span> <span class="fn-switch-tab layout-subtabs-switch silver-ico" data-tab-index="1-2"> <svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#BENEFITS"/></svg> SILVER <span class="small">VIP</span></span> <span class="fn-switch-tab layout-subtabs-switch gold-ico" data-tab-index="1-3"> <svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#BENEFITS"/></svg> GOLD <span class="small">VIP</span></span> <span class="fn-switch-tab layout-subtabs-switch platinum-ico" data-tab-index="1-4"> <svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#BENEFITS"/></svg> PLATINUM <span class="small">VIP</span></span></div>
+</div>
+
+
+
+==========
+slots and game page
+
+
+old
+====
+
+<svg class="Icon Icon--colored Icon--large"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#SLOTS_GAMES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;<strong>SLOTS</strong> & <strong>GAMES</strong>
+
+
+new
+====
+
+<svg class="Icon Icon--colored Icon--large"><use xlink:href="/library/images/sprite-home.svg#SLOTS_GAMES"/></svg>&nbsp;<strong>SLOTS</strong> & <strong>GAMES</strong>
+
+
+=========
+casino page
+
+
+
+old
+====
+
+<svg class="Icon Icon--colored Icon--large"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CASINO" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;<strong>CASINO</strong>
+
+
+new
+====
+
+<svg class="Icon Icon--colored Icon--large"><use xlink:href="/library/images/sprite-main.svg#CASINO"/></svg>&nbsp;<strong>CASINO</strong>
+
+
+=========
+
+
+CLUBS-TAB2-CLUBS-FINDER_1
+
+
+
+
+old
+====
+
+<div class="portlet portlet_default club-finder">
+	<div class="portlet-wrapper">
+		<div class="portlet-title slots-games">
+			<span class="portlet-title-text icons icon_club_finder"><svg class="Icon Icon--colored Icon--large"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CLUB_FINDER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;<strong>FIND YOUR LOCAL GALA BINGO CLUB</strong></span></div>
+		[CLUBS_MAP]</div>
+</div>
+<article class="gray-box">
+	<h2 class="default_title is-tablet">
+		Find Your Local Gala Bingo Club</h2>
+	<div class="two_columns_box">
+		<div>
+			<p>
+				If you're looking for a great night's entertainment along with the possibility of some spectacular jackpot prizes, then you'll be glad to know that your local Gala Bingo club is never too far away. Each Gala Bingo club offers a warm and friendly atmosphere with exciting games, helpful staff, and an excellent choice of delicious food and refreshing drinks too.</p>
+			<p>
+				We've created a handy Gala Bingo club finder to help you locate your most convenient outlet. To use the club finder simply scroll down the A-Z list of clubs, enter your postcode, or drag across the map to find your nearest Gala Bingo club.</p>
+		</div>
+		<div>
+			<p>
+				With 131 clubs scattered across the country from the far north of Scotland to the south coast of England, you'll always be close to Gala Bingo's legendary and professional service, as well as our tempting jackpots of up to £20,000!</p>
+			<p>
+				Whilst all of our clubs offer a quick and simple Gala Bingo format, there are many other gaming opportunities to explore once you're inside. There's a great selection of fun gaming machines that offer hundreds of pounds in cash prizes, and many players enjoy playing additional mobile slots games during bingo call breaks.</p>
+		</div>
+		<div>
+			<p>
+				Each club will also provide exclusive promotions where you'll get the chance to win fantastic meals, luxury Mediterranean cruises, and even get an invite to one of our special themed party nights.</p>
+			<p>
+				All the more reason to visit your local Gala Bingo club tonight!</p>
+		</div>
+	</div>
+</article>
+
+
+
+new
+====
+
+<div class="portlet portlet_default club-finder">
+	<div class="portlet-wrapper">
+		<div class="portlet-title slots-games">
+			<span class="portlet-title-text icons icon_club_finder"><svg class="Icon Icon--colored Icon--large"><use xlink:href="/library/images/sprite-main.svg#CLUB_FINDER"/></svg>&nbsp;<strong>FIND YOUR LOCAL GALA BINGO CLUB</strong></span></div>
+		[CLUBS_MAP]</div>
+</div>
+<article class="gray-box">
+	<h2 class="default_title is-tablet">
+		Find Your Local Gala Bingo Club</h2>
+	<div class="two_columns_box">
+		<div>
+			<p>
+				If you're looking for a great night's entertainment along with the possibility of some spectacular jackpot prizes, then you'll be glad to know that your local Gala Bingo club is never too far away. Each Gala Bingo club offers a warm and friendly atmosphere with exciting games, helpful staff, and an excellent choice of delicious food and refreshing drinks too.</p>
+			<p>
+				We've created a handy Gala Bingo club finder to help you locate your most convenient outlet. To use the club finder simply scroll down the A-Z list of clubs, enter your postcode, or drag across the map to find your nearest Gala Bingo club.</p>
+		</div>
+		<div>
+			<p>
+				With 131 clubs scattered across the country from the far north of Scotland to the south coast of England, you'll always be close to Gala Bingo's legendary and professional service, as well as our tempting jackpots of up to £20,000!</p>
+			<p>
+				Whilst all of our clubs offer a quick and simple Gala Bingo format, there are many other gaming opportunities to explore once you're inside. There's a great selection of fun gaming machines that offer hundreds of pounds in cash prizes, and many players enjoy playing additional mobile slots games during bingo call breaks.</p>
+		</div>
+		<div>
+			<p>
+				Each club will also provide exclusive promotions where you'll get the chance to win fantastic meals, luxury Mediterranean cruises, and even get an invite to one of our special themed party nights.</p>
+			<p>
+				All the more reason to visit your local Gala Bingo club tonight!</p>
+		</div>
+	</div>
+</article>
+
+
+
+==========
+
+CLUBS_FOOTER
+
+
+
+old
+====
+
+<div class="flex flex_wrap boxes boxes_clubs">
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">BE PART OF OUR SOCIAL COMMUNITY</span></h6>
+		<div class="boxes_img-holder">
+			<img alt="" class="boxes_img" src="/library/Banners/clubs_footer/socialmedia_734x320.jpg" /></div>
+		<div class="boxes_descr">
+			<a class="plus-link" href="/be-part-of-our-social-community"><svg class="Icon Icon--action-primary"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#EXPAND" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Find out more</a></div>
+	</article>
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">OUR CLUBS OFFERS</span></h6>
+		<div class="boxes_img-holder">
+			<img alt="" class="boxes_img" src="/library/Banners/clubs_footer/ourcluboffers_734x320.jpg" /></div>
+		<div class="boxes_descr">
+			<a class="plus-link guest-show" href="/register"><svg class="Icon Icon--action-primary"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#EXPAND" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Sign Up Now</a></div>
+	</article>
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">JOIN OUR CLUB</span></h6>
+		<div class="boxes_img-holder">
+			<img alt="" class="boxes_img" src="/library/Banners/clubs_footer/RAF-lower-boxes_734x320.jpg" /></div>
+		<div class="boxes_descr">
+			<span class="fn-switch-tab"><a class="plus-link" data-cgi-gtm="true" data-tab-index="2" href="/clubs#club-finder"><svg class="Icon Icon--action-primary"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#EXPAND" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>Find out more</a></span></div>
+	</article>
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">CONTACT US<br />
+			<span class="normal">Want to tell us something?</span></span></h6>
+		<div class="boxes_descr">
+			<div class="columns">
+				<div class="col col_short align-right">
+					<strong>Email</strong>:</div>
+				<div class="col align-left">
+					<a href="mailto:tellus@galaleisure.com">tellus@galaleisure.com</a></div>
+			</div>
+			<div class="columns">
+				<div class="col col_short align-right">
+					<strong>Tel</strong>:</div>
+				<div class="col align-left">
+					0845 940 4090</div>
+			</div>
+			<div class="columns">
+				<div class="col col_short align-right">
+					<strong>Address</strong>:</div>
+				<div class="col align-left">
+					Customer Services<br />
+					Gala Bingo<br />
+					New Castle House,<br />
+					Castle Boulevard<br />
+					Nottingham NG7 1FT</div>
+			</div>
+		</div>
+	</article>
+</div>
+
+
+
+new
+====
+
+<div class="flex flex_wrap boxes boxes_clubs">
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">BE PART OF OUR SOCIAL COMMUNITY</span></h6>
+		<div class="boxes_img-holder">
+			<img alt="" class="boxes_img" src="/library/Banners/clubs_footer/socialmedia_734x320.jpg" /></div>
+		<div class="boxes_descr">
+			<a class="plus-link" href="/be-part-of-our-social-community"><svg class="Icon Icon--action-primary"><use xlink:href="/library/images/sprite-main.svg#EXPAND"/></svg>Find out more</a></div>
+	</article>
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">OUR CLUBS OFFERS</span></h6>
+		<div class="boxes_img-holder">
+			<img alt="" class="boxes_img" src="/library/Banners/clubs_footer/ourcluboffers_734x320.jpg" /></div>
+		<div class="boxes_descr">
+			<a class="plus-link guest-show" href="/register"><svg class="Icon Icon--action-primary"><use xlink:href="/library/images/sprite-main.svg#EXPAND"/></svg>Sign Up Now</a></div>
+	</article>
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">JOIN OUR CLUB</span></h6>
+		<div class="boxes_img-holder">
+			<img alt="" class="boxes_img" src="/library/Banners/clubs_footer/RAF-lower-boxes_734x320.jpg" /></div>
+		<div class="boxes_descr">
+			<span class="fn-switch-tab"><a class="plus-link" data-cgi-gtm="true" data-tab-index="2" href="/clubs#club-finder"><svg class="Icon Icon--action-primary"><use xlink:href="/library/images/sprite-main.svg#EXPAND"/></svg>Find out more</a></span></div>
+	</article>
+	<article class="flex_item flex_item-4 boxes_item">
+		<h6 class="boxes_title split">
+			<span class="split_title">CONTACT US<br />
+			<span class="normal">Want to tell us something?</span></span></h6>
+		<div class="boxes_descr">
+			<div class="columns">
+				<div class="col col_short align-right">
+					<strong>Email</strong>:</div>
+				<div class="col align-left">
+					<a href="mailto:tellus@galaleisure.com">tellus@galaleisure.com</a></div>
+			</div>
+			<div class="columns">
+				<div class="col col_short align-right">
+					<strong>Tel</strong>:</div>
+				<div class="col align-left">
+					0845 940 4090</div>
+			</div>
+			<div class="columns">
+				<div class="col col_short align-right">
+					<strong>Address</strong>:</div>
+				<div class="col align-left">
+					Customer Services<br />
+					Gala Bingo<br />
+					New Castle House,<br />
+					Castle Boulevard<br />
+					Nottingham NG7 1FT</div>
+			</div>
+		</div>
+	</article>
+</div>
+
+
+
+=============
+CLUBS_BE-PART-OF-OUR-SOCIAL-COMMUNITY
+
+
+
+old
+====
+
+<div class="bonus-multiview-detailedview socials">
+	<div class="top_header_blue_block ">
+		<h3 class="detail_promo_header_bonus_name">
+			Like Playing Happy</h3>
+		<div class="top_header_blue_block_buttons_wrap">
+			<button class="btn_clear fn-close" data-cgi-gtm="true">close</button><button class="btn btn_navigate close fn-close" data-cgi-gtm="true"><svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#CLOSE_INVERTED" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></button></div>
+	</div>
+	<div class="main_detail_promo_content">
+		<div class="portlet-games-info">
+			<div class="portlet-title">
+				<span class="portlet-title-text"><strong>SOCIALS</strong></span></div>
+		</div>
+		<ul class="social">
+			<li class="social-item facebook">
+				<a href="https://www.facebook.com/Gala-Bingo-306292544446/" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#FACEBOOK" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+					<a href="https://www.facebook.com/Gala-Bingo-306292544446/" target="_blank"><span>Like us on Facebook!</span><br />
+					</a></div>
+				<div class="social-footer">
+					<a href="https://www.facebook.com/Gala-Bingo-306292544446/" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item youtube">
+				<a href="https://www.youtube.com/mygalabingotv" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#YOUTUBE" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+					<a href="https://www.youtube.com/mygalabingotv" target="_blank"><span>Subscribe to our<br />
+					YouTube Channel</span></a></div>
+				<div class="social-footer">
+					<a href="https://www.youtube.com/mygalabingotv" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item twitter">
+				<a href="https://twitter.com/galabingo" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#TWITTER" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+					<a href="https://twitter.com/galabingo" target="_blank"><span>Follow us on<br />
+					Twitter</span></a></div>
+				<div class="social-footer">
+					<a href="https://twitter.com/galabingo" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item gplus">
+				<a href="https://plus.google.com/u/0/111787442149789073575/posts" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#GOOGLE+" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+					<a href="https://plus.google.com/u/0/111787442149789073575/posts" target="_blank"><span>Google Plus</span><br />
+					</a></div>
+				<div class="social-footer">
+					<a href="https://plus.google.com/u/0/111787442149789073575/posts" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item instagram">
+				<a href="https://www.instagram.com/gala.bingo/" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#INSTAGRAM" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+					<a href="https://www.instagram.com/gala.bingo/" target="_blank"><span>Instagram</span><br />
+					</a></div>
+				<div class="social-footer">
+					<a href="https://www.instagram.com/gala.bingo/" target="_blank">&nbsp;</a></div>
+			</li>
+		</ul>
+		<article class="gray-box three_columns">
+			<h1 class="default_title">
+				Like, Follow, Subscribe and + us by clicking the different logos above.</h1>
+			<p>
+				You know us, we welcome anyone and everyone with open arms and a welcome bonus.</p>
+			<p>
+				In the same way, we're embracing all your favourite social media sites and opening up new ways for our bingo community members to get in touch with us and their favourite roomies.</p>
+			<p>
+				Through our social media community we'll be bringing you all our latest bingo news, pics and stories about new games, special events, third-party promotions and brilliant prizes.</p>
+			<p>
+				Plus there's exclusive offers and mini-games only available to our social media followers!</p>
+			<p>
+				Keep a smile on your face – Like, Follow, Subscribe and + us by clicking the different logos above.</p>
+		</article>
+	</div>
+</div>
+
+
+
+new
+====
+
+<div class="bonus-multiview-detailedview socials">
+	<div class="top_header_blue_block ">
+		<h3 class="detail_promo_header_bonus_name">
+			Like Playing Happy</h3>
+		<div class="top_header_blue_block_buttons_wrap">
+			<button class="btn_clear fn-close" data-cgi-gtm="true">close</button><button class="btn btn_navigate close fn-close" data-cgi-gtm="true"><svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#CLOSE_INVERTED"/></svg></button></div>
+	</div>
+	<div class="main_detail_promo_content">
+		<div class="portlet-games-info">
+			<div class="portlet-title">
+				<span class="portlet-title-text"><strong>SOCIALS</strong></span></div>
+		</div>
+		<ul class="social">
+			<li class="social-item facebook">
+				<a href="https://www.facebook.com/Gala-Bingo-306292544446/" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#FACEBOOK"/></svg></div>
+					<a href="https://www.facebook.com/Gala-Bingo-306292544446/" target="_blank"><span>Like us on Facebook!</span><br />
+					</a></div>
+				<div class="social-footer">
+					<a href="https://www.facebook.com/Gala-Bingo-306292544446/" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item youtube">
+				<a href="https://www.youtube.com/mygalabingotv" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#YOUTUBE"/></svg></div>
+					<a href="https://www.youtube.com/mygalabingotv" target="_blank"><span>Subscribe to our<br />
+					YouTube Channel</span></a></div>
+				<div class="social-footer">
+					<a href="https://www.youtube.com/mygalabingotv" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item twitter">
+				<a href="https://twitter.com/galabingo" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#TWITTER"/></svg></div>
+					<a href="https://twitter.com/galabingo" target="_blank"><span>Follow us on<br />
+					Twitter</span></a></div>
+				<div class="social-footer">
+					<a href="https://twitter.com/galabingo" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item gplus">
+				<a href="https://plus.google.com/u/0/111787442149789073575/posts" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#GOOGLE+"/></svg></div>
+					<a href="https://plus.google.com/u/0/111787442149789073575/posts" target="_blank"><span>Google Plus</span><br />
+					</a></div>
+				<div class="social-footer">
+					<a href="https://plus.google.com/u/0/111787442149789073575/posts" target="_blank">&nbsp;</a></div>
+			</li>
+			<li class="social-item instagram">
+				<a href="https://www.instagram.com/gala.bingo/" target="_blank"> </a>
+				<div class="social-wrap">
+					<div class="ico">
+						<svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#INSTAGRAM"/></svg></div>
+					<a href="https://www.instagram.com/gala.bingo/" target="_blank"><span>Instagram</span><br />
+					</a></div>
+				<div class="social-footer">
+					<a href="https://www.instagram.com/gala.bingo/" target="_blank">&nbsp;</a></div>
+			</li>
+		</ul>
+		<article class="gray-box three_columns">
+			<h1 class="default_title">
+				Like, Follow, Subscribe and + us by clicking the different logos above.</h1>
+			<p>
+				You know us, we welcome anyone and everyone with open arms and a welcome bonus.</p>
+			<p>
+				In the same way, we're embracing all your favourite social media sites and opening up new ways for our bingo community members to get in touch with us and their favourite roomies.</p>
+			<p>
+				Through our social media community we'll be bringing you all our latest bingo news, pics and stories about new games, special events, third-party promotions and brilliant prizes.</p>
+			<p>
+				Plus there's exclusive offers and mini-games only available to our social media followers!</p>
+			<p>
+				Keep a smile on your face – Like, Follow, Subscribe and + us by clicking the different logos above.</p>
+		</article>
+	</div>
+</div>
+
+======================
+
+LOYALTY-TITLE
+
+
+
+old
+====
+
+<div class="account-headline account-headline_buzz">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#BUZZ" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;<strong>LOYALTY</strong></span></div>
+
+
+
+new
+====
+
+<div class="account-headline account-headline_buzz">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-main.svg#BUZZ"/></svg>&nbsp;<strong>LOYALTY</strong></span></div>
+
+
+
+
+================
+
+
+SETTINGS-TITLE
+
+
+
+old
+====
+
+<div class="account-headline account-headline_key">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#SETTINGS" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;<strong>SETTINGS</strong></span></div>
+
+
+
+new
+====
+
+<div class="account-headline account-headline_key">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-main.svg#SETTINGS"/></svg>&nbsp;<strong>SETTINGS</strong></span>
+</div>
+
+
+
+
+===========
+
+RESPONSIBLE-GAMBLING-TITLE
+
+
+
+old
+====
+
+<div class="account-headline account-headline_gambling">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#RESPONSIBLE_GAMBLING" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>&nbsp;<strong>RESPONSIBLE</strong> GAMBLING</span></div>
+
+
+
+new
+====
+
+<div class="account-headline account-headline_gambling">
+	<span class="account-headline__text"><svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#RESPONSIBLE_GAMBLING"/></svg>&nbsp;<strong>RESPONSIBLE</strong> GAMBLING</span>
+</div>
+
+
+
+============

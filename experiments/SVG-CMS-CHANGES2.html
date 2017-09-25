@@ -1,0 +1,114 @@
+
+
+
+
+
+CMS_FIX
+=====
+
+promo_thumb
+===========
+
+old
+=======
+
+<div class="bonus-title_img #if ($vipex.data == true) vip_exclusive #end" style="background-image: url('$image.data')">
+	&nbsp;</div>
+
+#if ($ode.data == true)<div class="bonus_promo_info_label">One Day Exclusive!</div>#end
+<div class="bonus-title_description">
+	<h5 class="bonus-title_description_title">$title.data</h5>
+	<div class="bonus-title_description_content">$description.data</div>
+</div>
+
+
+<div class="ctaBtns">
+#if ($CTA.cta_check.data == 0) #end #if ($CTA.cta_check.data == 1) <a class="user-show btn btn_bonus_action fn-launch-game btn__play-bingo btn_type_custom in_header" data-game-code="null">Play Bingo Now</a><svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#ARROW" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($CTA.cta_check.data == 2) <a href="/my-account/deposit" class="user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Deposit Now</a> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($CTA.cta_check.data == 3) <a href="$CTA.cta_url.data" class="user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">$CTA.cta_text.data</a> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($CTA.cta_check.data == 4) <a class="fn-launch-game user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header" data-game-code="$CTA.cta_url.data" href="#" data-cgi-gtm="true">$CTA.cta_text.data</a> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end
+</div>
+
+
+
+new
+=======
+
+<div class="bonus-title_img #if ($vipex.data == true) vip_exclusive #end" style="background-image: url('$image.data')">
+	&nbsp;</div>
+
+#if ($ode.data == true)<div class="bonus_promo_info_label">One Day Exclusive!</div>#end
+<div class="bonus-title_description">
+	<h5 class="bonus-title_description_title">$title.data</h5>
+	<div class="bonus-title_description_content">$description.data</div>
+</div>
+
+
+<div class="ctaBtns">
+#if ($CTA.cta_check.data == 0) #end #if ($CTA.cta_check.data == 1) <a class="user-show btn btn_bonus_action fn-launch-game btn__play-bingo btn_type_custom in_header" data-game-code="null">Play Bingo Now</a><svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#ARROW"/></svg> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($CTA.cta_check.data == 2) <a href="/my-account/deposit" class="user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Deposit Now</a> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($CTA.cta_check.data == 3) <a href="$CTA.cta_url.data" class="user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">$CTA.cta_text.data</a> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end #if ($CTA.cta_check.data == 4) <a class="fn-launch-game user-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header" data-game-code="$CTA.cta_url.data" href="#" data-cgi-gtm="true">$CTA.cta_text.data</a> <a href="/register" class="guest-show btn btn_bonus_action btn__play-bingo btn_type_custom in_header">Join Now</a> #end
+</div>
+
+
+
+vip page - halloween games
+===========================
+old
+=======
+<svg class="Icon Icon--colored"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#40-And-50-ball"></use></svg> &nbsp;<strong>HALLOWEEN </strong>GAMES
+new
+=======
+<svg class="Icon Icon--colored"><use xlink:href="/library/images/sprite-home.svg#40-And-50-ball"/></svg> &nbsp;<strong>HALLOWEEN </strong>GAMES
+
+
+
+HAPPY-HUB-GALA-BLOG
+===================
+
+
+old
+=======
+
+<!--?xml version="1.0"?-->
+<div class="layout-subtabs-nav fn-tab-body-6 fn-tab-body-content">
+	<div class="flex flex_justify custom-tabs">
+		<span class="fn-switch-tab active layout-subtabs-switch slots-ico meet-hosts-tab" data-tab-index="1-1"><svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHAT" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> All Articles</span> <span class="fn-switch-tab layout-subtabs-switch slots-ico games-chat-tab" data-tab-index="1-2"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHAT_GAMES" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> The Best Dogwalks</span> <span class="fn-switch-tab layout-subtabs-switch games-ico chat-lingo-chat" data-tab-index="1-3"> <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHAT_LINGO" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> Celebrity Weddings</span> <span class="fn-switch-tab layout-subtabs-switch promos-chat" data-tab-index="1-4"><svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-main.svg#CHAT_LINGO" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg> 52 Lives Charity</span></div>
+</div>
+
+
+new
+=======
+
+<div class="layout-subtabs-nav fn-tab-body-6 fn-tab-body-content">
+	<div class="flex flex_justify custom-tabs">
+		<span class="fn-switch-tab active layout-subtabs-switch slots-ico meet-hosts-tab" data-tab-index="1-1"><svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#CHAT"/></svg> All Articles</span>
+		<span class="fn-switch-tab layout-subtabs-switch slots-ico games-chat-tab" data-tab-index="1-2"> <svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#CHAT_GAMES"/></svg> The Best Dogwalks</span>
+		<span class="fn-switch-tab layout-subtabs-switch games-ico chat-lingo-chat" data-tab-index="1-3"> <svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#CHAT_LINGO"/></svg> Celebrity Weddings</span>
+		<span class="fn-switch-tab layout-subtabs-switch promos-chat" data-tab-index="1-4"><svg class="Icon"><use xlink:href="/library/images/sprite-main.svg#CHAT_LINGO"/></svg> 52 Lives Charity</span></div>
+</div>
+
+
+
+
+FORGOT-PASSWORD-HEADER
+=======================
+
+old
+=======
+
+<div class="portlet-registration forgotten-header">
+	<div class="portlet-title">
+		<p class="forgot-password-title">
+			Forgotten your username or password</p>
+		<div class="close-btn fn-close" data-cgi-gtm="true">
+			close <svg class="Icon"><use xlink:href="/galabingo-theme/images/icons/sprite-home.svg#CLOSE_INVERTED" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div>
+	</div>
+</div>
+
+new
+=======
+
+<div class="portlet-registration forgotten-header">
+	<div class="portlet-title">
+		<p class="forgot-password-title">
+			Forgotten your username or password</p>
+		<div class="close-btn fn-close" data-cgi-gtm="true">
+			close <svg class="Icon"><use xlink:href="/library/images/sprite-home.svg#CLOSE_INVERTED"/></svg></div>
+	</div>
+</div>
