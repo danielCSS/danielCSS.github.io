@@ -1,0 +1,29 @@
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/bin:$PATH
+
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/
+#export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:$PATH
+
+function changeToCasinoBash() {
+    echo "killing java..."
+    killall -9 java
+    echo "killing node..."
+    killall -9 node
+    rm ~/.bash_profile && cp ~/.casino_bash ~/.bash_profile && source ~/.bash_profile
+    echo "now using java version: "
+    java -version
+}
+ 
+function changeToBingoBash() {
+    echo "killing java..."
+    killall -9 java
+    echo "killing node..."
+    killall -9 node
+    rm ~/.bash_profile && cp ~/.bingo_bash ~/.bash_profile && source ~/.bash_profile
+    echo "now using java version: "
+    java -version
+}
+
+alias bingo="changeToBingoBash && cd /Users/daniel.david/work/bingo/gala-bingo && nvm use 0"
+alias spins="changeToBingoBash && cd /Users/daniel.david/work/gala-spins && nvm use 0"
+alias casino="changeToCasinoBash && cd /Users/daniel.david/work/galaCasino-sbt/galacasino-responsive && nvm use 6.2.2"

@@ -13,7 +13,7 @@ class Search extends Component {
     return (
       <div className="search">
         <header>
-          <h1>{this.state.searchTerm}</h1>
+          <h1>svideo1</h1>
           <input
             value={this.state.searchTerm}
             onChange={this.handleSearchTermChange}
