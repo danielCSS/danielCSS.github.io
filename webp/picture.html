@@ -10,11 +10,12 @@
 
 <body>
     <h1>
-      Using webp with the picture element
+      Congrats, browser supports webp with the picture element!
     </h1>
     <h2>
       Sorry, this browser doesn't support the webp format. All images displayed here will be regular jpegs :(
     </h2>
+    <p>Check the network tab in dev tools - only one image is loaded</p>
     <figure>
      <picture>
       <!-- <source srcset="genies-jackpots_476x340.webp" media="(max-width: 600px)"> -->
@@ -22,7 +23,7 @@
       <source srcset="img/genies-jackpots_476x340.jpg" type="image/jpeg">
       <img src="img/genies-jackpots_476x340.jpg" alt="">
      </picture>
-     <figcaption><span>Equivalent webp image</span><span>Grrr I'm just a plain jpeg</span></figcaption>
+     <figcaption><span>Check out this lean webp image :) </span><span>Grrr I'm just a plain jpeg :( )</span></figcaption>
     </figure>
 
     <script src="modernizr-webp.min.js"></script>
