@@ -5,7 +5,7 @@ module.exports = {
   context: __dirname,
   entry: [
     "react-hot-loader/patch",
-    "webpack-dev-server/client?http://localhost:8087",
+    "webpack-dev-server/client?http://localhost:8088",
     "webpack/hot/only-dev-server",
     "./js/ClientApp.jsx"
   ],
@@ -17,7 +17,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    port: 8087,
+    port: 8088,
     publicPath: "/public/",
     historyApiFallback: true
   },

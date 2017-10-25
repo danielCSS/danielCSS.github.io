@@ -1,5 +1,8 @@
+// @flow
+
 import React from "react";
-import { shape, string } from "prop-types";
+// removed becaus ewe're using flowtype
+// import { shape, string } from "prop-types";
 import styled from "styled-components";
 
 const color = "#333";
@@ -18,25 +21,39 @@ const Image = styled.img`
   margin-right: 10px;
 `;
 
-const ShowCard = props => (
+const ShowCard = (props: { show: Show }) => (
   <Wrapper>
     <Image
       src={`/public/img/posters/${props.show.poster}`}
       alt={`${props.show.title} Show Poster`}
     />
-    <h3>{props.show.title}</h3>
-    <h4>({props.show.year})</h4>
-    <p>{props.show.description}</p>
+    <div>
+      <h3>{props.show.title}</h3>
+      <h4>({props.show.year})</h4>
+      <p>{props.show.description}</p>
+    </div>
   </Wrapper>
 );
 
-ShowCard.propTypes = {
-  show: shape({
-    poster: string.isRequired,
-    title: string.isRequired,
-    year: string.isRequired,
-    description: string.isRequired
-  }).isRequired
-};
+// const ShowCard = props => (
+//   <Wrapper>
+//     <Image
+//       src={`/public/img/posters/${props.show.poster}`}
+//       alt={`${props.show.title} Show Poster`}
+//     />
+//     <h3>{props.show.title}</h3>
+//     <h4>({props.show.year})</h4>
+//     <p>{props.show.description}</p>
+//   </Wrapper>
+// );
+//
+// ShowCard.propTypes = {
+//   show: shape({
+//     poster: string.isRequired,
+//     title: string.isRequired,
+//     year: string.isRequired,
+//     description: string.isRequired
+//   }).isRequired
+// };
 
 export default ShowCard;
