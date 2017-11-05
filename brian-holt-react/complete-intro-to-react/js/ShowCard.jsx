@@ -1,18 +1,21 @@
 // @flow
 
 import React from "react";
-// removed becaus ewe're using flowtype
+import { Link } from "react-router-dom";
+// removed because we're using flowtype
 // import { shape, string } from "prop-types";
 import styled from "styled-components";
 
 const color = "#333";
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
   width: 32%;
   border: 2px solid ${color};
   border-radius: 4px;
   margin-bottom: 25px;
   padding-right: 10px;
   overflow: hidden;
+  color: #111;
+  text-decoration: none;
 `;
 
 const Image = styled.img`
@@ -22,7 +25,7 @@ const Image = styled.img`
 `;
 
 const ShowCard = (props: { show: Show }) => (
-  <Wrapper>
+  <Wrapper to={`details/${props.show.imdbID}`}>
     <Image
       src={`/public/img/posters/${props.show.poster}`}
       alt={`${props.show.title} Show Poster`}
