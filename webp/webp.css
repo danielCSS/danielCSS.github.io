@@ -1,13 +1,16 @@
 h1 {
   text-align: center;
 }
-h2, figcaption span:last-child {
+h2,
+figcaption span:last-child {
   display: none;
 }
-.no-webp h1, .no-webp figcaption span:first-child  {
+.no-webp h1,
+.no-webp figcaption span:first-child {
   display: none;
 }
-.no-webp h2, .no-webp figcaption span:last-child {
+.no-webp h2,
+.no-webp figcaption span:last-child {
   display: block;
 }
 figure {
@@ -20,10 +23,20 @@ figure {
   border-right: 5px solid green;
 }*/
 figure:first-child:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 100%;
   background: green;
   display: inline-block;
+}
+.weight {
+  list-style: none;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid; /* 1 */
+  grid-template-columns: repeat(auto-fit, auto); /* 2 */
+  grid-gap: 1rem; /* 3 */
+  justify-content: space-between;
+  grid-auto-flow: dense;
 }
