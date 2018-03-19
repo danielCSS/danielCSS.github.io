@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variable Fonts</title>
+  <style type="text/css">
+  @font-face {
+  font-family:'Zycon';
+  src: url(https://danielcss.github.io/experiments/fonts/Zycon.ttf) format("truetype");
+}
+@font-face {
+  font-family:'Amstelvar';
+  src: url(https://danielcss.github.io/experiments/fonts/AmstelvarAlpha-VF.ttf) format("truetype");
+}
+/* @font-face {
+	font-family: base;
+	src: local("Segoe UI"),
+	url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2) format("woff2"),
+	url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Variable Sitka";
+	src: url("fonts/Sitka.ttf") format("truetype");
+}
+*/
+/* Windows shipping with variable copy of Bahnschrift */
+/* @font-face {
+	font-family: "Variable Bahnschrift";
+	src: local("Bahnschrift"),
+	url("fonts/Bahnschrift.ttf") format("truetype");
+}  */
+
+@font-face {
+	font-family: "Decovar";
+	src: url("https://danielcss.github.io/experiments/fonts/Decovar-VF.ttf") format("truetype");
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.zycon {
+	margin: 0;
+	font-size: 5vw;
+  font-family: 'Zycon';
+  font-variation-settings: 'T1  ' 0, 'T2  ' 0, 'T3  ' 0, 'T4  ' 0, 'M1  ' 1, 'M2  ' 0;
+  color: #000;
+	animation: zycon 4s infinite linear forwards;
+}
+.amstelvar {
+  font-size: 5vw;
+  font-family: 'Amstelvar';
+  font-variation-settings: 'wght' 100,'wdth' 100,'opsz' 14,'XOPQ' 88,'XTRA' 402,'YOPQ' 50,'YTLC' 500,'YTSE' 18,'GRAD' 88,'XTCH' 1000,'YTCH' 1000,'YTAS' 750,'YTDE' 250,'YTUC' 750,'YTRA' 1000,'PWGT' 88,'PWDT' 402;
+  animation: amstelvar 4s infinite linear forwards;
+}
+
+.vf-decovar__text {
+	font-family: "Decovar";
+	line-height: 1em;
+}
+
+/* So that animating axes doesn't bounce from one line to another on narrow viewports */
+.vf-decovar__text span {
+	display: block;
+}
+
+.vf-decovar__text {
+	animation: variationSettings 10s infinite;
+}
+
+@keyframes zycon {
+	0% {
+		font-variation-settings: 'M1' 1;
+	}
+	50% {
+		font-variation-settings: 'M1' -1;
+	}
+}
+@keyframes amstelvar {
+	0% {
+		font-variation-settings: 'wght' 100;
+	}
+	50% {
+		font-variation-settings: 'wght' 900;
+	}
+  100% {
+    font-variation-settings: 'wght' 100;
+  }
+}
+@keyframes variationSettings {
+	0% {
+		font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
+	}
+	10% {
+		font-variation-settings: "BLDA" 500, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
+	}
+	20% {
+		font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 1000, "SKLD" 326.389, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
+	}
+	30% {
+		font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 1000, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
+	}
+	40% {
+		font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 784.722, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 303.241, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
+	}
+	50% {
+		font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 303.241, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
+	}
+	60% {
+		font-variation-settings: "BLDA" 0, "TRMD" 1000, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 372.685, "TRMK" 0, "BLDB" 1000, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 1000, "TRME" 0;
+	}
+	70% {
+		font-variation-settings: "BLDA" 0, "TRMD" 1000, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 372.685, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 761.574, "TRMG" 1000, "TRME" 0;
+	}
+	80% {
+		font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 275.463, "WMX2" 344.907, "TRMB" 0, "TRMA" 1000, "SKLB" 761.574, "TRMG" 0, "TRME" 0;
+	}
+	90% {
+		font-variation-settings: "BLDA" 0, "TRMD" 548.611, "TRMC" 298.611, "SKLD" 173.611, "TRML" 1000, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 409.722, "TRMA" 53.241, "SKLB" 594.907, "TRMG" 0, "TRME" 0;
+	}
+	100% {
+		font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
+	}
+}
+  </style>
+</head>
+<body>
+  <ul id="typefaces">
+  <li class="zycon">
+    <figure>
+      <div class="sample XL XXL " contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <div style="white-space: normal;">☀🕛🚴🦎🦉🏵🔒⌚🖐🐕🐢🐈✯🌝⬤➟💡</div>
+      </div>
+
+    </figure>
+  </li>
+
+  <li class="amstelvar" id="amstelvar">
+    <h2>Amstelvar</h2>
+
+    <div class="content">
+      <ul class="fonts">
+
+        <li class="font">
+          <figure>
+
+            <div class="sample S M L XL " contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>abcdefghijklmnopqrstuvwxyz <span>0123456789</span>
+            </div>
+
+          </figure>
+        </li>
+<li class="decovar">
+  <div class="vf-decovar">
+  <span class="vf-decovar__text" aria-label="A single font">
+    <span aria-hidden="true">A single</span>
+    <span aria-hidden="true">font</span>
+  </span>
+</div>
+        </li>
+      </ul>
+</body>
+</html>
