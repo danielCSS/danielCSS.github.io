@@ -153,6 +153,8 @@
 @import "utilities.position";
 
 @import "_style-guide";
+@import "_svg-in-css";
+
 html {
   color: #333;
 }
@@ -237,8 +239,6 @@ p {
   background-color: purple;
   width: 200px;
   height: 200px;
-}
- {
   background-image: url(../images/1.png);
 }
 // input {
