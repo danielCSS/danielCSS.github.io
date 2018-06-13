@@ -29,7 +29,8 @@ const App = () => {
    return (
   <div className="c-style-content">
     <div className="o-box c-style-box c-style-container">
-      <Route exact path="/" component={TodoApp}/>
+      <Route exact path="/" />
+      <Route path="/react-redux-todo" component={TodoApp}/>
       <Route path="/icons" component={Icons}/>
       <Route path="/buttons" component={Buttons} />
       <Route path="/headers" component={Headers} />
@@ -45,6 +46,7 @@ const App = () => {
     <nav className="c-style-nav">
       <ul>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/react-redux-todo">React-Redux todo app</Link></li>
         <li><Link to="/icons">Icons</Link></li>
         <li><Link to="/buttons">Buttons</Link></li>
         <li><Link to="/headers">Headers</Link></li>

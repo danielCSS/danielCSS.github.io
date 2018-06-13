@@ -12095,6 +12095,20 @@ var App = function App() {
   return _react2.default.createElement(
     'div',
     null,
+    _react2.default.createElement(
+      'h2',
+      null,
+      'React-Redux Todo App\xA0',
+      _react2.default.createElement(
+        'a',
+        { href: 'https://redux.js.org/basics/example-todo-list' },
+        _react2.default.createElement(
+          'small',
+          null,
+          '(From Redux Doumentation)'
+        )
+      )
+    ),
     _react2.default.createElement(_addTodo2.default, null),
     _react2.default.createElement(_visibleTodoList2.default, null),
     _react2.default.createElement(_footer2.default, null)
@@ -26951,7 +26965,8 @@ var App = function App() {
     _react2.default.createElement(
       'div',
       { className: 'o-box c-style-box c-style-container' },
-      _react2.default.createElement(_router.Route, { exact: true, path: '/', component: _app2.default }),
+      _react2.default.createElement(_router.Route, { exact: true, path: '/' }),
+      _react2.default.createElement(_router.Route, { path: '/react-redux-todo', component: _app2.default }),
       _react2.default.createElement(_router.Route, { path: '/icons', component: _icons2.default }),
       _react2.default.createElement(_router.Route, { path: '/buttons', component: _buttons2.default }),
       _react2.default.createElement(_router.Route, { path: '/headers', component: _headers2.default }),
@@ -26977,6 +26992,15 @@ var App = function App() {
             _router.Link,
             { to: '/' },
             'Home'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            _router.Link,
+            { to: '/react-redux-todo' },
+            'React-Redux todo app'
           )
         ),
         _react2.default.createElement(
