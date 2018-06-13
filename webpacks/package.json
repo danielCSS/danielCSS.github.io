@@ -27,12 +27,18 @@
   },
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "tdd": "jest --watch"
   },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "redux": "^4.0.0",
-    "react-redux": "^5.0.7"
+    "react-redux": "^5.0.7",
+    "jest": "23.1.0",
+    "enzyme": "2.8.2",
+    "sinon": "6.0.0",
+    "classnames": "2.2.6"
   }
 }
