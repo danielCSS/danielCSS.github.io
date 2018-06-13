@@ -18,11 +18,18 @@ import Grids from './components/js/grids.jsx';
 import Badges from './components/js/badges.jsx';
 import Callouts from './components/js/callouts.jsx';
 
+// React-Redux todo app https://redux.js.org/basics/example-todo-list
+
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers/todo';
+import TodoApp from './components/todo/app';
+
 const App = () => {
    return (
   <div className="c-style-content">
     <div className="o-box c-style-box c-style-container">
-      <Route exact path="/" component={Icons}/>
+      <Route exact path="/" component={TodoApp}/>
       <Route path="/icons" component={Icons}/>
       <Route path="/buttons" component={Buttons} />
       <Route path="/headers" component={Headers} />
@@ -54,6 +61,16 @@ const App = () => {
   </div>
 )};
 //
+// render(
+//   <App />, document.getElementById('app')
+// );
+
+// Needed for the todo app
+const store = createStore(rootReducer);
+
 render(
-  <App />, document.getElementById('app')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
 );
