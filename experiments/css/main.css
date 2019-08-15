@@ -2552,7 +2552,9 @@ p {
   width: 200px;
   height: 200px;
   background-image: url(../images/1.png); }
-
+.popup.popup {
+  display: block;
+}
   .iframe-popup .popup-modal__content {
     max-height: 100%; }
   
