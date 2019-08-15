@@ -2582,15 +2582,8 @@ p {
   
   .lci-3dSecure {
     width: calc(100% - 5rem);
-    height: 90%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    height: 90%; 
     padding: 2rem;
-    -webkit-overflow-scrolling: touch;
     background: white;
     color: #2b2b2b;
      }
@@ -2617,6 +2610,13 @@ p {
   
   .lci-3dSecure__content {
     height: calc(100% - 5rem);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
    }
