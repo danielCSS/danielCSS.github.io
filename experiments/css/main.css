@@ -2590,7 +2590,9 @@ p {
     flex-direction: column;
     background: white;
     color: #2b2b2b;
-    position: absolute;
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
     top: 0;
     bottom: 0;
     left: 0;
