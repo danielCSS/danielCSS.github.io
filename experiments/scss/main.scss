@@ -256,7 +256,7 @@ p {
 
 /* start CSS for iOS-3.html */
 .popup_type_quick-deposit {
-  @include respond-to(tablet) {
+  @include mq($from: tablet) {
     min-height: 60vh;
     min-width: 80vw;
   }
@@ -278,12 +278,12 @@ p {
   right: 0;
 
   .game-launched & {
-    @include respond-to(mobile) {
+    @include mq($from: mobile) {
       padding: 0;
     }
   }
   
-  @include respond-to(tablet) {
+  @include mq($from: tablet) {
     min-height: 60vh;
     min-width: 80vw;
   }
