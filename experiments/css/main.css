@@ -2593,8 +2593,6 @@ p {
     grid-template-rows: 3rem 1fr 2rem;
     grid-template-columns: auto;
     padding: 2rem;
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
     background: white;
     color: #2b2b2b;
      }
@@ -2617,6 +2615,10 @@ p {
     background: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke-linecap="round"%3E%3Cpolyline points="2,2 22,22" stroke="currentColor" /%3E%3Cpolyline points="22,2 2,22" stroke="currentColor" /%3E%3C/svg%3E') no-repeat;
     width: 1.6rem;
     height: 1.6rem; }
+    .lci-3dSecure__content {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   
   .lci-3dSecure__content-iframe {
     width: 100%;
