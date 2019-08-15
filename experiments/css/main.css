@@ -2617,7 +2617,7 @@ p {
     height: 1.6rem; }
     .lci-3dSecure__content {
       -webkit-overflow-scrolling: touch;
-      overflow-y: scroll;
+      overflow: scroll;
     }
   
   .lci-3dSecure__content-iframe {
