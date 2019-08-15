@@ -2591,7 +2591,6 @@ p {
     margin: auto;
     padding: 2rem;
     -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
     background: white;
     color: #2b2b2b;
      }
@@ -2617,7 +2616,10 @@ p {
     height: 1.6rem; }
   
   .lci-3dSecure__content {
-    height: calc(100% - 5rem); }
+    height: calc(100% - 5rem);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+   }
   
   .lci-3dSecure__content-iframe {
     width: 100%;
