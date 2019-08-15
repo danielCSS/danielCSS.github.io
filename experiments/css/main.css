@@ -2582,8 +2582,19 @@ p {
   
   .lci-3dSecure {
     width: calc(100% - 5rem);
-    height: 90%; 
+    height: 90%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 3rem 1fr 2rem;
+    grid-template-columns: auto;
     padding: 2rem;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
     background: white;
     color: #2b2b2b;
      }
@@ -2596,7 +2607,6 @@ p {
         min-width: 80vw; } }
   
   .lci-3dSecure__header {
-    height: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
@@ -2609,14 +2619,6 @@ p {
     height: 1.6rem; }
   
   .lci-3dSecure__content {
-    height: calc(100% - 5rem);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
    }
@@ -2628,8 +2630,7 @@ p {
   
   .lci-3dSecure__footer {
     display: flex;
-    height: 2rem;
     align-items: flex-end;
     align-items: center;
-    margin-top: 1rem; }
+    padding-top: 1rem; }
   
