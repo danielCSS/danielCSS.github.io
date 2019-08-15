@@ -2552,3 +2552,79 @@ p {
   width: 200px;
   height: 200px;
   background-image: url(../images/1.png); }
+
+  .iframe-popup .popup-modal__content {
+    max-height: 100%; }
+  
+  .iframe-popup .popup-modal__content-container, .iframe-popup .quick-deposit__close-overlay__content {
+    padding: 0;
+    height: 100%; }
+  
+  .iframe-popup.popup-full-screen, .iframe-popup.notification-popup, .iframe-popup.lci-bonus-info {
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+  
+  .iframe-popup__iframe {
+    border: 0;
+    width: 100%;
+    height: 100%; }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1279px) {
+    .popup_type_quick-deposit {
+      min-height: 60vh;
+      min-width: 80vw; } }
+  
+  .lci-3dSecure {
+    width: calc(100% - 5rem);
+    height: 90%;
+    margin: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    color: #2b2b2b;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    @media only screen and (max-width: 767px) {
+      .game-launched .lci-3dSecure {
+        padding: 0; } }
+    @media only screen and (min-width: 768px) and (max-width: 1279px) {
+      .lci-3dSecure {
+        min-height: 60vh;
+        min-width: 80vw; } }
+  
+  .lci-3dSecure__header {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; }
+  
+  .lci-3dSecure__header-close:after {
+    content: '';
+    display: inline-block;
+    background: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke-linecap="round"%3E%3Cpolyline points="2,2 22,22" stroke="currentColor" /%3E%3Cpolyline points="22,2 2,22" stroke="currentColor" /%3E%3C/svg%3E') no-repeat;
+    width: 1.6rem;
+    height: 1.6rem; }
+  
+  .lci-3dSecure__content {
+    flex: 1; }
+  
+  .lci-3dSecure__content-iframe {
+    width: 100%;
+    height: 100%;
+    border: none; }
+  
+  .lci-3dSecure__footer {
+    display: flex;
+    align-items: flex-end;
+    align-items: center;
+    margin-top: 1rem; }
+  
