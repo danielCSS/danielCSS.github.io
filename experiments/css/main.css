@@ -2590,10 +2590,8 @@ p {
     right: 0;
     margin: auto;
     padding: 2rem;
-    display: flex;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
-    flex-direction: column;
     background: white;
     color: #2b2b2b;
      }
@@ -2619,7 +2617,7 @@ p {
     height: 1.6rem; }
   
   .lci-3dSecure__content {
-    flex: 1; }
+    height: calc(100% - 5rem); }
   
   .lci-3dSecure__content-iframe {
     width: 100%;
@@ -2628,6 +2626,7 @@ p {
   
   .lci-3dSecure__footer {
     display: flex;
+    height: 2rem;
     align-items: flex-end;
     align-items: center;
     margin-top: 1rem; }
