@@ -255,6 +255,9 @@ p {
 // }
 
 /* start CSS for iOS-3.html */
+.popup.popup { 
+  display: block;
+}
 .popup_type_quick-deposit {
   @include mq($from: tablet) {
     min-height: 60vh;

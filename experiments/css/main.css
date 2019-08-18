@@ -2554,6 +2554,9 @@ p {
   background-image: url(../images/1.png); }
 
 /* start CSS for iOS-3.html */
+.popup.popup {
+  display: block; }
+
 @media (min-width: 47.9375em) {
   .popup_type_quick-deposit {
     min-height: 60vh;
