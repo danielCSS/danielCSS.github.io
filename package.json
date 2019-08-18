@@ -24,7 +24,7 @@
     "gulp-svgmin": "^1.2.2",
     "gulp-tinypng": "^1.0.2",
     "run-sequence": "^1.1.5",
-    "sass-mq": "^3.2.9"
+    "sass-mq": "^5.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

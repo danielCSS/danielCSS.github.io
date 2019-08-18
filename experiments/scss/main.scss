@@ -278,7 +278,7 @@ p {
   right: 0;
 
   .game-launched & {
-    @include mq($from: mobile) {
+    @include mq($until: tablet) {
       padding: 0;
     }
   }
@@ -294,6 +294,9 @@ p {
   justify-content: space-between;
   align-items: baseline;
 }
+$svg-data: 'data:image/svg+xml,';
+$close: '%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke-linecap="round"%3E%3Cpolyline points="2,2 22,22" stroke="currentColor" /%3E%3Cpolyline points="22,2 2,22" stroke="currentColor" /%3E%3C/svg%3E';
+
 .lci-3dSecure__header-close:after {
   content: '';
   display: inline-block;
