@@ -25,14 +25,11 @@ const worker = new Worker('js/worker.js');
 
 // third iteration: Using the Channel Messaging API
 
-const messageChannel = new MessageChannel();
-
 const data = { name: 'Flavio' };
 const channel = new MessageChannel();
 worker.postMessage(data, [channel.port2]);
-// worker.postMessage('hello world', [messageChannel.port2])
 
-messageChannel.port1.addEventListener('message', event => {
+channel.port1.addEventListener('message', event => {
   console.log(event.data)
   outputDiv.innerHTML += `<p>${event.data}</p>`;
 })
