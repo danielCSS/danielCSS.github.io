@@ -32,4 +32,4 @@ messageChannel.port1.addEventListener('message', event => {
   outputDiv.innerHTML += `<p>${event.data}</p>`;
 })
 
-worker.postMessage(data, [messageChannel.port2])
+worker.postMessage('hello world', [messageChannel.port2])
