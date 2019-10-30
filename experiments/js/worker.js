@@ -35,7 +35,7 @@
 addEventListener('message', event => {
     console.log(event.data);
     postMessage('hey');
-    event.ports[0].postMessage(data);
+    event.ports[0].postMessage(`ok I'm ready`);
 }, false)
 
 addEventListener('message', event => {
