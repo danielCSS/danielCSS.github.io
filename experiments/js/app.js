@@ -1,6 +1,6 @@
 // console.log('hi there!');
 // console.log('web workers');
-const outputDiv = document.querySelector('.outputDiv');
+const outputDiv = document.querySelector('.output');
 
 outputDiv.innerHTML = '';
 
