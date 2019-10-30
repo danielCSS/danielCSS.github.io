@@ -1,7 +1,6 @@
 // console.log('hi there!');
 // console.log('web workers');
 const outputDiv = document.querySelector('.output');
-console.log(outputDiv);
 
 outputDiv.innerHTML = '';
 
@@ -18,7 +17,19 @@ worker.postMessage('hello');
 // second iteration: Multiple event listeners
 // If you want to setup multiple listeners for the message event, instead of using onmessage create an event listener (applies to the error event as well):
 
-worker.addEventListener('message', event => {
-    // console.log(event.data);
-    outputDiv.innerHTML += `<p>${event.data}</p>`;
-}, false)
+// worker.addEventListener('message', event => {
+//     // console.log(event.data);
+//     outputDiv.innerHTML += `<p>${event.data}</p>`;
+// }, false)
+
+
+// third iteration: Using the Channel Messaging API
+
+const messageChannel = new MessageChannel();
+
+messageChannel.port1.addEventListener('message', event => {
+  console.log(event.data)
+  outputDiv.innerHTML += `<p>${event.data}</p>`;
+})
+
+worker.postMessage(data, [messageChannel.port2])
