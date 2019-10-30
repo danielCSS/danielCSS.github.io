@@ -29,7 +29,7 @@ const messageChannel = new MessageChannel();
 
 const data = { name: 'Flavio' };
 const channel = new MessageChannel();
-window.postMessage(data, [channel.port2]);
+worker.postMessage(data, [channel.port2]);
 // worker.postMessage('hello world', [messageChannel.port2])
 
 messageChannel.port1.addEventListener('message', event => {
