@@ -33,9 +33,12 @@
 // third iteration: Using the Channel Messaging API
 
 addEventListener('message', event => {
+    console.log('A new message arrived!');
     console.log(event.data);
-    postMessage('hey');
-    event.ports[0].postMessage(`ok I'm ready`);
+    // postMessage('hey');
+    const data = { someData: 'hey' };
+
+    event.ports[0].postMessage(data);
 }, false)
 
 addEventListener('message', event => {
