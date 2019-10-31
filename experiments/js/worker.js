@@ -25,13 +25,15 @@ async function getJSON(url) {
     // })
     const response = await fetch(url);
     const myJson = await response.json();
-    return myJson;
+
+    return JSON.stringify(myJson);
 }
 
 addEventListener('message', event => {
     console.log(event.data);
     // postMessage('hey');
     const json = getJSON(event.data);
+    
     postMessage(`hey, here's some json I just fetched: ${json}`);
 }, false)
 
