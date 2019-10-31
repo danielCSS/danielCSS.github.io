@@ -14,10 +14,21 @@
 
 // second iteration: Multiple event listeners
 
+function getJSON(url) {
+    fetch(url)
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error("HTTP error, status = " + response.status);
+      }
+      return response.json();
+    })
+}
+
 addEventListener('message', event => {
     console.log(event.data);
     // postMessage('hey');
-    postMessage(event.data);
+    const json = getJSON(event.data);
+    postMessage(`hey, here's some json I just fetched: ${json}`);
 }, false)
 
 addEventListener('message', event => {
@@ -28,6 +39,7 @@ addEventListener('message', event => {
 addEventListener('error', event => {
     console.log(event.message);
 }, false)
+
 
 
 // third iteration: Using the Channel Messaging API
