@@ -43,7 +43,7 @@ function getJSON(url) {
       return response;
     })
     .then(response => response.json())
-    .then(data => buildData(data))
+    .then(data => buildJson(data))
 }
 
 addEventListener('message', event => {
