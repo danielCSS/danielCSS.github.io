@@ -15,13 +15,17 @@
 // second iteration: Multiple event listeners
 
 function getJSON(url) {
-    fetch(url)
-    .then(function(response) {
-      if (!response.ok) {
-        throw new Error("HTTP error, status = " + response.status);
-      }
-      return response.json();
-    })
+    // fetch(url)
+    // .then(function(response) {
+    //   if (!response.ok) {
+    //     throw new Error("HTTP error, status = " + response.status);
+    //   }
+    //   console.log(response.json());
+    //   return response.json();
+    // })
+    const response = await fetch(url);
+    const myJson = await response.json();
+    return myJson;
 }
 
 addEventListener('message', event => {
