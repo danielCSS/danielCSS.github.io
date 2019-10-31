@@ -14,7 +14,7 @@
 
 // second iteration: Multiple event listeners
 
-function getJSON(url) {
+async function getJSON(url) {
     // fetch(url)
     // .then(function(response) {
     //   if (!response.ok) {
