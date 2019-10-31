@@ -1,0 +1,18 @@
+.list {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1em;
+    background: aliceblue;
+    max-width: 50vw;
+}
+.item {
+    display: contents; 
+}
+strong {
+    background-color: purple;
+    color: white;
+    padding: 0.5em;
+}
+.description {
+    padding: 0.5em;
+}

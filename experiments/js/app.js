@@ -17,10 +17,11 @@ const worker = new Worker('js/worker.js');
 // If you want to setup multiple listeners for the message event, instead of using onmessage create an event listener (applies to the error event as well):
 
 const jsonUrl = `https://raw.githubusercontent.com/mdn/fetch-examples/master/fetch-json/products.json`;
+
 worker.postMessage(jsonUrl);
 worker.addEventListener('message', event => {
     // console.log(event.data);
-    outputDiv.innerHTML += `<p>${event.data}</p>`;
+    outputDiv.innerHTML += `${event.data}`;
 }, false)
 
 
