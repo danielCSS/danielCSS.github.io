@@ -13,7 +13,6 @@
 
 
 // second iteration: Multiple event listeners
-// <ul class="list"></ul>
 
 function buildJson(json) {
     let list = '<ul class="list">';

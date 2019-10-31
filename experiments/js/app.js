@@ -1,5 +1,4 @@
-// console.log('hi there!');
-// console.log('web workers');
+
 const outputDiv = document.querySelector('.output');
 
 outputDiv.innerHTML = '';
@@ -20,7 +19,6 @@ const jsonUrl = `https://raw.githubusercontent.com/mdn/fetch-examples/master/fet
 
 worker.postMessage(jsonUrl);
 worker.addEventListener('message', event => {
-    // console.log(event.data);
     outputDiv.innerHTML += `${event.data}`;
 }, false)
 
