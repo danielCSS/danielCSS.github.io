@@ -15,18 +15,23 @@
 // second iteration: Multiple event listeners
 
 async function getJSON(url) {
-    // fetch(url)
-    // .then(function(response) {
-    //   if (!response.ok) {
-    //     throw new Error("HTTP error, status = " + response.status);
-    //   }
-    //   console.log(response.json());
-    //   return response.json();
-    // })
-    const response = await fetch(url);
-    const myJson = await response.json();
+    fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("HTTP error, status = " + response.status);
+      }
+      return response;
+    })
+    .then(response => response.json())
+    .then(body => postMessage(`hey, here's some json I just fetched: ${JSON.stringify(body)}`))
 
-    postMessage(`hey, here's some json I just fetched: ${JSON.stringify(myJson)}`);
+ 
+    // Using async / await:
+
+    // const response = await fetch(url);
+    // const myJson = await response.json();
+
+    // postMessage(`hey, here's some json I just fetched: ${JSON.stringify(myJson)}`);
 }
 
 addEventListener('message', event => {
