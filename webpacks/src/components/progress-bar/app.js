@@ -5,7 +5,7 @@ import props, {data0, data1, data2, data3, data4, data5} from './progressBarProp
 const App = () => (
     <div>
     <section className="example-page__section"><ProgressBar {...props} />
-      <h3>3 results</h3>
+      <h3>1 result with pattern</h3>
       <p>Uses default path and a custom pattern for the stroke</p>
       <pre>
         <code>{`
