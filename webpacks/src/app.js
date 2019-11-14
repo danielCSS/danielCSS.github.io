@@ -23,6 +23,7 @@ import Callouts from './components/js/callouts.jsx';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers/todo';
+import ProgressBar from './components/progress-bar/app';
 import TodoApp from './components/todo/app';
 import TodoRoy from './containers/todo-roy/App';
 
@@ -31,6 +32,7 @@ const App = () => {
   <div className="c-style-content">
     <div className="o-box c-style-box c-style-container">
       <Route exact path="/" />
+      <Route path="/progress-bar" component={ProgressBar}/>
       <Route path="/react-redux-todo" component={TodoApp}/>
       <Route path="/react-roy-todo" component={TodoRoy}/>
       <Route path="/icons" component={Icons}/>
@@ -48,6 +50,7 @@ const App = () => {
     <nav className="c-style-nav">
       <ul>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/progress-bar">Progress Bar component</Link></li>
         <li><Link to="/react-redux-todo">React-Redux todo app</Link></li>
         <li><Link to="/react-roy-todo">Roy's todo app</Link></li>
         <li><Link to="/icons">Icons</Link></li>

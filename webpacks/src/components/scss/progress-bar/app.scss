@@ -1,0 +1,19 @@
+.lci-progress-bar-svg {
+    stroke: #ccc;
+    fill: none;
+  }
+  
+  [class *= '__layer'] {
+    stroke-dasharray: var(--path-length);
+    animation: progress 1.5s forwards;
+    position: relative;
+  }
+  
+  @keyframes progress {
+      from {
+          stroke-dashoffset: var(--path-length);
+      }
+      to {
+          stroke-dashoffset: var(--value);
+      }
+  }
