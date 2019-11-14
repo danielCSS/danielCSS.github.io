@@ -5,3 +5,4 @@ yarn.lock
 frontend
 grid-system/.DS_Store
 presentation-1/.DS_Store
+*.log
