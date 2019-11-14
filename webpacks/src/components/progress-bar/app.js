@@ -33,15 +33,18 @@ const App = () => (
             results: [
               {
                 value: 20,
-                cssClass: 'lci-progress-bar__result1'
+                cssClass: 'lci-progress-bar__result1',
+                color: 'salmon'
               },
               {
                 value: 100,
-                cssClass: 'lci-progress-bar__result2'
+                cssClass: 'lci-progress-bar__result2',
+                color: 'rebeccapurple'
               },
               {
                 value: 250,
-                cssClass: 'lci-progress-bar__result3'
+                cssClass: 'lci-progress-bar__result3',
+                color: 'gold'
               }
             ]
           };`}

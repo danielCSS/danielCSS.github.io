@@ -1,11 +1,25 @@
+
+.example-page__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    h3 {
+        grid-column: 1/-1;
+    }
+}
+
 .lci-progress-bar-svg {
     stroke: #ccc;
     fill: none;
-  }
+    width: 100%;
+    height: 100%;
+    grid-row: 2/-1;
+}
+  
   
   [class *= '__layer'] {
     stroke-dasharray: var(--path-length);
-    animation: progress 1.5s forwards;
+    animation: progress 5s forwards;
     position: relative;
   }
   
