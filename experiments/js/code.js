@@ -70,3 +70,61 @@ const myReduce = (arr, fn, seed) => {
 // NaN
 // myReduce([1,2,3], (x,y)=>x+y,0)
 // 6
+
+function divide(a,b,cb){
+	var devideMe = a/b;
+	return cb(devideMe)
+}
+
+function promisly(func){
+ return function(a,b) {
+   return new Promise((resolve)=> {
+     return func(a,b,resolve);
+   });
+   // console.log(arguments)
+   // var arg=arguments;
+   // return new Promise((resolve)=> {
+   //   return func(...arg,resolve);
+   // });
+ }
+}
+promisly(divide)(10,5).then((res)=>{
+	console.log(res)
+})
+// promisly(devide)(1,9,8).then((res)=>{
+// 	console.log(res)
+// })
+
+///////////////
+
+function stringMe(a){
+  console.log(this.name + a)
+}
+
+function callMe(context){
+  stringMe.bind(context, arguments[1])();
+  // stringMe(arguments[1])(); <--- this will be Codepen without bind
+}
+
+callMe({name:'daniel'},10);
+
+// write a function bind, which binds a function to a context
+// what is the difference between a class and a function
+// use functions instead of classes
+
+const obj = {
+  name: 'Dan',
+  printName: function() { return this.name;}
+}
+const obj2 = {
+  name: 'Stan'
+}
+console.log(obj.printName());
+console.log(obj.printName.bind(obj2)());
+
+const myBind = (func, context, ...prevArs) => {
+  return (...currentArgs) => {
+    return func.apply(context, [...prevArgs, ...currentArgs]);
+  };
+};
+console.log(myBind(obj2, obj.printName)());
