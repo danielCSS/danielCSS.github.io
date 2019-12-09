@@ -1,26 +1,92 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Todos from "./components/Todos";
+import Header from "./components/layout/Header";
+import AddTodo from "./components/AddTodo";
+import About from "./components/pages/About";
+// import uuid from "uuid";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+const generate = () => {
+  let count = 0;
+  const countUp = () => count++;
+
+  return countUp;
+};
+
+const generateID = generate();
+
+class App extends Component {
+  state = {
+    todos: [
+      {
+        id: generateID(),
+        title: "Take out the trash",
+        completed: false
+      },
+      {
+        id: generateID(),
+        title: "Dinner with wife",
+        completed: false
+      },
+      {
+        id: generateID(),
+        title: "Meeting with boss",
+        completed: false
+      }
+    ]
+  };
+
+  toggleComplete = id => {
+    this.setState({
+      todos: this.state.todos.map(todo => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed;
+        }
+        return todo;
+      })
+    });
+  };
+
+  deleteItem = id => {
+    this.setState({ todos: this.state.todos.filter(todo => todo.id !== id) });
+  };
+
+  addTodo = title => {
+    this.setState({
+      todos: [
+        ...this.state.todos,
+        { title, id: generateID(), completed: false }
+      ]
+    });
+  };
+
+  render() {
+    // console.log(this.state.todos);
+    return (
+      <Router>
+        <div className="App">
+          <Header />
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <React.Fragment>
+                <AddTodo addTodo={this.addTodo} />
+                <Todos
+                  deleteItem={this.deleteItem}
+                  toggleComplete={this.toggleComplete}
+                  todos={this.state.todos}
+                />
+              </React.Fragment>
+            )}
+          />
+          <Route path="/about" component={About} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
