@@ -5,7 +5,8 @@ function Header() {
   return (
     <header style={{ display: "flex" }}>
       <h1 style={{ padding: "1em", marginRight: "auto" }}>Todo App</h1>
-      <Link to="/">Home</Link> | <Link to="/about">About</Link>
+      <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
+      <Link to="/boxes">Boxes</Link>
     </header>
   );
 }

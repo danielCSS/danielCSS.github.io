@@ -1,4 +1,4 @@
-*, 
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -13,5 +13,26 @@ body {
 
 a {
   color: #333;
-  text-decoration: none;;
+  text-decoration: none;
+}
+
+:root {
+  --box-length: 4em;
+}
+.App {
+  font-family: sans-serif;
+}
+.box {
+  list-style: none;
+  padding-left: var(--box-length);
+}
+.box li {
+  width: var(--box-length);
+}
+.box li:before {
+  content: "";
+  display: inline-block;
+  width: var(--box-length);
+  height: var(--box-length);
+  background-color: tomato;
 }

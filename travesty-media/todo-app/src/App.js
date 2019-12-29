@@ -4,6 +4,8 @@ import Todos from "./components/Todos";
 import Header from "./components/layout/Header";
 import AddTodo from "./components/AddTodo";
 import About from "./components/pages/About";
+import Boxes from "./components/pages/Boxes";
+
 // import uuid from "uuid";
 
 import "./App.css";
@@ -83,6 +85,7 @@ class App extends Component {
             )}
           />
           <Route path="/about" component={About} />
+          <Route path="/boxes" component={Boxes} />
         </div>
       </Router>
     );
