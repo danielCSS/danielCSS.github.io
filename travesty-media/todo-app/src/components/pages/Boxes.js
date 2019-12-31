@@ -8,7 +8,7 @@ class Boxes extends Component {
   };
 
   onClick2 = e => {
-    console.log("inner click...click count:", this.state.clickCount);
+    console.log("inner click....click count:", this.state.clickCount);
     this.setState({ clickCount: this.state.clickCount + 1 });
   };
 
