@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class AddTodo extends Component {
   state = {
@@ -35,6 +36,10 @@ const formStyle = {
   display: "flex",
   width: "calc(100% - 40px)",
   margin: "0 auto 1em"
+};
+
+AddTodo.propTypes = {
+  addtodo: PropTypes.func.isRequired,
 };
 
 export default AddTodo;
