@@ -1,36 +1,82 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Boxes extends Component {
-  state = { clickCount: this.props.clickCount || 0 };
-  onClick = e => {
-    console.log("outer click...click count:", this.state.clickCount);
-    this.setState({ clickCount: this.state.clickCount + 1 });
+class Boxes extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     children: 0
+  //   };
+
+  //   this.addOne = this.addOne.bind(this);
+  // }
+
+  state = { children: 0 };
+
+  // addOne(e) {
+  //   e.stopPropagation();
+  //   this.setState({
+  //     children: this.state.children + 1
+  //   });
+  // }
+
+  addOne = e => {
+    e.stopPropagation();
+    this.setState({
+      children: this.state.children + 1
+    });
   };
 
-  onClick2 = e => {
-    console.log("inner click....click count:", this.state.clickCount);
-    this.setState({ clickCount: this.state.clickCount + 1 });
-  };
+  makeChildren() {
+    let boxComponent = [];
+    for (let i = 0; i < this.state.children; i++) {
+      boxComponent.push(<Boxes key={i}></Boxes>);
+    }
+    return boxComponent;
+  }
 
   render() {
     return (
-      <ol className="box">
-        <li onClick={this.props.onClick || this.onClick}>
-          {this.props.text || "root"}
-          {[...Array(this.state.clickCount)].map((e, i) => (
-            <Boxes
-              key={`${this.props.level}-${i}`}
-              text={`${this.props.level || 0}-${i}`}
-              level={this.props.level + 1 || 1}
-              onClick={this.onClick2}
-              clickCount={0}
-            />
-          ))}
-        </li>
-      </ol>
+      <ul className="box">
+        <li onClick={this.addOne}>{this.makeChildren()}</li>
+      </ul>
     );
   }
 }
+
+// export default Box;
+
+// class Boxes extends Component {
+//   state = { clickCount: this.props.clickCount || 0 };
+//   onClick = e => {
+//     console.log("outer click...click count:", this.state.clickCount);
+//     this.setState({ clickCount: this.state.clickCount + 1 });
+//   };
+
+//   onClick2 = e => {
+//     console.log("inner click....click count:", this.state.clickCount);
+//     this.setState({ clickCount: this.state.clickCount + 1 });
+//   };
+
+//   render() {
+//     return (
+//       <ol className="box">
+//         <li onClick={this.props.onClick || this.onClick}>
+//           {this.props.text || "root"}
+//           {[...Array(this.state.clickCount)].map((e, i) => (
+//             <Boxes
+//               key={`${this.props.level}-${i}`}
+//               text={`${this.props.level || 0}-${i}`}
+//               level={this.props.level + 1 || 1}
+//               onClick={this.onClick2}
+//               clickCount={0}
+//             />
+//           ))}
+//         </li>
+//       </ol>
+//     );
+//   }
+// }
+////////////////
 
 // class Boxes extends Component {
 //   state = { clickCount: this.props.clickCount || 0 };
