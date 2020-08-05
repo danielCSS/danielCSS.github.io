@@ -28,7 +28,7 @@
       newScore.innerHTML = event.data;
       let result =
         event.data > oldScore
-          ? "Congrats, your new high score is event.data"
+          ? `Congrats, your new high score is ${event.data}!`
           : "Better luck next time!";
       document.querySelector(".result").innerHTML = result;
     });
