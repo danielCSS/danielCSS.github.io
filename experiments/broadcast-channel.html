@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const channel = new BroadcastChannel("secret-channel");
+      document.quertSelector("iframe").onload = (event) => {
+        channel.postMessage("hey");
+      };
+    </script>
+  </head>
+  <body>
+    <iframe src="iframe3.html"> </iframe>
+  </body>
+</html>
