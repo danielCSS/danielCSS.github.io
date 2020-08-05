@@ -13,7 +13,7 @@
       let output = document.querySelector(".output");
       const data = Math.floor(Math.random() * 100);
       output.innerHTML = data;
-      window.postMessage(data, [channel.port2]);
+      window.parent.postMessage(data, [channel.port2]);
     </script>
   </body>
 </html>
