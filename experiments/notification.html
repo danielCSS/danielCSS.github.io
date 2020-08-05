@@ -40,15 +40,8 @@ vibrate: []
 __proto__: Notification
       */
 
-      Notification.requestPermission((permission) => {
-        process(permission);
-      }).then((permission) => {
-        process(permission);
-      });
       if (window.Notification && Notification.permission !== "denied") {
         Notification.requestPermission((status) => {
-          process(status);
-        }).then((status) => {
           process(status);
         });
       }
