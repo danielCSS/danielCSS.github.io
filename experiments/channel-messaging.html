@@ -9,8 +9,9 @@
     <h1>Channel messaging demo</h1>
     <p class="old">Current high Score: <span class="old-score"></span></p>
     <p class="new">
-      New Score:<span class="new-score"></span>(received from iframe)
+      New Score: <span class="new-score"></span>(received from iframe)
     </p>
+    <p class="result"></p>
 
     <iframe src="iframe2.html" width="250" height="250"></iframe>
   </body>
@@ -25,6 +26,10 @@
       console.log(event.data);
       const newScore = document.querySelector(".new-score");
       newScore.innerHTML = event.data;
+      let result =
+        event.data > oldScore
+          ? "Congrats, your new high score is event.data"
+          : "Better luck next time!";
     });
   </script>
 </html>
