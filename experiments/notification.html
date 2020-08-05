@@ -16,6 +16,29 @@
         }
         setTimeout(n.close(), 10000);
       };
+      // this is what the notification object looks like:
+      /*
+      Notification {onclick: null, onshow: null, onerror: null, onclose: null, title: "My Title", …}
+actions: []
+badge: ""
+body: "I am the body text!"
+data: null
+dir: "auto"
+icon: "https://stackoverflow.com/favicon.ico"
+lang: ""
+onclick: null
+onclose: null
+onerror: null
+onshow: null
+renotify: false
+requireInteraction: false
+silent: false
+tag: ""
+timestamp: 1596623372151
+title: "My Title"
+vibrate: []
+__proto__: Notification
+      */
 
       Notification.requestPermission((permission) => {
         process(permission);
@@ -51,6 +74,14 @@
       The Notifications API interacts heavily with Service Workers, as they are
       required for Push Notifications. You can use the Notifications API without
       Push, but its use cases are limited.
+    </p>
+    <p>This is what the above example looks like:</p>
+    <img alt="notification" src="./images/notification.png" />
+    <p>
+      <a
+        href="https://thejsbootcamp.com/SSX37e4tjSj7p081EDcG/97-notification-api/01/"
+        >see flavio bootcamp
+      </a>
     </p>
   </body>
 </html>
