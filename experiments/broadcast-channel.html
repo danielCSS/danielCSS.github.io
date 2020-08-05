@@ -6,7 +6,7 @@
     <title>Document</title>
     <script>
       const channel = new BroadcastChannel("secret-channel");
-      document.quertSelector("iframe").onload = (event) => {
+      document.querySelector("iframe").onload = (event) => {
         channel.postMessage("hey");
       };
     </script>
