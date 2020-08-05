@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Channel messaging demo</h1>
+    <p class="old">Current high Score: <span class="old-score"></span></p>
+    <p class="new">
+      New Score:<span class="new-score"></span>(received from iframe)
+    </p>
+
+    <iframe src="iframe2.html" width="250" height="250"></iframe>
+  </body>
+  <script>
+    const old = document.querySelector(".old-score");
+
+    let oldScore = Math.floor(Math.random() * 100);
+    old.innerHTML = oldScore;
+
+    self.addEventListener("message", (event) => {
+      console.log("A new message arrived!");
+      console.log(event.data);
+      const newScore = document.querySelector(".new-score");
+      newScore.innerHTML = event.data;
+    });
+  </script>
+</html>
