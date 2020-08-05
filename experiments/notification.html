@@ -14,6 +14,7 @@
             icon: "https://stackoverflow.com/favicon.ico", // optional
           });
         }
+        setTimeout(n.close(), 10000);
       };
 
       Notification.requestPermission((permission) => {
@@ -28,7 +29,6 @@
           process(status);
         });
       }
-      setTimeout(n.close(), 10000);
     </script>
   </head>
   <body>
