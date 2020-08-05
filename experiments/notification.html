@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const process = (permission) => {
+        if (permission === "granted") {
+          // ok we can show the permission
+          // status is "granted", if accepted by user
+          var n = new Notification("My Title", {
+            body: "I am the body text!",
+            icon: "https://stackoverflow.com/favicon.ico", // optional
+          });
+        }
+      };
+
+      Notification.requestPermission((permission) => {
+        process(permission);
+      }).then((permission) => {
+        process(permission);
+      });
+      if (window.Notification && Notification.permission !== "denied") {
+        Notification.requestPermission((status) => {
+          process(status);
+        }).then((status) => {
+          process(status);
+        });
+      }
+      setTimeout(n.close(), 10000);
+    </script>
+  </head>
+  <body>
+    <h1>Introduction to the Notification API</h1>
+    <p>
+      The Notifications API is the interface that browsers expose to the
+      developer to allow showing messages to the user, with their permission,
+      even if the web site / web app is not open in the browser.
+    </p>
+    <p>
+      Those messages are consistent and native, which means that the receiving
+      person is used to the UI and UX of them, being system-wide and not
+      specific to your site.
+    </p>
+    <p>
+      In combination with the Push API this technology can be a successful way
+      to increase user engagement and to enhance the capabilities of your app.
+    </p>
+    <p>
+      The Notifications API interacts heavily with Service Workers, as they are
+      required for Push Notifications. You can use the Notifications API without
+      Push, but its use cases are limited.
+    </p>
+  </body>
+</html>
