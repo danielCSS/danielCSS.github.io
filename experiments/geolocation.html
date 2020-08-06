@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      navigator.geolocation.getCurrentPosition((position) => {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          console.log(position);
+        },
+        (error) => {
+          console.error(error);
+        },
+        {
+          timeout: 1000,
+          maximumAge: 10000,
+          enableHighAccuracy: true,
+        }
+      );
+
+      const id = navigator.geolocation.watchPosition((position) => {
         console.log(position);
       });
+
+      //stop watching after 10 seconds
+      setTimeout(() => {
+        navigator.geolocation.clearWatch(id);
+      }, 10 * 1000);
     </script>
   </head>
   <body>
