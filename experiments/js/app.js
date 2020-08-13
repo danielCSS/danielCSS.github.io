@@ -1,9 +1,8 @@
+const outputDiv = document.querySelector(".output");
 
-const outputDiv = document.querySelector('.output');
+outputDiv.innerHTML = "";
 
-outputDiv.innerHTML = '';
-
-const worker = new Worker('js/worker.js');
+const worker = new Worker("js/worker.js");
 
 // first iteration: Communication with a Web Worker
 
@@ -18,10 +17,13 @@ const worker = new Worker('js/worker.js');
 const jsonUrl = `https://raw.githubusercontent.com/mdn/fetch-examples/master/fetch-json/products.json`;
 
 worker.postMessage(jsonUrl);
-worker.addEventListener('message', event => {
+worker.addEventListener(
+  "message",
+  (event) => {
     outputDiv.innerHTML += `${event.data}`;
-}, false)
-
+  },
+  false
+);
 
 // third iteration: Using the Channel Messaging API
 
@@ -35,13 +37,17 @@ worker.addEventListener('message', event => {
 // }) (not working)
 
 const channel = new MessageChannel();
-const display = document.querySelector('span');
-const iframe = document.querySelector('iframe');
+const display = document.querySelector("span");
+const iframe = document.querySelector("iframe");
 
-iframe.addEventListener('load', () => {
-    iframe.contentWindow.postMessage('Hey', '*', [channel.port2]);
-}, false)
+iframe.addEventListener(
+  "load",
+  () => {
+    iframe.contentWindow.postMessage("Hey", "*", [channel.port2]);
+  },
+  false
+);
 
-channel.port1.onmessage = event => {
-    display.innerHTML = event.data;
-}
+channel.port1.onmessage = (event) => {
+  display.innerHTML = event.data;
+};
