@@ -1,11 +1,11 @@
-const OFFLINE_GIF = "../images/notFound.webp";
+const OFFLINE_GIF = "images/notFound.webp";
 
 const CACHE_NAME = "experiments-v1";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      cache.addAll(["../images/favicon.ico", OFFLINE_GIF]);
+      cache.addAll(["images/favicon.ico", OFFLINE_GIF]);
     })
   );
 });
