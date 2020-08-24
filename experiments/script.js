@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
   }
   navigator.serviceWorker
     .register("sw.js", {
-      scope: "/",
+      scope: "/experiments",
     })
     .catch((err) => {
       console.log("SW registration failed", err);
