@@ -78,26 +78,33 @@
 /* pink */
 /* gray */
 body:before {
-  background-color: #FCF8E3;
-  border-bottom: 1px solid #FBEED5;
-  border-left: 1px solid #FBEED5;
-  color: #C09853;
+  background-color: #fcf8e3;
+  border-bottom: 1px solid #fbeed5;
+  border-left: 1px solid #fbeed5;
+  color: #c09853;
   font: small-caption;
   padding: 3px 6px;
   pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 100; }
-  @media (min-width: 47.9375em) {
-    body:before {
-      content: "tablet ≥ 767px (47.9375em)"; } }
-  @media (min-width: 75em) {
-    body:before {
-      content: "desktop ≥ 1200px (75em)"; } }
-  @media (min-width: 85.625em) {
-    body:before {
-      content: "wide ≥ 1370px (85.625em)"; } }
+  z-index: 100;
+}
+@media (min-width: 47.9375em) {
+  body:before {
+    content: "tablet ≥ 767px (47.9375em)";
+  }
+}
+@media (min-width: 75em) {
+  body:before {
+    content: "desktop ≥ 1200px (75em)";
+  }
+}
+@media (min-width: 85.625em) {
+  body:before {
+    content: "wide ≥ 1370px (85.625em)";
+  }
+}
 
 /* ==========================================================================
    #BOX-SIZING
@@ -107,10 +114,14 @@ body:before {
  * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
  */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-*, *:before, *:after {
-  box-sizing: inherit; }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -126,13 +137,15 @@ html {
   -ms-text-size-adjust: 100%;
   /* 3 */
   -webkit-text-size-adjust: 100%;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -154,7 +167,8 @@ nav,
 section,
 summary {
   /* 1 */
-  display: block; }
+  display: block;
+}
 
 /**
  * Add the correct display in IE 9-.
@@ -163,20 +177,23 @@ audio,
 canvas,
 progress,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Add the correct display in iOS 4-7.
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /**
  * Add the correct display in IE 10-.
@@ -184,7 +201,8 @@ progress {
  */
 template,
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 /* Links
    ========================================================================== */
@@ -196,7 +214,8 @@ a {
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the outline on focused links when they are also active or hovered
@@ -204,7 +223,8 @@ a {
  */
 a:active,
 a:hover {
-  outline-width: 0; }
+  outline-width: 0;
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -218,27 +238,31 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   text-decoration: underline dotted;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 b,
 strong {
-  font-weight: inherit; }
+  font-weight: inherit;
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * Add the correct font style in Android 4.3-.
  */
 dfn {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -246,20 +270,23 @@ dfn {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /**
  * Add the correct background and color in IE 9-.
  */
 mark {
   background-color: #ff0;
-  color: #000; }
+  color: #000;
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -270,13 +297,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -284,13 +314,15 @@ sup {
  * Remove the border on images inside links in IE 10-.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /**
  * Hide the overflow in IE.
  */
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -305,13 +337,15 @@ samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct margin in IE 8.
  */
 figure {
-  margin: 1em 40px; }
+  margin: 1em 40px;
+}
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -323,7 +357,8 @@ hr {
   height: 0;
   /* 1 */
   overflow: visible;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Forms
    ========================================================================== */
@@ -339,13 +374,15 @@ textarea {
   font: inherit;
   /* 1 */
   margin: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Restore the font weight unset by the previous rule.
  */
 optgroup {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /**
  * Show the overflow in IE.
@@ -354,7 +391,8 @@ optgroup {
 button,
 input {
   /* 1 */
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -363,7 +401,8 @@ input {
 button,
 select {
   /* 1 */
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
@@ -375,7 +414,8 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the inner border and padding in Firefox.
@@ -385,7 +425,8 @@ button::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Restore the focus styles unset by the previous rule.
@@ -394,7 +435,8 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Change the border, margin, and padding in all browsers (opinionated).
@@ -402,7 +444,8 @@ button:-moz-focusring,
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -422,13 +465,15 @@ legend {
   padding: 0;
   /* 3 */
   white-space: normal;
-  /* 1 */ }
+  /* 1 */
+}
 
 /**
  * Remove the default vertical scrollbar in IE.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10-.
@@ -439,14 +484,16 @@ textarea {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -456,21 +503,24 @@ textarea {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
  */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * Correct the text style of placeholders in Chrome, Edge, and Safari.
  */
 ::-webkit-input-placeholder {
   color: inherit;
-  opacity: 0.54; }
+  opacity: 0.54;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -480,7 +530,8 @@ textarea {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* ==========================================================================
    #RESET
@@ -489,28 +540,42 @@ textarea {
  * A very simple reset that sits on top of Normalize.css.
  */
 body,
-h1, h2, h3, h4, h5, h6,
-blockquote, p, pre,
-dl, dd, ol, ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+pre,
+dl,
+dd,
+ol,
+ul,
 figure,
 hr,
-fieldset, legend {
+fieldset,
+legend {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Remove trailing margins from nested lists.
  */
 li > ol,
 li > ul {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 /**
  * Remove default table spacing.
  */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /* ==========================================================================
    #SHARED
@@ -524,20 +589,32 @@ table {
  */
 /* stylelint-disable selector-list-comma-newline-after */
 address,
-h1, h2, h3, h4, h5, h6,
-blockquote, p, pre
-dl, ol, ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+pre dl,
+ol,
+ul,
 figure,
 hr,
 table,
 fieldset {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+}
 
 /**
  * Consistent indentation for lists.
  */
-dd, ol, ul {
-  margin-left: 1.5rem; }
+dd,
+ol,
+ul {
+  margin-left: 1.5rem;
+}
 
 /* stylelint-enable selector-list-comma-newline-after */
 /* ==========================================================================
@@ -563,19 +640,26 @@ html {
   /* [2] */
   min-height: 100%;
   /* [3] */
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+}
 
 @media (max-width: 47.9275em) {
   html {
-    font-size: 0.75em; } }
+    font-size: 0.75em;
+  }
+}
 
 @media (min-width: 47.9375em) {
   html {
-    font-size: calc(0.00663 * 100vw + 6.91211px); } }
+    font-size: calc(0.00663 * 100vw + 6.91211px);
+  }
+}
 
 @media (min-width: 85.625em) {
   html {
-    font-size: 1em; } }
+    font-size: 1em;
+  }
+}
 
 /* ==========================================================================
    #HEADINGS
@@ -587,27 +671,33 @@ html {
  */
 h1 {
   font-size: 2.25rem;
-  line-height: 1.33333; }
+  line-height: 1.33333;
+}
 
 h2 {
   font-size: 1.75rem;
-  line-height: 1.71429; }
+  line-height: 1.71429;
+}
 
 h3 {
   font-size: 1.5rem;
-  line-height: 1; }
+  line-height: 1;
+}
 
 h4 {
   font-size: 1.25rem;
-  line-height: 1.2; }
+  line-height: 1.2;
+}
 
 h5 {
   font-size: 1.125rem;
-  line-height: 1.33333; }
+  line-height: 1.33333;
+}
 
 h6 {
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 /* ==========================================================================
    #IMAGES
@@ -625,7 +715,8 @@ img {
   font-style: italic;
   /* [2] */
   vertical-align: middle;
-  /* [3] */ }
+  /* [3] */
+}
 
 /**
  * 1. If a `width` and/or `height` attribute have been explicitly defined, let’s
@@ -634,7 +725,8 @@ img {
 img[width],
 img[height] {
   /* [1] */
-  max-width: none; }
+  max-width: none;
+}
 
 /* ==========================================================================
    #TABLES
@@ -644,7 +736,8 @@ img[height] {
  */
 table {
   width: 100%;
-  /* [1] */ }
+  /* [1] */
+}
 
 /* ==========================================================================
    #WRAPPERS
@@ -662,29 +755,35 @@ table {
   margin-left: auto;
   max-width: 1600px;
   position: relative;
-  /* mine */ }
-  .o-wrapper:after {
-    content: "" !important;
-    display: block !important;
-    clear: both !important; }
+  /* mine */
+}
+.o-wrapper:after {
+  content: "" !important;
+  display: block !important;
+  clear: both !important;
+}
 
 /* Size variants.
    ========================================================================== */
 .o-wrapper--tiny {
   padding-right: 6px;
-  padding-left: 6px; }
+  padding-left: 6px;
+}
 
 .o-wrapper--small {
   padding-right: 12px;
-  padding-left: 12px; }
+  padding-left: 12px;
+}
 
 .o-wrapper--large {
   padding-right: 48px;
-  padding-left: 48px; }
+  padding-left: 48px;
+}
 
 .o-wrapper--huge {
   padding-right: 96px;
-  padding-left: 96px; }
+  padding-left: 96px;
+}
 
 /* ==========================================================================
    #GRID - Flexbox based grid system
@@ -693,85 +792,112 @@ table {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   list-style: none;
   margin-left: -24px;
-  padding: 0; }
-  .o-grid > .o-grid__item {
-    padding-left: 24px;
-    -ms-flex: 1;
-        flex: 1;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 100%; }
-    .o-grid > .o-grid__item--top {
-      -ms-flex-item-align: start;
-          align-self: flex-start; }
-    .o-grid > .o-grid__item--bottom {
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
-    .o-grid > .o-grid__item--center {
-      -ms-flex-item-align: center;
-          -ms-grid-row-align: center;
-          align-self: center; }
-    .o-grid > .o-grid__item--flex-none {
-      -ms-flex: none;
-          flex: none; }
-  .o-grid--bottom {
-    -ms-flex-align: end;
-        align-items: flex-end; }
-  .o-grid--center {
-    -ms-flex-align: center;
-        align-items: center; }
-  .o-grid--justify-left {
-    -ms-flex-pack: start;
-        justify-content: start; }
-  .o-grid--justify-center {
-    -ms-flex-pack: center;
-        justify-content: center; }
-  .o-grid--center {
-    -ms-flex-align: center;
-        align-items: center; }
-  .o-grid--vertical {
-    -ms-flex-direction: column;
-        flex-direction: column; }
-  .o-grid--justified {
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap; }
-    .o-grid--justified > .o-grid__item {
-      -ms-flex: none;
-          flex: none; }
-  .o-grid--no-gutters {
-    margin: 0; }
-    .o-grid--no-gutters > .o-grid__item {
-      padding: 0; }
-  .o-grid--tiny {
-    margin-left: -6px; }
-    .o-grid--tiny > .o-grid__item {
-      padding-left: 6px; }
-  .o-grid--small {
-    margin-left: -12px; }
-    .o-grid--small > .o-grid__item {
-      padding-left: 12px; }
-  .o-grid--large {
-    margin-left: -48px; }
-    .o-grid--large > .o-grid__item {
-      padding-left: 48px; }
-  .o-grid--huge {
-    margin-left: -96px; }
-    .o-grid--huge > .o-grid__item {
-      padding-left: 96px; }
-  .o-grid--flexCells > .o-grid__item {
-    display: -ms-flexbox;
-    display: flex; }
-  .o-grid--no-flex {
-    overflow: auto;
-    /* or hidden when there are arrows?? */ }
-    .o-grid--no-flex > .o-grid__item {
-      -ms-flex: none;
-          flex: none; }
+  padding: 0;
+}
+.o-grid > .o-grid__item {
+  padding-left: 24px;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+.o-grid > .o-grid__item--top {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+.o-grid > .o-grid__item--bottom {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+.o-grid > .o-grid__item--center {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+.o-grid > .o-grid__item--flex-none {
+  -ms-flex: none;
+  flex: none;
+}
+.o-grid--bottom {
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.o-grid--center {
+  -ms-flex-align: center;
+  align-items: center;
+}
+.o-grid--justify-left {
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.o-grid--justify-center {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.o-grid--center {
+  -ms-flex-align: center;
+  align-items: center;
+}
+.o-grid--vertical {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.o-grid--justified {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.o-grid--justified > .o-grid__item {
+  -ms-flex: none;
+  flex: none;
+}
+.o-grid--no-gutters {
+  margin: 0;
+}
+.o-grid--no-gutters > .o-grid__item {
+  padding: 0;
+}
+.o-grid--tiny {
+  margin-left: -6px;
+}
+.o-grid--tiny > .o-grid__item {
+  padding-left: 6px;
+}
+.o-grid--small {
+  margin-left: -12px;
+}
+.o-grid--small > .o-grid__item {
+  padding-left: 12px;
+}
+.o-grid--large {
+  margin-left: -48px;
+}
+.o-grid--large > .o-grid__item {
+  padding-left: 48px;
+}
+.o-grid--huge {
+  margin-left: -96px;
+}
+.o-grid--huge > .o-grid__item {
+  padding-left: 96px;
+}
+.o-grid--flexCells > .o-grid__item {
+  display: -ms-flexbox;
+  display: flex;
+}
+.o-grid--no-flex {
+  overflow: auto;
+  /* or hidden when there are arrows?? */
+}
+.o-grid--no-flex > .o-grid__item {
+  -ms-flex: none;
+  flex: none;
+}
 
 /*
   mobile = s
@@ -782,52 +908,67 @@ table {
 @media (max-width: 47.9275em) {
   .m-1\/2\@s > .o-grid__item {
     -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%; } }
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
 
 @media (min-width: 47.9375em) {
   .m-1\/2\@md > .o-grid__item {
     -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%; }
+    flex-basis: 50%;
+    max-width: 50%;
+  }
   .m-1\/3\@md > .o-grid__item {
     -ms-flex-preferred-size: 33.333%;
-        flex-basis: 33.333%;
-    max-width: 33.333%; } }
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+}
 
 @media (min-width: 47.9375em) and (orientation: landscape) {
   .m-1\/2\@md > .o-grid__item {
     -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%; }
+    flex-basis: 50%;
+    max-width: 50%;
+  }
   .m-1\/3\@md > .o-grid__item {
     -ms-flex-preferred-size: 33.333%;
-        flex-basis: 33.333%;
-    max-width: 33.333%; }
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
   .m-1\/4\@md > .o-grid__item {
     -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%; } }
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
 
 @media (min-width: 75em) {
   .m-1\/3\@lg > .o-grid__item {
     -ms-flex-preferred-size: 33.333%;
-        flex-basis: 33.333%;
-    max-width: 33.333%; }
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
   .m-1\/4\@lg > .o-grid__item {
     -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%; } }
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
 
 @media (min-width: 85.625em) {
   .m-1\/4\@xl > .o-grid__item {
     -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%; }
+    flex-basis: 25%;
+    max-width: 25%;
+  }
   .m-1\/5\@xl > .o-grid__item {
     -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    max-width: 20%; } }
+    flex-basis: 20%;
+    max-width: 20%;
+  }
+}
 
 /* ==========================================================================
    #MEDIA
@@ -837,24 +978,30 @@ table {
  * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
  */
 .o-media {
-  display: block; }
-  .o-media:after {
-    content: "" !important;
-    display: block !important;
-    clear: both !important; }
+  display: block;
+}
+.o-media:after {
+  content: "" !important;
+  display: block !important;
+  clear: both !important;
+}
 
 .o-media__img {
   float: left;
-  margin-right: 24px; }
-  .o-media__img > img {
-    display: block; }
+  margin-right: 24px;
+}
+.o-media__img > img {
+  display: block;
+}
 
 .o-media__body {
   overflow: hidden;
-  display: block; }
-  .o-media__body,
-  .o-media__body > :last-child {
-    margin-bottom: 0; }
+  display: block;
+}
+.o-media__body,
+.o-media__body > :last-child {
+  margin-bottom: 0;
+}
 
 /* Size variants
    ========================================================================== */
@@ -863,45 +1010,55 @@ table {
  * reversible options for all available sizes.
  */
 .o-media--tiny > .o-media__img {
-  margin-right: 6px; }
+  margin-right: 6px;
+}
 
 .o-media--tiny.o-media--reverse > .o-media__img {
   margin-right: 0;
-  margin-left: 6px; }
+  margin-left: 6px;
+}
 
 .o-media--small > .o-media__img {
-  margin-right: 12px; }
+  margin-right: 12px;
+}
 
 .o-media--small.o-media--reverse > .o-media__img {
   margin-right: 0;
-  margin-left: 12px; }
+  margin-left: 12px;
+}
 
 .o-media--large > .o-media__img {
-  margin-right: 48px; }
+  margin-right: 48px;
+}
 
 .o-media--large.o-media--reverse > .o-media__img {
   margin-right: 0;
-  margin-left: 48px; }
+  margin-left: 48px;
+}
 
 .o-media--huge > .o-media__img {
-  margin-right: 96px; }
+  margin-right: 96px;
+}
 
 .o-media--huge.o-media--reverse > .o-media__img {
   margin-right: 0;
-  margin-left: 96px; }
+  margin-left: 96px;
+}
 
 /* Reversed media objects
    ========================================================================== */
 .o-media--reverse > .o-media__img {
   float: right;
   margin-right: 0;
-  margin-left: 24px; }
+  margin-left: 24px;
+}
 
 /* Gutterless media objects
    ========================================================================== */
 .o-media--flush > .o-media__img {
   margin-right: 0;
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 /* ==========================================================================
    #FLAG
@@ -921,7 +1078,8 @@ table {
   display: table;
   /* [1] */
   width: 100%;
-  /* [2] */ }
+  /* [2] */
+}
 
 /**
    * Items within a flag object. There should only ever be one of each.
@@ -932,7 +1090,8 @@ table {
 .o-flag__body {
   display: table-cell;
   vertical-align: middle;
-  /* [1] */ }
+  /* [1] */
+}
 
 /**
    * Flag images have a space between them and the body of the object.
@@ -946,10 +1105,12 @@ table {
   padding-right: 24px;
   /**
      * 1. Fixes problem with images disappearing.
-     */ }
-  .o-flag__img > img {
-    max-width: none;
-    /* [1] */ }
+     */
+}
+.o-flag__img > img {
+  max-width: none;
+  /* [1] */
+}
 
 /**
    * The container for the main content of the flag object.
@@ -958,44 +1119,55 @@ table {
    */
 .o-flag__body {
   width: auto;
-  /* [1] */ }
-  .o-flag__body,
-  .o-flag__body > :last-child {
-    margin-bottom: 0; }
+  /* [1] */
+}
+.o-flag__body,
+.o-flag__body > :last-child {
+  margin-bottom: 0;
+}
 
 /* Size variants.
    ========================================================================== */
 .o-flag--tiny > .o-flag__img {
-  padding-right: 6px; }
+  padding-right: 6px;
+}
 
 .o-flag--tiny.o-flag--reverse > .o-flag__img {
   padding-right: 0;
-  padding-left: 6px; }
+  padding-left: 6px;
+}
 
 .o-flag--small > .o-flag__img {
-  padding-right: 12px; }
+  padding-right: 12px;
+}
 
 .o-flag--small.o-flag--reverse > .o-flag__img {
   padding-right: 0;
-  padding-left: 12px; }
+  padding-left: 12px;
+}
 
 .o-flag--large > .o-flag__img {
-  padding-right: 48px; }
+  padding-right: 48px;
+}
 
 .o-flag--large.o-flag--reverse > .o-flag__img {
   padding-right: 0;
-  padding-left: 48px; }
+  padding-left: 48px;
+}
 
 .o-flag--huge > .o-flag__img {
-  padding-right: 96px; }
+  padding-right: 96px;
+}
 
 .o-flag--huge.o-flag--reverse > .o-flag__img {
   padding-right: 0;
-  padding-left: 96px; }
+  padding-left: 96px;
+}
 
 .o-flag--flush > .o-flag__img {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+}
 
 /* Reversed flag.
    ========================================================================== */
@@ -1006,16 +1178,19 @@ table {
  */
 .o-flag--reverse {
   direction: rtl;
-  /* [1] */ }
-  .o-flag--reverse > .o-flag__img,
-  .o-flag--reverse > .o-flag__body {
-    direction: ltr;
-    /* [2] */ }
-  .o-flag--reverse > .o-flag__img {
-    padding-right: 0;
-    /* [3] */
-    padding-left: 24px;
-    /* [3] */ }
+  /* [1] */
+}
+.o-flag--reverse > .o-flag__img,
+.o-flag--reverse > .o-flag__body {
+  direction: ltr;
+  /* [2] */
+}
+.o-flag--reverse > .o-flag__img {
+  padding-right: 0;
+  /* [3] */
+  padding-left: 24px;
+  /* [3] */
+}
 
 /* Alignment variants.
    ========================================================================== */
@@ -1024,11 +1199,13 @@ table {
  */
 .o-flag--top > .o-flag__img,
 .o-flag--top > .o-flag__body {
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .o-flag--bottom > .o-flag__img,
 .o-flag--bottom > .o-flag__body {
-  vertical-align: bottom; }
+  vertical-align: bottom;
+}
 
 /* ==========================================================================
    #LIST-BARE
@@ -1039,7 +1216,8 @@ table {
  */
 .o-list-bare {
   list-style: none;
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 /* ==========================================================================
    #LIST-INLINE
@@ -1049,10 +1227,12 @@ table {
  */
 .o-list-inline {
   margin-left: 0;
-  list-style: none; }
+  list-style: none;
+}
 
 .o-list-inline__item {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /* Delimited list.
    ========================================================================== */
@@ -1061,11 +1241,14 @@ table {
  * change the delimiter by predefining the following variable:
  */
 .o-list-inline--delimited {
-  font-size: 0; }
-  .o-list-inline--delimited > .o-list-inline__item {
-    font-size: 1rem; }
-  .o-list-inline--delimited > .o-list-inline__item + .o-list-inline__item:before {
-    content: ", "; }
+  font-size: 0;
+}
+.o-list-inline--delimited > .o-list-inline__item {
+  font-size: 1rem;
+}
+.o-list-inline--delimited > .o-list-inline__item + .o-list-inline__item:before {
+  content: ", ";
+}
 
 /* ==========================================================================
    #BOX
@@ -1079,30 +1262,38 @@ table {
 .o-box {
   display: block;
   /* [1] */
-  padding: 24px; }
-  .o-box:after {
-    content: "" !important;
-    display: block !important;
-    clear: both !important; }
-  .o-box > :last-child {
-    margin-bottom: 0; }
+  padding: 24px;
+}
+.o-box:after {
+  content: "" !important;
+  display: block !important;
+  clear: both !important;
+}
+.o-box > :last-child {
+  margin-bottom: 0;
+}
 
 /* Size variants
    ========================================================================== */
 .o-box--flush {
-  padding: 0; }
+  padding: 0;
+}
 
 .o-box--tiny {
-  padding: 6px; }
+  padding: 6px;
+}
 
 .o-box--small {
-  padding: 12px; }
+  padding: 12px;
+}
 
 .o-box--large {
-  padding: 48px; }
+  padding: 48px;
+}
 
 .o-box--huge {
-  padding: 96px; }
+  padding: 96px;
+}
 
 /* ==========================================================================
    #BLOCK
@@ -1113,33 +1304,43 @@ table {
  */
 .o-block {
   display: block;
-  text-align: center; }
+  text-align: center;
+}
 
 .o-block__img {
   margin-bottom: 24px;
   /* Size variants.
-       ====================================================================== */ }
-  .o-block--flush > .o-block__img {
-    margin-bottom: 0; }
-  .o-block--tiny > .o-block__img {
-    margin-bottom: 6px; }
-  .o-block--small > .o-block__img {
-    margin-bottom: 12px; }
-  .o-block--large > .o-block__img {
-    margin-bottom: 48px; }
-  .o-block--huge > .o-block__img {
-    margin-bottom: 96px; }
+       ====================================================================== */
+}
+.o-block--flush > .o-block__img {
+  margin-bottom: 0;
+}
+.o-block--tiny > .o-block__img {
+  margin-bottom: 6px;
+}
+.o-block--small > .o-block__img {
+  margin-bottom: 12px;
+}
+.o-block--large > .o-block__img {
+  margin-bottom: 48px;
+}
+.o-block--huge > .o-block__img {
+  margin-bottom: 96px;
+}
 
 .o-block__body {
-  display: block; }
+  display: block;
+}
 
 /* Alignment variants.
    ========================================================================== */
 .o-block--right {
-  text-align: right; }
+  text-align: right;
+}
 
 .o-block--left {
-  text-align: left; }
+  text-align: left;
+}
 
 /* ==========================================================================
    #RATIO
@@ -1155,13 +1356,15 @@ table {
 .o-ratio {
   position: relative;
   display: block;
-  overflow: hidden; }
-  .o-ratio:before {
-    content: "";
-    display: block;
-    width: 100%;
-    padding-bottom: 100%;
-    /* [1] */ }
+  overflow: hidden;
+}
+.o-ratio:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  /* [1] */
+}
 
 .o-ratio__content,
 .o-ratio > iframe,
@@ -1172,7 +1375,8 @@ table {
   bottom: 0;
   left: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
 
 /* stylelint-disable */
 /* Ratio variants.
@@ -1184,16 +1388,20 @@ table {
  *
  */
 .o-ratio--2\:1:before {
-  padding-bottom: 50%; }
+  padding-bottom: 50%;
+}
 
 .o-ratio--4\:3:before {
-  padding-bottom: 75%; }
+  padding-bottom: 75%;
+}
 
 .o-ratio--7\:5:before {
-  padding-bottom: 71.42857%; }
+  padding-bottom: 71.42857%;
+}
 
 .o-ratio--16\:9:before {
-  padding-bottom: 56.25%; }
+  padding-bottom: 56.25%;
+}
 
 /* stylelint-enable */
 /* ==========================================================================
@@ -1211,7 +1419,8 @@ table {
   /* [1] */
   display: block;
   overflow: hidden;
-  /* [2] */ }
+  /* [2] */
+}
 
 /**
    * Apply this class to the content (usually `img`) that needs cropping.
@@ -1226,23 +1435,27 @@ table {
   left: 0;
   /* [1] */
   max-width: none;
-  /* [2] */ }
+  /* [2] */
+}
 
 /**
    * We can position the media in different locations within the cropping area.
    */
 .o-crop__content--right {
   right: 0;
-  left: auto; }
+  left: auto;
+}
 
 .o-crop__content--bottom {
   top: auto;
-  bottom: 0; }
+  bottom: 0;
+}
 
 .o-crop__content--center {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+}
 
 /* stylelint-disable */
 /* Crop-ratio variants.
@@ -1254,13 +1467,16 @@ table {
  *
  */
 .o-crop--2\:1 {
-  padding-bottom: 50%; }
+  padding-bottom: 50%;
+}
 
 .o-crop--4\:3 {
-  padding-bottom: 75%; }
+  padding-bottom: 75%;
+}
 
 .o-crop--16\:9 {
-  padding-bottom: 56.25%; }
+  padding-bottom: 56.25%;
+}
 
 /* stylelint-enable */
 /* ==========================================================================
@@ -1270,7 +1486,8 @@ table {
  * A simple object for manipulating the structure of HTML `table`s.
  */
 .o-table {
-  width: 100%; }
+  width: 100%;
+}
 
 /* Equal-width table cells.
    ========================================================================== */
@@ -1282,25 +1499,30 @@ table {
  * https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
  */
 .o-table--fixed {
-  table-layout: fixed; }
+  table-layout: fixed;
+}
 
 /* Size variants.
    ========================================================================== */
 .o-table--tiny th,
 .o-table--tiny td {
-  padding: 6px; }
+  padding: 6px;
+}
 
 .o-table--small th,
 .o-table--small td {
-  padding: 12px; }
+  padding: 12px;
+}
 
 .o-table--large th,
 .o-table--large td {
-  padding: 48px; }
+  padding: 48px;
+}
 
 .o-table--huge th,
 .o-table--huge td {
-  padding: 96px; }
+  padding: 96px;
+}
 
 /* ==========================================================================
    #PACK
@@ -1320,7 +1542,8 @@ table {
   /* [2] */
   display: table;
   table-layout: fixed;
-  /* [3] */ }
+  /* [3] */
+}
 
 /**
    * 1. Cause children to adopt table-like structure.
@@ -1329,39 +1552,50 @@ table {
   display: table-cell;
   /* [1] */
   /* Vertical alignment variants.
-       ====================================================================== */ }
-  .o-pack--middle > .o-pack__item {
-    vertical-align: middle; }
-  .o-pack--bottom > .o-pack__item {
-    vertical-align: bottom; }
+       ====================================================================== */
+}
+.o-pack--middle > .o-pack__item {
+  vertical-align: middle;
+}
+.o-pack--bottom > .o-pack__item {
+  vertical-align: bottom;
+}
 
 /* Unequal-width items.
    ========================================================================== */
 .o-pack--auto {
-  table-layout: auto; }
+  table-layout: auto;
+}
 
 /* Size variants.
    ========================================================================== */
 .o-pack--tiny {
-  border-spacing: 6px; }
+  border-spacing: 6px;
+}
 
 .o-pack--small {
-  border-spacing: 12px; }
+  border-spacing: 12px;
+}
 
 .o-pack--large {
-  border-spacing: 48px; }
+  border-spacing: 48px;
+}
 
 .o-pack--huge {
-  border-spacing: 96px; }
+  border-spacing: 96px;
+}
 
 /* Reversed order packs
    ========================================================================== */
 .o-pack--rev {
-  direction: rtl; }
-  .o-pack--rev > .o-pack__item {
-    direction: ltr; }
+  direction: rtl;
+}
+.o-pack--rev > .o-pack__item {
+  direction: ltr;
+}
 
-.o-icon, [class*="o-icon--"] {
+.o-icon,
+[class*="o-icon--"] {
   /* Allows sizing by changing the icon’s font-size */
   width: 1em;
   height: 1em;
@@ -1378,68 +1612,91 @@ table {
   box-sizing: content-box;
   overflow: hidden;
   pointer-events: none;
-  /* TODO: decide whether to use .ie .o-icon {} selector for this */ }
-  .is-active .o-icon, .is-active [class*="o-icon--"] {
-    fill: #112268; }
+  /* TODO: decide whether to use .ie .o-icon {} selector for this */
+}
+.is-active .o-icon,
+.is-active [class*="o-icon--"] {
+  fill: #112268;
+}
 
 .o-icon {
-  /* use utility positioning classes instead */ }
-  .o-icon--small {
-    font-size: 1.3em; }
-  .o-icon--medium {
-    font-size: 1.7em; }
-  .o-icon--large {
-    font-size: 2.4em; }
-  .o-icon--colored {
-    fill: #112268; }
-    .is-active .o-icon--colored {
-      fill: #fff; }
-    .c-tab .o-icon--colored {
-      transition: all 0.3s; }
-  .o-icon--inverted {
-    color: #112268; }
-  .o-icon--bordered {
-    stroke: #112268; }
-  .o-icon--primary {
-    fill: #ec028d; }
-  .o-icon--secondary {
-    fill: #fdd941; }
-    .is-active .o-icon--secondary {
-      fill: #112268; }
+  /* use utility positioning classes instead */
+}
+.o-icon--small {
+  font-size: 1.3em;
+}
+.o-icon--medium {
+  font-size: 1.7em;
+}
+.o-icon--large {
+  font-size: 2.4em;
+}
+.o-icon--colored {
+  fill: #112268;
+}
+.is-active .o-icon--colored {
+  fill: #fff;
+}
+.c-tab .o-icon--colored {
+  transition: all 0.3s;
+}
+.o-icon--inverted {
+  color: #112268;
+}
+.o-icon--bordered {
+  stroke: #112268;
+}
+.o-icon--primary {
+  fill: #ec028d;
+}
+.o-icon--secondary {
+  fill: #fdd941;
+}
+.is-active .o-icon--secondary {
+  fill: #112268;
+}
 
 .c-input {
   /* By default this component refers to a text input */
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column; }
-  .c-input--search {
-    padding: 0.5em 1em;
-    background: #999; }
-  .c-input__input {
-    border-radius: 0.375em;
-    background: #fff;
-    color: currentColor;
-    border: 0.15em solid #fff;
-    padding: 0.5em;
-    width: 100%;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    /* remove default OS appearance  */ }
-    .c-input__input:focus {
-      border: 0.15em solid #112268;
-      outline: none; }
-  .c-input__label {
-    padding-bottom: 0.5em; }
-  .c-input__msg {
-    padding-top: 0.5em;
-    -ms-flex-item-align: end;
-        align-self: flex-end; }
-    .has-error .c-input__msg {
-      color: #ec028d; }
-  .c-input.has-error .c-input__input {
-    border-color: #ec028d; }
+  flex-direction: column;
+}
+.c-input--search {
+  padding: 0.5em 1em;
+  background: #999;
+}
+.c-input__input {
+  border-radius: 0.375em;
+  background: #fff;
+  color: currentColor;
+  border: 0.15em solid #fff;
+  padding: 0.5em;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* remove default OS appearance  */
+}
+.c-input__input:focus {
+  border: 0.15em solid #112268;
+  outline: none;
+}
+.c-input__label {
+  padding-bottom: 0.5em;
+}
+.c-input__msg {
+  padding-top: 0.5em;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+.has-error .c-input__msg {
+  color: #ec028d;
+}
+.c-input.has-error .c-input__input {
+  border-color: #ec028d;
+}
 
 /* ==========================================================================
    #BUTTONS
@@ -1457,7 +1714,8 @@ table {
  * 5. Force all button-styled elements to appear clickable.
  */
 /* c-btn base styles */
-.c-btn, [class*="c-btn--"] {
+.c-btn,
+[class*="c-btn--"] {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -1473,127 +1731,165 @@ table {
   padding: 0.1em 0.5em;
   transition: 0.33333s;
   border-radius: 0.375em;
-  border: .15em solid transparent;
+  border: 0.15em solid transparent;
   /* mine */
   text-decoration: none;
   /* mine */
   font-size: 1em;
-  /* ems here! */ }
-  .c-btn[disabled], [class*="c-btn--"][disabled] {
-    opacity: 0.5; }
-  .c-btn.is-active, [class*="c-btn--"].is-active {
-    background: #fdd941;
-    color: #112268; }
-  @media (min-width: 47.9375em) {
-    .c-btn:active, .c-btn:focus, [class*="c-btn--"]:active, [class*="c-btn--"]:focus {
-      border: .15em solid #eee;
-      /* mine */
-      outline: none;
-      /* mine */ } }
+  /* ems here! */
+}
+.c-btn[disabled],
+[class*="c-btn--"][disabled] {
+  opacity: 0.5;
+}
+.c-btn.is-active,
+[class*="c-btn--"].is-active {
+  background: #fdd941;
+  color: #112268;
+}
+@media (min-width: 47.9375em) {
+  .c-btn:active,
+  .c-btn:focus,
+  [class*="c-btn--"]:active,
+  [class*="c-btn--"]:focus {
+    border: 0.15em solid #eee;
+    /* mine */
+    outline: none;
+    /* mine */
+  }
+}
 
 .c-btn {
   /* Style variants
      ========================================================================== */
   /* Size variants
-     ========================================================================== */ }
-  .c-btn--primary {
-    color: #fff;
-    background-color: #ec028d;
-    width: 100%;
-    font-size: 1.5em;
-    padding: 0.5em; }
-    @media (min-width: 47.9375em) {
-      .c-btn--primary:hover:not([disabled]), .c-btn--primary:focus {
-        background-color: #fd24a5; } }
-  .c-btn--secondary {
-    color: #112268;
-    background-color: #fdd941;
-    width: 100%;
-    font-size: 1.5em;
-    padding: 0.5em; }
-    @media (min-width: 47.9375em) {
-      .c-btn--secondary:hover:not([disabled]), .c-btn--secondary:focus {
-        background-color: #fee373; } }
-  .c-btn--text {
-    background: none;
-    border: none;
-    color: currentColor; }
-  .c-btn__link {
-    text-decoration: underline; }
-  .c-btn--inline {
-    width: auto;
-    font-size: 1em;
-    padding: .1em 2em; }
-  .c-btn--icon {
-    padding: .4em; }
-  .c-btn--split {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center;
-    width: auto;
-    font-size: 1em;
-    padding: 0 0 0 0.8em;
-    border-radius: 0.5em; }
-  .c-btn__counter {
-    color: #fdd941;
-    padding-left: 0.8em; }
-  .c-btn--small {
-    padding: 0.1875em 0.5625em;
-    font-size: 0.8em; }
-  .c-btn--large {
-    padding: 0.75em 2.25em;
-    font-size: 1.6em; }
+     ========================================================================== */
+}
+.c-btn--primary {
+  color: #fff;
+  background-color: #ec028d;
+  width: 100%;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+@media (min-width: 47.9375em) {
+  .c-btn--primary:hover:not([disabled]),
+  .c-btn--primary:focus {
+    background-color: #fd24a5;
+  }
+}
+.c-btn--secondary {
+  color: #112268;
+  background-color: #fdd941;
+  width: 100%;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+@media (min-width: 47.9375em) {
+  .c-btn--secondary:hover:not([disabled]),
+  .c-btn--secondary:focus {
+    background-color: #fee373;
+  }
+}
+.c-btn--text {
+  background: none;
+  border: none;
+  color: currentColor;
+}
+.c-btn__link {
+  text-decoration: underline;
+}
+.c-btn--inline {
+  width: auto;
+  font-size: 1em;
+  padding: 0.1em 2em;
+}
+.c-btn--icon {
+  padding: 0.4em;
+}
+.c-btn--split {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  font-size: 1em;
+  padding: 0 0 0 0.8em;
+  border-radius: 0.5em;
+}
+.c-btn__counter {
+  color: #fdd941;
+  padding-left: 0.8em;
+}
+.c-btn--small {
+  padding: 0.1875em 0.5625em;
+  font-size: 0.8em;
+}
+.c-btn--large {
+  padding: 0.75em 2.25em;
+  font-size: 1.6em;
+}
 
 /* Ghost buttons
    ========================================================================== */
 /**
  * Ghost buttons have see-through backgrounds and are bordered.
  */
-.c-checkable, [class*="c-checkable--"] {
+.c-checkable,
+[class*="c-checkable--"] {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .c-checkable__input {
-  display: none; }
+  display: none;
+}
 
 .c-checkable__input:checked + [class*="o-icon"] {
-  color: #112268; }
+  color: #112268;
+}
 
 .c-checkable__input ~ label {
   padding-left: 2.2em;
   /* needs refactoring? */
   /* the following is optional - I find the 'auto' selection here a bit annoying */
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 .c-checkable--terms {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   font-size: 1.3rem;
-  /* less than optimal - but it does the job */ }
-  .c-checkable--terms .terms__label {
-    height: 2em;
-    padding-left: 2.5em; }
+  /* less than optimal - but it does the job */
+}
+.c-checkable--terms .terms__label {
+  height: 2em;
+  padding-left: 2.5em;
+}
 
 .c-checkable--small {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .c-checkable--large {
-  font-size: 1.6em; }
+  font-size: 1.6em;
+}
 
 .c-checkable__label-wpr {
   -ms-flex: 1;
-      flex: 1;
-  font-size: 0.9rem; }
+  flex: 1;
+  font-size: 0.9rem;
+}
 
-.c-header, [class*="c-header--"] {
+.c-header,
+[class*="c-header--"] {
   font-size: 1.3rem;
   padding: 0 1em;
   height: 4rem;
@@ -1602,41 +1898,49 @@ table {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center; }
+  align-items: center;
+}
 
 .c-header--main {
   height: 5rem;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+}
 
 .c-header__text {
   font-size: 1em;
   /* override h2 element style */
   display: inline-block;
   margin: 0 auto 0 0.5em;
-  /* override default h2 element margin bottom (auto right margin is to space the flex-items) */ }
+  /* override default h2 element margin bottom (auto right margin is to space the flex-items) */
+}
 
 .c-header--colored {
   /* generally used in tabs */
   color: #fff;
-  background: #112268; }
+  background: #112268;
+}
 
 .c-header--inverted {
   /* generally used in popups */
   color: #112268;
-  background: #fff; }
+  background: #fff;
+}
 
 [class*="c-link"] {
   color: currentColor;
   text-decoration: underline;
   cursor: pointer;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .c-link--no-deco {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .c-link--icon {
   padding-left: 2em;
-  /* use when icon is position absolute and pointer is need on icon as well */ }
+  /* use when icon is position absolute and pointer is need on icon as well */
+}
 
 .c-tab {
   font-size: 1.3rem;
@@ -1647,19 +1951,22 @@ table {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   text-transform: uppercase;
-  margin-bottom: 0.2em; }
-  .c-tab.is-active {
-    background: #112268;
-    color: #fff;
-    /* not the best solution because we break i/o priinciple
+  margin-bottom: 0.2em;
+}
+.c-tab.is-active {
+  background: #112268;
+  color: #fff;
+  /* not the best solution because we break i/o priinciple
     (we change the meaning icon--colored based on context), but
-    maybe the most pragmatic */ }
-    .c-tab.is-active .o-icon--colored {
-      color: #112268;
-      fill: #fdd941;
-      transform: rotateX(180deg); }
+    maybe the most pragmatic */
+}
+.c-tab.is-active .o-icon--colored {
+  color: #112268;
+  fill: #fdd941;
+  transform: rotateX(180deg);
+}
 
 .c-card {
   background: url(../images/promo.jpeg) no-repeat;
@@ -1667,7 +1974,8 @@ table {
   font-size: 1rem;
   margin-bottom: 1rem;
   border: 1px solid #112268;
-  /* not sure if this is according to design....but without it - the promo looks weird */ }
+  /* not sure if this is according to design....but without it - the promo looks weird */
+}
 
 .c-caption {
   font-size: 1rem;
@@ -1677,26 +1985,32 @@ table {
   text-transform: uppercase;
   width: 100%;
   position: absolute;
-  top: 0; }
-  @media (min-width: 47.9375em) {
-    .c-caption {
-      top: auto;
-      bottom: 0; } }
-  .c-caption--inline {
-    /* generally used in card component */
-    font-size: .9rem;
-    color: #112268;
-    background: #f1f2f7;
-    padding: 0.5em 1em 0.5em 0.5em;
-    text-transform: none;
-    border-radius: 0 1em 0 0;
-    font-weight: bold;
-    width: auto;
+  top: 0;
+}
+@media (min-width: 47.9375em) {
+  .c-caption {
+    top: auto;
     bottom: 0;
-    top: auto; }
-    @media (min-width: 47.9375em) {
-      .c-caption--inline {
-        transform: translateY(-100%); } }
+  }
+}
+.c-caption--inline {
+  /* generally used in card component */
+  font-size: 0.9rem;
+  color: #112268;
+  background: #f1f2f7;
+  padding: 0.5em 1em 0.5em 0.5em;
+  text-transform: none;
+  border-radius: 0 1em 0 0;
+  font-weight: bold;
+  width: auto;
+  bottom: 0;
+  top: auto;
+}
+@media (min-width: 47.9375em) {
+  .c-caption--inline {
+    transform: translateY(-100%);
+  }
+}
 
 .c-footer {
   position: relative;
@@ -1705,22 +2019,26 @@ table {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: stretch;
-      align-items: stretch; }
-  .c-footer__item {
-    padding: 0.5em;
-    color: #fff;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
-  .c-footer__item--spacer {
-    margin-right: auto; }
-  .c-footer__item--right {
-    background: #fdd941;
-    color: #112268;
-    margin-left: 1em;
-    position: relative; }
+  align-items: stretch;
+}
+.c-footer__item {
+  padding: 0.5em;
+  color: #fff;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.c-footer__item--spacer {
+  margin-right: auto;
+}
+.c-footer__item--right {
+  background: #fdd941;
+  color: #112268;
+  margin-left: 1em;
+  position: relative;
+}
 
 /* ==========================================================================
    #CLEARFIX
@@ -1731,7 +2049,8 @@ table {
 .u-clearfix:after {
   content: "" !important;
   display: block !important;
-  clear: both !important; }
+  clear: both !important;
+}
 
 /* ==========================================================================
    #WIDTHS
@@ -1774,63 +2093,78 @@ table {
  */
 .u-1\/1 {
   -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
+  flex-basis: 100% !important;
+}
 
 .u-1\/2 {
   -ms-flex-preferred-size: 50% !important;
-      flex-basis: 50% !important; }
+  flex-basis: 50% !important;
+}
 
 .u-2\/2 {
   -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
+  flex-basis: 100% !important;
+}
 
 .u-1\/3 {
   -ms-flex-preferred-size: 33.33333% !important;
-      flex-basis: 33.33333% !important; }
+  flex-basis: 33.33333% !important;
+}
 
 .u-2\/3 {
   -ms-flex-preferred-size: 66.66667% !important;
-      flex-basis: 66.66667% !important; }
+  flex-basis: 66.66667% !important;
+}
 
 .u-3\/3 {
   -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
+  flex-basis: 100% !important;
+}
 
 .u-1\/4 {
   -ms-flex-preferred-size: 25% !important;
-      flex-basis: 25% !important; }
+  flex-basis: 25% !important;
+}
 
 .u-2\/4 {
   -ms-flex-preferred-size: 50% !important;
-      flex-basis: 50% !important; }
+  flex-basis: 50% !important;
+}
 
 .u-3\/4 {
   -ms-flex-preferred-size: 75% !important;
-      flex-basis: 75% !important; }
+  flex-basis: 75% !important;
+}
 
 .u-4\/4 {
   -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
+  flex-basis: 100% !important;
+}
 
 .u-1\/5 {
   -ms-flex-preferred-size: 20% !important;
-      flex-basis: 20% !important; }
+  flex-basis: 20% !important;
+}
 
 .u-2\/5 {
   -ms-flex-preferred-size: 40% !important;
-      flex-basis: 40% !important; }
+  flex-basis: 40% !important;
+}
 
 .u-3\/5 {
   -ms-flex-preferred-size: 60% !important;
-      flex-basis: 60% !important; }
+  flex-basis: 60% !important;
+}
 
 .u-4\/5 {
   -ms-flex-preferred-size: 80% !important;
-      flex-basis: 80% !important; }
+  flex-basis: 80% !important;
+}
 
 .u-5\/5 {
   -ms-flex-preferred-size: 100% !important;
-      flex-basis: 100% !important; }
+  flex-basis: 100% !important;
+}
 
 /**
  * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
@@ -1841,143 +2175,191 @@ table {
 @media (min-width: 47.9375em) {
   .u-1\/1\@tablet {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/2\@tablet {
     -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
+    flex-basis: 50% !important;
+  }
   .u-2\/2\@tablet {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/3\@tablet {
     -ms-flex-preferred-size: 33.33333% !important;
-        flex-basis: 33.33333% !important; }
+    flex-basis: 33.33333% !important;
+  }
   .u-2\/3\@tablet {
     -ms-flex-preferred-size: 66.66667% !important;
-        flex-basis: 66.66667% !important; }
+    flex-basis: 66.66667% !important;
+  }
   .u-3\/3\@tablet {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/4\@tablet {
     -ms-flex-preferred-size: 25% !important;
-        flex-basis: 25% !important; }
+    flex-basis: 25% !important;
+  }
   .u-2\/4\@tablet {
     -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
+    flex-basis: 50% !important;
+  }
   .u-3\/4\@tablet {
     -ms-flex-preferred-size: 75% !important;
-        flex-basis: 75% !important; }
+    flex-basis: 75% !important;
+  }
   .u-4\/4\@tablet {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/5\@tablet {
     -ms-flex-preferred-size: 20% !important;
-        flex-basis: 20% !important; }
+    flex-basis: 20% !important;
+  }
   .u-2\/5\@tablet {
     -ms-flex-preferred-size: 40% !important;
-        flex-basis: 40% !important; }
+    flex-basis: 40% !important;
+  }
   .u-3\/5\@tablet {
     -ms-flex-preferred-size: 60% !important;
-        flex-basis: 60% !important; }
+    flex-basis: 60% !important;
+  }
   .u-4\/5\@tablet {
     -ms-flex-preferred-size: 80% !important;
-        flex-basis: 80% !important; }
+    flex-basis: 80% !important;
+  }
   .u-5\/5\@tablet {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; } }
+    flex-basis: 100% !important;
+  }
+}
 
 @media (min-width: 75em) {
   .u-1\/1\@desktop {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/2\@desktop {
     -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
+    flex-basis: 50% !important;
+  }
   .u-2\/2\@desktop {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/3\@desktop {
     -ms-flex-preferred-size: 33.33333% !important;
-        flex-basis: 33.33333% !important; }
+    flex-basis: 33.33333% !important;
+  }
   .u-2\/3\@desktop {
     -ms-flex-preferred-size: 66.66667% !important;
-        flex-basis: 66.66667% !important; }
+    flex-basis: 66.66667% !important;
+  }
   .u-3\/3\@desktop {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/4\@desktop {
     -ms-flex-preferred-size: 25% !important;
-        flex-basis: 25% !important; }
+    flex-basis: 25% !important;
+  }
   .u-2\/4\@desktop {
     -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
+    flex-basis: 50% !important;
+  }
   .u-3\/4\@desktop {
     -ms-flex-preferred-size: 75% !important;
-        flex-basis: 75% !important; }
+    flex-basis: 75% !important;
+  }
   .u-4\/4\@desktop {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/5\@desktop {
     -ms-flex-preferred-size: 20% !important;
-        flex-basis: 20% !important; }
+    flex-basis: 20% !important;
+  }
   .u-2\/5\@desktop {
     -ms-flex-preferred-size: 40% !important;
-        flex-basis: 40% !important; }
+    flex-basis: 40% !important;
+  }
   .u-3\/5\@desktop {
     -ms-flex-preferred-size: 60% !important;
-        flex-basis: 60% !important; }
+    flex-basis: 60% !important;
+  }
   .u-4\/5\@desktop {
     -ms-flex-preferred-size: 80% !important;
-        flex-basis: 80% !important; }
+    flex-basis: 80% !important;
+  }
   .u-5\/5\@desktop {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; } }
+    flex-basis: 100% !important;
+  }
+}
 
 @media (min-width: 85.625em) {
   .u-1\/1\@wide {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/2\@wide {
     -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
+    flex-basis: 50% !important;
+  }
   .u-2\/2\@wide {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/3\@wide {
     -ms-flex-preferred-size: 33.33333% !important;
-        flex-basis: 33.33333% !important; }
+    flex-basis: 33.33333% !important;
+  }
   .u-2\/3\@wide {
     -ms-flex-preferred-size: 66.66667% !important;
-        flex-basis: 66.66667% !important; }
+    flex-basis: 66.66667% !important;
+  }
   .u-3\/3\@wide {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/4\@wide {
     -ms-flex-preferred-size: 25% !important;
-        flex-basis: 25% !important; }
+    flex-basis: 25% !important;
+  }
   .u-2\/4\@wide {
     -ms-flex-preferred-size: 50% !important;
-        flex-basis: 50% !important; }
+    flex-basis: 50% !important;
+  }
   .u-3\/4\@wide {
     -ms-flex-preferred-size: 75% !important;
-        flex-basis: 75% !important; }
+    flex-basis: 75% !important;
+  }
   .u-4\/4\@wide {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; }
+    flex-basis: 100% !important;
+  }
   .u-1\/5\@wide {
     -ms-flex-preferred-size: 20% !important;
-        flex-basis: 20% !important; }
+    flex-basis: 20% !important;
+  }
   .u-2\/5\@wide {
     -ms-flex-preferred-size: 40% !important;
-        flex-basis: 40% !important; }
+    flex-basis: 40% !important;
+  }
   .u-3\/5\@wide {
     -ms-flex-preferred-size: 60% !important;
-        flex-basis: 60% !important; }
+    flex-basis: 60% !important;
+  }
   .u-4\/5\@wide {
     -ms-flex-preferred-size: 80% !important;
-        flex-basis: 80% !important; }
+    flex-basis: 80% !important;
+  }
   .u-5\/5\@wide {
     -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important; } }
+    flex-basis: 100% !important;
+  }
+}
 
 /* ==========================================================================
    #HEADINGS
@@ -1992,27 +2374,33 @@ table {
  */
 .u-h1 {
   font-size: 2.25rem !important;
-  line-height: 1.33333 !important; }
+  line-height: 1.33333 !important;
+}
 
 .u-h2 {
   font-size: 1.75rem !important;
-  line-height: 1.71429 !important; }
+  line-height: 1.71429 !important;
+}
 
 .u-h3 {
   font-size: 1.5rem !important;
-  line-height: 1 !important; }
+  line-height: 1 !important;
+}
 
 .u-h4 {
   font-size: 1.25rem !important;
-  line-height: 1.2 !important; }
+  line-height: 1.2 !important;
+}
 
 .u-h5 {
   font-size: 1.125rem !important;
-  line-height: 1.33333 !important; }
+  line-height: 1.33333 !important;
+}
 
 .u-h6 {
   font-size: 1rem !important;
-  line-height: 1.5 !important; }
+  line-height: 1.5 !important;
+}
 
 /* ==========================================================================
    #SPACING
@@ -2030,184 +2418,244 @@ table {
  */
 /* stylelint-disable string-quotes */
 .u-padding {
-  padding: 24px !important; }
+  padding: 24px !important;
+}
 
 .u-padding-tiny {
-  padding: 6px !important; }
+  padding: 6px !important;
+}
 
 .u-padding-small {
-  padding: 12px !important; }
+  padding: 12px !important;
+}
 
 .u-padding-large {
-  padding: 48px !important; }
+  padding: 48px !important;
+}
 
 .u-padding-huge {
-  padding: 96px !important; }
+  padding: 96px !important;
+}
 
 .u-padding-none {
-  padding: 0 !important; }
+  padding: 0 !important;
+}
 
 .u-padding-top {
-  padding-top: 24px !important; }
+  padding-top: 24px !important;
+}
 
 .u-padding-top-tiny {
-  padding-top: 6px !important; }
+  padding-top: 6px !important;
+}
 
 .u-padding-top-small {
-  padding-top: 12px !important; }
+  padding-top: 12px !important;
+}
 
 .u-padding-top-large {
-  padding-top: 48px !important; }
+  padding-top: 48px !important;
+}
 
 .u-padding-top-huge {
-  padding-top: 96px !important; }
+  padding-top: 96px !important;
+}
 
 .u-padding-top-none {
-  padding-top: 0 !important; }
+  padding-top: 0 !important;
+}
 
 .u-padding-right {
-  padding-right: 24px !important; }
+  padding-right: 24px !important;
+}
 
 .u-padding-right-tiny {
-  padding-right: 6px !important; }
+  padding-right: 6px !important;
+}
 
 .u-padding-right-small {
-  padding-right: 12px !important; }
+  padding-right: 12px !important;
+}
 
 .u-padding-right-large {
-  padding-right: 48px !important; }
+  padding-right: 48px !important;
+}
 
 .u-padding-right-huge {
-  padding-right: 96px !important; }
+  padding-right: 96px !important;
+}
 
 .u-padding-right-none {
-  padding-right: 0 !important; }
+  padding-right: 0 !important;
+}
 
 .u-padding-bottom {
-  padding-bottom: 24px !important; }
+  padding-bottom: 24px !important;
+}
 
 .u-padding-bottom-tiny {
-  padding-bottom: 6px !important; }
+  padding-bottom: 6px !important;
+}
 
 .u-padding-bottom-small {
-  padding-bottom: 12px !important; }
+  padding-bottom: 12px !important;
+}
 
 .u-padding-bottom-large {
-  padding-bottom: 48px !important; }
+  padding-bottom: 48px !important;
+}
 
 .u-padding-bottom-huge {
-  padding-bottom: 96px !important; }
+  padding-bottom: 96px !important;
+}
 
 .u-padding-bottom-none {
-  padding-bottom: 0 !important; }
+  padding-bottom: 0 !important;
+}
 
 .u-padding-left {
-  padding-left: 24px !important; }
+  padding-left: 24px !important;
+}
 
 .u-padding-left-tiny {
-  padding-left: 6px !important; }
+  padding-left: 6px !important;
+}
 
 .u-padding-left-small {
-  padding-left: 12px !important; }
+  padding-left: 12px !important;
+}
 
 .u-padding-left-large {
-  padding-left: 48px !important; }
+  padding-left: 48px !important;
+}
 
 .u-padding-left-huge {
-  padding-left: 96px !important; }
+  padding-left: 96px !important;
+}
 
 .u-padding-left-none {
-  padding-left: 0 !important; }
+  padding-left: 0 !important;
+}
 
 .u-margin {
-  margin: 24px !important; }
+  margin: 24px !important;
+}
 
 .u-margin-tiny {
-  margin: 6px !important; }
+  margin: 6px !important;
+}
 
 .u-margin-small {
-  margin: 12px !important; }
+  margin: 12px !important;
+}
 
 .u-margin-large {
-  margin: 48px !important; }
+  margin: 48px !important;
+}
 
 .u-margin-huge {
-  margin: 96px !important; }
+  margin: 96px !important;
+}
 
 .u-margin-none {
-  margin: 0 !important; }
+  margin: 0 !important;
+}
 
 .u-margin-top {
-  margin-top: 24px !important; }
+  margin-top: 24px !important;
+}
 
 .u-margin-top-tiny {
-  margin-top: 6px !important; }
+  margin-top: 6px !important;
+}
 
 .u-margin-top-small {
-  margin-top: 12px !important; }
+  margin-top: 12px !important;
+}
 
 .u-margin-top-large {
-  margin-top: 48px !important; }
+  margin-top: 48px !important;
+}
 
 .u-margin-top-huge {
-  margin-top: 96px !important; }
+  margin-top: 96px !important;
+}
 
 .u-margin-top-none {
-  margin-top: 0 !important; }
+  margin-top: 0 !important;
+}
 
 .u-margin-right {
-  margin-right: 24px !important; }
+  margin-right: 24px !important;
+}
 
 .u-margin-right-tiny {
-  margin-right: 6px !important; }
+  margin-right: 6px !important;
+}
 
 .u-margin-right-small {
-  margin-right: 12px !important; }
+  margin-right: 12px !important;
+}
 
 .u-margin-right-large {
-  margin-right: 48px !important; }
+  margin-right: 48px !important;
+}
 
 .u-margin-right-huge {
-  margin-right: 96px !important; }
+  margin-right: 96px !important;
+}
 
 .u-margin-right-none {
-  margin-right: 0 !important; }
+  margin-right: 0 !important;
+}
 
 .u-margin-bottom {
-  margin-bottom: 24px !important; }
+  margin-bottom: 24px !important;
+}
 
 .u-margin-bottom-tiny {
-  margin-bottom: 6px !important; }
+  margin-bottom: 6px !important;
+}
 
 .u-margin-bottom-small {
-  margin-bottom: 12px !important; }
+  margin-bottom: 12px !important;
+}
 
 .u-margin-bottom-large {
-  margin-bottom: 48px !important; }
+  margin-bottom: 48px !important;
+}
 
 .u-margin-bottom-huge {
-  margin-bottom: 96px !important; }
+  margin-bottom: 96px !important;
+}
 
 .u-margin-bottom-none {
-  margin-bottom: 0 !important; }
+  margin-bottom: 0 !important;
+}
 
 .u-margin-left {
-  margin-left: 24px !important; }
+  margin-left: 24px !important;
+}
 
 .u-margin-left-tiny {
-  margin-left: 6px !important; }
+  margin-left: 6px !important;
+}
 
 .u-margin-left-small {
-  margin-left: 12px !important; }
+  margin-left: 12px !important;
+}
 
 .u-margin-left-large {
-  margin-left: 48px !important; }
+  margin-left: 48px !important;
+}
 
 .u-margin-left-huge {
-  margin-left: 96px !important; }
+  margin-left: 96px !important;
+}
 
 .u-margin-left-none {
-  margin-left: 0 !important; }
+  margin-left: 0 !important;
+}
 
 /* stylelint-enable string-quotes */
 /* ==========================================================================
@@ -2231,43 +2679,55 @@ table {
     color: #000 !important;
     /* [1] */
     box-shadow: none !important;
-    text-shadow: none !important; }
+    text-shadow: none !important;
+  }
   a,
   a:visited {
-    text-decoration: underline; }
+    text-decoration: underline;
+  }
   a[href]:after {
-    content: " (" attr(href) ")"; }
+    content: " (" attr(href) ")";
+  }
   abbr[title]:after {
-    content: " (" attr(title) ")"; }
+    content: " (" attr(title) ")";
+  }
   /**
    * Don't show links that are fragment identifiers, or use the `javascript:`
    * pseudo protocol.
    */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
-    content: ""; }
+    content: "";
+  }
   pre,
   blockquote {
     border: 1px solid #999;
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   /**
    * Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables
    */
   thead {
-    display: table-header-group; }
+    display: table-header-group;
+  }
   tr,
   img {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   img {
-    max-width: 100% !important; }
+    max-width: 100% !important;
+  }
   p,
   h2,
   h3 {
     orphans: 3;
-    widows: 3; }
+    widows: 3;
+  }
   h2,
   h3 {
-    page-break-after: avoid; } }
+    page-break-after: avoid;
+  }
+}
 
 /* ==========================================================================
    #HIDE
@@ -2284,126 +2744,164 @@ table {
   overflow: hidden !important;
   padding: 0 !important;
   position: absolute !important;
-  width: 1px !important; }
+  width: 1px !important;
+}
 
 /**
  * Hide visually and from screen readers.
  */
 .u-hidden {
-  display: none !important; }
+  display: none !important;
+}
 
 @media (max-width: 47.9275em) {
   .u-hidden--mobile {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 @media (min-width: 47.9375em) and (max-width: 74.99em) {
   .u-hidden--tablet {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 @media (min-width: 75em) {
   .u-hidden--desktop {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 /* misc utilities - still needs some thought */
 .u-margin-auto {
-  margin: auto; }
+  margin: auto;
+}
 
 .u-margin-left-auto {
-  margin-left: auto; }
+  margin-left: auto;
+}
 
 .u-align-left {
-  text-align: left; }
+  text-align: left;
+}
 
 .u-align-right {
-  text-align: right; }
+  text-align: right;
+}
 
 .u-relative {
-  position: relative; }
+  position: relative;
+}
 
 .u-inline-block {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .u-reset-case {
-  text-transform: none; }
+  text-transform: none;
+}
 
 .u-absolute-center {
   margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+}
 
 .u-absolute-top {
-  top: 0; }
+  top: 0;
+}
 
 .u-absolute-bottom {
-  bottom: 0; }
+  bottom: 0;
+}
 
 .u-absolute-left {
   left: 0;
   top: 0;
   bottom: 0;
-  margin: auto; }
+  margin: auto;
+}
 
 .u-absolute-right {
   right: 0;
   top: 0;
   bottom: 0;
-  margin: auto; }
+  margin: auto;
+}
 
 [class*="u-absolute"] {
-  position: absolute !important; }
+  position: absolute !important;
+}
 
 @font-face {
   font-family: "Headline";
-  src: url("../fonts/headline-regular.woff") format("woff"); }
+  src: url("../fonts/headline-regular.woff") format("woff");
+}
 
 .style-guide {
-  font-family: "Headline",sans-serif;
+  font-family: "Headline", sans-serif;
   color: #112268;
   margin: 0 auto;
-  max-width: 100em; }
-  .style-guide > .o-box {
-    margin: 2em;
-    background: #f1f2f7; }
-    .style-guide > .o-box.dark {
-      color: #f1f2f7;
-      background: #112268; }
-  .style-guide > .c-header, .style-guide [class*="c-header--"] {
-    margin: 2rem; }
+  max-width: 100em;
+}
+.style-guide > .o-box {
+  margin: 2em;
+  background: #f1f2f7;
+}
+.style-guide > .o-box.dark {
+  color: #f1f2f7;
+  background: #112268;
+}
+.style-guide > .c-header,
+.style-guide [class*="c-header--"] {
+  margin: 2rem;
+}
 
 hr {
-  margin-top: 2rem; }
+  margin-top: 2rem;
+}
 
 .paletteWpr.paletteWpr {
-  background: #fff; }
+  background: #fff;
+}
 
 .palette {
-  color: #fff; }
-  .palette div {
-    min-height: 40px; }
-  .palette .o-grid__item > div {
-    padding: 1em; }
+  color: #fff;
+}
+.palette div {
+  min-height: 40px;
+}
+.palette .o-grid__item > div {
+  padding: 1em;
+}
 
 .primaryColor {
   background: #4a5ab1;
-  height: 160px; }
+  height: 160px;
+}
 
 .textColor-light {
-  background: #23337e; }
+  background: #23337e;
+}
 
 .textColor {
-  background: #112268; }
+  background: #112268;
+}
 
 .secondaryColor {
   background: #fdd941;
-  height: 160px; }
+  height: 160px;
+}
 
 .actionColor-light {
-  background: #fa25a4; }
+  background: #fa25a4;
+}
 
 .actionColor {
-  background: #ec028d; }
+  background: #ec028d;
+}
 
 .grayColor.grayColor.grayColor {
   background: #f1f2f7;
@@ -2411,25 +2909,36 @@ hr {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   padding: 0;
-  color: #050a1e; }
+  color: #050a1e;
+}
 
 .grayColor > div:first-child {
-  margin: auto; }
+  margin: auto;
+}
 
 .white {
-  background: #fff; }
+  background: #fff;
+}
 
 .grayColor-dark {
-  background: #dadce9; }
+  background: #dadce9;
+}
 
 .blackColor {
-  background: #050a1e; }
+  background: #050a1e;
+}
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+}
 
 /* media queries examples */
 .icons {
@@ -2441,108 +2950,133 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+  justify-content: space-between;
+}
 
 .svg-icon {
   width: 6rem;
   height: 5rem;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 .gamcare-cert {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.3 14.6">\a   <path fill="#8d8d8d" d="M5 8.4l-.5 1.3h1L5 8.4zm-1.1 2.8h-.5l1.3-3.4h.5l1.3 3.4H6l-.4-1H4.3l-.4 1zM6.8 11.2V7.8h.8l1 2.6 1-2.6h.7v3.4h-.5l.1-3-1.1 3h-.4l-1.1-3v3zM12.5 11.3c-.5 0-.9-.2-1.3-.5-.3-.3-.5-.8-.5-1.3s.2-.9.5-1.2c.3-.3.8-.5 1.3-.5.8 0 1.5.5 1.7 1.4h-.9c-.2-.3-.5-.5-.8-.5-.5 0-.9.4-.9.9s.4 1 .9 1c.3 0 .6-.2.8-.5h.9c-.2.7-.9 1.2-1.7 1.2M15.7 8.9l-.3 1.1h.7l-.4-1.1zm-.7 2.3h-.9l1.3-3.4h.7l1.3 3.4h-.9l-.2-.5h-1.1l-.2.5zM18.5 9.3c.4 0 .6-.1.6-.4 0-.3-.2-.4-.6-.4h-.2v.8h.2zm-1 1.9V7.8h1.1c.4 0 .6 0 .9.2.3.2.5.5.5 1 0 .6-.3 1-.8 1.1l.8 1.2h-1l-.7-1.1v1.1h-.8zM20.4 11.2V7.8h1.9v.7h-1.1v.6h1.1v.7h-1.1v.6h1.1v.8zM1.9 12.8c-.1-.1-.3-.3-.7-.3-.5 0-.9.4-.9.9s.4.9.9.9c.2 0 .5-.1.6-.3h.4c-.3.5-.7.6-1.1.6-.6 0-1.1-.6-1.1-1.2 0-.7.6-1.2 1.2-1.2.2 0 .5 0 .7.2l.4.4h-.4zM2.7 14.6v-2.4H4v.3H3v.7h1v.3H3v.7h1v.4zM4.7 13.4H5c.1 0 .7 0 .7-.5 0-.2-.1-.4-.5-.4h-.5v.9zm.8 1.2l-.8-1.1v1.1h-.3v-2.4h.7c.3 0 .5.1.6.2.2.1.3.3.3.5 0 .6-.5.7-.7.7l.7 1h-.5zM6.6 14.6v-2.1h-.4v-.3h1.2v.3H7v2.1zM7.8 12.2h.3v2.4h-.3zM8.6 14.6v-2.4h1.2v.3H9v.7h.8v.3H9v1.1zM10.2 12.2h.3v2.4h-.3zM12.8 12.8c-.1-.1-.3-.3-.7-.3-.5 0-.9.4-.9.9s.4.9.9.9c.3 0 .5-.1.6-.3h.4c-.3.5-.7.6-1.1.6-.7 0-1.2-.6-1.2-1.2 0-.7.6-1.2 1.2-1.2.2 0 .5 0 .7.2l.4.4h-.3zM14.6 13.5l-.3-.9-.3.9h.6zm.4 1.1l-.3-.7h-.9l-.3.7h-.4l.9-2.4h.3l.9 2.4H15zM15.8 14.6v-2.1h-.5v-.3h1.3v.3h-.5v2.1zM16.9 12.2h.3v2.4h-.3zM18.8 12.5c-.6 0-.9.5-.9.9s.3.9.9.9c.6 0 .9-.5.9-.9s-.3-.9-.9-.9m0 2.1c-.7 0-1.2-.6-1.2-1.2s.5-1.2 1.2-1.2 1.2.6 1.2 1.2c.1.6-.5 1.2-1.2 1.2M21.9 14.6l-1.2-1.9v1.9h-.3v-2.4h.4l1.1 1.8v-1.8h.4v2.4zM20.4 5.8l-1.5-1.1-1.5 1.1.5-1.8-1.5-1.1h1.9l.6-1.9.6 1.8h1.9L19.8 4l.6 1.8zM18.3 0h-2.2c-.4 0-.6.3-.6.6v5.5c0 .4.3.6.6.6h6.2V0h-4zM12.7 5.8l-1.5-1.1-1.6 1.1.6-1.8-1.5-1.1h1.9l.5-1.9.6 1.8h1.9L12.1 4l.6 1.8zM10.6 0H8.4c-.4 0-.7.3-.7.7v5.5c0 .4.3.6.6.6h6.2V0h-3.9zM5 5.8L3.4 4.7 1.9 5.8 2.5 4 .9 2.9h1.9L3.4 1 4 2.9h1.9L4.4 4 5 5.8zM2.8 0H.6C.3 0 0 .3 0 .7v5.5c0 .4.3.6.6.6h6.2V0h-4zM3.5 9.5c0 1.1-.8 1.8-1.8 1.8-.5 0-1-.2-1.3-.6-.2-.3-.4-.8-.4-1.2 0-.5.2-1 .5-1.3.3-.3.7-.5 1.2-.5.8 0 1.3.3 1.6.9h-.6c-.2-.3-.6-.4-1-.4-.3 0-.6.1-.9.4-.1.2-.3.5-.3.9s.1.7.3.9c.2.2.6.4.9.4.5 0 .9-.3 1.2-.8H1.4v-.5h2.1z"/>\a</svg>');
-  height: 4.2rem; }
+  height: 4.2rem;
+}
 
 .gamcare {
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.09 132">\a   <path fill="#8d8d8d" d="M18.77 122.61c-.29 5.57-4.11 9.39-9.39 9.39a9.37 9.37 0 0 1-7-3.23A9.13 9.13 0 0 1 0 122.32a9.55 9.55 0 0 1 2.93-6.75 9.29 9.29 0 0 1 6.75-2.64 8.48 8.48 0 0 1 8.21 5h-3.52a6.27 6.27 0 0 0-5-2.35 6.25 6.25 0 0 0-4.69 2.05 10.22 10.22 0 0 0-1.76 5 6 6 0 0 0 2.05 5 5.84 5.84 0 0 0 4.69 2.05c2.93 0 5-1.47 6.45-4.4H7.33v-2.64zM26.69 116.74l-2.64 7h5.28zm-5.87 15h-2.93l7.33-18.48h2.64l7.34 18.44h-2.93l-2.05-5.28h-7zM36.66 131.7v-18.48h3.82l5.57 14.38 5.28-14.38h3.82v18.48h-2.64l.29-15.84-5.87 15.84h-2.05l-5.87-15.84v15.84h-2.35zM66.88 132a9.55 9.55 0 0 1-6.75-2.93 9.29 9.29 0 0 1-2.64-6.75 8.91 8.91 0 0 1 2.93-6.75 9.29 9.29 0 0 1 6.75-2.64 9.62 9.62 0 0 1 9.09 7.33h-5c-1.17-1.76-2.35-2.93-4.11-2.93a4.71 4.71 0 0 0-5 4.69 4.89 4.89 0 0 0 4.69 5 4.42 4.42 0 0 0 4.16-2.65h5c-1.17 5-4.69 7.63-9.09 7.63M84.18 119.38l-1.76 5.87h3.81zm-4.1 12.32h-5l7-18.48h3.81l7 18.48H88l-.88-2.64H81zM99.14 121.73c2.35 0 3.23-.59 3.23-2.35 0-1.47-.88-2.05-2.93-2.05h-1.18v4.4zm-5.57 10v-18.21h6.16a8 8 0 0 1 4.69 1.17 6.27 6.27 0 0 1 2.35 5c0 2.93-1.47 5.28-4.11 5.87l4.69 6.45h-5.57l-3.52-5.87V132l-4.69-.29zM109.12 131.7v-18.48h9.97v4.11h-5.57v2.93h5.57v4.11h-5.57v3.23h5.57v4.1h-9.97zM28.75 34c-4.69 3.81-9.68 9.09-9.68 17.6 0 8.21 5 13.79 10 17.89A45.79 45.79 0 0 0 47.81 78a54.75 54.75 0 0 0 7.33 1.17V24.05c-2.35.29-5 .59-7.63 1.17C40.19 27 34 29.63 28.75 34"/>\a   <path fill="#8d8d8d" d="M54.56 89.17c-16.72-1.47-31.68-7.63-40.19-17.31a20.51 20.51 0 0 1-3.81-5 25.12 25.12 0 0 1-3.81-13.48 24.39 24.39 0 0 1 3.81-13.49c1.47-2.64 3.81-5 5.87-7.33a52.26 52.26 0 0 1 17.89-10.85 72.64 72.64 0 0 1 20.83-4.4V0H10A9.89 9.89 0 0 0 0 10v84.16a9.89 9.89 0 0 0 10 10h45.44v-15h-.88"/>\a   <path fill="#8d8d8d" d="M93 22.88a57.41 57.41 0 0 0-10-3.52 59.37 59.37 0 0 0-12.9-2.05 39.31 39.31 0 0 0-5.86-.31c-2.93 0-5.87 0-9.09.29v6.75c2.93-.29 5.87-.29 9.09-.29 2.05 0 3.81.29 5.87.29a63.24 63.24 0 0 1 18.19 5c1.47.59 2.93 1.76 4.69 2.35 2.93.59 7.92.29 7.92-2.93 0-2.93-5.28-4.4-7.92-5.57M118.8 66.29c-1.17-5-9.39-4.11-16.13-4.11H91.22c-5.57 0-18.77-1.76-18.48 4.4a4.46 4.46 0 0 0 2.93 3.81c4.11 2.05 12 0 17.31.59-5.57 4.11-13.78 6.75-22.88 7.92a39.31 39.31 0 0 1-5.87.29c-2.93 0-5.87 0-9.09-.29v10c2.93.29 5.87.29 9.09.29 2.05 0 3.81-.29 5.87-.29a79 79 0 0 0 31.39-9.68c-.59 2.05-1.17 3.23-1.47 4.69-.59 1.76-1.47 3.81-1.17 5.57.59 4.4 9.39 6.75 12.91 2.93 1.47-1.47 1.47-4.4 2.35-6.75 1.17-3.81 2.35-9.09 3.52-12.91.59-1.76 1.47-4.69 1.17-6.45"/>\a</svg>'); }
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.09 132">\a   <path fill="#8d8d8d" d="M18.77 122.61c-.29 5.57-4.11 9.39-9.39 9.39a9.37 9.37 0 0 1-7-3.23A9.13 9.13 0 0 1 0 122.32a9.55 9.55 0 0 1 2.93-6.75 9.29 9.29 0 0 1 6.75-2.64 8.48 8.48 0 0 1 8.21 5h-3.52a6.27 6.27 0 0 0-5-2.35 6.25 6.25 0 0 0-4.69 2.05 10.22 10.22 0 0 0-1.76 5 6 6 0 0 0 2.05 5 5.84 5.84 0 0 0 4.69 2.05c2.93 0 5-1.47 6.45-4.4H7.33v-2.64zM26.69 116.74l-2.64 7h5.28zm-5.87 15h-2.93l7.33-18.48h2.64l7.34 18.44h-2.93l-2.05-5.28h-7zM36.66 131.7v-18.48h3.82l5.57 14.38 5.28-14.38h3.82v18.48h-2.64l.29-15.84-5.87 15.84h-2.05l-5.87-15.84v15.84h-2.35zM66.88 132a9.55 9.55 0 0 1-6.75-2.93 9.29 9.29 0 0 1-2.64-6.75 8.91 8.91 0 0 1 2.93-6.75 9.29 9.29 0 0 1 6.75-2.64 9.62 9.62 0 0 1 9.09 7.33h-5c-1.17-1.76-2.35-2.93-4.11-2.93a4.71 4.71 0 0 0-5 4.69 4.89 4.89 0 0 0 4.69 5 4.42 4.42 0 0 0 4.16-2.65h5c-1.17 5-4.69 7.63-9.09 7.63M84.18 119.38l-1.76 5.87h3.81zm-4.1 12.32h-5l7-18.48h3.81l7 18.48H88l-.88-2.64H81zM99.14 121.73c2.35 0 3.23-.59 3.23-2.35 0-1.47-.88-2.05-2.93-2.05h-1.18v4.4zm-5.57 10v-18.21h6.16a8 8 0 0 1 4.69 1.17 6.27 6.27 0 0 1 2.35 5c0 2.93-1.47 5.28-4.11 5.87l4.69 6.45h-5.57l-3.52-5.87V132l-4.69-.29zM109.12 131.7v-18.48h9.97v4.11h-5.57v2.93h5.57v4.11h-5.57v3.23h5.57v4.1h-9.97zM28.75 34c-4.69 3.81-9.68 9.09-9.68 17.6 0 8.21 5 13.79 10 17.89A45.79 45.79 0 0 0 47.81 78a54.75 54.75 0 0 0 7.33 1.17V24.05c-2.35.29-5 .59-7.63 1.17C40.19 27 34 29.63 28.75 34"/>\a   <path fill="#8d8d8d" d="M54.56 89.17c-16.72-1.47-31.68-7.63-40.19-17.31a20.51 20.51 0 0 1-3.81-5 25.12 25.12 0 0 1-3.81-13.48 24.39 24.39 0 0 1 3.81-13.49c1.47-2.64 3.81-5 5.87-7.33a52.26 52.26 0 0 1 17.89-10.85 72.64 72.64 0 0 1 20.83-4.4V0H10A9.89 9.89 0 0 0 0 10v84.16a9.89 9.89 0 0 0 10 10h45.44v-15h-.88"/>\a   <path fill="#8d8d8d" d="M93 22.88a57.41 57.41 0 0 0-10-3.52 59.37 59.37 0 0 0-12.9-2.05 39.31 39.31 0 0 0-5.86-.31c-2.93 0-5.87 0-9.09.29v6.75c2.93-.29 5.87-.29 9.09-.29 2.05 0 3.81.29 5.87.29a63.24 63.24 0 0 1 18.19 5c1.47.59 2.93 1.76 4.69 2.35 2.93.59 7.92.29 7.92-2.93 0-2.93-5.28-4.4-7.92-5.57M118.8 66.29c-1.17-5-9.39-4.11-16.13-4.11H91.22c-5.57 0-18.77-1.76-18.48 4.4a4.46 4.46 0 0 0 2.93 3.81c4.11 2.05 12 0 17.31.59-5.57 4.11-13.78 6.75-22.88 7.92a39.31 39.31 0 0 1-5.87.29c-2.93 0-5.87 0-9.09-.29v10c2.93.29 5.87.29 9.09.29 2.05 0 3.81-.29 5.87-.29a79 79 0 0 0 31.39-9.68c-.59 2.05-1.17 3.23-1.47 4.69-.59 1.76-1.47 3.81-1.17 5.57.59 4.4 9.39 6.75 12.91 2.93 1.47-1.47 1.47-4.4 2.35-6.75 1.17-3.81 2.35-9.09 3.52-12.91.59-1.76 1.47-4.69 1.17-6.45"/>\a</svg>');
+}
 
 .plus18 {
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">\a   <path fill="#8d8d8d" d="M10.5 0A10.5 10.5 0 1 0 21 10.5 10.5 10.5 0 0 0 10.5 0zm0 18.38a7.88 7.88 0 1 1 7.88-7.88 7.88 7.88 0 0 1-7.88 7.88z"/>\a   <path fill="#8d8d8d" d="M5.02 7.35h1.9V14H5.66V8.54H4.3zm6.7 3.05a2.02 2.02 0 0 1 .94 1.72 2.06 2.06 0 0 1-.3 1.07 1.86 1.86 0 0 1-.76.7 2.72 2.72 0 0 1-1.24.26 2.9 2.9 0 0 1-1.28-.24 1.82 1.82 0 0 1-.75-.72 2.1 2.1 0 0 1-.3-1.08 2.02 2.02 0 0 1 .24-.95 2.3 2.3 0 0 1 .68-.77 2.18 2.18 0 0 1-.45-.65 1.75 1.75 0 0 1-.14-.72 1.83 1.83 0 0 1 .25-.95 1.73 1.73 0 0 1 .7-.66 2.2 2.2 0 0 1 1.07-.24 2.13 2.13 0 0 1 1.03.24 1.76 1.76 0 0 1 .68.68 1.86 1.86 0 0 1 .26.95 1.63 1.63 0 0 1-.13.66 2.58 2.58 0 0 1-.47.7zm-1.36.67a1.1 1.1 0 0 0-.76.28.86.86 0 0 0-.32.66.9.9 0 0 0 .3.7 1.08 1.08 0 0 0 .77.28 1.1 1.1 0 0 0 .77-.26.86.86 0 0 0 .3-.66.9.9 0 0 0-.3-.7 1.05 1.05 0 0 0-.76-.27zM10.3 8.4a.7.7 0 0 0-.5.2.72.72 0 0 0-.2.54.74.74 0 1 0 1.47-.02.7.7 0 0 0-.2-.52.75.75 0 0 0-.56-.2zm3.93 1.7V8.43h1.13v1.7h1.7v1.12h-1.7v1.7h-1.13v-1.7h-1.7V10.1z"/>\a</svg>'); }
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">\a   <path fill="#8d8d8d" d="M10.5 0A10.5 10.5 0 1 0 21 10.5 10.5 10.5 0 0 0 10.5 0zm0 18.38a7.88 7.88 0 1 1 7.88-7.88 7.88 7.88 0 0 1-7.88 7.88z"/>\a   <path fill="#8d8d8d" d="M5.02 7.35h1.9V14H5.66V8.54H4.3zm6.7 3.05a2.02 2.02 0 0 1 .94 1.72 2.06 2.06 0 0 1-.3 1.07 1.86 1.86 0 0 1-.76.7 2.72 2.72 0 0 1-1.24.26 2.9 2.9 0 0 1-1.28-.24 1.82 1.82 0 0 1-.75-.72 2.1 2.1 0 0 1-.3-1.08 2.02 2.02 0 0 1 .24-.95 2.3 2.3 0 0 1 .68-.77 2.18 2.18 0 0 1-.45-.65 1.75 1.75 0 0 1-.14-.72 1.83 1.83 0 0 1 .25-.95 1.73 1.73 0 0 1 .7-.66 2.2 2.2 0 0 1 1.07-.24 2.13 2.13 0 0 1 1.03.24 1.76 1.76 0 0 1 .68.68 1.86 1.86 0 0 1 .26.95 1.63 1.63 0 0 1-.13.66 2.58 2.58 0 0 1-.47.7zm-1.36.67a1.1 1.1 0 0 0-.76.28.86.86 0 0 0-.32.66.9.9 0 0 0 .3.7 1.08 1.08 0 0 0 .77.28 1.1 1.1 0 0 0 .77-.26.86.86 0 0 0 .3-.66.9.9 0 0 0-.3-.7 1.05 1.05 0 0 0-.76-.27zM10.3 8.4a.7.7 0 0 0-.5.2.72.72 0 0 0-.2.54.74.74 0 1 0 1.47-.02.7.7 0 0 0-.2-.52.75.75 0 0 0-.56-.2zm3.93 1.7V8.43h1.13v1.7h1.7v1.12h-1.7v1.7h-1.13v-1.7h-1.7V10.1z"/>\a</svg>');
+}
 
 .norton {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.78 169.97">\a   <path d="M261.65 128.19H57.57a53.13 53.13 0 0 1 0-106.26h204.08a53.13 53.13 0 0 1 0 106.26M57.57 26.1a49 49 0 0 0 0 97.92h204.08a49 49 0 0 0 0-97.92z" fill="#8d8d8d"/>\a   <path d="M237.17 45.33a14.35 14.35 0 1 0 14.35 14.35 14.35 14.35 0 0 0-14.35-14.35m0 21.71a7.36 7.36 0 1 1 7.36-7.36 7.36 7.36 0 0 1-7.36 7.32M171.37 45.33a14.35 14.35 0 1 0 14.35 14.35 14.35 14.35 0 0 0-14.35-14.35m0 21.71a7.36 7.36 0 1 1 7.36-7.36 7.36 7.36 0 0 1-7.36 7.32" fill="#8d8d8d"/>\a   <path d="M221.9 67.44a14.29 14.29 0 0 1-2.82.52c-2.45 0-3-.84-3-3.19V51.52H222V46h-5.87v-7.85h-6.6L208.1 46h-5c-3.76 0-6.6 2.31-8.41 5.9l-2.27-5.9h-4.73v27.51h8.09v-12c0-6 3.57-9.89 7.79-10H208V65.2c0 6.44 3.3 8.84 8.68 8.84a19.38 19.38 0 0 0 6.18-1zM261.31 54.69v18.82h-7.86V45.98h4.77l1.6 4.2" fill="#8d8d8d"/>\a   <path d="M259.79 50.21c2.39-2.77 5.66-4.87 9.49-4.87 6.55 0 9.25 5.22 9.25 10.07v18.1h-8.1V55.63c0-2.36-2-3.64-4.09-3.64s-3.73 1.3-5 2.69M125.47 36.01h9.01l12.38 23.58V36.01h7.47v37.5h-8.17l-13.22-25.92v25.92h-7.47v-37.5zM302.42 21.93v1.34h-1.97v6.61h-1.53v-6.61h-1.93v-1.34h5.43zM303.52 29.88v-7.95h2.07l1.38 5.21 1.4-5.21h2.1v7.95h-1.27v-6.22h-.03l-1.61 6.22h-1.12l-1.62-6.22h-.04v6.22h-1.26zM123.22 106.74l1.87-2.91a11.14 11.14 0 0 0 6.58 2.17c2.7 0 4.37-1.23 4.37-3.35 0-2.45-2.11-3.09-5.57-4.3-3.11-1.09-6.16-2.66-6.16-7.06 0-4.13 3.25-6.37 7.63-6.37a13 13 0 0 1 6.78 1.59l-1.5 3.1a11.16 11.16 0 0 0-5.22-1.28c-2.44 0-3.9.92-3.9 2.85 0 2.27 1.69 2.85 4.88 3.9s7 2.62 7 7.49c0 4.13-3 6.85-8.24 6.85a13.81 13.81 0 0 1-8.51-2.68M147.07 85.28h14.17v3.3H151.1v6.5h8.01v3.23h-8.01v7.51h10.76v3.29h-14.79V85.28zM167.63 97.22c0-7 3.33-12.3 10-12.3a8.73 8.73 0 0 1 7 2.87l-2.35 2.72a5.94 5.94 0 0 0-4.57-2.07c-3.9 0-5.7 3.19-5.7 9.09 0 5.53 1.9 8.34 5.74 8.34a6.66 6.66 0 0 0 4.94-2.51L185 106a9 9 0 0 1-7.35 3.43c-6.85 0-10-5.22-10-12.21M191.59 100V85.28h4.06v15.36c0 3.28.81 5.42 4.27 5.42s4.27-2.14 4.27-5.42V85.28h4.1V100c0 5.9-2.27 9.43-8.41 9.43s-8.3-3.53-8.3-9.43M233.16 109.12h-4.41L224.18 99h-3.76v10.11h-4V85.28h7.77c4.81 0 8.57 1.73 8.57 6.95a6.21 6.21 0 0 1-4.51 6.2zM224 95.9c3 0 4.57-1 4.57-3.73s-1.58-3.59-4.34-3.59h-3.83v7.32zM240.06 85.28h14.18v3.3h-10.15v6.5h8v3.23h-8v7.51h10.75v3.29h-14.78V85.28zM261.65 85.28h5.95c7.77 0 11.5 4.2 11.5 11.83s-3.8 12-11.29 12h-6.15zm5.71 20.54c5.56 0 7.46-2.57 7.46-8.71 0-5.39-1.49-8.54-7-8.54h-2.17v17.25zM57.33 132.39a57.33 57.33 0 1 1 57.32-57.33 57.4 57.4 0 0 1-57.32 57.33m0-96.52A39.19 39.19 0 1 0 85 47.35a39 39 0 0 0-27.67-11.48" fill="#8d8d8d"/>\a   <path fill="#8d8d8d" d="M119.77 8.91h4.47v4.47h-4.47z"/>\a   <path d="M119.77 0h4.47v4.48h-4.47z"/>\a   <path fill="#8d8d8d" d="M107.2 13.35h4.17v4.36h-4.17zM98.92 21.92h4.21v4.17h-4.21zM111.37 17.71h4.68v4.2h-4.68zM94.73 17.92h4.19v4h-4.19zM107.2 21.92h4.17v4.17h-4.17zM115.35 4.48h4.42v4.43h-4.42z"/>\a   <path fill="#8d8d8d" d="M107.2 8.91h8.15v4.44h-8.15zM103.13 13.35h4.06v8.57h-4.06zM103.13 26.09v4.21h-4.21v-4.21h-7v3H88.2v3.74h4.18V37H88.2v-4.14h-4.45v6.54h-4.2v4.17h-2.78v4.19H73.7C70.26 52.87 61.63 68.83 59 75.33c-9.39-13.08-16.69-18.27-22.44-20.15-3.1-.93-6.84 2.44-1.69 7.76C46.71 76 50.43 86.73 54 95.32c1.9 4.53 10.43 5.24 12.14.62a139.59 139.59 0 0 1 15.21-29.71v-4.66h3.34v-4.21h3.51v-4.87h4.19v-4.7h-4.24v-4.27h4.24v4.27h4.15v-4.23h3.32v-5.1h3.74V35h3.6v-8.91zM22.26 152h3.14v2.28a5.47 5.47 0 0 1 4.6-2.52c3.24 0 6.38 2.57 6.38 7.11v.05c0 4.54-3.11 7.11-6.38 7.11a5.58 5.58 0 0 1-4.64-2.41v6.28h-3.1zm11 6.87v-.05c0-2.64-1.79-4.38-3.92-4.38a4.13 4.13 0 0 0-4 4.38v.05a4.12 4.12 0 0 0 4 4.39c2.15 0 3.92-1.69 3.92-4.39M39 159v-.05a7.3 7.3 0 0 1 14.6-.05v.05a7.16 7.16 0 0 1-7.35 7.05 7.08 7.08 0 0 1-7.25-7m11.47 0v-.05a4.23 4.23 0 0 0-4.2-4.41 4.11 4.11 0 0 0-4.12 4.36v.05a4.25 4.25 0 0 0 4.18 4.41 4.13 4.13 0 0 0 4.12-4.36M55.1 152.04h3.22l2.75 9.39 3.03-9.44h2.67l3.06 9.44 2.81-9.39h3.13l-4.48 13.8h-2.81l-3.05-9.36-3.09 9.36h-2.8l-4.44-13.8zM77.39 158.94v-.05c0-3.92 2.78-7.13 6.69-7.13 4.36 0 6.56 3.42 6.56 7.37 0 .28 0 .57-.05.88H80.53a3.82 3.82 0 0 0 3.94 3.47 5 5 0 0 0 3.71-1.63l1.82 1.63a6.92 6.92 0 0 1-5.6 2.57 6.84 6.84 0 0 1-7-7.11m10.14-1c-.21-2-1.4-3.6-3.48-3.6-1.92 0-3.27 1.48-3.55 3.6zM93.91 152H97v3.09a4.86 4.86 0 0 1 4.85-3.35v3.32h-.18c-2.75 0-4.67 1.79-4.67 5.42v5.21h-3.09zM103.72 158.94v-.05c0-3.92 2.78-7.13 6.69-7.13 4.36 0 6.56 3.42 6.56 7.37v.88h-10.11a3.82 3.82 0 0 0 3.94 3.47 5 5 0 0 0 3.71-1.63l1.84 1.63a6.93 6.93 0 0 1-5.6 2.57 6.84 6.84 0 0 1-7-7.11m10.14-1c-.21-2-1.4-3.6-3.48-3.6-1.92 0-3.27 1.48-3.55 3.6zM119.52 158.91v-.05c0-4.54 3.09-7.11 6.35-7.11a5.67 5.67 0 0 1 4.67 2.41v-7.36h3.14v18.94h-3.14v-2.28a5.48 5.48 0 0 1-4.67 2.57c-3.22 0-6.35-2.57-6.35-7.11m11.08 0v-.05a4.11 4.11 0 0 0-4-4.38c-2.15 0-3.94 1.66-3.94 4.38v.05a4.08 4.08 0 0 0 3.94 4.39 4.13 4.13 0 0 0 4-4.39M148.51 163.61v2.13h-3.14V146.8h3.14v7.53a5.47 5.47 0 0 1 4.64-2.57c3.24 0 6.38 2.57 6.38 7.11v.05c0 4.54-3.11 7.11-6.38 7.11a5.58 5.58 0 0 1-4.64-2.41m7.83-4.69v-.05c0-2.64-1.79-4.38-3.92-4.38a4.13 4.13 0 0 0-4 4.38v.05a4.12 4.12 0 0 0 4 4.39c2.15 0 3.92-1.69 3.92-4.39M161.67 169.13l1.06-2.33a3.85 3.85 0 0 0 1.84.52c.88 0 1.43-.39 1.95-1.58l-5.7-13.7h3.34l3.89 10.17 3.56-10.21h3.27l-5.45 14.09c-1.09 2.8-2.31 3.84-4.51 3.84a6.38 6.38 0 0 1-3.24-.83M184.15 147.58h3.53l5.47 13.95 5.45-13.95h3.45l-7.55 18.29h-2.8l-7.55-18.29zM202.69 158.94v-.05c0-3.92 2.78-7.13 6.69-7.13 4.36 0 6.56 3.42 6.56 7.37 0 .28 0 .57-.05.88h-10.06a3.82 3.82 0 0 0 3.94 3.47 5 5 0 0 0 3.71-1.63l1.84 1.63a6.93 6.93 0 0 1-5.6 2.57 6.83 6.83 0 0 1-7-7.11m10.14-1c-.21-2-1.4-3.6-3.47-3.6-1.92 0-3.27 1.48-3.55 3.6zM219.22 152h3.14v3.09a4.86 4.86 0 0 1 4.85-3.35v3.32H227c-2.75 0-4.67 1.79-4.67 5.42v5.21h-3.14zM229.77 147h3.37v3h-3.37zm.13 5.08h3.1v13.7h-3.1zM236.3 163.09l1.92-2.28a8.35 8.35 0 0 0 5.73 2.36c2 0 3.22-.91 3.22-2.28v-.05c0-1.29-.73-2-4.1-2.77-3.87-.93-6-2.07-6-5.42v-.05c0-3.11 2.59-5.26 6.2-5.26a10.06 10.06 0 0 1 6.59 2.28L248.1 152a8.26 8.26 0 0 0-4.93-1.87c-1.87 0-3 1-3 2.15v.05c0 1.4.83 2 4.31 2.85 3.84.93 5.83 2.31 5.83 5.32 0 3.4-2.67 5.42-6.49 5.42a11.19 11.19 0 0 1-7.57-2.9M253.82 147h3.37v3h-3.37zm.13 5.08h3.14v13.7h-3.14zM261 168.31l1.17-2.36a8.93 8.93 0 0 0 4.88 1.45c2.8 0 4.33-1.45 4.33-4.2v-1.06a5.74 5.74 0 0 1-4.82 2.51 6.15 6.15 0 0 1-6.23-6.41v-.05a6.18 6.18 0 0 1 6.23-6.43 5.91 5.91 0 0 1 4.8 2.33v-2h3.14v10.89a7 7 0 0 1-1.74 5.16c-1.25 1.24-3.16 1.84-5.63 1.84a11.8 11.8 0 0 1-6.12-1.63m10.4-10.07v-.05a3.83 3.83 0 0 0-4-3.79 3.7 3.7 0 0 0-3.89 3.76v.05a3.74 3.74 0 0 0 3.89 3.79 3.84 3.84 0 0 0 4-3.76M278.56 152h3.14v2.13a4.93 4.93 0 0 1 4.28-2.41c3.09 0 4.88 2.08 4.88 5.26v8.72h-3.14V158c0-2.13-1.06-3.35-2.93-3.35s-3.09 1.27-3.09 3.4v7.73h-3.14z"/>\a</svg>');
-  height: 3.6rem; }
+  height: 3.6rem;
+}
 
 .ibas {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 402.15 163.5">\a   <path d="M62.82 66.46a51.64 51.64 0 0 1 2.49-16 45.62 45.62 0 0 0-5-10.3 58.59 58.59 0 0 0-4.38 11.27 38.38 38.38 0 0 1 3.08 15 38.71 38.71 0 0 1-3.21 15.06 56.17 56.17 0 0 0 4.27 11.31 49.14 49.14 0 0 0 5.24-10.88 50.06 50.06 0 0 1-2.49-15.46z" fill="#8d8d8d"/>\a   <path d="M55.07 54.85a56.19 56.19 0 0 0-1.24 11.61A60.2 60.2 0 0 0 55 78.13a34.83 34.83 0 0 0 .1-23.28zM61.31 95.13a51.89 51.89 0 0 0 5.26 7.58 51.89 51.89 0 0 0 5.26-7.58 52 52 0 0 1-5.26-9.66 52 52 0 0 1-5.26 9.66zM71.54 37.89a58.8 58.8 0 0 0-5-7.38 58.8 58.8 0 0 0-5 7.38 47.93 47.93 0 0 1 5 9.08 47.93 47.93 0 0 1 5-9.08zM66.57 77.61a47.58 47.58 0 0 0 1.38-11.15 50.13 50.13 0 0 0-1.38-11.59 50.13 50.13 0 0 0-1.38 11.59 47.58 47.58 0 0 0 1.38 11.15zM76.12 66.46a36.1 36.1 0 0 0 2.05 11.66 60.2 60.2 0 0 0 1.13-11.66 56.19 56.19 0 0 0-1.24-11.6 36.31 36.31 0 0 0-1.94 11.6z" fill="#8d8d8d"/>\a   <path d="M77.2 51.48a58.59 58.59 0 0 0-4.38-11.28 45.62 45.62 0 0 0-5 10.3 51.64 51.64 0 0 1 2.49 16 50.06 50.06 0 0 1-2.5 15.47 49.14 49.14 0 0 0 5.26 10.83 56.17 56.17 0 0 0 4.26-11.3 37.46 37.46 0 0 1-.12-30z" fill="#8d8d8d"/>\a   <path d="M66.8 0L0 66.8l66.8 66.8 66.8-66.8zm-46 70.73a4.27 4.27 0 0 1 0-8.55 4.27 4.27 0 0 1 0 8.55zM32 77.55l-1-.81a15.23 15.23 0 0 0 4.12-10.28 14.53 14.53 0 0 0-4.1-10.25l.89-.88a15.79 15.79 0 0 1 4.45 11.13A16.61 16.61 0 0 1 32 77.55zm6.65 6.72a25 25 0 0 0 0-35.62l1.14-1.15a26.61 26.61 0 0 1 0 37.91zm46.46 9a36.17 36.17 0 0 1-5.95-8A58.38 58.38 0 0 1 74.9 95.4a51.51 51.51 0 0 0 4.1 4.86l-1.72 1.64a54.11 54.11 0 0 1-3.69-4.35 54.42 54.42 0 0 1-5.12 7.22c.81.87 1.61 1.76 2.48 2.56l-1.86 2c-.88-.81-1.67-1.7-2.49-2.57-.82.87-1.61 1.76-2.49 2.57l-1.86-2c.87-.81 1.67-1.69 2.48-2.56a54.42 54.42 0 0 1-5.12-7.22 54.11 54.11 0 0 1-3.69 4.35l-1.72-1.64a51.51 51.51 0 0 0 4.08-4.92A58.34 58.34 0 0 1 54 85.22a36.17 36.17 0 0 1-5.95 8l-1.41-1.41a34.88 34.88 0 0 0 6.58-9.43 62.36 62.36 0 0 1-2.12-15.94 59.22 59.22 0 0 1 2.23-15.84 35.15 35.15 0 0 0-6.7-9.52L48 39.67a36.94 36.94 0 0 1 6.11 8.17 61.59 61.59 0 0 1 4.39-10.13 47.88 47.88 0 0 0-4.32-5L55.86 31a50.56 50.56 0 0 1 4 4.52 61.52 61.52 0 0 1 4.92-7.14c-.84-1-1.66-1.93-2.57-2.84l1.94-1.94c.86.86 1.65 1.8 2.45 2.71.81-.91 1.59-1.84 2.45-2.71L71 25.53c-.9.9-1.73 1.88-2.57 2.84a61.52 61.52 0 0 1 4.92 7.14 50.56 50.56 0 0 1 4-4.52l1.68 1.67a47.88 47.88 0 0 0-4.32 5A61.6 61.6 0 0 1 79 47.85a36.9 36.9 0 0 1 6.12-8.17l1.41 1.41a35.1 35.1 0 0 0-6.71 9.52A59.22 59.22 0 0 1 82 66.46a62.36 62.36 0 0 1-2.12 15.94 34.87 34.87 0 0 0 6.58 9.43zm9.4-9l-1.14 1.14a26.61 26.61 0 0 1 0-37.91l1.14 1.15a25 25 0 0 0 0 35.62zm6.65-6.72a16.61 16.61 0 0 1-4.43-11.09 15.79 15.79 0 0 1 4.45-11.13l.89.88A14.53 14.53 0 0 0 98 66.46a15.23 15.23 0 0 0 4.12 10.28zm11.16-6.82a4.27 4.27 0 1 1 4.27-4.27 4.6 4.6 0 0 1-4.28 4.27z" fill="#8d8d8d"/>\a   <path d="M223.46 110.49c0-3.42-2.14-5.13-7.27-5.13h-4.27l-.43 10.26h4.27c5.13 0 7.7-1.28 7.7-5.13zM215.76 124.17h-5.13l.86 10.26h5.13c6.84 0 9-1.28 9-5.13s-2.16-5.13-9.86-5.13z" fill="#8d8d8d"/>\a   <path d="M132.4 78.43L70.42 155 37.5 115.62v47.88h364.65V78.43zm32.91 64.12H154.2v-44h11.11zm18-17.1a5.56 5.56 0 1 1 5.56-5.56 5.66 5.66 0 0 1-5.6 5.56zM229 142.12c-2.14.86-4.27.86-8.12.86h-19.65V98.52h16.24c4.7 0 6.41 0 8.55.86a10.84 10.84 0 0 1 8.55 10.26c0 3.42-2.14 6.84-6 9 6.41 2.14 9 5.56 9 11.54-.01 5.53-3.43 9.82-8.57 11.94zm24.37-16.67a5.56 5.56 0 1 1 5.56-5.56 5.66 5.66 0 0 1-5.55 5.56zm48.31 16.67l-3.42-8.55H278.6l-3.42 9h-11.54l18-44h12.82l19.24 43.6zm21.8-16.67a5.56 5.56 0 1 1 5.56-5.56 5.66 5.66 0 0 1-5.55 5.56zm32.52 17.1a41.57 41.57 0 0 1-11.54-2.14c-2.56-.86-2.56-.86-3.85-2.14v-9.4a41.29 41.29 0 0 0 7.27 3.85 18.52 18.52 0 0 0 8.12 1.71q6.41 0 6.41-3.85c0-2.14-1.71-3.42-6-5.13l-2.14-.86a39 39 0 0 1-7.27-3.42 16.73 16.73 0 0 1-4.27-3.42 13.5 13.5 0 0 1-3-8.12c0-7.69 6.41-12.4 16.67-12.4 5.13 0 9 .86 15 3.42v9l-.43.43-.86-.43c-5.13-2.57-9.4-3.85-13.25-3.85s-6.41 1.28-6.41 3.42 2.14 3.42 7.27 5.13l3.42 1.28c8.55 3 12 7.27 12 13.68-.06 7.69-6.9 13.24-17.14 13.24z" fill="#8d8d8d"/>\a   <path fill="#8d8d8d" d="M281.59 125.88h13.26l-7.27-17.1-5.99 17.1z"/>\a</svg>');
-  height: 2.8rem; }
+  height: 2.8rem;
+}
 
 .gbga {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329.37 124.01">\a   <path d="M94.8 122.55V7.19h17.33q11.58 0 18.46 1.79A27.73 27.73 0 0 1 142.32 15 31.4 31.4 0 0 1 150 26a33.23 33.23 0 0 1 2.91 13.45 27.26 27.26 0 0 1-9.49 21 27.88 27.88 0 0 1 14.5 11 31 31 0 0 1 5.38 18.08 30.73 30.73 0 0 1-9.56 22.86 31.39 31.39 0 0 1-12.93 8 75.19 75.19 0 0 1-19.65 2.17zm17.41-65.83h5.45q9.71 0 14.23-4.3t4.52-12.66q0-8.14-4.63-12.37t-13.45-4.22h-6.13zm0 49.46H123q11.81 0 17.33-4.63a16 16 0 0 0 5.83-12.7 16.27 16.27 0 0 0-5.6-12.55q-5.45-5-19.5-5h-8.82z" fill="#8d8d8d"/>\a   <path d="M64.92 61.92h47.55v3.8a78.55 78.55 0 0 1-3.06 23A48.79 48.79 0 0 1 99.36 106q-16 18-40.77 18-24.15 0-41.37-17.44A57.83 57.83 0 0 1 0 64.53Q0 39.49 17.52 22T60.15 4.53A58.6 58.6 0 0 1 85.34 10q11.18 5.49 22 17.84L95 39.71Q80.8 20.86 60.45 20.86q-18.26 0-30.63 12.6-12.37 12.37-12.37 31 0 19.23 13.79 31.68 12.89 11.55 28 11.55a34.77 34.77 0 0 0 23-8.62q10.21-8.7 11.4-20.82H64.92z" fill="#8d8d8d"/>\a   <path d="M206.9 61.92h47.55v3.8a78.55 78.55 0 0 1-3.06 23A48.79 48.79 0 0 1 241.33 106q-16 18-40.77 18-24.15 0-41.37-17.44a57.83 57.83 0 0 1-17.22-42q0-25 17.52-42.48t42.64-17.55A58.6 58.6 0 0 1 227.32 10q11.18 5.49 22 17.84l-12.39 11.87q-14.16-18.86-34.51-18.86-18.26 0-30.63 12.6-12.37 12.37-12.37 31 0 19.23 13.79 31.68 12.89 11.55 28 11.55a34.77 34.77 0 0 0 23-8.62q10.21-8.7 11.4-20.82H206.9z" fill="#8d8d8d"/>\a   <path d="M298.31 94.31h-49.25l-12.81 27.94h-18.7L274.47 0l54.9 122.25h-19zM291.23 78l-17.06-39.11L256.29 78z" fill="#8d8d8d"/>\a</svg>');
-  height: 2.4em; }
+  height: 2.4em;
+}
 
 html {
-  color: #333; }
+  color: #333;
+}
 
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 main {
   display: -ms-flexbox;
   display: flex;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 a {
-  color: inherit; }
+  color: inherit;
+}
 
 main > section {
   position: relative;
   min-height: 100vh;
-  padding: 2rem; }
+  padding: 2rem;
+}
 
 .popup {
   background: #f1f2f7;
   -ms-flex: 0 0 100vw;
-      flex: 0 0 100vw;
+  flex: 0 0 100vw;
   display: none;
   -ms-flex-order: 5;
-      order: 5; }
-  .popup:target {
-    display: block;
-    -ms-flex-order: -1;
-        order: -1; }
+  order: 5;
+}
+.popup:target {
+  display: block;
+  -ms-flex-order: -1;
+  order: -1;
+}
 
 .menu {
   -ms-flex: 0 0 30vw;
-      flex: 0 0 30vw;
-  background: aqua; }
-  .menu:target ~ .page {
-    transform: translateX(0); }
+  flex: 0 0 30vw;
+  background: aqua;
+}
+.menu:target ~ .page {
+  transform: translateX(0);
+}
 
 .page {
   transform: translateX(-30vw);
   background: orange;
   -ms-flex: 0 0 100vw;
-      flex: 0 0 100vw;
-  transition: transform 0.3s; }
-  .page:target ~ .popup {
-    display: none; }
+  flex: 0 0 100vw;
+  transition: transform 0.3s;
+}
+.page:target ~ .popup {
+  display: none;
+}
 
 .login {
   -ms-flex: 0 0 30vw;
-      flex: 0 0 30vw;
+  flex: 0 0 30vw;
   -ms-flex-order: 1;
-      order: 1;
+  order: 1;
   z-index: -1;
   transform: translateX(-60vw);
-  background: salmon; }
-  .login:target {
-    z-index: 0; }
-    .login:target ~ .page {
-      transform: translateX(-60vw); }
+  background: salmon;
+}
+.login:target {
+  z-index: 0;
+}
+.login:target ~ .page {
+  transform: translateX(-60vw);
+}
 
 .c-input {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+}
 
 .c-header--colored {
   position: -webkit-sticky;
   position: sticky;
   /* won't work because it is wrapped within overflow:hidden of main elememnt */
-  top: 0; }
+  top: 0;
+}
 
 p {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 /* for preload.html */
 .my-img {
@@ -2551,16 +3085,20 @@ p {
   background-color: purple;
   width: 200px;
   height: 200px;
-  background-image: url(../images/1.png); }
+  background-image: url(../images/1.png);
+}
 
 /* start CSS for iOS-3.html */
 .popup.popup {
-  display: block; }
+  display: block;
+}
 
 @media (min-width: 47.9375em) {
   .popup_type_quick-deposit {
     min-height: 60vh;
-    min-width: 80vw; } }
+    min-width: 80vw;
+  }
+}
 
 .lci-3dSecure {
   width: calc(100% - 5rem);
@@ -2571,54 +3109,87 @@ p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   background: white;
   color: #2b2b2b;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
-  @media (max-width: 47.9275em) {
-    .game-launched .lci-3dSecure {
-      padding: 0; } }
-  @media (min-width: 47.9375em) {
-    .lci-3dSecure {
-      min-height: 60vh;
-      min-width: 80vw; } }
+  right: 0;
+}
+@media (max-width: 47.9275em) {
+  .game-launched .lci-3dSecure {
+    padding: 0;
+  }
+}
+@media (min-width: 47.9375em) {
+  .lci-3dSecure {
+    min-height: 60vh;
+    min-width: 80vw;
+  }
+}
 
 .lci-3dSecure__header {
   height: 3rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between;
+  justify-content: space-between;
   -ms-flex-align: baseline;
-      align-items: baseline; }
+  align-items: baseline;
+}
 
 .lci-3dSecure__header-close:after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke-linecap="round"%3E%3Cpolyline points="2,2 22,22" stroke="currentColor" /%3E%3Cpolyline points="22,2 2,22" stroke="currentColor" /%3E%3C/svg%3E') no-repeat;
+  background: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke-linecap="round"%3E%3Cpolyline points="2,2 22,22" stroke="currentColor" /%3E%3Cpolyline points="22,2 2,22" stroke="currentColor" /%3E%3C/svg%3E')
+    no-repeat;
   width: 1.6rem;
-  height: 1.6rem; }
+  height: 1.6rem;
+}
 
 .lci-3dSecure__content {
   -ms-flex: 1;
-      flex: 1; }
+  flex: 1;
+}
 
 .lci-3dSecure__content-iframe {
   width: 100%;
   height: 100%;
-  border: none; }
+  border: none;
+}
 
 .lci-3dSecure__footer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: end;
-      align-items: flex-end;
+  align-items: flex-end;
   -ms-flex-align: center;
-      align-items: center;
-  margin-top: 1rem; }
+  align-items: center;
+  margin-top: 1rem;
+}
 
 /* end CSS for iOS-3.html */
+
+.pwa {
+  display: block;
+}
+
+.pwa__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.pwa__item {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid maroon;
+  box-shadow: 2px 2px 2px 0 maroon;
+}
