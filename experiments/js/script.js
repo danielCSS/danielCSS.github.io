@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     return;
   }
   navigator.serviceWorker
-    .register("/js/sw.js", {
+    .register("sw.js", {
       scope: "/",
     })
     .catch((err) => {
