@@ -12,4 +12,5 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   console.log(event.request);
+  event.respondWith(fetch(event.request).catch(() => fetch(OFFLINE_GIF)));
 });
