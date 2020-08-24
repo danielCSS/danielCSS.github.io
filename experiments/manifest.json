@@ -1,0 +1,14 @@
+{
+  "name": "Web narrator app",
+  "short_name": "Narratour",
+  "lang": "en",
+  "start_url": "https://danielcss.github.io/experiments/",
+  "display": "standalone",
+  "theme_color": "#f0ad4e",
+  "icons": [
+    {
+      "src": "images/narratour.png",
+      "type": "image/png"
+    }
+  ]
+}
